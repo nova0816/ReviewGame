@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgRecord" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e0f2f1" />
+      <stop offset="100%" stop-color="#b2dfdb" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" rx="24" fill="url(#bgRecord)" />
+  <!-- Video Camera Body -->
+  <rect x="90" y="100" width="160" height="110" rx="16" fill="#00796b" />
+  <circle cx="140" cy="155" r="30" fill="#004d40" stroke="#80cbc4" stroke-width="6" />
+  <!-- Lens Cone -->
+  <path d="M 250 120 L 310 90 L 310 220 L 250 190 Z" fill="#004d40" />
+  <!-- Red REC Light -->
+  <circle cx="120" cy="120" r="10" fill="#ff1744" />
+  <text x="136" y="125" font-family="sans-serif" font-weight="bold" font-size="14" fill="#ff1744">REC</text>
+</svg>

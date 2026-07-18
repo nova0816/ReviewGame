@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgWait" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f3e5f5" />
+      <stop offset="100%" stop-color="#e1bee7" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" rx="24" fill="url(#bgWait)" />
+  <!-- Wall Clock -->
+  <circle cx="200" cy="120" r="70" fill="#ffffff" stroke="#ab47bc" stroke-width="10" />
+  <circle cx="200" cy="120" r="6" fill="#4a148c" />
+  <!-- Hands -->
+  <line x1="200" y1="120" x2="200" y2="70" stroke="#4a148c" stroke-width="6" stroke-linecap="round" />
+  <line x1="200" y1="120" x2="240" y2="120" stroke="#ab47bc" stroke-width="6" stroke-linecap="round" />
+  <!-- Sitting Character Waiting -->
+  <circle cx="200" cy="230" r="30" fill="#ce93d8" />
+  <path d="M 170 230 C 150 250, 150 270, 160 280 M 230 230 C 250 250, 250 270, 240 280" stroke="#8e24aa" stroke-width="10" stroke-linecap="round" />
+</svg>

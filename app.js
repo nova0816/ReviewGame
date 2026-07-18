@@ -1,147 +1,294 @@
-// Vocabulary Explorer Game Logic - Autumn Wind (15 Levels)
+// Vocabulary Explorer Game Logic - Multi-Episode Database
 
-const levels = [
-  {
-    targetWord: "Autumn",
-    statement: "It's Autumn time",
-    words: ["It's", "Autumn", "time"],
-    distractors: ["summer", "spring"],
-    sentenceWithBlank: "It's _______ time.",
-    image: "assets/autumn.png",
-    emoji: "🍂"
+const episodeData = {
+  ep1: {
+    title: "PP S2 E8: Autumn Wind",
+    levels: [
+      {
+        targetWord: "Autumn",
+        statement: "It's Autumn time",
+        words: ["It's", "Autumn", "time"],
+        distractors: ["summer", "spring"],
+        sentenceWithBlank: "It's _______ time.",
+        image: "assets/autumn.png",
+        emoji: "🍂"
+      },
+      {
+        targetWord: "windy",
+        statement: "It is quite windy",
+        words: ["It", "is", "quite", "windy"],
+        distractors: ["sunny", "calm"],
+        sentenceWithBlank: "It is quite _______.",
+        image: "assets/windy.png",
+        emoji: "🌬️"
+      },
+      {
+        targetWord: "freezing",
+        statement: "It's freezing cold",
+        words: ["It's", "freezing", "cold"],
+        distractors: ["warm", "boiling"],
+        sentenceWithBlank: "It's _______ cold!",
+        image: "assets/freezing.png",
+        emoji: "🥶"
+      },
+      {
+        targetWord: "heating",
+        statement: "Turn the heating on",
+        words: ["Turn", "the", "heating", "on"],
+        distractors: ["cooling", "lights"],
+        sentenceWithBlank: "Turn the _______ on.",
+        image: "assets/heating.png",
+        emoji: "🔥"
+      },
+      {
+        targetWord: "scarf",
+        statement: "Wear your warm scarf",
+        words: ["Wear", "your", "warm", "scarf"],
+        distractors: ["shoes", "t-shirt"],
+        sentenceWithBlank: "Wear your warm _______.",
+        image: "assets/scarf.png",
+        emoji: "🧣"
+      },
+      {
+        targetWord: "pond",
+        statement: "The ball is in the pond",
+        words: ["The", "ball", "is", "in", "the", "pond"],
+        distractors: ["sky", "tree"],
+        sentenceWithBlank: "The ball is in the _______.",
+        image: "assets/pond.png",
+        emoji: "🦆"
+      },
+      {
+        targetWord: "muddy",
+        statement: "Jumping in muddy puddles",
+        words: ["Jumping", "in", "muddy", "puddles"],
+        distractors: ["dry", "clean"],
+        sentenceWithBlank: "Jumping in _______ puddles.",
+        image: "assets/muddy.png",
+        emoji: "🐷"
+      },
+      {
+        targetWord: "Shake",
+        statement: "Shake the thin tree",
+        words: ["Shake", "the", "thin", "tree"],
+        distractors: ["Climb", "Cut"],
+        sentenceWithBlank: "_______ the thin tree.",
+        image: "assets/shake.png",
+        emoji: "🌳"
+      },
+      {
+        targetWord: "Lean",
+        statement: "Lean into the wind",
+        words: ["Lean", "into", "the", "wind"],
+        distractors: ["Jump", "Run"],
+        sentenceWithBlank: "_______ into the wind.",
+        image: "assets/lean.png",
+        emoji: "💨"
+      },
+      {
+        targetWord: "suppose",
+        statement: "I suppose it is funny",
+        words: ["I", "suppose", "it", "is", "funny"],
+        distractors: ["forget", "know"],
+        sentenceWithBlank: "I _______ it is funny.",
+        image: "assets/suppose.png",
+        emoji: "🤔"
+      },
+      {
+        targetWord: "thin",
+        statement: "The tree is too thin",
+        words: ["The", "tree", "is", "too", "thin"],
+        distractors: ["thick", "strong"],
+        sentenceWithBlank: "The tree is too _______.",
+        image: "assets/thin.png",
+        emoji: "🌿"
+      },
+      {
+        targetWord: "heavy",
+        statement: "I am too heavy",
+        words: ["I", "am", "too", "heavy"],
+        distractors: ["light", "small"],
+        sentenceWithBlank: "I am too _______.",
+        image: "assets/heavy.png",
+        emoji: "🐘"
+      },
+      {
+        targetWord: "weight",
+        statement: "It cannot take your weight",
+        words: ["It", "cannot", "take", "your", "weight"],
+        distractors: ["height", "speed"],
+        sentenceWithBlank: "It cannot take your _______.",
+        image: "assets/weight.png",
+        emoji: "⚖️"
+      },
+      {
+        targetWord: "favorite",
+        statement: "What's your favorite game",
+        words: ["What's", "your", "favorite", "game"],
+        distractors: ["boring", "hardest"],
+        sentenceWithBlank: "What's your _______ game?",
+        image: "assets/favorite.png",
+        emoji: "💖"
+      },
+      {
+        targetWord: "stroke",
+        statement: "What a stroke of luck",
+        words: ["What", "a", "stroke", "of", "luck"],
+        distractors: ["problem", "accident"],
+        sentenceWithBlank: "What a _______ of luck!",
+        image: "assets/luck.png",
+        emoji: "🍀"
+      }
+    ]
   },
-  {
-    targetWord: "windy",
-    statement: "It is quite windy",
-    words: ["It", "is", "quite", "windy"],
-    distractors: ["sunny", "calm"],
-    sentenceWithBlank: "It is quite _______.",
-    image: "assets/windy.png",
-    emoji: "🌬️"
-  },
-  {
-    targetWord: "freezing",
-    statement: "It's freezing cold",
-    words: ["It's", "freezing", "cold"],
-    distractors: ["warm", "boiling"],
-    sentenceWithBlank: "It's _______ cold!",
-    image: "assets/freezing.png",
-    emoji: "🥶"
-  },
-  {
-    targetWord: "heating",
-    statement: "Turn the heating on",
-    words: ["Turn", "the", "heating", "on"],
-    distractors: ["cooling", "lights"],
-    sentenceWithBlank: "Turn the _______ on.",
-    image: "assets/heating.png",
-    emoji: "🔥"
-  },
-  {
-    targetWord: "scarf",
-    statement: "Wear your warm scarf",
-    words: ["Wear", "your", "warm", "scarf"],
-    distractors: ["shoes", "t-shirt"],
-    sentenceWithBlank: "Wear your warm _______.",
-    image: "assets/scarf.png",
-    emoji: "🧣"
-  },
-  {
-    targetWord: "pond",
-    statement: "The ball is in the pond",
-    words: ["The", "ball", "is", "in", "the", "pond"],
-    distractors: ["sky", "tree"],
-    sentenceWithBlank: "The ball is in the _______.",
-    image: "assets/pond.png",
-    emoji: "🦆"
-  },
-  {
-    targetWord: "muddy",
-    statement: "Jumping in muddy puddles",
-    words: ["Jumping", "in", "muddy", "puddles"],
-    distractors: ["dry", "clean"],
-    sentenceWithBlank: "Jumping in _______ puddles.",
-    image: "assets/muddy.png",
-    emoji: "🐷"
-  },
-  {
-    targetWord: "Shake",
-    statement: "Shake the thin tree",
-    words: ["Shake", "the", "thin", "tree"],
-    distractors: ["Climb", "Cut"],
-    sentenceWithBlank: "_______ the thin tree.",
-    image: "assets/shake.png",
-    emoji: "🌳"
-  },
-  {
-    targetWord: "Lean",
-    statement: "Lean into the wind",
-    words: ["Lean", "into", "the", "wind"],
-    distractors: ["Jump", "Run"],
-    sentenceWithBlank: "_______ into the wind.",
-    image: "assets/lean.png",
-    emoji: "💨"
-  },
-  {
-    targetWord: "suppose",
-    statement: "I suppose it is funny",
-    words: ["I", "suppose", "it", "is", "funny"],
-    distractors: ["forget", "know"],
-    sentenceWithBlank: "I _______ it is funny.",
-    image: "assets/suppose.png",
-    emoji: "🤔"
-  },
-  {
-    targetWord: "thin",
-    statement: "The tree is too thin",
-    words: ["The", "tree", "is", "too", "thin"],
-    distractors: ["thick", "strong"],
-    sentenceWithBlank: "The tree is too _______.",
-    image: "assets/thin.png",
-    emoji: "🌿"
-  },
-  {
-    targetWord: "heavy",
-    statement: "I am too heavy",
-    words: ["I", "am", "too", "heavy"],
-    distractors: ["light", "small"],
-    sentenceWithBlank: "I am too _______.",
-    image: "assets/heavy.png",
-    emoji: "🐘"
-  },
-  {
-    targetWord: "weight",
-    statement: "It cannot take your weight",
-    words: ["It", "cannot", "take", "your", "weight"],
-    distractors: ["height", "speed"],
-    sentenceWithBlank: "It cannot take your _______.",
-    image: "assets/weight.png",
-    emoji: "⚖️"
-  },
-  {
-    targetWord: "favorite",
-    statement: "What's your favorite game",
-    words: ["What's", "your", "favorite", "game"],
-    distractors: ["boring", "hardest"],
-    sentenceWithBlank: "What's your _______ game?",
-    image: "assets/favorite.png",
-    emoji: "💖"
-  },
-  {
-    targetWord: "stroke",
-    statement: "What a stroke of luck",
-    words: ["What", "a", "stroke", "of", "luck"],
-    distractors: ["problem", "accident"],
-    sentenceWithBlank: "What a _______ of luck!",
-    image: "assets/luck.png",
-    emoji: "🍀"
+  ep2: {
+    title: "PP S2 E9: Time Treasure",
+    levels: [
+      {
+        targetWord: "Rocket",
+        statement: "Fly in space rockets",
+        words: ["Fly", "in", "space", "rockets"],
+        distractors: ["car", "boat"],
+        sentenceWithBlank: "Fly in space _______.",
+        image: "assets/ep2_rocket.png",
+        emoji: "🚀"
+      },
+      {
+        targetWord: "Dig",
+        statement: "Dig a deep hole",
+        words: ["Dig", "a", "deep", "hole"],
+        distractors: ["Fill", "Jump"],
+        sentenceWithBlank: "_______ a deep hole.",
+        image: "assets/ep2_dig.png",
+        emoji: "⛏️"
+      },
+      {
+        targetWord: "Bury",
+        statement: "Bury it in garden",
+        words: ["Bury", "it", "in", "garden"],
+        distractors: ["Throw", "Keep"],
+        sentenceWithBlank: "_______ it in garden.",
+        image: "assets/ep2_bury.png",
+        emoji: "📦"
+      },
+      {
+        targetWord: "grown",
+        statement: "The tree has grown",
+        words: ["The", "tree", "has", "grown"],
+        distractors: ["fallen", "shrunk"],
+        sentenceWithBlank: "The tree has _______.",
+        image: "assets/ep2_grow.png",
+        emoji: "🌱"
+      },
+      {
+        targetWord: "squeaky",
+        statement: "What a squeaky voice",
+        words: ["What", "a", "squeaky", "voice"],
+        distractors: ["loud", "deep"],
+        sentenceWithBlank: "What a _______ voice!",
+        image: "assets/ep2_squeaky.png",
+        emoji: "🐭"
+      },
+      {
+        targetWord: "arrived",
+        statement: "Parents have all arrived",
+        words: ["Parents", "have", "all", "arrived"],
+        distractors: ["left", "slept"],
+        sentenceWithBlank: "Parents have all _______.",
+        image: "assets/ep2_arrive.svg",
+        emoji: "🚗"
+      },
+      {
+        targetWord: "treasure",
+        statement: "Find a hidden treasure",
+        words: ["Find", "a", "hidden", "treasure"],
+        distractors: ["trash", "stone"],
+        sentenceWithBlank: "Find a hidden _______.",
+        image: "assets/ep2_treasure.svg",
+        emoji: "🏴‍☠️"
+      },
+      {
+        targetWord: "wait",
+        statement: "I cannot wait long",
+        words: ["I", "cannot", "wait", "long"],
+        distractors: ["run", "sleep"],
+        sentenceWithBlank: "I cannot _______ long.",
+        image: "assets/ep2_wait.svg",
+        emoji: "⏰"
+      },
+      {
+        targetWord: "Record",
+        statement: "Record a special message",
+        words: ["Record", "a", "special", "message"],
+        distractors: ["Delete", "Forget"],
+        sentenceWithBlank: "_______ a special message.",
+        image: "assets/ep2_record.svg",
+        emoji: "📹"
+      },
+      {
+        targetWord: "holiday",
+        statement: "Going on a holiday",
+        words: ["Going", "on", "a", "holiday"],
+        distractors: ["school", "work"],
+        sentenceWithBlank: "Going on a _______.",
+        image: "assets/ep2_holiday.svg",
+        emoji: "🏖️"
+      },
+      {
+        targetWord: "Remain",
+        statement: "Remain in the ground",
+        words: ["Remain", "in", "the", "ground"],
+        distractors: ["Fly", "Move"],
+        sentenceWithBlank: "_______ in the ground.",
+        image: "assets/ep2_remain.svg",
+        emoji: "🪵"
+      },
+      {
+        targetWord: "future",
+        statement: "People in the future",
+        words: ["People", "in", "the", "future"],
+        distractors: ["past", "yesterday"],
+        sentenceWithBlank: "People in the _______.",
+        image: "assets/ep2_future.png",
+        emoji: "🔮"
+      },
+      {
+        targetWord: "remember",
+        statement: "I remember the past",
+        words: ["I", "remember", "the", "past"],
+        distractors: ["forget", "dislike"],
+        sentenceWithBlank: "I _______ the past.",
+        image: "assets/ep2_remember.png",
+        emoji: "💭"
+      },
+      {
+        targetWord: "daily",
+        statement: "Show our daily lives",
+        words: ["Show", "our", "daily", "lives"],
+        distractors: ["rare", "yearly"],
+        sentenceWithBlank: "Show our _______ lives.",
+        image: "assets/ep2_daily.png",
+        emoji: "📅"
+      },
+      {
+        targetWord: "choice",
+        statement: "What a good choice",
+        words: ["What", "a", "good", "choice"],
+        distractors: ["mistake", "bad"],
+        sentenceWithBlank: "What a good _______.",
+        image: "assets/ep2_choice.png",
+        emoji: "👍"
+      }
+    ]
   }
-];
+};
 
 // Game State
+let currentEpisodeKey = 'ep1';
+let levels = episodeData.ep1.levels;
 let currentLevelIndex = 0;
 let score = 0;
-let selectedWords = []; // Array of strings currently placed in slots
+let selectedWords = [];
 let soundMuted = false;
 let isCurrentLevelSolved = false;
 let currentDifficulty = 'easy';
@@ -245,7 +392,7 @@ function speak(text, slow = false) {
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.lang = 'en-US';
     utterance.rate = slow ? 0.65 : 0.8;
-    utterance.pitch = 1.1; // Friendly higher pitch for kids
+    utterance.pitch = 1.1;
     
     const voices = window.speechSynthesis.getVoices();
     const englishVoice = voices.find(v => v.lang.startsWith('en') && v.name.includes('Google')) ||
@@ -280,12 +427,11 @@ class ConfettiParticle {
     this.x = Math.random() * canvas.width;
     this.y = Math.random() * -canvas.height - 20;
     this.size = Math.random() * 12 + 10;
-    // Autumn themed confetti colors: reds, oranges, yellows, greens
     const colors = [
-      `hsl(${Math.random() * 20 + 10}, 95%, 55%)`,  // Orange-Red
-      `hsl(${Math.random() * 15 + 40}, 95%, 50%)`,  // Gold/Yellow
-      `hsl(${Math.random() * 10 + 0}, 90%, 50%)`,   // Maple Red
-      `hsl(${Math.random() * 25 + 90}, 80%, 45%)`   // Pine Green
+      `hsl(${Math.random() * 20 + 10}, 95%, 55%)`,
+      `hsl(${Math.random() * 15 + 40}, 95%, 50%)`,
+      `hsl(${Math.random() * 10 + 0}, 90%, 50%)`,
+      `hsl(${Math.random() * 25 + 90}, 80%, 45%)`
     ];
     this.color = colors[Math.floor(Math.random() * colors.length)];
     this.rotation = Math.random() * 360;
@@ -355,6 +501,8 @@ function animateConfetti() {
 // DOM Elements
 const episodeScreen = document.getElementById('episodeScreen');
 const episodeCard1 = document.getElementById('episodeCard1');
+const episodeCard2 = document.getElementById('episodeCard2');
+const selectedEpisodeTitle = document.getElementById('selectedEpisodeTitle');
 const startScreen = document.getElementById('startScreen');
 const backToEpisodesBtn = document.getElementById('backToEpisodesBtn');
 const levelGrid = document.getElementById('levelGrid');
@@ -395,6 +543,14 @@ function shuffle(array) {
     [arr[i], arr[j]] = [arr[j], arr[i]];
   }
   return arr;
+}
+
+// Select Episode Function
+function selectEpisode(epKey) {
+  currentEpisodeKey = epKey;
+  levels = episodeData[epKey].levels;
+  selectedEpisodeTitle.textContent = episodeData[epKey].title;
+  renderLevelGrid();
 }
 
 // Generate the level selector grid dynamically
@@ -808,10 +964,19 @@ soundToggle.addEventListener('click', () => {
 // Landing Page & Level Selector Transitions
 episodeCard1.addEventListener('click', () => {
   playSound('click');
+  selectEpisode('ep1');
   episodeScreen.classList.add('hidden');
   startScreen.classList.remove('hidden');
-  renderLevelGrid();
 });
+
+if (episodeCard2) {
+  episodeCard2.addEventListener('click', () => {
+    playSound('click');
+    selectEpisode('ep2');
+    episodeScreen.classList.add('hidden');
+    startScreen.classList.remove('hidden');
+  });
+}
 
 backToEpisodesBtn.addEventListener('click', () => {
   playSound('click');
@@ -833,7 +998,7 @@ victoryMenuBtn.addEventListener('click', () => {
   playSound('click');
   victoryModal.classList.add('hidden');
   gameContainer.classList.add('hidden');
-  episodeScreen.classList.remove('hidden'); // Victory Menu returns to Episode Selection landing page
+  episodeScreen.classList.remove('hidden');
 });
 
 // Reset Game
