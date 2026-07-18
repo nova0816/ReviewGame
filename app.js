@@ -124,7 +124,7 @@ const levels = [
     words: ["What's", "your", "favorite", "game"],
     distractors: ["boring", "hardest"],
     sentenceWithBlank: "What's your _______ game?",
-    image: "assets/favorite.svg",
+    image: "assets/favorite.png",
     emoji: "💖"
   },
   {
@@ -133,7 +133,7 @@ const levels = [
     words: ["What", "a", "stroke", "of", "luck"],
     distractors: ["problem", "accident"],
     sentenceWithBlank: "What a _______ of luck!",
-    image: "assets/luck.svg",
+    image: "assets/luck.png",
     emoji: "🍀"
   }
 ];
