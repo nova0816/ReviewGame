@@ -1,17 +1,58 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 375" width="100%" height="100%">
   <defs>
-    <linearGradient id="bgRecord" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="bgRecordSky" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#e0f2f1" />
       <stop offset="100%" stop-color="#b2dfdb" />
     </linearGradient>
+    <filter id="shadowRecord" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="4" flood-color="#004d40" flood-opacity="0.2" />
+    </filter>
   </defs>
-  <rect width="100%" height="100%" rx="24" fill="url(#bgRecord)" />
-  <!-- Video Camera Body -->
-  <rect x="90" y="100" width="160" height="110" rx="16" fill="#00796b" />
-  <circle cx="140" cy="155" r="30" fill="#004d40" stroke="#80cbc4" stroke-width="6" />
-  <!-- Lens Cone -->
-  <path d="M 250 120 L 310 90 L 310 220 L 250 190 Z" fill="#004d40" />
-  <!-- Red REC Light -->
-  <circle cx="120" cy="120" r="10" fill="#ff1744" />
-  <text x="136" y="125" font-family="sans-serif" font-weight="bold" font-size="14" fill="#ff1744">REC</text>
+
+  <!-- Background -->
+  <rect width="500" height="375" rx="28" fill="url(#bgRecordSky)" />
+
+  <!-- Cute Child Speaking into Camera -->
+  <g filter="url(#shadowRecord)">
+    <!-- Body -->
+    <rect x="330" y="220" width="55" height="90" rx="12" fill="#ab47bc" />
+    <!-- Cute Head -->
+    <circle cx="357" cy="180" r="28" fill="#ffcc80" />
+    <!-- Big Sparkling Eyes -->
+    <circle cx="347" cy="178" r="5" fill="#263238" />
+    <circle cx="345" cy="176" r="2" fill="#ffffff" />
+    <circle cx="367" cy="178" r="5" fill="#263238" />
+    <circle cx="365" cy="176" r="2" fill="#ffffff" />
+    <!-- Open Happy Mouth speaking -->
+    <ellipse cx="357" cy="194" rx="6" ry="8" fill="#d84315" />
+    <!-- Waving Arm -->
+    <path d="M 385 230 C 405 210, 420 200, 415 190" stroke="#ffcc80" stroke-width="8" stroke-linecap="round" fill="none" />
+
+    <!-- Cute Speech Bubble "Hello!" -->
+    <path d="M 380 130 C 380 110, 440 110, 440 130 C 440 150, 390 150, 380 160 L 385 145 Z" fill="#ffffff" stroke="#26a69a" stroke-width="3" />
+    <text x="393" y="135" font-family="sans-serif" font-weight="bold" font-size="14" fill="#00796b">Hello! 🎤</text>
+  </g>
+
+  <!-- Cute Video Camera on Tripod Recording -->
+  <g filter="url(#shadowRecord)">
+    <!-- Tripod Legs -->
+    <line x1="160" y1="210" x2="100" y2="340" stroke="#37474f" stroke-width="7" stroke-linecap="round" />
+    <line x1="160" y1="210" x2="160" y2="340" stroke="#37474f" stroke-width="7" stroke-linecap="round" />
+    <line x1="160" y1="210" x2="220" y2="340" stroke="#37474f" stroke-width="7" stroke-linecap="round" />
+
+    <!-- Camera Body -->
+    <rect x="90" y="125" width="140" height="95" rx="16" fill="#00796b" stroke="#004d40" stroke-width="5" />
+    <!-- Film Reels on top -->
+    <circle cx="125" cy="110" r="20" fill="#26a69a" stroke="#004d40" stroke-width="4" />
+    <circle cx="175" cy="110" r="20" fill="#26a69a" stroke="#004d40" stroke-width="4" />
+
+    <!-- Big Shiny Camera Lens pointing right -->
+    <path d="M 230 145 L 290 120 L 290 225 L 230 200 Z" fill="#004d40" stroke="#00251a" stroke-width="4" />
+    <ellipse cx="290" cy="172" rx="8" ry="52" fill="#80cbc4" opacity="0.7" />
+
+    <!-- Red Glowing REC Light -->
+    <circle cx="115" cy="145" r="10" fill="#ff1744" />
+    <circle cx="113" cy="143" r="3" fill="#ffffff" />
+    <text x="132" y="150" font-family="sans-serif" font-weight="bold" font-size="14" fill="#ff1744">REC ●</text>
+  </g>
 </svg>

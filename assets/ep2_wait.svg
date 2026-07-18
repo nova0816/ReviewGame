@@ -1,18 +1,64 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 375" width="100%" height="100%">
   <defs>
-    <linearGradient id="bgWait" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="bgWaitSky" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#f3e5f5" />
       <stop offset="100%" stop-color="#e1bee7" />
     </linearGradient>
+    <filter id="shadowWait" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="4" flood-color="#4a148c" flood-opacity="0.18" />
+    </filter>
   </defs>
-  <rect width="100%" height="100%" rx="24" fill="url(#bgWait)" />
-  <!-- Wall Clock -->
-  <circle cx="200" cy="120" r="70" fill="#ffffff" stroke="#ab47bc" stroke-width="10" />
-  <circle cx="200" cy="120" r="6" fill="#4a148c" />
-  <!-- Hands -->
-  <line x1="200" y1="120" x2="200" y2="70" stroke="#4a148c" stroke-width="6" stroke-linecap="round" />
-  <line x1="200" y1="120" x2="240" y2="120" stroke="#ab47bc" stroke-width="6" stroke-linecap="round" />
-  <!-- Sitting Character Waiting -->
-  <circle cx="200" cy="230" r="30" fill="#ce93d8" />
-  <path d="M 170 230 C 150 250, 150 270, 160 280 M 230 230 C 250 250, 250 270, 240 280" stroke="#8e24aa" stroke-width="10" stroke-linecap="round" />
+
+  <!-- Background -->
+  <rect width="500" height="375" rx="28" fill="url(#bgWaitSky)" />
+
+  <!-- Cozy Wall Wallpaper Stripes -->
+  <path d="M 50 0 L 50 375 M 150 0 L 150 375 M 250 0 L 250 375 M 350 0 L 350 375 M 450 0 L 450 375" stroke="#ea80fc" stroke-width="2" opacity="0.3" />
+
+  <!-- Cute Wall Clock -->
+  <g filter="url(#shadowWait)">
+    <circle cx="250" cy="115" r="65" fill="#ffffff" stroke="#ab47bc" stroke-width="8" />
+    <!-- Hour marks -->
+    <circle cx="250" cy="62" r="4" fill="#6a1b9a" />
+    <circle cx="303" cy="115" r="4" fill="#6a1b9a" />
+    <circle cx="250" cy="168" r="4" fill="#6a1b9a" />
+    <circle cx="197" cy="115" r="4" fill="#6a1b9a" />
+    <!-- Clock Center & Hands -->
+    <circle cx="250" cy="115" r="7" fill="#4a148c" />
+    <line x1="250" y1="115" x2="250" y2="72" stroke="#4a148c" stroke-width="6" stroke-linecap="round" />
+    <line x1="250" y1="115" x2="285" y2="115" stroke="#ab47bc" stroke-width="6" stroke-linecap="round" />
+    <!-- Swinging Pendulum -->
+    <line x1="250" y1="180" x2="230" y2="240" stroke="#ab47bc" stroke-width="4" />
+    <circle cx="230" cy="240" r="12" fill="#ffd54f" stroke="#ffb300" stroke-width="3" />
+  </g>
+
+  <!-- Cute Sitting Child Waiting Patiently -->
+  <g filter="url(#shadowWait)">
+    <!-- Floor Shadow -->
+    <ellipse cx="250" cy="335" rx="55" ry="12" fill="#ce93d8" opacity="0.5" />
+    <!-- Soft Cushion -->
+    <ellipse cx="250" cy="325" rx="60" ry="18" fill="#80deea" stroke="#00acc1" stroke-width="4" />
+
+    <!-- Legs Crossed -->
+    <path d="M 200 310 Q 250 335, 300 310" stroke="#ffcc80" stroke-width="14" stroke-linecap="round" fill="none" />
+
+    <!-- Torso / Yellow Sweater -->
+    <path d="M 220 250 C 220 230, 280 230, 280 250 L 275 310 L 225 310 Z" fill="#ffee58" stroke="#fbc02d" stroke-width="4" />
+
+    <!-- Cute Head Looking Up at Clock -->
+    <circle cx="250" cy="195" r="30" fill="#ffcc80" />
+    <!-- Rosy Cheeks -->
+    <circle cx="232" cy="205" r="6" fill="#ff8a80" opacity="0.7" />
+    <circle cx="268" cy="205" r="6" fill="#ff8a80" opacity="0.7" />
+    <!-- Big Eye looking up -->
+    <circle cx="240" cy="192" r="5" fill="#263238" />
+    <circle cx="239" cy="190" r="2" fill="#ffffff" />
+    <circle cx="260" cy="192" r="5" fill="#263238" />
+    <circle cx="259" cy="190" r="2" fill="#ffffff" />
+    <!-- Gentle Patient Smile -->
+    <path d="M 244 208 Q 250 213, 256 208" stroke="#d84315" stroke-width="3" fill="none" stroke-linecap="round" />
+
+    <!-- Hands resting under chin -->
+    <path d="M 235 220 Q 250 226, 265 220" stroke="#ffcc80" stroke-width="10" stroke-linecap="round" fill="none" />
+  </g>
 </svg>
