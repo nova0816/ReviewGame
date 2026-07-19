@@ -923,6 +923,7 @@ function initLevel() {
 
   if (currentDifficulty === 'listen') {
     document.getElementById('gameMain').classList.add('hidden');
+    if (matchMain) matchMain.classList.add('hidden');
     listenMain.classList.remove('hidden');
     
     const distractors = getRandomListenDistractors(currentLevelIndex);
@@ -933,9 +934,16 @@ function initLevel() {
     setTimeout(() => {
       speak(currentLevel.targetWord);
     }, 500);
+  } else if (currentDifficulty === 'match') {
+    document.getElementById('gameMain').classList.add('hidden');
+    listenMain.classList.add('hidden');
+    if (matchMain) matchMain.classList.remove('hidden');
+    
+    renderMatchStage();
   } else {
     document.getElementById('gameMain').classList.remove('hidden');
     listenMain.classList.add('hidden');
+    if (matchMain) matchMain.classList.add('hidden');
     
     // Reset fallback image state
     vocabImage.classList.remove('hidden');

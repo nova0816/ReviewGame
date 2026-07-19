@@ -742,6 +742,13 @@ body {
   box-shadow: 0 4px 0 #3498db;
 }
 
+.diff-tab.active[data-diff="match"] {
+  background: #f3e5f5;
+  border-color: #ab47bc;
+  color: #7b1fa2;
+  box-shadow: 0 4px 0 #ab47bc;
+}
+
 .diff-tab.active[data-diff="normal"] {
   background: #fef9e7;
   border-color: #f1c40f;
