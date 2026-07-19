@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 375" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgArriveSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#bbdefb" />
+      <stop offset="100%" stop-color="#e3f2fd" />
+    </linearGradient>
+    <linearGradient id="grassGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#a5d6a7" />
+      <stop offset="100%" stop-color="#66bb6a" />
+    </linearGradient>
+    <filter id="shadowArrive" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="4" flood-color="#263238" flood-opacity="0.2" />
+    </filter>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="500" height="375" rx="28" fill="url(#bgArriveSky)" />
+
+  <!-- Sun -->
+  <circle cx="420" cy="70" r="35" fill="#ffeb3b" opacity="0.9" />
+
+  <!-- School Lawn -->
+  <path d="M 0 220 Q 250 200, 500 220 L 500 375 L 0 375 Z" fill="url(#grassGrad)" />
+
+  <!-- Cute School Gate & Brick Pillars -->
+  <g filter="url(#shadowArrive)">
+    <rect x="50" y="100" width="45" height="180" rx="8" fill="#8d6e63" stroke="#5d4037" stroke-width="4" />
+    <rect x="405" y="100" width="45" height="180" rx="8" fill="#8d6e63" stroke="#5d4037" stroke-width="4" />
+    <!-- Brick detail -->
+    <line x1="50" y1="140" x2="95" y2="140" stroke="#5d4037" stroke-width="3" />
+    <line x1="50" y1="180" x2="95" y2="180" stroke="#5d4037" stroke-width="3" />
+    <line x1="50" y1="220" x2="95" y2="220" stroke="#5d4037" stroke-width="3" />
+    <line x1="405" y1="140" x2="450" y2="140" stroke="#5d4037" stroke-width="3" />
+    <line x1="405" y1="180" x2="450" y2="180" stroke="#5d4037" stroke-width="3" />
+    <line x1="405" y1="220" x2="450" y2="220" stroke="#5d4037" stroke-width="3" />
+    
+    <!-- Open Wrought Iron Gate -->
+    <path d="M 95 120 C 130 110, 160 130, 160 270 M 95 160 L 160 160 M 95 210 L 160 210" stroke="#37474f" stroke-width="6" fill="none" />
+    <path d="M 405 120 C 370 110, 340 130, 340 270 M 405 160 L 340 160 M 405 210 L 340 210" stroke="#37474f" stroke-width="6" fill="none" />
+  </g>
+
+  <!-- Cute Rounded Red Car Arriving -->
+  <g filter="url(#shadowArrive)">
+    <!-- Car Body -->
+    <path d="M 170 260 L 330 260 C 350 260, 360 240, 340 210 L 310 170 C 290 150, 210 150, 190 170 L 160 210 C 140 240, 150 260, 170 260 Z" fill="#ef5350" stroke="#c62828" stroke-width="5" />
+    <!-- Roof / Windows -->
+    <path d="M 195 175 L 305 175 L 325 210 L 175 210 Z" fill="#b3e5fc" stroke="#0288d1" stroke-width="4" />
+    <!-- Wheels -->
+    <circle cx="200" cy="265" r="22" fill="#37474f" />
+    <circle cx="200" cy="265" r="10" fill="#cfd8dc" />
+    <circle cx="300" cy="265" r="22" fill="#37474f" />
+    <circle cx="300" cy="265" r="10" fill="#cfd8dc" />
+    <!-- Headlight -->
+    <circle cx="155" cy="225" r="8" fill="#fff59d" />
+  </g>
+
+  <!-- Cute Parent Waving from Car / Gate -->
+  <g filter="url(#shadowArrive)">
+    <circle cx="230" cy="180" r="16" fill="#ffcc80" />
+    <circle cx="224" cy="178" r="3" fill="#263238" />
+    <circle cx="236" cy="178" r="3" fill="#263238" />
+    <path d="M 226 188 Q 230 193, 234 188" stroke="#d84315" stroke-width="2.5" fill="none" />
+    <!-- Waving Hand outside window -->
+    <path d="M 245 185 C 260 165, 270 155, 265 145" stroke="#ffcc80" stroke-width="7" stroke-linecap="round" fill="none" />
+    <circle cx="265" cy="140" r="6" fill="#ffcc80" />
+  </g>
+
+  <!-- Cute Child Running to Meet Parents -->
+  <g filter="url(#shadowArrive)">
+    <ellipse cx="110" cy="315" rx="20" ry="6" fill="#43a047" opacity="0.4" />
+    <!-- Body -->
+    <path d="M 95 260 L 125 260 L 120 305 L 100 305 Z" fill="#ab47bc" />
+    <!-- Legs running -->
+    <line x1="105" y1="305" x2="95" y2="330" stroke="#ffcc80" stroke-width="8" stroke-linecap="round" />
+    <line x1="115" y1="305" x2="130" y2="325" stroke="#ffcc80" stroke-width="8" stroke-linecap="round" />
+    <!-- Head -->
+    <circle cx="110" cy="235" r="20" fill="#ffcc80" />
+    <circle cx="103" cy="233" r="3" fill="#263238" />
+    <circle cx="117" cy="233" r="3" fill="#263238" />
+    <path d="M 106 243 Q 110 248, 114 243" stroke="#d84315" stroke-width="2.5" fill="none" />
+    <!-- Waving Arms -->
+    <path d="M 95 260 C 80 245, 75 235, 70 230" stroke="#ffcc80" stroke-width="7" stroke-linecap="round" fill="none" />
+  </g>
+</svg>
