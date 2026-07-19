@@ -294,13 +294,13 @@ const episodeData = {
         emoji: "🌊"
       },
       {
-        targetWord: "rocky",
-        statement: "A bumpy rocky beach",
-        words: ["A", "bumpy", "rocky", "beach"],
-        distractors: ["smooth", "sandy"],
-        sentenceWithBlank: "A bumpy _______ beach.",
-        image: "assets/ep3_rocky.png",
-        emoji: "🪨"
+        targetWord: "beach",
+        statement: "On this rocky beach",
+        words: ["On", "this", "rocky", "beach"],
+        distractors: ["grass", "room"],
+        sentenceWithBlank: "On this rocky _______.",
+        image: "assets/ep3_beach.png",
+        emoji: "🏖️"
       },
       {
         targetWord: "pool",
@@ -312,22 +312,22 @@ const episodeData = {
         emoji: "💧"
       },
       {
-        targetWord: "glittering",
-        statement: "Something is glittering bright",
-        words: ["Something", "is", "glittering", "bright"],
-        distractors: ["dark", "hidden"],
-        sentenceWithBlank: "Something is _______ bright.",
-        image: "assets/ep3_glitter.png",
-        emoji: "✨"
+        targetWord: "fish",
+        statement: "Poor little fish",
+        words: ["Poor", "little", "fish"],
+        distractors: ["bird", "frog"],
+        sentenceWithBlank: "Poor little _______.",
+        image: "assets/ep3_fish.png",
+        emoji: "🐟"
       },
       {
-        targetWord: "collection",
-        statement: "Make a big collection",
-        words: ["Make", "a", "big", "collection"],
-        distractors: ["mess", "drawing"],
-        sentenceWithBlank: "Make a big _______.",
-        image: "assets/ep3_collection.png",
-        emoji: "🧰"
+        targetWord: "water",
+        statement: "Pools of sea water",
+        words: ["Pools", "of", "sea", "water"],
+        distractors: ["milk", "juice"],
+        sentenceWithBlank: "Pools of sea _______.",
+        image: "assets/ep3_water.png",
+        emoji: "💧"
       },
       {
         targetWord: "bucket",
@@ -357,13 +357,13 @@ const episodeData = {
         emoji: "🤏"
       },
       {
-        targetWord: "sideways",
-        statement: "Walking sideways on sand",
-        words: ["Walking", "sideways", "on", "sand"],
-        distractors: ["backwards", "fast"],
-        sentenceWithBlank: "Walking _______ on sand.",
-        image: "assets/ep3_sideways.png",
-        emoji: "🦀"
+        targetWord: "ear",
+        statement: "Put shell to ear",
+        words: ["Put", "shell", "to", "ear"],
+        distractors: ["hand", "foot"],
+        sentenceWithBlank: "Put shell to _______.",
+        image: "assets/ep3_ear.png",
+        emoji: "👂"
       },
       {
         targetWord: "seashell",
@@ -375,22 +375,13 @@ const episodeData = {
         emoji: "🐚"
       },
       {
-        targetWord: "fossil",
-        statement: "Found an old fossil",
-        words: ["Found", "an", "old", "fossil"],
-        distractors: ["toy", "flower"],
-        sentenceWithBlank: "Found an old _______.",
-        image: "assets/ep3_fossil.png",
-        emoji: "🦴"
-      },
-      {
-        targetWord: "trapped",
-        statement: "Poor fish is trapped",
-        words: ["Poor", "fish", "is", "trapped"],
-        distractors: ["free", "flying"],
-        sentenceWithBlank: "Poor fish is _______.",
-        image: "assets/ep3_trapped.png",
-        emoji: "🐟"
+        targetWord: "rocky",
+        statement: "A bumpy rocky beach",
+        words: ["A", "bumpy", "rocky", "beach"],
+        distractors: ["smooth", "soft"],
+        sentenceWithBlank: "A bumpy _______ beach.",
+        image: "assets/ep3_rocky.png",
+        emoji: "🪨"
       },
       {
         targetWord: "rescue",
@@ -418,6 +409,15 @@ const episodeData = {
         sentenceWithBlank: "Something _______ inside pool.",
         image: "assets/ep3_special.png",
         emoji: "⭐"
+      },
+      {
+        targetWord: "sand",
+        statement: "Where is the sand",
+        words: ["Where", "is", "the", "sand"],
+        distractors: ["water", "grass"],
+        sentenceWithBlank: "Where is the _______?",
+        image: "assets/ep3_seaside.png",
+        emoji: "🏖️"
       }
     ]
   }
