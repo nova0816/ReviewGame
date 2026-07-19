@@ -280,6 +280,146 @@ const episodeData = {
         emoji: "👍"
       }
     ]
+  },
+  ep3: {
+    title: "PP S2 E10: Tide Pools",
+    levels: [
+      {
+        targetWord: "seaside",
+        statement: "Going to the seaside",
+        words: ["Going", "to", "the", "seaside"],
+        distractors: ["school", "mountain"],
+        sentenceWithBlank: "Going to the _______.",
+        image: "assets/ep3_seaside.png",
+        emoji: "🌊"
+      },
+      {
+        targetWord: "rocky",
+        statement: "A bumpy rocky beach",
+        words: ["A", "bumpy", "rocky", "beach"],
+        distractors: ["smooth", "sandy"],
+        sentenceWithBlank: "A bumpy _______ beach.",
+        image: "assets/ep3_rocky.png",
+        emoji: "🪨"
+      },
+      {
+        targetWord: "pool",
+        statement: "Little pools of water",
+        words: ["Little", "pools", "of", "water"],
+        distractors: ["rivers", "clouds"],
+        sentenceWithBlank: "Little _______ of water.",
+        image: "assets/ep3_pool.png",
+        emoji: "💧"
+      },
+      {
+        targetWord: "glittering",
+        statement: "Something is glittering bright",
+        words: ["Something", "is", "glittering", "bright"],
+        distractors: ["dark", "hidden"],
+        sentenceWithBlank: "Something is _______ bright.",
+        image: "assets/ep3_glitter.png",
+        emoji: "✨"
+      },
+      {
+        targetWord: "collection",
+        statement: "Make a big collection",
+        words: ["Make", "a", "big", "collection"],
+        distractors: ["mess", "drawing"],
+        sentenceWithBlank: "Make a big _______.",
+        image: "assets/ep3_collection.png",
+        emoji: "🧰"
+      },
+      {
+        targetWord: "bucket",
+        statement: "Put it in bucket",
+        words: ["Put", "it", "in", "bucket"],
+        distractors: ["pocket", "box"],
+        sentenceWithBlank: "Put it in _______.",
+        image: "assets/ep3_bucket.png",
+        emoji: "🪣"
+      },
+      {
+        targetWord: "crab",
+        statement: "See a little crab",
+        words: ["See", "a", "little", "crab"],
+        distractors: ["bird", "dog"],
+        sentenceWithBlank: "See a little _______.",
+        image: "assets/ep3_crab.png",
+        emoji: "🦀"
+      },
+      {
+        targetWord: "pinch",
+        statement: "Naughty crabs pinch pinch",
+        words: ["Naughty", "crabs", "pinch", "pinch"],
+        distractors: ["hug", "smile"],
+        sentenceWithBlank: "Naughty crabs _______ pinch.",
+        image: "assets/ep3_pinch.png",
+        emoji: "🤏"
+      },
+      {
+        targetWord: "sideways",
+        statement: "Walking sideways on sand",
+        words: ["Walking", "sideways", "on", "sand"],
+        distractors: ["backwards", "fast"],
+        sentenceWithBlank: "Walking _______ on sand.",
+        image: "assets/ep3_sideways.png",
+        emoji: "🦀"
+      },
+      {
+        targetWord: "seashell",
+        statement: "Listen to a seashell",
+        words: ["Listen", "to", "a", "seashell"],
+        distractors: ["stone", "leaf"],
+        sentenceWithBlank: "Listen to a _______.",
+        image: "assets/ep3_seashell.png",
+        emoji: "🐚"
+      },
+      {
+        targetWord: "fossil",
+        statement: "Found an old fossil",
+        words: ["Found", "an", "old", "fossil"],
+        distractors: ["toy", "flower"],
+        sentenceWithBlank: "Found an old _______.",
+        image: "assets/ep3_fossil.png",
+        emoji: "🦴"
+      },
+      {
+        targetWord: "trapped",
+        statement: "Poor fish is trapped",
+        words: ["Poor", "fish", "is", "trapped"],
+        distractors: ["free", "flying"],
+        sentenceWithBlank: "Poor fish is _______.",
+        image: "assets/ep3_trapped.png",
+        emoji: "🐟"
+      },
+      {
+        targetWord: "rescue",
+        statement: "Rescue the little fish",
+        words: ["Rescue", "the", "little", "fish"],
+        distractors: ["Drop", "Hide"],
+        sentenceWithBlank: "_______ the little fish.",
+        image: "assets/ep3_rescue.png",
+        emoji: "🛟"
+      },
+      {
+        targetWord: "pretend",
+        statement: "Pretend to be crabs",
+        words: ["Pretend", "to", "be", "crabs"],
+        distractors: ["Forget", "Sleep"],
+        sentenceWithBlank: "_______ to be crabs.",
+        image: "assets/ep3_pretend.png",
+        emoji: "🎭"
+      },
+      {
+        targetWord: "special",
+        statement: "Something special inside pool",
+        words: ["Something", "special", "inside", "pool"],
+        distractors: ["boring", "normal"],
+        sentenceWithBlank: "Something _______ inside pool.",
+        image: "assets/ep3_special.png",
+        emoji: "⭐"
+      }
+    ]
   }
 };
 
@@ -502,6 +642,7 @@ function animateConfetti() {
 const episodeScreen = document.getElementById('episodeScreen');
 const episodeCard1 = document.getElementById('episodeCard1');
 const episodeCard2 = document.getElementById('episodeCard2');
+const episodeCard3 = document.getElementById('episodeCard3');
 const selectedEpisodeTitle = document.getElementById('selectedEpisodeTitle');
 const startScreen = document.getElementById('startScreen');
 const backToEpisodesBtn = document.getElementById('backToEpisodesBtn');
@@ -973,6 +1114,15 @@ if (episodeCard2) {
   episodeCard2.addEventListener('click', () => {
     playSound('click');
     selectEpisode('ep2');
+    episodeScreen.classList.add('hidden');
+    startScreen.classList.remove('hidden');
+  });
+}
+
+if (episodeCard3) {
+  episodeCard3.addEventListener('click', () => {
+    playSound('click');
+    selectEpisode('ep3');
     episodeScreen.classList.add('hidden');
     startScreen.classList.remove('hidden');
   });
