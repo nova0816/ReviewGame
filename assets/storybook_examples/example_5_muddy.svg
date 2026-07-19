@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 375" width="100%" height="100%">
+  <defs>
+    <linearGradient id="muddyBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#c8e6c9" />
+      <stop offset="50%" stop-color="#a5d6a7" />
+      <stop offset="100%" stop-color="#81c784" />
+    </linearGradient>
+    <linearGradient id="mudGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#795548" />
+      <stop offset="100%" stop-color="#4e342e" />
+    </linearGradient>
+    <filter id="shadow5" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="4" flood-color="#3e2723" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <rect width="500" height="375" rx="28" fill="url(#muddyBg)" />
+
+  <!-- Green Grass Hills -->
+  <path d="M 0 160 Q 250 120, 500 170 L 500 375 L 0 375 Z" fill="#66bb6a" />
+
+  <!-- Big Muddy Puddle -->
+  <ellipse cx="250" cy="290" rx="180" ry="55" fill="url(#mudGrad)" stroke="#3e2723" stroke-width="4" />
+  <ellipse cx="220" cy="280" rx="140" ry="35" fill="#5d4037" opacity="0.6" />
+
+  <!-- Mud Splashes Flying in Air -->
+  <g fill="#5d4037">
+    <ellipse cx="140" cy="220" rx="10" ry="6" transform="rotate(-30 140 220)" />
+    <ellipse cx="120" cy="190" rx="7" ry="4" transform="rotate(-40 120 190)" />
+    <ellipse cx="170" cy="180" rx="12" ry="7" transform="rotate(-20 170 180)" />
+    
+    <ellipse cx="360" cy="220" rx="10" ry="6" transform="rotate(30 360 220)" />
+    <ellipse cx="380" cy="190" rx="7" ry="4" transform="rotate(40 380 190)" />
+    <ellipse cx="330" cy="180" rx="12" ry="7" transform="rotate(20 330 180)" />
+  </g>
+
+  <!-- Cute Cartoon Piglet Jumping in Mud -->
+  <g filter="url(#shadow5)">
+    <!-- Yellow Rainboots -->
+    <path d="M 195 250 L 220 250 L 225 285 L 190 285 Z" fill="#ffeb3b" stroke="#fbc02d" stroke-width="3" />
+    <path d="M 280 250 L 305 250 L 310 285 L 275 285 Z" fill="#ffeb3b" stroke="#fbc02d" stroke-width="3" />
+
+    <!-- Cute Pink Piglet Body -->
+    <ellipse cx="250" cy="190" rx="45" ry="55" fill="#f8bbd0" stroke="#f48fb1" stroke-width="4" />
+
+    <!-- Cute Pig Tail -->
+    <path d="M 295 210 Q 315 210, 310 225 T 320 220" stroke="#f48fb1" stroke-width="4" stroke-linecap="round" fill="none" />
+
+    <!-- Cute Arms Raised in Joy -->
+    <path d="M 205 180 C 180 160, 170 140, 160 135" stroke="#f8bbd0" stroke-width="12" stroke-linecap="round" fill="none" />
+    <path d="M 295 180 C 320 160, 330 140, 340 135" stroke="#f8bbd0" stroke-width="12" stroke-linecap="round" fill="none" />
+
+    <!-- Cute Head & Snout -->
+    <circle cx="250" cy="130" r="38" fill="#f8bbd0" stroke="#f48fb1" stroke-width="4" />
+    <!-- Ears -->
+    <polygon points="215,105 230,80 238,105" fill="#f48fb1" stroke="#e91e63" stroke-width="2" />
+    <polygon points="285,105 270,80 262,105" fill="#f48fb1" stroke="#e91e63" stroke-width="2" />
+    <!-- Rosy Cheeks -->
+    <circle cx="222" cy="138" r="7" fill="#ff8a80" opacity="0.8" />
+    <circle cx="278" cy="138" r="7" fill="#ff8a80" opacity="0.8" />
+    <!-- Big Happy Eyes -->
+    <circle cx="233" cy="122" r="5" fill="#263238" />
+    <circle cx="231" cy="120" r="2" fill="#ffffff" />
+    <circle cx="267" cy="122" r="5" fill="#263238" />
+    <circle cx="265" cy="120" r="2" fill="#ffffff" />
+
+    <!-- Oval Pink Snout -->
+    <ellipse cx="250" cy="135" rx="14" ry="10" fill="#f48fb1" stroke="#e91e63" stroke-width="2" />
+    <circle cx="244" cy="135" r="3" fill="#880e4f" />
+    <circle cx="256" cy="135" r="3" fill="#880e4f" />
+  </g>
+</svg>

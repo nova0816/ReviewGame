@@ -195,7 +195,7 @@ const episodeData = {
         words: ["Parents", "have", "all", "arrived"],
         distractors: ["left", "slept"],
         sentenceWithBlank: "Parents have all _______.",
-        image: "assets/ep2_arrive.svg",
+        image: "assets/ep2_arrive.png",
         emoji: "🚗"
       },
       {
@@ -204,7 +204,7 @@ const episodeData = {
         words: ["Find", "a", "hidden", "treasure"],
         distractors: ["trash", "stone"],
         sentenceWithBlank: "Find a hidden _______.",
-        image: "assets/ep2_treasure.svg",
+        image: "assets/ep2_treasure.png",
         emoji: "🏴‍☠️"
       },
       {
@@ -213,7 +213,7 @@ const episodeData = {
         words: ["I", "cannot", "wait", "long"],
         distractors: ["run", "sleep"],
         sentenceWithBlank: "I cannot _______ long.",
-        image: "assets/ep2_wait.svg",
+        image: "assets/ep2_wait.png",
         emoji: "⏰"
       },
       {
@@ -222,7 +222,7 @@ const episodeData = {
         words: ["Record", "a", "special", "message"],
         distractors: ["Delete", "Forget"],
         sentenceWithBlank: "_______ a special message.",
-        image: "assets/ep2_record.svg",
+        image: "assets/ep2_record.png",
         emoji: "📹"
       },
       {
@@ -231,7 +231,7 @@ const episodeData = {
         words: ["Going", "on", "a", "holiday"],
         distractors: ["school", "work"],
         sentenceWithBlank: "Going on a _______.",
-        image: "assets/ep2_holiday.svg",
+        image: "assets/ep2_holiday.png",
         emoji: "🏖️"
       },
       {
@@ -240,7 +240,7 @@ const episodeData = {
         words: ["Remain", "in", "the", "ground"],
         distractors: ["Fly", "Move"],
         sentenceWithBlank: "_______ in the ground.",
-        image: "assets/ep2_remain.svg",
+        image: "assets/ep2_remain.png",
         emoji: "🪵"
       },
       {

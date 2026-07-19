@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 375" width="100%" height="100%">
+  <defs>
+    <linearGradient id="sky2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4fc3f7" />
+      <stop offset="100%" stop-color="#e0f7fa" />
+    </linearGradient>
+    <linearGradient id="sea2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00bcd4" />
+      <stop offset="100%" stop-color="#00838f" />
+    </linearGradient>
+    <linearGradient id="sand2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffe082" />
+      <stop offset="100%" stop-color="#ffca28" />
+    </linearGradient>
+    <filter id="shadow2" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="4" flood-color="#4e342e" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <rect width="500" height="375" rx="28" fill="url(#sky2)" />
+
+  <!-- Glowing Sun -->
+  <circle cx="80" cy="70" r="38" fill="#ffeb3b" />
+  <circle cx="80" cy="70" r="30" fill="#fbc02d" />
+
+  <!-- Clouds -->
+  <path d="M 240 60 C 240 48, 258 40, 275 48 C 285 40, 305 44, 310 56 C 322 56, 328 68, 320 76 Z" fill="#ffffff" opacity="0.9" />
+
+  <!-- Ocean Waves -->
+  <path d="M 0 170 Q 125 150, 250 170 T 500 170 L 500 230 L 0 230 Z" fill="url(#sea2)" />
+  <path d="M 0 190 Q 60 180, 120 190 T 240 190 T 360 190 T 480 190" stroke="#ffffff" stroke-width="4" fill="none" opacity="0.8" />
+
+  <!-- Beach Sand -->
+  <path d="M 0 215 Q 250 195, 500 225 L 500 375 L 0 375 Z" fill="url(#sand2)" />
+
+  <!-- Sandcastle -->
+  <g filter="url(#shadow2)">
+    <rect x="250" y="245" width="120" height="75" rx="8" fill="#ffd54f" stroke="#ffb300" stroke-width="4" />
+    <rect x="280" y="195" width="60" height="55" rx="6" fill="#ffe082" stroke="#ffb300" stroke-width="4" />
+    <path d="M 270 195 L 310 150 L 350 195 Z" fill="#ff7043" stroke="#d84315" stroke-width="3" />
+    <line x1="310" y1="150" x2="310" y2="120" stroke="#5d4037" stroke-width="4" stroke-linecap="round" />
+    <path d="M 310 120 L 340 132 L 310 144 Z" fill="#ff1744" />
+  </g>
+
+  <!-- Cute Character with Ice Cream -->
+  <g filter="url(#shadow2)">
+    <!-- Shadow -->
+    <ellipse cx="130" cy="335" rx="30" ry="8" fill="#d7ccc8" />
+    <!-- Body -->
+    <path d="M 105 250 C 105 240, 155 240, 155 250 L 150 310 L 110 310 Z" fill="#29b6f6" stroke="#0288d1" stroke-width="3" />
+    <path d="M 107 265 L 153 265 M 108 285 L 152 285" stroke="#ffffff" stroke-width="4" />
+    <!-- Cute Head -->
+    <circle cx="130" cy="195" r="34" fill="#ffcc80" />
+    <circle cx="110" cy="205" r="7" fill="#ff8a80" opacity="0.7" />
+    <circle cx="150" cy="205" r="7" fill="#ff8a80" opacity="0.7" />
+    <circle cx="117" cy="195" r="6" fill="#263238" />
+    <circle cx="115" cy="193" r="2" fill="#ffffff" />
+    <circle cx="143" cy="195" r="6" fill="#263238" />
+    <circle cx="141" cy="193" r="2" fill="#ffffff" />
+    <path d="M 122 212 Q 130 222, 138 212" stroke="#d84315" stroke-width="3.5" fill="none" stroke-linecap="round" />
+
+    <!-- Big Strawberry Ice Cream Cone in Hand -->
+    <path d="M 160 250 C 175 240, 185 245, 185 255" stroke="#ffcc80" stroke-width="10" stroke-linecap="round" fill="none" />
+    <polygon points="180,265 195,265 187,295" fill="#d7ccc8" stroke="#8d6e63" stroke-width="2" />
+    <circle cx="187" cy="255" r="14" fill="#ff4081" />
+    <circle cx="187" cy="245" r="11" fill="#ff80ab" />
+  </g>
+
+  <!-- Palm Tree -->
+  <g filter="url(#shadow2)">
+    <path d="M 430 375 C 420 280, 450 180, 420 100" stroke="#795548" stroke-width="14" stroke-linecap="round" fill="none" />
+    <path d="M 420 100 C 350 60, 290 90, 260 130 C 300 120, 360 115, 420 100 Z" fill="#4caf50" />
+    <path d="M 420 100 C 460 30, 490 40, 500 60 C 480 70, 440 85, 420 100 Z" fill="#66bb6a" />
+  </g>
+</svg>
