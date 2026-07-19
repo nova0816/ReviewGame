@@ -5,7 +5,7 @@ This Standard Operating Procedure (SOP) documents the complete, consolidated end
 ---
 
 ## 📋 Table of Contents
-1. **Phase 1: Video Transcript & CEFR A1/A2 Word Frequency Filtering**
+1. **Phase 1: Video Transcript & CEFR A1/A2 Word Selection Rule**
 2. **Phase 2: Concreteness & Abstractness Classification Framework**
 3. **Phase 3: 3D Pixar Cartoon & Multi-Panel Comic Generation**
 4. **Phase 4: Human-in-the-Loop Abstract Review Mechanism**
@@ -15,24 +15,18 @@ This Standard Operating Procedure (SOP) documents the complete, consolidated end
 
 ---
 
-## 🔬 Phase 1: Video Transcript & CEFR A1/A2 Word Frequency Filtering
+## 🔬 Phase 1: Video Transcript & CEFR A1/A2 Word Selection Rule
 
-To ensure words are age-appropriate and easy to learn for a 7-year-old ESL student:
+To ensure words are 100% authentic to the video episode while remaining age-appropriate for a 7-year-old ESL student:
 
 1. **Transcript Fetching:** Download episode transcripts using `youtube-transcript-api` in Python.
-2. **Scientific CEFR A1/A2 Frequency Filter:**
-   - **Allowed Vocabulary:** **CEFR A1** (Top 1,000 words) and **CEFR A2** (Top 2,500 words).
-   - **Target Age of Acquisition (AoA):** 3.0 to 6.5 years.
-   - **Rejection Rule:** Automatically reject **CEFR B1, B2, C1, C2** words (e.g. *fossil*, *glittering*, *sideways*, *collection*, *remain*).
-   - **Synonym Replacement:** Replace rejected words with high-frequency A1/A2 synonyms from the transcript:
-     - *Fossil (B2)* ➔ **Dinosaur (A1)** or **Stone (A1)**
-     - *Glittering (B1)* ➔ **Shine (A1)** or **Gold (A1)**
-     - *Sideways (B1)* ➔ **Walk (A1)**
-     - *Collection (B1)* ➔ **Find (A1)** or **Box (A1)**
-     - *Trapped (B1)* ➔ **Stuck (A1)**
+2. **Strict A1/A2 Selection (No Word Replacements):**
+   - Filter the transcript words to identify those belonging to **CEFR A1** (Top 1,000 words) and **CEFR A2** (Top 2,500 words).
+   - **CRITICAL RULE:** **Do NOT modify, paraphrase, or replace words with outside synonyms.** Pick 15 target words **directly spoken in the episode** that pass the CEFR A1/A2 filter.
+   - **Automatic Rejection:** Ignore any B1, B2, C1, C2 words spoken in the video episode during word selection.
 3. **Curate 15 Target Vocabulary Items:**
-   - Target Word (CEFR A1/A2)
-   - Full Sentence Statement (for Easy/Hard modes)
+   - Target Word (CEFR A1/A2 directly from show)
+   - Full Sentence Statement (authentic to show)
    - Words Array + Distractor Words Array
    - Fill-in-the-Blank Sentence (for Normal mode)
    - Child-friendly emoji and pronunciation guide
@@ -101,7 +95,7 @@ When the user triggers **"generate next 2 episodes"**:
 
 1. **Progress Tracker:** Read `episode_tracker.json` to identify the next 2 unbuilt episodes.
 2. **Episode A (Immediate Batch):**
-   - Run CEFR A1/A2 filter on transcript.
+   - Extract transcript and select 15 CEFR A1/A2 words directly spoken in the episode (no word replacements).
    - Generate 3D Pixar PNGs and 2-panel abstract comics.
    - Unlock card on `index.html`, update `app.js`, and push live to GitHub.
 3. **Episode B (Automated Schedule Batch):**
