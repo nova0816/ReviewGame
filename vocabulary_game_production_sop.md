@@ -1,108 +1,109 @@
-# 📚 Episode Vocabulary Game Production SOP & Blueprint
+# 📚 Episode Vocabulary Game Production SOP & Blueprint (Consolidated Edition)
 
-This Standard Operating Procedure (SOP) documents the complete, step-by-step workflow for extracting vocabulary from video episodes, classifying words by concreteness, reviewing abstract comic illustrations with a human-in-the-loop approval mechanism, building the game codebase, and deploying to GitHub.
+This Standard Operating Procedure (SOP) documents the complete, consolidated end-to-end workflow for batch producing interactive vocabulary games for 7-year-old ESL learners.
 
 ---
 
 ## 📋 Table of Contents
-1. **Phase 1: Video Transcript & Vocabulary Extraction**
+1. **Phase 1: Video Transcript & CEFR A1/A2 Word Frequency Filtering**
 2. **Phase 2: Concreteness & Abstractness Classification Framework**
-3. **Phase 3: Visual Concept Generation & Human Approval Mechanism (Abstract Words)**
-4. **Phase 4: Game Architecture & Code Construction**
-5. **Phase 5: Rebranding & Copyright Compliance**
-6. **Phase 6: Deployment & GitHub Publishing SOP**
+3. **Phase 3: 3D Pixar Cartoon & Multi-Panel Comic Generation**
+4. **Phase 4: Human-in-the-Loop Abstract Review Mechanism**
+5. **Phase 5: Game Architecture & Multi-Episode Engine**
+6. **Phase 6: Rebranding & Copyright Compliance**
+7. **Phase 7: Automated Batch Engine & GitHub Publishing SOP**
 
 ---
 
-## 🎬 Phase 1: Video Transcript & Vocabulary Extraction
-1. **Fetch Transcript:** Use `youtube-transcript-api` in Python with the video ID (e.g. `b6KvEcCy2IQ`).
-   ```python
-   from youtube_transcript_api import YouTubeTranscriptApi
-   api = YouTubeTranscriptApi()
-   transcript = api.fetch("VIDEO_ID")
-   ```
-2. **Curate 15 Target Words:**
-   - Target Age: 7-year-old ESL student.
-   - Mix of Word Types: Nouns, Verbs, Adjectives, Expressions.
-   - For each word, define:
-     - Target Word
-     - Full Statement (for Easy/Hard unscramble mode)
-     - Words array + Distractor words array
-     - Fill-in-the-Blank Sentence (for Normal mode)
-     - Simplified Child-Friendly Definition & Pronunciation
+## 🔬 Phase 1: Video Transcript & CEFR A1/A2 Word Frequency Filtering
+
+To ensure words are age-appropriate and easy to learn for a 7-year-old ESL student:
+
+1. **Transcript Fetching:** Download episode transcripts using `youtube-transcript-api` in Python.
+2. **Scientific CEFR A1/A2 Frequency Filter:**
+   - **Allowed Vocabulary:** **CEFR A1** (Top 1,000 words) and **CEFR A2** (Top 2,500 words).
+   - **Target Age of Acquisition (AoA):** 3.0 to 6.5 years.
+   - **Rejection Rule:** Automatically reject **CEFR B1, B2, C1, C2** words (e.g. *fossil*, *glittering*, *sideways*, *collection*, *remain*).
+   - **Synonym Replacement:** Replace rejected words with high-frequency A1/A2 synonyms from the transcript:
+     - *Fossil (B2)* ➔ **Dinosaur (A1)** or **Stone (A1)**
+     - *Glittering (B1)* ➔ **Shine (A1)** or **Gold (A1)**
+     - *Sideways (B1)* ➔ **Walk (A1)**
+     - *Collection (B1)* ➔ **Find (A1)** or **Box (A1)**
+     - *Trapped (B1)* ➔ **Stuck (A1)**
+3. **Curate 15 Target Vocabulary Items:**
+   - Target Word (CEFR A1/A2)
+   - Full Sentence Statement (for Easy/Hard modes)
+   - Words Array + Distractor Words Array
+   - Fill-in-the-Blank Sentence (for Normal mode)
+   - Child-friendly emoji and pronunciation guide
 
 ---
 
 ## 🧠 Phase 2: Concreteness & Abstractness Classification Framework
 
-Before creating visual illustrations, evaluate all 15 words using the **3-Tier Psycholinguistic Concreteness Scale**:
+Evaluate all 15 curated A1/A2 words using the **3-Tier Psycholinguistic Concreteness Scale**:
 
 | Tier | Definition | Visual Strategy | Examples |
 | :--- | :--- | :--- | :--- |
-| **Level 1: Highly Concrete** | Direct physical objects, body actions, or sensory states. | **Single Vector Photo/Illustration** | *Scarf, Pond, Muddy, Shake* |
-| **Level 2: Semi-Concrete** | Environmental climate, posture, or relative physical properties. | **Single Vector Photo** (with comparative/sensory cues) | *Autumn, Windy, Freezing, Heating, Thin, Heavy, Lean* |
-| **Level 3: Abstract** | Cognitive mental states, subjective preferences, measurements, compound idioms. | **Multi-Panel (2-3 Panel) Comic Strip + Dual-Coding** | *Suppose, Favorite, Weight, Stroke of luck* |
+| **Level 1: Highly Concrete** | Direct physical objects, body actions, or sensory states. | **Single 3D Pixar Cartoon PNG** | *Rocket, Crab, Beach, Bucket, Fish, Shell* |
+| **Level 2: Semi-Concrete** | Climate, posture, or relative physical properties with sensory cues. | **Single 3D Pixar Cartoon PNG** | *Shine, Walk, Stuck, Dig, Grow* |
+| **Level 3: Abstract** | Cognitive mental states, preferences, measurements, compound idioms. | **Multi-Panel (2-3 Panel) Comic Strip + Dual-Coding** | *Future, Remember, Pretend, Rescue, Special* |
 
 ---
 
-## 🎨 Phase 3: Abstract Words Reviewing Mechanism (Human-in-the-Loop)
+## 🎨 Phase 3: 3D Pixar Cartoon & Multi-Panel Comic Generation
 
-To ensure abstract concepts are accurately depicted for a 7-year-old before writing code:
+**Quality Rule:** Use **100% 3D Pixar/Disney style PNG cartoon illustrations**. Do not use flat vector drawings.
 
-1. **Design 2-Panel Comic Prompts:**
-   - **Panel 1 (Setup/Context):** Show the initial situation or trigger (e.g. falling into leaves, looking at multiple toys, a thin branch holding a bird, wind blowing a hat).
-   - **Panel 2 (Abstract Concept / Outcome):** Show the abstract resolution (e.g. realizing it's funny, picking the teddy bear with glowing hearts, an elephant bending the branch under heavy weight, hat landing safely in a net with a clover).
-2. **Generate Images via AI:**
-   - Use image generation tool with prompt structured as: `"A 2-panel cartoon comic strip for kids. Left panel: [Setup]. Right panel: [Outcome]. Bright colorful vector art, comic panels, no text."`
-3. **Create Review Artifact (`abstract_comics_review.md`):**
-   - Embed all generated comic images.
-   - Outline the story concept for each panel.
-   - **CRITICAL STEP:** **STOP and wait for user/parent approval** before revising game source code.
+1. **Concrete Words (Single 3D Pixar PNG):**
+   - Prompt pattern: `"Charming 3D Pixar style cartoon illustration of [subject], warm lighting, cute character design, 3D render, highly detailed, no text."`
+2. **Abstract Words (2-Panel Comic Strips):**
+   - Prompt pattern: `"A 2-panel cartoon comic strip for kids. Left panel: [Setup/Trigger]. Right panel: [Abstract Resolution/Feeling]. Bright colorful vector art, comic panels, no text."`
 
 ---
 
-## 💻 Phase 4: Game Architecture & Code Construction
+## 🔍 Phase 4: Human-in-the-Loop Abstract Review Mechanism
 
-1. **Landing Page Menu (Multi-Episode Support):**
-   - Top-level `episodeScreen`: Grid of Episode Cards (e.g., Active Card: *PP S2 E8 - Autumn Wind*, Locked Cards: *Coming Soon!*).
-   - Smooth navigation: Landing Page ➔ Stage/Level Selector ➔ Gameplay Interface.
-2. **Four Educational Game Modes:**
-   - **Easy Mode:** Unscramble the full sentence with voice button support.
-   - **Listen Mode:** Tap the matching picture card from 3 choices upon hearing the spoken word.
-   - **Normal Mode (Fill-in-the-Blank):** Real grammar review where the child chooses the target word to complete a sentence (e.g., *"I _______ it is funny."*).
-   - **Hard Mode:** Unscramble sentence without audio guides.
-3. **Audio & Audio-Visual Feedback:**
-   - Web Audio API oscillators for click, correct, error, and victory sounds.
-   - Web Speech Synthesis (`SpeechSynthesisUtterance`) for voice pronunciation.
-   - Confetti animation canvas on level/stage completion.
+Before revising game source code for an episode:
+1. Generate the 4 multi-panel comic strips for Level 3 abstract words.
+2. Render a review artifact (`epX_abstract_comics_review.md`) displaying the comic strips and story panel descriptions.
+3. Pause for user/parent review and feedback.
 
 ---
 
-## ⚖️ Phase 5: Rebranding & Copyright Compliance Checklist
+## 💻 Phase 5: Game Architecture & Multi-Episode Engine
 
-Before publishing to the internet:
-- [x] Rename episode titles to generic names or abbreviated codes (e.g. *"PP S2 E8"* instead of full branded show names).
-- [x] Replace episode title subtitles with generic descriptions (e.g., *"Autumn Wind"* instead of official episode titles).
-- [x] Ensure all character names in level statements are replaced with generic terms (*"child"*, *"dad"*, *"tree"*).
-- [x] Run automated script search to confirm **0 occurrences** of protected brand names in the repository.
+1. **Multi-Episode Database (`app.js`):**
+   - Central `episodeData` object containing `ep1`, `ep2`, `ep3`, `ep4`, etc.
+   - Dynamic episode selector function (`selectEpisode(epKey)`).
+2. **Landing Page Episode Menu (`index.html`):**
+   - Interactive Episode Grid with episode cards (`episodeCard1`, `episodeCard2`, `episodeCard3`).
+   - Visual status badges (*Active 🟢* vs *Locked 🔴*).
+3. **4 Interactive Difficulty Modes:**
+   - **Easy Mode:** Sentence unscramble with voice guidance button.
+   - **Listen Mode:** Tap matching picture card upon hearing spoken word.
+   - **Normal Mode:** Fill-in-the-blank grammar review.
+   - **Hard Mode:** Sentence unscramble without voice helpers.
 
 ---
 
-## 🚀 Phase 6: Deployment & GitHub Publishing SOP
+## ⚖️ Phase 6: Rebranding & Copyright Compliance
 
-1. **Git Initialization:**
-   ```bash
-   git init
-   ```
-2. **Add `.gitignore`:** Ignore `.agents/`, `*.log`, `.system_generated/`, `/scratch/`.
-3. **Commit & Set Remote:**
-   ```bash
-   git add .
-   git commit -m "Initial commit of Episode Game"
-   git branch -M main
-   git remote add origin https://<PAT_TOKEN>@github.com/<USERNAME>/<REPO_NAME>.git
-   git push -u origin main
-   ```
-4. **Enable GitHub Pages:**
-   - GitHub ➔ Settings ➔ Pages ➔ Source: `Deploy from a branch` ➔ Branch: `main` (`/root`) ➔ Save.
-   - Live URL: `https://<USERNAME>.github.io/<REPO_NAME>/`
+- Use generic code titles (e.g. *PP S2 E8*, *PP S2 E9*, *PP S2 E10*).
+- Replace trademarked subtitles with generic descriptive titles (*Autumn Wind, Time Treasure, Tide Pools, Eco Clean*).
+- Ensure 0 occurrences of protected brand names exist in `.html`, `.js`, or `.css` files.
+
+---
+
+## 🚀 Phase 7: Automated Batch Engine ("Generate Next 2 Episodes")
+
+When the user triggers **"generate next 2 episodes"**:
+
+1. **Progress Tracker:** Read `episode_tracker.json` to identify the next 2 unbuilt episodes.
+2. **Episode A (Immediate Batch):**
+   - Run CEFR A1/A2 filter on transcript.
+   - Generate 3D Pixar PNGs and 2-panel abstract comics.
+   - Unlock card on `index.html`, update `app.js`, and push live to GitHub.
+3. **Episode B (Automated Schedule Batch):**
+   - Set background timer via `schedule` tool for the 4-hour API quota reset mark (`CronExpression`).
+   - Automatically execute Episode B generation, build files, and push to GitHub hands-free.
