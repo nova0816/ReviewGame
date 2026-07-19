@@ -83,6 +83,7 @@
         <div class="difficulty-tabs">
           <button class="diff-tab active" id="diffEasy" data-diff="easy" aria-label="Easy Stage">Easy 🟢</button>
           <button class="diff-tab" id="diffListen" data-diff="listen" aria-label="Listen Stage">Listen 🔵</button>
+          <button class="diff-tab" id="diffMatch" data-diff="match" aria-label="Match Stage">Match 🧩</button>
           <button class="diff-tab" id="diffNormal" data-diff="normal" aria-label="Normal Stage">Normal 🟡</button>
           <button class="diff-tab" id="diffHard" data-diff="hard" aria-label="Hard Stage">Hard 🔴</button>
         </div>
@@ -209,6 +210,27 @@
         </div>
         <button class="action-btn hidden" id="listenNextLevelBtn">Next Level ➔</button>
       </div>
+    <!-- Match Stage Workspace (shown in Match mode) -->
+    <div class="match-main hidden" id="matchMain">
+      <div class="match-header">
+        <div class="match-instructions">🧩 Tap the matching word card!</div>
+        <div class="match-mistakes-badge" id="matchMistakesBadge">Mistakes: 0 / 15 ⚠️</div>
+      </div>
+
+      <div class="match-pic-container">
+        <img id="matchPicImg" src="assets/autumn.png" alt="Target picture" class="match-pic-img">
+      </div>
+
+      <div class="match-word-grid" id="matchWordGrid">
+        <!-- Populated dynamically by app.js -->
+      </div>
+
+      <div class="action-row" style="width: 100%; max-width: 900px; margin-top: 10px;">
+        <div class="message-banner hidden" id="matchMessageBanner" style="margin-right: auto;">
+          <span class="message-text" id="matchMessageText">Great job! 🎉</span>
+        </div>
+        <button class="action-btn hidden" id="matchNextLevelBtn">Next Level ➔</button>
+      </div>
     </div>
   </div>
 
@@ -217,7 +239,7 @@
     <div class="modal-content">
       <div class="trophy-bounce">🏆</div>
       <h2 class="modal-title">Vocabulary Master!</h2>
-      <p class="modal-subtitle">You completed all 15 words from PP S2 E8! You are amazing! 🌟</p>
+      <p class="modal-subtitle">You completed all 15 words! You are amazing! 🌟</p>
       
       <div class="stars-summary">
         <span class="star-spin">⭐</span>
@@ -227,6 +249,16 @@
 
       <button class="action-btn reset-btn" id="playAgainBtn">Play Again 🔁</button>
       <button class="action-btn reset-btn" id="victoryMenuBtn" style="margin-top: 12px; background: linear-gradient(135deg, #7e57c2 0%, #5e35b1 100%); box-shadow: 0 6px 12px rgba(94, 53, 177, 0.3), inset 0 -4px 0 rgba(0, 0, 0, 0.2);">Main Menu 🏠</button>
+    </div>
+  </div>
+
+  <!-- Match Failure Overlay Modal (Mistakes > 15) -->
+  <div class="modal-overlay hidden" id="matchFailModal">
+    <div class="modal-content">
+      <div class="trophy-bounce">⚠️</div>
+      <h2 class="modal-title">Too Many Mistakes!</h2>
+      <p class="modal-subtitle">You made more than 15 mistakes. Let's try matching again from Level 1!</p>
+      <button class="action-btn reset-btn" id="matchRestartBtn">Try Again 🔁</button>
     </div>
   </div>
 

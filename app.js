@@ -432,6 +432,8 @@ let selectedWords = [];
 let soundMuted = false;
 let isCurrentLevelSolved = false;
 let currentDifficulty = 'easy';
+let matchMistakeCount = 0;
+const MAX_MATCH_MISTAKES = 15;
 let listenChoicesMemo = [];
 let levelChoicesMemo = [];
 
@@ -675,6 +677,16 @@ const listenReplayBtn = document.getElementById('listenReplayBtn');
 const listenMessageBanner = document.getElementById('listenMessageBanner');
 const listenMessageText = document.getElementById('listenMessageText');
 const listenNextLevelBtn = document.getElementById('listenNextLevelBtn');
+const diffMatch = document.getElementById('diffMatch');
+const matchMain = document.getElementById('matchMain');
+const matchMistakesBadge = document.getElementById('matchMistakesBadge');
+const matchPicImg = document.getElementById('matchPicImg');
+const matchWordGrid = document.getElementById('matchWordGrid');
+const matchMessageBanner = document.getElementById('matchMessageBanner');
+const matchMessageText = document.getElementById('matchMessageText');
+const matchNextLevelBtn = document.getElementById('matchNextLevelBtn');
+const matchFailModal = document.getElementById('matchFailModal');
+const matchRestartBtn = document.getElementById('matchRestartBtn');
 
 // Fisher-Yates Shuffle
 function shuffle(array) {
@@ -745,6 +757,76 @@ function getRandomListenDistractors(correctIndex) {
 }
 
 // Render Listen & Match Stage pictures
+
+// Render Match Stage (Image-to-Word Card Matching with Mistake Limit)
+function renderMatchStage() {
+  const currentLevel = levels[currentLevelIndex];
+  isCurrentLevelSolved = false;
+  
+  if (matchPicImg) {
+    matchPicImg.src = currentLevel.image;
+    matchPicImg.alt = currentLevel.targetWord;
+  }
+  
+  if (matchMistakesBadge) {
+    matchMistakesBadge.textContent = `Mistakes: ${matchMistakeCount} / ${MAX_MATCH_MISTAKES} ⚠️`;
+  }
+  
+  if (matchMessageBanner) matchMessageBanner.classList.add('hidden');
+  if (matchNextLevelBtn) matchNextLevelBtn.classList.add('hidden');
+  
+  const correctWord = currentLevel.targetWord;
+  const otherLevels = levels.filter((l, idx) => idx !== currentLevelIndex);
+  
+  const shuffledOther = [...otherLevels].sort(() => 0.5 - Math.random());
+  const distractor1 = shuffledOther[0] ? shuffledOther[0].targetWord : "run";
+  const distractor2 = shuffledOther[1] ? shuffledOther[1].targetWord : "play";
+  
+  const choices = [correctWord, distractor1, distractor2].sort(() => 0.5 - Math.random());
+  
+  if (matchWordGrid) {
+    matchWordGrid.innerHTML = '';
+    choices.forEach(word => {
+      const card = document.createElement('button');
+      card.className = 'match-word-card';
+      card.textContent = word;
+      
+      card.addEventListener('click', () => {
+        if (isCurrentLevelSolved) return;
+        
+        if (word.toLowerCase() === correctWord.toLowerCase()) {
+          isCurrentLevelSolved = true;
+          card.classList.add('correct');
+          score += 10;
+          scoreValue.textContent = score;
+          
+          playSound('correct');
+          speak(correctWord);
+          startConfetti();
+          
+          matchMessageText.textContent = "Awesome Match! 🎯";
+          matchMessageBanner.classList.remove('hidden');
+          matchNextLevelBtn.classList.remove('hidden');
+        } else {
+          card.classList.add('wrong');
+          playSound('incorrect');
+          matchMistakeCount++;
+          if (matchMistakesBadge) {
+            matchMistakesBadge.textContent = `Mistakes: ${matchMistakeCount} / ${MAX_MATCH_MISTAKES} ⚠️`;
+          }
+          
+          if (matchMistakeCount > MAX_MATCH_MISTAKES) {
+            playSound('incorrect');
+            if (matchFailModal) matchFailModal.classList.remove('hidden');
+          }
+        }
+      });
+      
+      matchWordGrid.appendChild(card);
+    });
+  }
+}
+
 function renderListenStage() {
   const currentLevel = levels[currentLevelIndex];
   listenGrid.innerHTML = '';
@@ -1086,6 +1168,22 @@ function handleNextLevel() {
 nextLevelBtn.addEventListener('click', handleNextLevel);
 listenNextLevelBtn.addEventListener('click', handleNextLevel);
 
+if (matchNextLevelBtn) {
+  matchNextLevelBtn.addEventListener('click', handleNextLevel);
+}
+
+if (matchRestartBtn) {
+  matchRestartBtn.addEventListener('click', () => {
+    playSound('click');
+    matchMistakeCount = 0;
+    if (matchFailModal) matchFailModal.classList.add('hidden');
+    currentLevelIndex = 0;
+    score = 0;
+    scoreValue.textContent = score;
+    initLevel();
+  });
+}
+
 // Sound Volume Mute Control
 soundToggle.addEventListener('click', () => {
   soundMuted = !soundMuted;
@@ -1153,6 +1251,7 @@ victoryMenuBtn.addEventListener('click', () => {
 
 // Reset Game
 function resetGame() {
+  matchMistakeCount = 0;
   currentLevelIndex = 0;
   score = 0;
   victoryModal.classList.add('hidden');
