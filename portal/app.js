@@ -1275,14 +1275,27 @@ playAgainBtn.addEventListener('click', () => {
 });
 
 // Difficulty Tab Switcher
+function setDifficulty(diff) {
+  currentDifficulty = diff;
+  const tabs = document.querySelectorAll('.diff-tab');
+  tabs.forEach(t => {
+    const tabDiff = t.dataset.diff || t.getAttribute('data-diff');
+    if (tabDiff === diff) {
+      t.classList.add('active');
+    } else {
+      t.classList.remove('active');
+    }
+  });
+}
+
 function initDifficultySelector() {
   const tabs = document.querySelectorAll('.diff-tab');
   tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
+    tab.addEventListener('click', (e) => {
+      e.preventDefault();
       playSound('click');
-      tabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-      currentDifficulty = tab.dataset.diff;
+      const diff = tab.dataset.diff || tab.getAttribute('data-diff');
+      setDifficulty(diff);
     });
   });
 }
