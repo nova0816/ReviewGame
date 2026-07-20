@@ -560,6 +560,146 @@ const episodeData = {
         emoji: "🥣"
       }
     ]
+  },
+  ep5: {
+    title: "PP S2 E12: The Boat Pond",
+    levels: [
+      {
+        targetWord: "boat",
+        statement: "Peppa brought her toy boat",
+        words: ["Peppa", "brought", "her", "toy", "boat"],
+        distractors: ["car", "bus"],
+        sentenceWithBlank: "Peppa brought her toy _______.",
+        image: "assets/ep3_pool.png",
+        emoji: "⛵"
+      },
+      {
+        targetWord: "duck",
+        statement: "Ducks swimming in pond",
+        words: ["Ducks", "swimming", "in", "pond"],
+        distractors: ["dogs", "cats"],
+        sentenceWithBlank: "Ducks swimming in _______.",
+        image: "assets/ep3_pool.png",
+        emoji: "🦆"
+      },
+      {
+        targetWord: "pond",
+        statement: "Put boat in pond",
+        words: ["Put", "boat", "in", "pond"],
+        distractors: ["house", "box"],
+        sentenceWithBlank: "Put boat in _______.",
+        image: "assets/ep3_pool.png",
+        emoji: "🏞️"
+      },
+      {
+        targetWord: "wind",
+        statement: "Wind makes it go",
+        words: ["Wind", "makes", "it", "go"],
+        distractors: ["rain", "sun"],
+        sentenceWithBlank: "_______ makes it go.",
+        image: "assets/windy.png",
+        emoji: "💨"
+      },
+      {
+        targetWord: "fast",
+        statement: "It went really fast",
+        words: ["It", "went", "really", "fast"],
+        distractors: ["slow", "quiet"],
+        sentenceWithBlank: "It went really _______.",
+        image: "assets/ep2_rocket.png",
+        emoji: "⚡"
+      },
+      {
+        targetWord: "push",
+        statement: "Push this little lever",
+        words: ["Push", "this", "little", "lever"],
+        distractors: ["pull", "stop"],
+        sentenceWithBlank: "_______ this little lever.",
+        image: "assets/ep2_dig.png",
+        emoji: "🎛️"
+      },
+      {
+        targetWord: "race",
+        statement: "Let us have a race",
+        words: ["Let", "us", "have", "a", "race"],
+        distractors: ["sleep", "nap"],
+        sentenceWithBlank: "Let us have a _______.",
+        image: "assets/ep2_rocket.png",
+        emoji: "🏁"
+      },
+      {
+        targetWord: "breath",
+        statement: "Take a deep breath",
+        words: ["Take", "a", "deep", "breath"],
+        distractors: ["step", "jump"],
+        sentenceWithBlank: "Take a deep _______.",
+        image: "assets/windy.png",
+        emoji: "🌬️"
+      },
+      {
+        targetWord: "winner",
+        statement: "We have a winner",
+        words: ["We", "have", "a", "winner"],
+        distractors: ["loser", "game"],
+        sentenceWithBlank: "We have a _______.",
+        image: "assets/ep2_treasure.png",
+        emoji: "🏆"
+      },
+      {
+        targetWord: "paper",
+        statement: "Made a paper boat",
+        words: ["Made", "a", "paper", "boat"],
+        distractors: ["stone", "glass"],
+        sentenceWithBlank: "Made a _______ boat.",
+        image: "assets/ep4_paper.png",
+        emoji: "📄"
+      },
+      {
+        targetWord: "blow",
+        statement: "Blow your boat along",
+        words: ["Blow", "your", "boat", "along"],
+        distractors: ["stop", "hold"],
+        sentenceWithBlank: "_______ your boat along.",
+        image: "assets/windy.png",
+        emoji: "💨"
+      },
+      {
+        targetWord: "happy",
+        statement: "Ducks are very happy",
+        words: ["Ducks", "are", "very", "happy"],
+        distractors: ["sad", "angry"],
+        sentenceWithBlank: "Ducks are very _______.",
+        image: "assets/ep2_holiday.png",
+        emoji: "😊"
+      },
+      {
+        targetWord: "idea",
+        statement: "I have a good idea",
+        words: ["I", "have", "a", "good", "idea"],
+        distractors: ["question", "doubt"],
+        sentenceWithBlank: "I have a good _______.",
+        image: "assets/ep2_future.png",
+        emoji: "💡"
+      },
+      {
+        targetWord: "wish",
+        statement: "I wish I had boat",
+        words: ["I", "wish", "I", "had", "boat"],
+        distractors: ["fear", "hate"],
+        sentenceWithBlank: "I _______ I had boat.",
+        image: "assets/ep2_remember.png",
+        emoji: "🌟"
+      },
+      {
+        targetWord: "enjoy",
+        statement: "Enjoyed the toy boats",
+        words: ["Enjoyed", "the", "toy", "boats"],
+        distractors: ["disliked", "missed"],
+        sentenceWithBlank: "_______ the toy boats.",
+        image: "assets/ep2_holiday.png",
+        emoji: "🎉"
+      }
+    ]
   }
 };
 
@@ -786,6 +926,7 @@ const episodeCard1 = document.getElementById('episodeCard1');
 const episodeCard2 = document.getElementById('episodeCard2');
 const episodeCard3 = document.getElementById('episodeCard3');
 const episodeCard4 = document.getElementById('episodeCard4');
+const episodeCard5 = document.getElementById('episodeCard5');
 const selectedEpisodeTitle = document.getElementById('selectedEpisodeTitle');
 const startScreen = document.getElementById('startScreen');
 const backToEpisodesBtn = document.getElementById('backToEpisodesBtn');
@@ -1379,6 +1520,15 @@ if (episodeCard4) {
   episodeCard4.addEventListener('click', () => {
     playSound('click');
     selectEpisode('ep4');
+    episodeScreen.classList.add('hidden');
+    startScreen.classList.remove('hidden');
+  });
+}
+
+if (episodeCard5) {
+  episodeCard5.addEventListener('click', () => {
+    playSound('click');
+    selectEpisode('ep5');
     episodeScreen.classList.add('hidden');
     startScreen.classList.remove('hidden');
   });

@@ -1,5 +1,5 @@
 {
-  "current_published_count": 4,
+  "current_published_count": 5,
   "episodes": [
     {
       "episode_num": 1,
@@ -27,6 +27,13 @@
       "code_title": "PP S2 E11",
       "subtitle": "Eco Clean",
       "video_id": "wLIXhmrOsZI",
+      "status": "published"
+    },
+    {
+      "episode_num": 5,
+      "code_title": "PP S2 E12",
+      "subtitle": "The Boat Pond",
+      "video_id": "GCpxM1sn69k",
       "status": "published"
     }
   ]
