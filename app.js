@@ -420,6 +420,146 @@ const episodeData = {
         emoji: "🏖️"
       }
     ]
+  },
+  ep4: {
+    title: "PP S2 E11: Eco Clean",
+    levels: [
+      {
+        targetWord: "bottle",
+        statement: "Throw this empty bottle",
+        words: ["Throw", "this", "empty", "bottle"],
+        distractors: ["can", "paper"],
+        sentenceWithBlank: "Throw this empty _______.",
+        image: "assets/ep4_bottle.png",
+        emoji: "🍼"
+      },
+      {
+        targetWord: "box",
+        statement: "Put in recycle boxes",
+        words: ["Put", "in", "recycle", "boxes"],
+        distractors: ["bags", "pockets"],
+        sentenceWithBlank: "Put in recycle _______.",
+        image: "assets/ep4_box.png",
+        emoji: "📦"
+      },
+      {
+        targetWord: "paper",
+        statement: "Newspapers go in box",
+        words: ["Newspapers", "go", "in", "box"],
+        distractors: ["stay", "leave"],
+        sentenceWithBlank: "Newspapers go in _______.",
+        image: "assets/ep4_paper.png",
+        emoji: "📰"
+      },
+      {
+        targetWord: "clean",
+        statement: "Let us clear up",
+        words: ["Let", "us", "clear", "up"],
+        distractors: ["dirty", "mess"],
+        sentenceWithBlank: "Let us _______ up.",
+        image: "assets/ep4_clean.png",
+        emoji: "🧹"
+      },
+      {
+        targetWord: "quiet",
+        statement: "Tries to be quiet",
+        words: ["Tries", "to", "be", "quiet"],
+        distractors: ["loud", "noisy"],
+        sentenceWithBlank: "Tries to be _______.",
+        image: "assets/ep4_quiet.png",
+        emoji: "🤫"
+      },
+      {
+        targetWord: "morning",
+        statement: "It is early morning",
+        words: ["It", "is", "early", "morning"],
+        distractors: ["night", "evening"],
+        sentenceWithBlank: "It is early _______.",
+        image: "assets/ep4_morning.png",
+        emoji: "🌅"
+      },
+      {
+        targetWord: "empty",
+        statement: "Emptied the rubbish bin",
+        words: ["Emptied", "the", "rubbish", "bin"],
+        distractors: ["filled", "kept"],
+        sentenceWithBlank: "_______ the rubbish bin.",
+        image: "assets/ep4_empty.png",
+        emoji: "🗑️"
+      },
+      {
+        targetWord: "green",
+        statement: "Green box for bottles",
+        words: ["Green", "box", "for", "bottles"],
+        distractors: ["Yellow", "Black"],
+        sentenceWithBlank: "_______ box for bottles.",
+        image: "assets/ep4_green.png",
+        emoji: "🟩"
+      },
+      {
+        targetWord: "blue",
+        statement: "Blue box for cans",
+        words: ["Blue", "box", "for", "cans"],
+        distractors: ["White", "Purple"],
+        sentenceWithBlank: "_______ box for cans.",
+        image: "assets/ep4_blue.png",
+        emoji: "🟦"
+      },
+      {
+        targetWord: "red",
+        statement: "Red box for paper",
+        words: ["Red", "box", "for", "paper"],
+        distractors: ["Orange", "Brown"],
+        sentenceWithBlank: "_______ box for paper.",
+        image: "assets/ep4_box.png",
+        emoji: "🟥"
+      },
+      {
+        targetWord: "car",
+        statement: "Our little red car",
+        words: ["Our", "little", "red", "car"],
+        distractors: ["bus", "train"],
+        sentenceWithBlank: "Our little red _______.",
+        image: "assets/ep4_clean.png",
+        emoji: "🚗"
+      },
+      {
+        targetWord: "ready",
+        statement: "Is everybody ready now",
+        words: ["Is", "everybody", "ready", "now"],
+        distractors: ["late", "slow"],
+        sentenceWithBlank: "Is everybody _______ now?",
+        image: "assets/ep4_morning.png",
+        emoji: "🎒"
+      },
+      {
+        targetWord: "recycle",
+        statement: "We are going to recycle",
+        words: ["We", "are", "going", "to", "recycle"],
+        distractors: ["throw", "waste"],
+        sentenceWithBlank: "We are going to _______.",
+        image: "assets/ep4_box.png",
+        emoji: "♻️"
+      },
+      {
+        targetWord: "help",
+        statement: "Can we help mommy",
+        words: ["Can", "we", "help", "mommy"],
+        distractors: ["stop", "watch"],
+        sentenceWithBlank: "Can we _______ mommy?",
+        image: "assets/ep4_clean.png",
+        emoji: "🤝"
+      },
+      {
+        targetWord: "finish",
+        statement: "Finishing their breakfast",
+        words: ["Finishing", "their", "breakfast"],
+        distractors: ["starting", "eating"],
+        sentenceWithBlank: "_______ their breakfast.",
+        image: "assets/ep4_paper.png",
+        emoji: "🥣"
+      }
+    ]
   }
 };
 
@@ -645,6 +785,7 @@ const episodeScreen = document.getElementById('episodeScreen');
 const episodeCard1 = document.getElementById('episodeCard1');
 const episodeCard2 = document.getElementById('episodeCard2');
 const episodeCard3 = document.getElementById('episodeCard3');
+const episodeCard4 = document.getElementById('episodeCard4');
 const selectedEpisodeTitle = document.getElementById('selectedEpisodeTitle');
 const startScreen = document.getElementById('startScreen');
 const backToEpisodesBtn = document.getElementById('backToEpisodesBtn');
@@ -1229,6 +1370,15 @@ if (episodeCard3) {
   episodeCard3.addEventListener('click', () => {
     playSound('click');
     selectEpisode('ep3');
+    episodeScreen.classList.add('hidden');
+    startScreen.classList.remove('hidden');
+  });
+}
+
+if (episodeCard4) {
+  episodeCard4.addEventListener('click', () => {
+    playSound('click');
+    selectEpisode('ep4');
     episodeScreen.classList.add('hidden');
     startScreen.classList.remove('hidden');
   });

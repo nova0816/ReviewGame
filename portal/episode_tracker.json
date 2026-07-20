@@ -1,5 +1,5 @@
 {
-  "current_published_count": 2,
+  "current_published_count": 4,
   "episodes": [
     {
       "episode_num": 1,
@@ -20,14 +20,14 @@
       "code_title": "PP S2 E10",
       "subtitle": "Tide Pools",
       "video_id": "bJVK0Iwmlg0",
-      "status": "in_progress"
+      "status": "published"
     },
     {
       "episode_num": 4,
       "code_title": "PP S2 E11",
       "subtitle": "Eco Clean",
       "video_id": "wLIXhmrOsZI",
-      "status": "queued"
+      "status": "published"
     }
   ]
 }
