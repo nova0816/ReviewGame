@@ -700,6 +700,146 @@ const episodeData = {
         emoji: "🎉"
       }
     ]
+  },
+  ep6: {
+    title: "PP S2 E13: Traffic Jam",
+    levels: [
+      {
+        targetWord: "traffic",
+        statement: "Avoids all the traffic",
+        words: ["Avoids", "all", "the", "traffic"],
+        distractors: ["train", "boat"],
+        sentenceWithBlank: "Avoids all the _______.",
+        image: "assets/ep2_rocket.png",
+        emoji: "🚗"
+      },
+      {
+        targetWord: "jam",
+        statement: "Stuck in a traffic jam",
+        words: ["Stuck", "in", "a", "traffic", "jam"],
+        distractors: ["park", "yard"],
+        sentenceWithBlank: "Stuck in a traffic _______.",
+        image: "assets/ep2_rocket.png",
+        emoji: "🚕"
+      },
+      {
+        targetWord: "potato",
+        statement: "Plenty of potatoes",
+        words: ["Plenty", "of", "potatoes"],
+        distractors: ["apples", "carrots"],
+        sentenceWithBlank: "Plenty of _______.",
+        image: "assets/ep3_pool.png",
+        emoji: "🥔"
+      },
+      {
+        targetWord: "lunch",
+        statement: "Making lunch for Peppa",
+        words: ["Making", "lunch", "for", "Peppa"],
+        distractors: ["dinner", "snack"],
+        sentenceWithBlank: "Making _______ for Peppa.",
+        image: "assets/ep2_holiday.png",
+        emoji: "🍱"
+      },
+      {
+        targetWord: "oven",
+        statement: "Potatoes in the oven",
+        words: ["Potatoes", "in", "the", "oven"],
+        distractors: ["fridge", "box"],
+        sentenceWithBlank: "Potatoes in the _______.",
+        image: "assets/heating.png",
+        emoji: "🔥"
+      },
+      {
+        targetWord: "clock",
+        statement: "It is eleven o clock",
+        words: ["It", "is", "eleven", "o", "clock"],
+        distractors: ["nine", "five"],
+        sentenceWithBlank: "It is eleven o _______.",
+        image: "assets/ep2_treasure.png",
+        emoji: "⏰"
+      },
+      {
+        targetWord: "stuck",
+        statement: "We are stuck here",
+        words: ["We", "are", "stuck", "here"],
+        distractors: ["free", "flying"],
+        sentenceWithBlank: "We are _______ here.",
+        image: "assets/ep3_trapped.png",
+        emoji: "🛑"
+      },
+      {
+        targetWord: "road",
+        statement: "There is main road",
+        words: ["There", "is", "main", "road"],
+        distractors: ["river", "ocean"],
+        sentenceWithBlank: "There is main _______.",
+        image: "assets/ep2_rocket.png",
+        emoji: "🛣️"
+      },
+      {
+        targetWord: "slow",
+        statement: "Moving so slowly",
+        words: ["Moving", "so", "slowly"],
+        distractors: ["fast", "quick"],
+        sentenceWithBlank: "Moving so _______.",
+        image: "assets/ep3_pool.png",
+        emoji: "🐌"
+      },
+      {
+        targetWord: "food",
+        statement: "Food is getting cold",
+        words: ["Food", "is", "getting", "cold"],
+        distractors: ["drink", "water"],
+        sentenceWithBlank: "_______ is getting cold.",
+        image: "assets/freezing.png",
+        emoji: "🍲"
+      },
+      {
+        targetWord: "house",
+        statement: "Almost at your house",
+        words: ["Almost", "at", "your", "house"],
+        distractors: ["school", "store"],
+        sentenceWithBlank: "Almost at your _______.",
+        image: "assets/autumn.png",
+        emoji: "🏡"
+      },
+      {
+        targetWord: "late",
+        statement: "We are running late",
+        words: ["We", "are", "running", "late"],
+        distractors: ["early", "ready"],
+        sentenceWithBlank: "We are running _______.",
+        image: "assets/ep2_treasure.png",
+        emoji: "⌛"
+      },
+      {
+        targetWord: "worry",
+        statement: "Do not worry now",
+        words: ["Do", "not", "worry", "now"],
+        distractors: ["laugh", "sing"],
+        sentenceWithBlank: "Do not _______ now.",
+        image: "assets/ep2_remember.png",
+        emoji: "😌"
+      },
+      {
+        targetWord: "shortcut",
+        statement: "Taking a shortcut",
+        words: ["Taking", "a", "shortcut"],
+        distractors: ["highway", "circle"],
+        sentenceWithBlank: "Taking a _______.",
+        image: "assets/ep2_rocket.png",
+        emoji: "🔀"
+      },
+      {
+        targetWord: "serve",
+        statement: "Lunch is served",
+        words: ["Lunch", "is", "served"],
+        distractors: ["cooked", "hidden"],
+        sentenceWithBlank: "Lunch is _______.",
+        image: "assets/ep2_holiday.png",
+        emoji: "🍽️"
+      }
+    ]
   }
 };
 
@@ -927,6 +1067,7 @@ const episodeCard2 = document.getElementById('episodeCard2');
 const episodeCard3 = document.getElementById('episodeCard3');
 const episodeCard4 = document.getElementById('episodeCard4');
 const episodeCard5 = document.getElementById('episodeCard5');
+const episodeCard6 = document.getElementById('episodeCard6');
 const selectedEpisodeTitle = document.getElementById('selectedEpisodeTitle');
 const startScreen = document.getElementById('startScreen');
 const backToEpisodesBtn = document.getElementById('backToEpisodesBtn');
@@ -1529,6 +1670,15 @@ if (episodeCard5) {
   episodeCard5.addEventListener('click', () => {
     playSound('click');
     selectEpisode('ep5');
+    episodeScreen.classList.add('hidden');
+    startScreen.classList.remove('hidden');
+  });
+}
+
+if (episodeCard6) {
+  episodeCard6.addEventListener('click', () => {
+    playSound('click');
+    selectEpisode('ep6');
     episodeScreen.classList.add('hidden');
     startScreen.classList.remove('hidden');
   });

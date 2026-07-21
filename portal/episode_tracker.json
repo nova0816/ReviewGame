@@ -1,5 +1,5 @@
 {
-  "current_published_count": 5,
+  "current_published_count": 6,
   "episodes": [
     {
       "episode_num": 1,
@@ -34,6 +34,13 @@
       "code_title": "PP S2 E12",
       "subtitle": "The Boat Pond",
       "video_id": "GCpxM1sn69k",
+      "status": "published"
+    },
+    {
+      "episode_num": 6,
+      "code_title": "PP S2 E13",
+      "subtitle": "Traffic Jam",
+      "video_id": "-qoTHn_SM-E",
       "status": "published"
     }
   ]
