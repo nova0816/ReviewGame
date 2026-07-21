@@ -1,5 +1,5 @@
 {
-  "current_published_count": 6,
+  "current_published_count": 7,
   "episodes": [
     {
       "episode_num": 1,
@@ -41,6 +41,13 @@
       "code_title": "PP S2 E13",
       "subtitle": "Traffic Jam",
       "video_id": "-qoTHn_SM-E",
+      "status": "published"
+    },
+    {
+      "episode_num": 7,
+      "code_title": "PP S2 E14",
+      "subtitle": "Bedtime",
+      "video_id": "HV86siFCa7o",
       "status": "published"
     }
   ]

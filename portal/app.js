@@ -840,6 +840,146 @@ const episodeData = {
         emoji: "🍽️"
       }
     ]
+  },
+  ep7: {
+    title: "PP S2 E14: Bedtime",
+    levels: [
+      {
+        targetWord: "bedtime",
+        statement: "It is almost bedtime",
+        words: ["It", "is", "almost", "bedtime"],
+        distractors: ["morning", "playtime"],
+        sentenceWithBlank: "It is almost _______.",
+        image: "assets/ep2_treasure.png",
+        emoji: "🌙"
+      },
+      {
+        targetWord: "supper",
+        statement: "Finishing their supper",
+        words: ["Finishing", "their", "supper"],
+        distractors: ["lunch", "breakfast"],
+        sentenceWithBlank: "Finishing their _______.",
+        image: "assets/ep4_paper.png",
+        emoji: "🍲"
+      },
+      {
+        targetWord: "bath",
+        statement: "Quick into the bath",
+        words: ["Quick", "into", "the", "bath"],
+        distractors: ["bed", "car"],
+        sentenceWithBlank: "Quick into the _______.",
+        image: "assets/ep3_pool.png",
+        emoji: "🛁"
+      },
+      {
+        targetWord: "pajamas",
+        statement: "Into your soft pajamas",
+        words: ["Into", "your", "soft", "pajamas"],
+        distractors: ["shoes", "coats"],
+        sentenceWithBlank: "Into your soft _______.",
+        image: "assets/scarf.png",
+        emoji: "👔"
+      },
+      {
+        targetWord: "teeth",
+        statement: "Clean your teeth now",
+        words: ["Clean", "your", "teeth", "now"],
+        distractors: ["hands", "hair"],
+        sentenceWithBlank: "Clean your _______ now.",
+        image: "assets/ep4_clean.png",
+        emoji: "🦷"
+      },
+      {
+        targetWord: "brush",
+        statement: "Brush their teeth clean",
+        words: ["Brush", "their", "teeth", "clean"],
+        distractors: ["wash", "comb"],
+        sentenceWithBlank: "_______ their teeth clean.",
+        image: "assets/ep4_clean.png",
+        emoji: "🪥"
+      },
+      {
+        targetWord: "story",
+        statement: "Read you a story",
+        words: ["Read", "you", "a", "story"],
+        distractors: ["song", "game"],
+        sentenceWithBlank: "Read you a _______.",
+        image: "assets/ep4_paper.png",
+        emoji: "📖"
+      },
+      {
+        targetWord: "book",
+        statement: "Which book do you want",
+        words: ["Which", "book", "do", "you", "want"],
+        distractors: ["toy", "ball"],
+        sentenceWithBlank: "Which _______ do you want?",
+        image: "assets/ep4_paper.png",
+        emoji: "📚"
+      },
+      {
+        targetWord: "monkey",
+        statement: "The red monkey book",
+        words: ["The", "red", "monkey", "book"],
+        distractors: ["tiger", "bear"],
+        sentenceWithBlank: "The red _______ book.",
+        image: "assets/ep2_rocket.png",
+        emoji: "🐒"
+      },
+      {
+        targetWord: "sleepy",
+        statement: "We are not sleepy",
+        words: ["We", "are", "not", "sleepy"],
+        distractors: ["awake", "happy"],
+        sentenceWithBlank: "We are not _______.",
+        image: "assets/ep2_remember.png",
+        emoji: "😴"
+      },
+      {
+        targetWord: "asleep",
+        statement: "Fell fast asleep now",
+        words: ["Fell", "fast", "asleep", "now"],
+        distractors: ["running", "jumping"],
+        sentenceWithBlank: "Fell fast _______ now.",
+        image: "assets/ep2_remember.png",
+        emoji: "💤"
+      },
+      {
+        targetWord: "splash",
+        statement: "Peppa likes splashing",
+        words: ["Peppa", "likes", "splashing"],
+        distractors: ["crying", "sleeping"],
+        sentenceWithBlank: "Peppa likes _______.",
+        image: "assets/ep3_pool.png",
+        emoji: "💦"
+      },
+      {
+        targetWord: "teddy",
+        statement: "Tucked up with teddy",
+        words: ["Tucked", "up", "with", "teddy"],
+        distractors: ["robot", "doll"],
+        sentenceWithBlank: "Tucked up with _______.",
+        image: "assets/ep2_treasure.png",
+        emoji: "🧸"
+      },
+      {
+        targetWord: "night",
+        statement: "Good night red monkey",
+        words: ["Good", "night", "red", "monkey"],
+        distractors: ["morning", "afternoon"],
+        sentenceWithBlank: "Good _______ red monkey.",
+        image: "assets/ep2_future.png",
+        emoji: "✨"
+      },
+      {
+        targetWord: "tired",
+        statement: "I am a bit tired",
+        words: ["I", "am", "a", "bit", "tired"],
+        distractors: ["active", "excited"],
+        sentenceWithBlank: "I am a bit _______.",
+        image: "assets/ep2_remember.png",
+        emoji: "🥱"
+      }
+    ]
   }
 };
 
@@ -1068,6 +1208,7 @@ const episodeCard3 = document.getElementById('episodeCard3');
 const episodeCard4 = document.getElementById('episodeCard4');
 const episodeCard5 = document.getElementById('episodeCard5');
 const episodeCard6 = document.getElementById('episodeCard6');
+const episodeCard7 = document.getElementById('episodeCard7');
 const selectedEpisodeTitle = document.getElementById('selectedEpisodeTitle');
 const startScreen = document.getElementById('startScreen');
 const backToEpisodesBtn = document.getElementById('backToEpisodesBtn');
@@ -1679,6 +1820,15 @@ if (episodeCard6) {
   episodeCard6.addEventListener('click', () => {
     playSound('click');
     selectEpisode('ep6');
+    episodeScreen.classList.add('hidden');
+    startScreen.classList.remove('hidden');
+  });
+}
+
+if (episodeCard7) {
+  episodeCard7.addEventListener('click', () => {
+    playSound('click');
+    selectEpisode('ep7');
     episodeScreen.classList.add('hidden');
     startScreen.classList.remove('hidden');
   });
