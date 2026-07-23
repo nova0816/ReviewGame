@@ -1120,6 +1120,146 @@ const episodeData = {
         emoji: "📖"
       }
     ]
+  },
+  ep9: {
+    title: "PP S2 E17: Auto Garage",
+    levels: [
+      {
+        targetWord: "garage",
+        statement: "At Granddad dog garage",
+        words: ["At", "Granddad", "dog", "garage"],
+        distractors: ["house", "park"],
+        sentenceWithBlank: "At Granddad dog _______.",
+        image: "assets/ep4_box.png",
+        emoji: "🏬"
+      },
+      {
+        targetWord: "petrol",
+        statement: "Run out of petrol",
+        words: ["Run", "out", "of", "petrol"],
+        distractors: ["water", "juice"],
+        sentenceWithBlank: "Run out of _______.",
+        image: "assets/ep4_green.png",
+        emoji: "⛽"
+      },
+      {
+        targetWord: "tire",
+        statement: "Air for the tires",
+        words: ["Air", "for", "the", "tires"],
+        distractors: ["doors", "seats"],
+        sentenceWithBlank: "Air for the _______.",
+        image: "assets/ep4_box.png",
+        emoji: "🛞"
+      },
+      {
+        targetWord: "wash",
+        statement: "New automatic car wash",
+        words: ["New", "automatic", "car", "wash"],
+        distractors: ["drive", "ride"],
+        sentenceWithBlank: "New automatic car _______.",
+        image: "assets/ep3_pool.png",
+        emoji: "🧼"
+      },
+      {
+        targetWord: "ice",
+        statement: "Two ice lollies please",
+        words: ["Two", "ice", "lollies", "please"],
+        distractors: ["hot", "warm"],
+        sentenceWithBlank: "Two _______ lollies please.",
+        image: "assets/freezing.png",
+        emoji: "🍦"
+      },
+      {
+        targetWord: "broken",
+        statement: "Our car has broken",
+        words: ["Our", "car", "has", "broken"],
+        distractors: ["fixed", "new"],
+        sentenceWithBlank: "Our car has _______.",
+        image: "assets/ep2_remember.png",
+        emoji: "🛠️"
+      },
+      {
+        targetWord: "rescue",
+        statement: "To the rescue now",
+        words: ["To", "the", "rescue", "now"],
+        distractors: ["stop", "wait"],
+        sentenceWithBlank: "To the _______ now.",
+        image: "assets/ep3_rescue.png",
+        emoji: "🛟"
+      },
+      {
+        targetWord: "tow",
+        statement: "I will tow you",
+        words: ["I", "will", "tow", "you"],
+        distractors: ["push", "drop"],
+        sentenceWithBlank: "I will _______ you.",
+        image: "assets/ep2_rocket.png",
+        emoji: "🚜"
+      },
+      {
+        targetWord: "air",
+        statement: "Fill tire with air",
+        words: ["Fill", "tire", "with", "air"],
+        distractors: ["sand", "dust"],
+        sentenceWithBlank: "Fill tire with _______.",
+        image: "assets/windy.png",
+        emoji: "💨"
+      },
+      {
+        targetWord: "computer",
+        statement: "Run by a computer",
+        words: ["Run", "by", "a", "computer"],
+        distractors: ["robot", "engine"],
+        sentenceWithBlank: "Run by a _______.",
+        image: "assets/ep2_future.png",
+        emoji: "💻"
+      },
+      {
+        targetWord: "water",
+        statement: "First soapy water then",
+        words: ["First", "soapy", "water", "then"],
+        distractors: ["oil", "milk"],
+        sentenceWithBlank: "First soapy _______ then.",
+        image: "assets/ep3_water.png",
+        emoji: "💧"
+      },
+      {
+        targetWord: "switch",
+        statement: "Switch it off and",
+        words: ["Switch", "it", "off", "and"],
+        distractors: ["break", "smash"],
+        sentenceWithBlank: "_______ it off and on.",
+        image: "assets/ep2_dig.png",
+        emoji: "🔘"
+      },
+      {
+        targetWord: "stop",
+        statement: "The car has stopped",
+        words: ["The", "car", "has", "stopped"],
+        distractors: ["moved", "flown"],
+        sentenceWithBlank: "The car has _______.",
+        image: "assets/ep3_trapped.png",
+        emoji: "🛑"
+      },
+      {
+        targetWord: "help",
+        statement: "We need some help",
+        words: ["We", "need", "some", "help"],
+        distractors: ["rest", "sleep"],
+        sentenceWithBlank: "We need some _______.",
+        image: "assets/ep4_clean.png",
+        emoji: "🤝"
+      },
+      {
+        targetWord: "best",
+        statement: "He is the best",
+        words: ["He", "is", "the", "best"],
+        distractors: ["worst", "slowest"],
+        sentenceWithBlank: "He is the _______.",
+        image: "assets/ep2_treasure.png",
+        emoji: "⭐"
+      }
+    ]
   }
 };
 
@@ -1350,6 +1490,7 @@ const episodeCard5 = document.getElementById('episodeCard5');
 const episodeCard6 = document.getElementById('episodeCard6');
 const episodeCard7 = document.getElementById('episodeCard7');
 const episodeCard8 = document.getElementById('episodeCard8');
+const episodeCard9 = document.getElementById('episodeCard9');
 const selectedEpisodeTitle = document.getElementById('selectedEpisodeTitle');
 const startScreen = document.getElementById('startScreen');
 const backToEpisodesBtn = document.getElementById('backToEpisodesBtn');
@@ -1979,6 +2120,15 @@ if (episodeCard8) {
   episodeCard8.addEventListener('click', () => {
     playSound('click');
     selectEpisode('ep8');
+    episodeScreen.classList.add('hidden');
+    startScreen.classList.remove('hidden');
+  });
+}
+
+if (episodeCard9) {
+  episodeCard9.addEventListener('click', () => {
+    playSound('click');
+    selectEpisode('ep9');
     episodeScreen.classList.add('hidden');
     startScreen.classList.remove('hidden');
   });

@@ -1,5 +1,5 @@
 {
-  "current_published_count": 8,
+  "current_published_count": 9,
   "episodes": [
     {
       "episode_num": 1,
@@ -55,6 +55,13 @@
       "code_title": "PP S2 E15",
       "subtitle": "The Eye Test",
       "video_id": "2ftRQYzUBQc",
+      "status": "published"
+    },
+    {
+      "episode_num": 9,
+      "code_title": "PP S2 E17",
+      "subtitle": "Auto Garage",
+      "video_id": "BybRP6WQsgA",
       "status": "published"
     }
   ]
