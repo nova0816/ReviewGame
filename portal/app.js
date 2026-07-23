@@ -980,6 +980,146 @@ const episodeData = {
         emoji: "🥱"
       }
     ]
+  },
+  ep8: {
+    title: "PP S2 E15: The Eye Test",
+    levels: [
+      {
+        targetWord: "glasses",
+        statement: "Where are my glasses",
+        words: ["Where", "are", "my", "glasses"],
+        distractors: ["hat", "shoes"],
+        sentenceWithBlank: "Where are my _______?",
+        image: "assets/ep2_remember.png",
+        emoji: "👓"
+      },
+      {
+        targetWord: "eye",
+        statement: "Give me an eye test",
+        words: ["Give", "me", "an", "eye", "test"],
+        distractors: ["ear", "hand"],
+        sentenceWithBlank: "Give me an _______ test.",
+        image: "assets/ep3_ear.png",
+        emoji: "👁️"
+      },
+      {
+        targetWord: "look",
+        statement: "Look at the chart",
+        words: ["Look", "at", "the", "chart"],
+        distractors: ["listen", "walk"],
+        sentenceWithBlank: "_______ at the chart.",
+        image: "assets/ep3_beach.png",
+        emoji: "👀"
+      },
+      {
+        targetWord: "letters",
+        statement: "Read these letters please",
+        words: ["Read", "these", "letters", "please"],
+        distractors: ["numbers", "words"],
+        sentenceWithBlank: "Read these _______ please.",
+        image: "assets/ep4_paper.png",
+        emoji: "🔤"
+      },
+      {
+        targetWord: "numbers",
+        statement: "Now read these numbers",
+        words: ["Now", "read", "these", "numbers"],
+        distractors: ["letters", "colors"],
+        sentenceWithBlank: "Now read these _______.",
+        image: "assets/ep4_paper.png",
+        emoji: "🔢"
+      },
+      {
+        targetWord: "red",
+        statement: "I can see red color",
+        words: ["I", "can", "see", "red", "color"],
+        distractors: ["blue", "green"],
+        sentenceWithBlank: "I can see _______ color.",
+        image: "assets/ep4_box.png",
+        emoji: "🟥"
+      },
+      {
+        targetWord: "green",
+        statement: "I see green color",
+        words: ["I", "see", "green", "color"],
+        distractors: ["yellow", "red"],
+        sentenceWithBlank: "I see _______ color.",
+        image: "assets/ep4_green.png",
+        emoji: "🟩"
+      },
+      {
+        targetWord: "blue",
+        statement: "Look at blue color",
+        words: ["Look", "at", "blue", "color"],
+        distractors: ["pink", "black"],
+        sentenceWithBlank: "Look at _______ color.",
+        image: "assets/ep4_blue.png",
+        emoji: "🟦"
+      },
+      {
+        targetWord: "yellow",
+        statement: "Yellow is bright color",
+        words: ["Yellow", "is", "bright", "color"],
+        distractors: ["dark", "gray"],
+        sentenceWithBlank: "_______ is bright color.",
+        image: "assets/ep3_bucket.png",
+        emoji: "🟨"
+      },
+      {
+        targetWord: "sunny",
+        statement: "Hope it is sunny today",
+        words: ["Hope", "it", "is", "sunny", "today"],
+        distractors: ["rainy", "cold"],
+        sentenceWithBlank: "Hope it is _______ today.",
+        image: "assets/ep4_morning.png",
+        emoji: "☀️"
+      },
+      {
+        targetWord: "sunglasses",
+        statement: "Wear my cool sunglasses",
+        words: ["Wear", "my", "cool", "sunglasses"],
+        distractors: ["boots", "gloves"],
+        sentenceWithBlank: "Wear my cool _______.",
+        image: "assets/ep2_remember.png",
+        emoji: "🕶️"
+      },
+      {
+        targetWord: "funny",
+        statement: "These glasses are funny",
+        words: ["These", "glasses", "are", "funny"],
+        distractors: ["sad", "boring"],
+        sentenceWithBlank: "These glasses are _______.",
+        image: "assets/ep2_holiday.png",
+        emoji: "😄"
+      },
+      {
+        targetWord: "big",
+        statement: "They are too big",
+        words: ["They", "are", "too", "big"],
+        distractors: ["small", "tiny"],
+        sentenceWithBlank: "They are too _______.",
+        image: "assets/ep3_seaside.png",
+        emoji: "🐘"
+      },
+      {
+        targetWord: "sit",
+        statement: "Please sit down here",
+        words: ["Please", "sit", "down", "here"],
+        distractors: ["stand", "jump"],
+        sentenceWithBlank: "Please _______ down here.",
+        image: "assets/ep2_wait.png",
+        emoji: "🪑"
+      },
+      {
+        targetWord: "read",
+        statement: "Can you read this",
+        words: ["Can", "you", "read", "this"],
+        distractors: ["draw", "write"],
+        sentenceWithBlank: "Can you _______ this?",
+        image: "assets/ep4_paper.png",
+        emoji: "📖"
+      }
+    ]
   }
 };
 
@@ -1209,6 +1349,7 @@ const episodeCard4 = document.getElementById('episodeCard4');
 const episodeCard5 = document.getElementById('episodeCard5');
 const episodeCard6 = document.getElementById('episodeCard6');
 const episodeCard7 = document.getElementById('episodeCard7');
+const episodeCard8 = document.getElementById('episodeCard8');
 const selectedEpisodeTitle = document.getElementById('selectedEpisodeTitle');
 const startScreen = document.getElementById('startScreen');
 const backToEpisodesBtn = document.getElementById('backToEpisodesBtn');
@@ -1829,6 +1970,15 @@ if (episodeCard7) {
   episodeCard7.addEventListener('click', () => {
     playSound('click');
     selectEpisode('ep7');
+    episodeScreen.classList.add('hidden');
+    startScreen.classList.remove('hidden');
+  });
+}
+
+if (episodeCard8) {
+  episodeCard8.addEventListener('click', () => {
+    playSound('click');
+    selectEpisode('ep8');
     episodeScreen.classList.add('hidden');
     startScreen.classList.remove('hidden');
   });

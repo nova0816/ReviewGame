@@ -1,5 +1,5 @@
 {
-  "current_published_count": 7,
+  "current_published_count": 8,
   "episodes": [
     {
       "episode_num": 1,
@@ -48,6 +48,13 @@
       "code_title": "PP S2 E14",
       "subtitle": "Bedtime",
       "video_id": "HV86siFCa7o",
+      "status": "published"
+    },
+    {
+      "episode_num": 8,
+      "code_title": "PP S2 E15",
+      "subtitle": "The Eye Test",
+      "video_id": "2ftRQYzUBQc",
       "status": "published"
     }
   ]
