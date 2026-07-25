@@ -7,7 +7,7 @@ This Standard Operating Procedure (SOP) documents the complete, consolidated end
 ## 📋 Table of Contents
 1. **Phase 1: Video Transcript & CEFR A1/A2 Word Selection Rule**
 2. **Phase 2: Concreteness & Abstractness Classification Framework**
-3. **Phase 3: 3D Pixar Cartoon & Multi-Panel Comic Generation**
+3. **Phase 3: 100% Unique 3D Pixar Cartoon & Multi-Panel Comic Rule (Zero Image Reuse)**
 4. **Phase 4: Human-in-the-Loop Abstract Review Mechanism**
 5. **Phase 5: Game Architecture & Multi-Episode Engine**
 6. **Phase 6: Rebranding & Copyright Compliance**
@@ -22,7 +22,7 @@ To ensure words are 100% authentic to the video episode while remaining age-appr
 1. **Transcript Fetching:** Download episode transcripts using `youtube-transcript-api` in Python.
 2. **Strict A1/A2 Selection (No Word Replacements):**
    - Filter the transcript words to identify those belonging to **CEFR A1** (Top 1,000 words) and **CEFR A2** (Top 2,500 words).
-   - **CRITICAL RULE:** **Do NOT modify, paraphrase, or replace words with outside synonyms.** Pick 15 target words **directly spoken in the episode** that pass the CEFR A1/A2 filter.
+   - **CRITICAL RULE:** Pick 15 target words **directly spoken in the episode** that pass the CEFR A1/A2 filter.
    - **Automatic Rejection:** Ignore any B1, B2, C1, C2 words spoken in the video episode during word selection.
 3. **Curate 15 Target Vocabulary Items:**
    - Target Word (CEFR A1/A2 directly from show)
@@ -39,20 +39,18 @@ Evaluate all 15 curated A1/A2 words using the **3-Tier Psycholinguistic Concrete
 
 | Tier | Definition | Visual Strategy | Examples |
 | :--- | :--- | :--- | :--- |
-| **Level 1: Highly Concrete** | Direct physical objects, body actions, or sensory states. | **Single 3D Pixar Cartoon PNG** | *Rocket, Crab, Beach, Bucket, Fish, Shell* |
-| **Level 2: Semi-Concrete** | Climate, posture, or relative physical properties with sensory cues. | **Single 3D Pixar Cartoon PNG** | *Shine, Walk, Stuck, Dig, Grow* |
+| **Level 1: Highly Concrete** | Direct physical objects, body actions, or sensory states. | **Single Dedicated 3D Pixar Cartoon PNG** | *Rocket, Crab, Beach, Bucket, Fish, Shell* |
+| **Level 2: Semi-Concrete** | Climate, posture, or relative physical properties with sensory cues. | **Single Dedicated 3D Pixar Cartoon PNG** | *Shine, Walk, Stuck, Dig, Grow* |
 | **Level 3: Abstract** | Cognitive mental states, preferences, measurements, compound idioms. | **Multi-Panel (2-3 Panel) Comic Strip + Dual-Coding** | *Future, Remember, Pretend, Rescue, Special* |
 
 ---
 
-## 🎨 Phase 3: 3D Pixar Cartoon & Multi-Panel Comic Generation
+## 🎨 Phase 3: 100% Unique 3D Pixar Cartoon Rule (Zero Image Reuse)
 
-**Quality Rule:** Use **100% 3D Pixar/Disney style PNG cartoon illustrations**. Do not use flat vector drawings.
-
-1. **Concrete Words (Single 3D Pixar PNG):**
-   - Prompt pattern: `"Charming 3D Pixar style cartoon illustration of [subject], warm lighting, cute character design, 3D render, highly detailed, no text."`
-2. **Abstract Words (2-Panel Comic Strips):**
-   - Prompt pattern: `"A 2-panel cartoon comic strip for kids. Left panel: [Setup/Trigger]. Right panel: [Abstract Resolution/Feeling]. Bright colorful vector art, comic panels, no text."`
+**CRITICAL QUALITY MANDATE:**
+1. **Zero Image Reuse:** **NEVER reuse an image across multiple levels or episodes.** Every single target word across every episode must have its OWN unique, 100% dedicated, highly accurate image. Saving API quota by reusing images is **STRICTLY PROHIBITED**.
+2. **Visual Accuracy:** Every image prompt must accurately reflect the specific target word and sentence context.
+3. **Format:** Use **100% 3D Pixar/Disney style PNG cartoon illustrations** or multi-panel comics for abstract concepts.
 
 ---
 
@@ -71,13 +69,14 @@ Before revising game source code for an episode:
    - Central `episodeData` object containing `ep1`, `ep2`, `ep3`, `ep4`, etc.
    - Dynamic episode selector function (`selectEpisode(epKey)`).
 2. **Landing Page Episode Menu (`index.html`):**
-   - Interactive Episode Grid with episode cards (`episodeCard1`, `episodeCard2`, `episodeCard3`).
+   - Interactive Episode Grid with episode cards (`episodeCard1`, `episodeCard2`, etc.).
    - Visual status badges (*Active 🟢* vs *Locked 🔴*).
-3. **4 Interactive Difficulty Modes:**
-   - **Easy Mode:** Sentence unscramble with voice guidance button.
-   - **Listen Mode:** Tap matching picture card upon hearing spoken word.
-   - **Normal Mode:** Fill-in-the-blank grammar review.
-   - **Hard Mode:** Sentence unscramble without voice helpers.
+3. **5 Interactive Difficulty Modes:**
+   - **Easy 🟢:** Sentence unscramble with voice guidance button.
+   - **Listen 🔵:** Tap matching picture card upon hearing spoken word.
+   - **Match 🧩:** Tap matching word card for 3D picture (with 15-mistake reset rule).
+   - **Normal 🟡:** Fill-in-the-blank grammar review.
+   - **Hard 🔴:** Sentence unscramble without voice helpers.
 
 ---
 
@@ -94,10 +93,7 @@ Before revising game source code for an episode:
 When the user triggers **"generate next 2 episodes"**:
 
 1. **Progress Tracker:** Read `episode_tracker.json` to identify the next 2 unbuilt episodes.
-2. **Episode A (Immediate Batch):**
-   - Extract transcript and select 15 CEFR A1/A2 words directly spoken in the episode (no word replacements).
-   - Generate 3D Pixar PNGs and 2-panel abstract comics.
-   - Unlock card on `index.html`, update `app.js`, and push live to GitHub.
-3. **Episode B (Automated Schedule Batch):**
-   - Set background timer via `schedule` tool for the 4-hour API quota reset mark (`CronExpression`).
-   - Automatically execute Episode B generation, build files, and push to GitHub hands-free.
+2. **Batch Build:**
+   - Extract transcript and select 15 CEFR A1/A2 words directly spoken in the episode.
+   - Generate **15 dedicated, 100% unique 3D Pixar PNGs** per episode (zero image reuse).
+   - Unlock card on `index.html`, update `app.js`, sync `portal/`, and push live to both `main` and `gh-pages` branches on GitHub.
