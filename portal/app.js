@@ -416,7 +416,7 @@ const episodeData = {
         words: ["Where", "is", "the", "sand"],
         distractors: ["water", "grass"],
         sentenceWithBlank: "Where is the _______?",
-        image: "assets/ep3_seaside.png",
+        image: "assets/ep3_sand.png",
         emoji: "🏖️"
       }
     ]
@@ -511,7 +511,7 @@ const episodeData = {
         words: ["Red", "box", "for", "paper"],
         distractors: ["Orange", "Brown"],
         sentenceWithBlank: "_______ box for paper.",
-        image: "assets/ep4_box.png",
+        image: "assets/ep4_red.png",
         emoji: "🟥"
       },
       {
@@ -520,7 +520,7 @@ const episodeData = {
         words: ["Our", "little", "red", "car"],
         distractors: ["bus", "train"],
         sentenceWithBlank: "Our little red _______.",
-        image: "assets/ep4_clean.png",
+        image: "assets/ep4_car.png",
         emoji: "🚗"
       },
       {
@@ -529,7 +529,7 @@ const episodeData = {
         words: ["Is", "everybody", "ready", "now"],
         distractors: ["late", "slow"],
         sentenceWithBlank: "Is everybody _______ now?",
-        image: "assets/ep4_morning.png",
+        image: "assets/ep4_ready.png",
         emoji: "🎒"
       },
       {
@@ -538,7 +538,7 @@ const episodeData = {
         words: ["We", "are", "going", "to", "recycle"],
         distractors: ["throw", "waste"],
         sentenceWithBlank: "We are going to _______.",
-        image: "assets/ep4_box.png",
+        image: "assets/ep4_recycle.png",
         emoji: "♻️"
       },
       {
@@ -547,7 +547,7 @@ const episodeData = {
         words: ["Can", "we", "help", "mommy"],
         distractors: ["stop", "watch"],
         sentenceWithBlank: "Can we _______ mommy?",
-        image: "assets/ep4_clean.png",
+        image: "assets/ep4_help.png",
         emoji: "🤝"
       },
       {
@@ -556,7 +556,7 @@ const episodeData = {
         words: ["Finishing", "their", "breakfast"],
         distractors: ["starting", "eating"],
         sentenceWithBlank: "_______ their breakfast.",
-        image: "assets/ep4_paper.png",
+        image: "assets/ep4_finish.png",
         emoji: "🥣"
       }
     ]
@@ -570,7 +570,7 @@ const episodeData = {
         words: ["Peppa", "brought", "her", "toy", "boat"],
         distractors: ["car", "bus"],
         sentenceWithBlank: "Peppa brought her toy _______.",
-        image: "assets/ep3_pool.png",
+        image: "assets/ep5_boat.png",
         emoji: "⛵"
       },
       {
@@ -579,7 +579,7 @@ const episodeData = {
         words: ["Ducks", "swimming", "in", "pond"],
         distractors: ["dogs", "cats"],
         sentenceWithBlank: "Ducks swimming in _______.",
-        image: "assets/ep3_pool.png",
+        image: "assets/ep5_duck.png",
         emoji: "🦆"
       },
       {
@@ -588,7 +588,7 @@ const episodeData = {
         words: ["Put", "boat", "in", "pond"],
         distractors: ["house", "box"],
         sentenceWithBlank: "Put boat in _______.",
-        image: "assets/ep3_pool.png",
+        image: "assets/ep5_pond.png",
         emoji: "🏞️"
       },
       {
@@ -597,7 +597,7 @@ const episodeData = {
         words: ["Wind", "makes", "it", "go"],
         distractors: ["rain", "sun"],
         sentenceWithBlank: "_______ makes it go.",
-        image: "assets/windy.png",
+        image: "assets/ep5_wind.png",
         emoji: "💨"
       },
       {
@@ -606,7 +606,7 @@ const episodeData = {
         words: ["It", "went", "really", "fast"],
         distractors: ["slow", "quiet"],
         sentenceWithBlank: "It went really _______.",
-        image: "assets/ep2_rocket.png",
+        image: "assets/ep5_fast.png",
         emoji: "⚡"
       },
       {
@@ -1035,7 +1035,7 @@ const episodeData = {
         words: ["I", "can", "see", "red", "color"],
         distractors: ["blue", "green"],
         sentenceWithBlank: "I can see _______ color.",
-        image: "assets/ep4_box.png",
+        image: "assets/ep4_red.png",
         emoji: "🟥"
       },
       {
@@ -1247,7 +1247,7 @@ const episodeData = {
         words: ["We", "need", "some", "help"],
         distractors: ["rest", "sleep"],
         sentenceWithBlank: "We need some _______.",
-        image: "assets/ep4_clean.png",
+        image: "assets/ep4_help.png",
         emoji: "🤝"
       },
       {
