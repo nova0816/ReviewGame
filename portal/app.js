@@ -1,2218 +1,245 @@
-// Vocabulary Explorer Game Logic - Multi-Episode Database
-
-const episodeData = {
-  ep1: {
-    title: "PP S2 E8: Autumn Wind",
-    levels: [
-      {
-        targetWord: "Autumn",
-        statement: "It's Autumn time",
-        words: ["It's", "Autumn", "time"],
-        distractors: ["summer", "spring"],
-        sentenceWithBlank: "It's _______ time.",
-        image: "assets/autumn.png",
-        emoji: "🍂"
-      },
-      {
-        targetWord: "windy",
-        statement: "It is quite windy",
-        words: ["It", "is", "quite", "windy"],
-        distractors: ["sunny", "calm"],
-        sentenceWithBlank: "It is quite _______.",
-        image: "assets/windy.png",
-        emoji: "🌬️"
-      },
-      {
-        targetWord: "freezing",
-        statement: "It's freezing cold",
-        words: ["It's", "freezing", "cold"],
-        distractors: ["warm", "boiling"],
-        sentenceWithBlank: "It's _______ cold!",
-        image: "assets/freezing.png",
-        emoji: "🥶"
-      },
-      {
-        targetWord: "heating",
-        statement: "Turn the heating on",
-        words: ["Turn", "the", "heating", "on"],
-        distractors: ["cooling", "lights"],
-        sentenceWithBlank: "Turn the _______ on.",
-        image: "assets/heating.png",
-        emoji: "🔥"
-      },
-      {
-        targetWord: "scarf",
-        statement: "Wear your warm scarf",
-        words: ["Wear", "your", "warm", "scarf"],
-        distractors: ["shoes", "t-shirt"],
-        sentenceWithBlank: "Wear your warm _______.",
-        image: "assets/scarf.png",
-        emoji: "🧣"
-      },
-      {
-        targetWord: "pond",
-        statement: "The ball is in the pond",
-        words: ["The", "ball", "is", "in", "the", "pond"],
-        distractors: ["sky", "tree"],
-        sentenceWithBlank: "The ball is in the _______.",
-        image: "assets/pond.png",
-        emoji: "🦆"
-      },
-      {
-        targetWord: "muddy",
-        statement: "Jumping in muddy puddles",
-        words: ["Jumping", "in", "muddy", "puddles"],
-        distractors: ["dry", "clean"],
-        sentenceWithBlank: "Jumping in _______ puddles.",
-        image: "assets/muddy.png",
-        emoji: "🐷"
-      },
-      {
-        targetWord: "Shake",
-        statement: "Shake the thin tree",
-        words: ["Shake", "the", "thin", "tree"],
-        distractors: ["Climb", "Cut"],
-        sentenceWithBlank: "_______ the thin tree.",
-        image: "assets/shake.png",
-        emoji: "🌳"
-      },
-      {
-        targetWord: "Lean",
-        statement: "Lean into the wind",
-        words: ["Lean", "into", "the", "wind"],
-        distractors: ["Jump", "Run"],
-        sentenceWithBlank: "_______ into the wind.",
-        image: "assets/lean.png",
-        emoji: "💨"
-      },
-      {
-        targetWord: "suppose",
-        statement: "I suppose it is funny",
-        words: ["I", "suppose", "it", "is", "funny"],
-        distractors: ["forget", "know"],
-        sentenceWithBlank: "I _______ it is funny.",
-        image: "assets/suppose.png",
-        emoji: "🤔"
-      },
-      {
-        targetWord: "thin",
-        statement: "The tree is too thin",
-        words: ["The", "tree", "is", "too", "thin"],
-        distractors: ["thick", "strong"],
-        sentenceWithBlank: "The tree is too _______.",
-        image: "assets/thin.png",
-        emoji: "🌿"
-      },
-      {
-        targetWord: "heavy",
-        statement: "I am too heavy",
-        words: ["I", "am", "too", "heavy"],
-        distractors: ["light", "small"],
-        sentenceWithBlank: "I am too _______.",
-        image: "assets/heavy.png",
-        emoji: "🐘"
-      },
-      {
-        targetWord: "weight",
-        statement: "It cannot take your weight",
-        words: ["It", "cannot", "take", "your", "weight"],
-        distractors: ["height", "speed"],
-        sentenceWithBlank: "It cannot take your _______.",
-        image: "assets/weight.png",
-        emoji: "⚖️"
-      },
-      {
-        targetWord: "favorite",
-        statement: "What's your favorite game",
-        words: ["What's", "your", "favorite", "game"],
-        distractors: ["boring", "hardest"],
-        sentenceWithBlank: "What's your _______ game?",
-        image: "assets/favorite.png",
-        emoji: "💖"
-      },
-      {
-        targetWord: "stroke",
-        statement: "What a stroke of luck",
-        words: ["What", "a", "stroke", "of", "luck"],
-        distractors: ["problem", "accident"],
-        sentenceWithBlank: "What a _______ of luck!",
-        image: "assets/luck.png",
-        emoji: "🍀"
-      }
-    ]
+// Nova's Web Apps Database
+const APPS_DATA = [
+  {
+    id: "MonsterSnackShop",
+    title: "Monster Snack Shop 👾 | Dialogue Cafe Game",
+    category: "english",
+    icon: "👾",
+    description: "Interactive ESL functional dialogue cafe game for kids! Serve hungry monsters delicious treats using natural English phrases and voice audio.",
+    url: "https://nova0816.github.io/MonsterSnackShop/",
+    repoUrl: "https://github.com/nova0816/MonsterSnackShop",
+    tags: ["ESL", "Dialogue Game", "Kids", "Audio", "Interactive Cafe"],
+    accent: "linear-gradient(135deg, #ff6b6b, #ff8e53)",
+    glow: "rgba(255, 107, 107, 0.25)"
   },
-  ep2: {
-    title: "PP S2 E9: Time Treasure",
-    levels: [
-      {
-        targetWord: "Rocket",
-        statement: "Fly in space rockets",
-        words: ["Fly", "in", "space", "rockets"],
-        distractors: ["car", "boat"],
-        sentenceWithBlank: "Fly in space _______.",
-        image: "assets/ep2_rocket.png",
-        emoji: "🚀"
-      },
-      {
-        targetWord: "Dig",
-        statement: "Dig a deep hole",
-        words: ["Dig", "a", "deep", "hole"],
-        distractors: ["Fill", "Jump"],
-        sentenceWithBlank: "_______ a deep hole.",
-        image: "assets/ep2_dig.png",
-        emoji: "⛏️"
-      },
-      {
-        targetWord: "Bury",
-        statement: "Bury it in garden",
-        words: ["Bury", "it", "in", "garden"],
-        distractors: ["Throw", "Keep"],
-        sentenceWithBlank: "_______ it in garden.",
-        image: "assets/ep2_bury.png",
-        emoji: "📦"
-      },
-      {
-        targetWord: "grown",
-        statement: "The tree has grown",
-        words: ["The", "tree", "has", "grown"],
-        distractors: ["fallen", "shrunk"],
-        sentenceWithBlank: "The tree has _______.",
-        image: "assets/ep2_grow.png",
-        emoji: "🌱"
-      },
-      {
-        targetWord: "squeaky",
-        statement: "What a squeaky voice",
-        words: ["What", "a", "squeaky", "voice"],
-        distractors: ["loud", "deep"],
-        sentenceWithBlank: "What a _______ voice!",
-        image: "assets/ep2_squeaky.png",
-        emoji: "🐭"
-      },
-      {
-        targetWord: "arrived",
-        statement: "Parents have all arrived",
-        words: ["Parents", "have", "all", "arrived"],
-        distractors: ["left", "slept"],
-        sentenceWithBlank: "Parents have all _______.",
-        image: "assets/ep2_arrive.png",
-        emoji: "🚗"
-      },
-      {
-        targetWord: "treasure",
-        statement: "Find a hidden treasure",
-        words: ["Find", "a", "hidden", "treasure"],
-        distractors: ["trash", "stone"],
-        sentenceWithBlank: "Find a hidden _______.",
-        image: "assets/ep2_treasure.png",
-        emoji: "🏴‍☠️"
-      },
-      {
-        targetWord: "wait",
-        statement: "I cannot wait long",
-        words: ["I", "cannot", "wait", "long"],
-        distractors: ["run", "sleep"],
-        sentenceWithBlank: "I cannot _______ long.",
-        image: "assets/ep2_wait.png",
-        emoji: "⏰"
-      },
-      {
-        targetWord: "Record",
-        statement: "Record a special message",
-        words: ["Record", "a", "special", "message"],
-        distractors: ["Delete", "Forget"],
-        sentenceWithBlank: "_______ a special message.",
-        image: "assets/ep2_record.png",
-        emoji: "📹"
-      },
-      {
-        targetWord: "holiday",
-        statement: "Going on a holiday",
-        words: ["Going", "on", "a", "holiday"],
-        distractors: ["school", "work"],
-        sentenceWithBlank: "Going on a _______.",
-        image: "assets/ep2_holiday.png",
-        emoji: "🏖️"
-      },
-      {
-        targetWord: "Remain",
-        statement: "Remain in the ground",
-        words: ["Remain", "in", "the", "ground"],
-        distractors: ["Fly", "Move"],
-        sentenceWithBlank: "_______ in the ground.",
-        image: "assets/ep2_remain.png",
-        emoji: "🪵"
-      },
-      {
-        targetWord: "future",
-        statement: "People in the future",
-        words: ["People", "in", "the", "future"],
-        distractors: ["past", "yesterday"],
-        sentenceWithBlank: "People in the _______.",
-        image: "assets/ep2_future.png",
-        emoji: "🔮"
-      },
-      {
-        targetWord: "remember",
-        statement: "I remember the past",
-        words: ["I", "remember", "the", "past"],
-        distractors: ["forget", "dislike"],
-        sentenceWithBlank: "I _______ the past.",
-        image: "assets/ep2_remember.png",
-        emoji: "💭"
-      },
-      {
-        targetWord: "daily",
-        statement: "Show our daily lives",
-        words: ["Show", "our", "daily", "lives"],
-        distractors: ["rare", "yearly"],
-        sentenceWithBlank: "Show our _______ lives.",
-        image: "assets/ep2_daily.png",
-        emoji: "📅"
-      },
-      {
-        targetWord: "choice",
-        statement: "What a good choice",
-        words: ["What", "a", "good", "choice"],
-        distractors: ["mistake", "bad"],
-        sentenceWithBlank: "What a good _______.",
-        image: "assets/ep2_choice.png",
-        emoji: "👍"
-      }
-    ]
+  {
+    id: "LearnFrench",
+    title: "Élan - Interactive French Learning PWA",
+    category: "language",
+    icon: "🇫🇷",
+    description: "Conversational French PWA featuring interactive vocabulary flip cards, listening drills, speech practice, and native audio pronunciations.",
+    url: "https://nova0816.github.io/LearnFrench/",
+    repoUrl: "https://github.com/nova0816/LearnFrench",
+    tags: ["PWA", "French", "Vocabulary", "Audio Drills", "Speech API"],
+    accent: "linear-gradient(135deg, #ec4899, #f43f5e)",
+    glow: "rgba(236, 72, 153, 0.25)"
   },
-  ep3: {
-    title: "PP S2 E10: Tide Pools",
-    levels: [
-      {
-        targetWord: "seaside",
-        statement: "Going to the seaside",
-        words: ["Going", "to", "the", "seaside"],
-        distractors: ["school", "mountain"],
-        sentenceWithBlank: "Going to the _______.",
-        image: "assets/ep3_seaside.png",
-        emoji: "🌊"
-      },
-      {
-        targetWord: "beach",
-        statement: "On this rocky beach",
-        words: ["On", "this", "rocky", "beach"],
-        distractors: ["grass", "room"],
-        sentenceWithBlank: "On this rocky _______.",
-        image: "assets/ep3_beach.png",
-        emoji: "🏖️"
-      },
-      {
-        targetWord: "pool",
-        statement: "Little pools of water",
-        words: ["Little", "pools", "of", "water"],
-        distractors: ["rivers", "clouds"],
-        sentenceWithBlank: "Little _______ of water.",
-        image: "assets/ep3_pool.png",
-        emoji: "💧"
-      },
-      {
-        targetWord: "fish",
-        statement: "Poor little fish",
-        words: ["Poor", "little", "fish"],
-        distractors: ["bird", "frog"],
-        sentenceWithBlank: "Poor little _______.",
-        image: "assets/ep3_fish.png",
-        emoji: "🐟"
-      },
-      {
-        targetWord: "water",
-        statement: "Pools of sea water",
-        words: ["Pools", "of", "sea", "water"],
-        distractors: ["milk", "juice"],
-        sentenceWithBlank: "Pools of sea _______.",
-        image: "assets/ep3_water.png",
-        emoji: "💧"
-      },
-      {
-        targetWord: "bucket",
-        statement: "Put it in bucket",
-        words: ["Put", "it", "in", "bucket"],
-        distractors: ["pocket", "box"],
-        sentenceWithBlank: "Put it in _______.",
-        image: "assets/ep3_bucket.png",
-        emoji: "🪣"
-      },
-      {
-        targetWord: "crab",
-        statement: "See a little crab",
-        words: ["See", "a", "little", "crab"],
-        distractors: ["bird", "dog"],
-        sentenceWithBlank: "See a little _______.",
-        image: "assets/ep3_crab.png",
-        emoji: "🦀"
-      },
-      {
-        targetWord: "pinch",
-        statement: "Naughty crabs pinch pinch",
-        words: ["Naughty", "crabs", "pinch", "pinch"],
-        distractors: ["hug", "smile"],
-        sentenceWithBlank: "Naughty crabs _______ pinch.",
-        image: "assets/ep3_pinch.png",
-        emoji: "🤏"
-      },
-      {
-        targetWord: "ear",
-        statement: "Put shell to ear",
-        words: ["Put", "shell", "to", "ear"],
-        distractors: ["hand", "foot"],
-        sentenceWithBlank: "Put shell to _______.",
-        image: "assets/ep3_ear.png",
-        emoji: "👂"
-      },
-      {
-        targetWord: "seashell",
-        statement: "Listen to a seashell",
-        words: ["Listen", "to", "a", "seashell"],
-        distractors: ["stone", "leaf"],
-        sentenceWithBlank: "Listen to a _______.",
-        image: "assets/ep3_seashell.png",
-        emoji: "🐚"
-      },
-      {
-        targetWord: "rocky",
-        statement: "A bumpy rocky beach",
-        words: ["A", "bumpy", "rocky", "beach"],
-        distractors: ["smooth", "soft"],
-        sentenceWithBlank: "A bumpy _______ beach.",
-        image: "assets/ep3_rocky.png",
-        emoji: "🪨"
-      },
-      {
-        targetWord: "rescue",
-        statement: "Rescue the little fish",
-        words: ["Rescue", "the", "little", "fish"],
-        distractors: ["Drop", "Hide"],
-        sentenceWithBlank: "_______ the little fish.",
-        image: "assets/ep3_rescue.png",
-        emoji: "🛟"
-      },
-      {
-        targetWord: "pretend",
-        statement: "Pretend to be crabs",
-        words: ["Pretend", "to", "be", "crabs"],
-        distractors: ["Forget", "Sleep"],
-        sentenceWithBlank: "_______ to be crabs.",
-        image: "assets/ep3_pretend.png",
-        emoji: "🎭"
-      },
-      {
-        targetWord: "special",
-        statement: "Something special inside pool",
-        words: ["Something", "special", "inside", "pool"],
-        distractors: ["boring", "normal"],
-        sentenceWithBlank: "Something _______ inside pool.",
-        image: "assets/ep3_special.png",
-        emoji: "⭐"
-      },
-      {
-        targetWord: "sand",
-        statement: "Where is the sand",
-        words: ["Where", "is", "the", "sand"],
-        distractors: ["water", "grass"],
-        sentenceWithBlank: "Where is the _______?",
-        image: "assets/ep3_sand.png",
-        emoji: "🏖️"
-      }
-    ]
+  {
+    id: "MemoryGame",
+    title: "Cute Memory Match - Learn to Read!",
+    category: "kids",
+    icon: "🧸",
+    description: "Vibrant animal & vocabulary memory matching game across 12 fun topics (Animals, Colors, Fruits, Shapes, School, Beach, Kitchen) designed for kids.",
+    url: "https://nova0816.github.io/MemoryGame/",
+    repoUrl: "https://github.com/nova0816/MemoryGame",
+    tags: ["Kids", "Memory Game", "12 Topics", "Audio Rewards", "Interactive"],
+    accent: "linear-gradient(135deg, #f59e0b, #fbbf24)",
+    glow: "rgba(245, 158, 11, 0.25)"
   },
-  ep4: {
-    title: "PP S2 E11: Eco Clean",
-    levels: [
-      {
-        targetWord: "bottle",
-        statement: "Throw this empty bottle",
-        words: ["Throw", "this", "empty", "bottle"],
-        distractors: ["can", "paper"],
-        sentenceWithBlank: "Throw this empty _______.",
-        image: "assets/ep4_bottle.png",
-        emoji: "🍼"
-      },
-      {
-        targetWord: "box",
-        statement: "Put in recycle boxes",
-        words: ["Put", "in", "recycle", "boxes"],
-        distractors: ["bags", "pockets"],
-        sentenceWithBlank: "Put in recycle _______.",
-        image: "assets/ep4_box.png",
-        emoji: "📦"
-      },
-      {
-        targetWord: "paper",
-        statement: "Newspapers go in box",
-        words: ["Newspapers", "go", "in", "box"],
-        distractors: ["stay", "leave"],
-        sentenceWithBlank: "Newspapers go in _______.",
-        image: "assets/ep4_paper.png",
-        emoji: "📰"
-      },
-      {
-        targetWord: "clean",
-        statement: "Let us clear up",
-        words: ["Let", "us", "clear", "up"],
-        distractors: ["dirty", "mess"],
-        sentenceWithBlank: "Let us _______ up.",
-        image: "assets/ep4_clean.png",
-        emoji: "🧹"
-      },
-      {
-        targetWord: "quiet",
-        statement: "Tries to be quiet",
-        words: ["Tries", "to", "be", "quiet"],
-        distractors: ["loud", "noisy"],
-        sentenceWithBlank: "Tries to be _______.",
-        image: "assets/ep4_quiet.png",
-        emoji: "🤫"
-      },
-      {
-        targetWord: "morning",
-        statement: "It is early morning",
-        words: ["It", "is", "early", "morning"],
-        distractors: ["night", "evening"],
-        sentenceWithBlank: "It is early _______.",
-        image: "assets/ep4_morning.png",
-        emoji: "🌅"
-      },
-      {
-        targetWord: "empty",
-        statement: "Emptied the rubbish bin",
-        words: ["Emptied", "the", "rubbish", "bin"],
-        distractors: ["filled", "kept"],
-        sentenceWithBlank: "_______ the rubbish bin.",
-        image: "assets/ep4_empty.png",
-        emoji: "🗑️"
-      },
-      {
-        targetWord: "green",
-        statement: "Green box for bottles",
-        words: ["Green", "box", "for", "bottles"],
-        distractors: ["Yellow", "Black"],
-        sentenceWithBlank: "_______ box for bottles.",
-        image: "assets/ep4_green.png",
-        emoji: "🟩"
-      },
-      {
-        targetWord: "blue",
-        statement: "Blue box for cans",
-        words: ["Blue", "box", "for", "cans"],
-        distractors: ["White", "Purple"],
-        sentenceWithBlank: "_______ box for cans.",
-        image: "assets/ep4_blue.png",
-        emoji: "🟦"
-      },
-      {
-        targetWord: "red",
-        statement: "Red box for paper",
-        words: ["Red", "box", "for", "paper"],
-        distractors: ["Orange", "Brown"],
-        sentenceWithBlank: "_______ box for paper.",
-        image: "assets/ep4_red.png",
-        emoji: "🟥"
-      },
-      {
-        targetWord: "car",
-        statement: "Our little red car",
-        words: ["Our", "little", "red", "car"],
-        distractors: ["bus", "train"],
-        sentenceWithBlank: "Our little red _______.",
-        image: "assets/ep4_car.png",
-        emoji: "🚗"
-      },
-      {
-        targetWord: "ready",
-        statement: "Is everybody ready now",
-        words: ["Is", "everybody", "ready", "now"],
-        distractors: ["late", "slow"],
-        sentenceWithBlank: "Is everybody _______ now?",
-        image: "assets/ep4_ready.png",
-        emoji: "🎒"
-      },
-      {
-        targetWord: "recycle",
-        statement: "We are going to recycle",
-        words: ["We", "are", "going", "to", "recycle"],
-        distractors: ["throw", "waste"],
-        sentenceWithBlank: "We are going to _______.",
-        image: "assets/ep4_recycle.png",
-        emoji: "♻️"
-      },
-      {
-        targetWord: "help",
-        statement: "Can we help mommy",
-        words: ["Can", "we", "help", "mommy"],
-        distractors: ["stop", "watch"],
-        sentenceWithBlank: "Can we _______ mommy?",
-        image: "assets/ep4_help.png",
-        emoji: "🤝"
-      },
-      {
-        targetWord: "finish",
-        statement: "Finishing their breakfast",
-        words: ["Finishing", "their", "breakfast"],
-        distractors: ["starting", "eating"],
-        sentenceWithBlank: "_______ their breakfast.",
-        image: "assets/ep4_finish.png",
-        emoji: "🥣"
-      }
-    ]
+  {
+    id: "ReviewGame",
+    title: "Vocabulary Explorer: Story Series",
+    category: "english",
+    icon: "📚",
+    description: "Story-based English vocabulary explorer with animated episode cards (Autumn Wind, Time Treasure) featuring interactive matching and voice audio.",
+    url: "https://nova0816.github.io/ReviewGame/",
+    repoUrl: "https://github.com/nova0816/ReviewGame",
+    tags: ["English", "Story Cards", "Vocabulary", "Audio", "Episodes"],
+    accent: "linear-gradient(135deg, #10b981, #059669)",
+    glow: "rgba(16, 185, 129, 0.25)"
   },
-  ep5: {
-    title: "PP S2 E12: The Boat Pond",
-    levels: [
-      {
-        targetWord: "boat",
-        statement: "Peppa brought her toy boat",
-        words: ["Peppa", "brought", "her", "toy", "boat"],
-        distractors: ["car", "bus"],
-        sentenceWithBlank: "Peppa brought her toy _______.",
-        image: "assets/ep5_boat.png",
-        emoji: "⛵"
-      },
-      {
-        targetWord: "duck",
-        statement: "Ducks swimming in pond",
-        words: ["Ducks", "swimming", "in", "pond"],
-        distractors: ["dogs", "cats"],
-        sentenceWithBlank: "Ducks swimming in _______.",
-        image: "assets/ep5_duck.png",
-        emoji: "🦆"
-      },
-      {
-        targetWord: "pond",
-        statement: "Put boat in pond",
-        words: ["Put", "boat", "in", "pond"],
-        distractors: ["house", "box"],
-        sentenceWithBlank: "Put boat in _______.",
-        image: "assets/ep5_pond.png",
-        emoji: "🏞️"
-      },
-      {
-        targetWord: "wind",
-        statement: "Wind makes it go",
-        words: ["Wind", "makes", "it", "go"],
-        distractors: ["rain", "sun"],
-        sentenceWithBlank: "_______ makes it go.",
-        image: "assets/ep5_wind.png",
-        emoji: "💨"
-      },
-      {
-        targetWord: "fast",
-        statement: "It went really fast",
-        words: ["It", "went", "really", "fast"],
-        distractors: ["slow", "quiet"],
-        sentenceWithBlank: "It went really _______.",
-        image: "assets/ep5_fast.png",
-        emoji: "⚡"
-      },
-      {
-        targetWord: "push",
-        statement: "Push this little lever",
-        words: ["Push", "this", "little", "lever"],
-        distractors: ["pull", "stop"],
-        sentenceWithBlank: "_______ this little lever.",
-        image: "assets/ep2_dig.png",
-        emoji: "🎛️"
-      },
-      {
-        targetWord: "race",
-        statement: "Let us have a race",
-        words: ["Let", "us", "have", "a", "race"],
-        distractors: ["sleep", "nap"],
-        sentenceWithBlank: "Let us have a _______.",
-        image: "assets/ep2_rocket.png",
-        emoji: "🏁"
-      },
-      {
-        targetWord: "breath",
-        statement: "Take a deep breath",
-        words: ["Take", "a", "deep", "breath"],
-        distractors: ["step", "jump"],
-        sentenceWithBlank: "Take a deep _______.",
-        image: "assets/windy.png",
-        emoji: "🌬️"
-      },
-      {
-        targetWord: "winner",
-        statement: "We have a winner",
-        words: ["We", "have", "a", "winner"],
-        distractors: ["loser", "game"],
-        sentenceWithBlank: "We have a _______.",
-        image: "assets/ep2_treasure.png",
-        emoji: "🏆"
-      },
-      {
-        targetWord: "paper",
-        statement: "Made a paper boat",
-        words: ["Made", "a", "paper", "boat"],
-        distractors: ["stone", "glass"],
-        sentenceWithBlank: "Made a _______ boat.",
-        image: "assets/ep4_paper.png",
-        emoji: "📄"
-      },
-      {
-        targetWord: "blow",
-        statement: "Blow your boat along",
-        words: ["Blow", "your", "boat", "along"],
-        distractors: ["stop", "hold"],
-        sentenceWithBlank: "_______ your boat along.",
-        image: "assets/windy.png",
-        emoji: "💨"
-      },
-      {
-        targetWord: "happy",
-        statement: "Ducks are very happy",
-        words: ["Ducks", "are", "very", "happy"],
-        distractors: ["sad", "angry"],
-        sentenceWithBlank: "Ducks are very _______.",
-        image: "assets/ep2_holiday.png",
-        emoji: "😊"
-      },
-      {
-        targetWord: "idea",
-        statement: "I have a good idea",
-        words: ["I", "have", "a", "good", "idea"],
-        distractors: ["question", "doubt"],
-        sentenceWithBlank: "I have a good _______.",
-        image: "assets/ep2_future.png",
-        emoji: "💡"
-      },
-      {
-        targetWord: "wish",
-        statement: "I wish I had boat",
-        words: ["I", "wish", "I", "had", "boat"],
-        distractors: ["fear", "hate"],
-        sentenceWithBlank: "I _______ I had boat.",
-        image: "assets/ep2_remember.png",
-        emoji: "🌟"
-      },
-      {
-        targetWord: "enjoy",
-        statement: "Enjoyed the toy boats",
-        words: ["Enjoyed", "the", "toy", "boats"],
-        distractors: ["disliked", "missed"],
-        sentenceWithBlank: "_______ the toy boats.",
-        image: "assets/ep2_holiday.png",
-        emoji: "🎉"
-      }
-    ]
+  {
+    id: "VerbGame",
+    title: "Word Explorer: Action Verbs!",
+    category: "english",
+    icon: "🎨",
+    description: "Action verb mastery game featuring 10 level progressions across 4 difficulty modes (Easy, Listen, Normal, Hard) with word ordering challenges.",
+    url: "https://nova0816.github.io/VerbGame/",
+    repoUrl: "https://github.com/nova0816/VerbGame",
+    tags: ["Grammar", "Action Verbs", "Audio Drills", "Levels", "Sentences"],
+    accent: "linear-gradient(135deg, #6366f1, #4f46e5)",
+    glow: "rgba(99, 102, 241, 0.25)"
   },
-  ep6: {
-    title: "PP S2 E13: Traffic Jam",
-    levels: [
-      {
-        targetWord: "traffic",
-        statement: "Avoids all the traffic",
-        words: ["Avoids", "all", "the", "traffic"],
-        distractors: ["train", "boat"],
-        sentenceWithBlank: "Avoids all the _______.",
-        image: "assets/ep2_rocket.png",
-        emoji: "🚗"
-      },
-      {
-        targetWord: "jam",
-        statement: "Stuck in a traffic jam",
-        words: ["Stuck", "in", "a", "traffic", "jam"],
-        distractors: ["park", "yard"],
-        sentenceWithBlank: "Stuck in a traffic _______.",
-        image: "assets/ep2_rocket.png",
-        emoji: "🚕"
-      },
-      {
-        targetWord: "potato",
-        statement: "Plenty of potatoes",
-        words: ["Plenty", "of", "potatoes"],
-        distractors: ["apples", "carrots"],
-        sentenceWithBlank: "Plenty of _______.",
-        image: "assets/ep3_pool.png",
-        emoji: "🥔"
-      },
-      {
-        targetWord: "lunch",
-        statement: "Making lunch for Peppa",
-        words: ["Making", "lunch", "for", "Peppa"],
-        distractors: ["dinner", "snack"],
-        sentenceWithBlank: "Making _______ for Peppa.",
-        image: "assets/ep2_holiday.png",
-        emoji: "🍱"
-      },
-      {
-        targetWord: "oven",
-        statement: "Potatoes in the oven",
-        words: ["Potatoes", "in", "the", "oven"],
-        distractors: ["fridge", "box"],
-        sentenceWithBlank: "Potatoes in the _______.",
-        image: "assets/heating.png",
-        emoji: "🔥"
-      },
-      {
-        targetWord: "clock",
-        statement: "It is eleven o clock",
-        words: ["It", "is", "eleven", "o", "clock"],
-        distractors: ["nine", "five"],
-        sentenceWithBlank: "It is eleven o _______.",
-        image: "assets/ep2_treasure.png",
-        emoji: "⏰"
-      },
-      {
-        targetWord: "stuck",
-        statement: "We are stuck here",
-        words: ["We", "are", "stuck", "here"],
-        distractors: ["free", "flying"],
-        sentenceWithBlank: "We are _______ here.",
-        image: "assets/ep3_trapped.png",
-        emoji: "🛑"
-      },
-      {
-        targetWord: "road",
-        statement: "There is main road",
-        words: ["There", "is", "main", "road"],
-        distractors: ["river", "ocean"],
-        sentenceWithBlank: "There is main _______.",
-        image: "assets/ep2_rocket.png",
-        emoji: "🛣️"
-      },
-      {
-        targetWord: "slow",
-        statement: "Moving so slowly",
-        words: ["Moving", "so", "slowly"],
-        distractors: ["fast", "quick"],
-        sentenceWithBlank: "Moving so _______.",
-        image: "assets/ep3_pool.png",
-        emoji: "🐌"
-      },
-      {
-        targetWord: "food",
-        statement: "Food is getting cold",
-        words: ["Food", "is", "getting", "cold"],
-        distractors: ["drink", "water"],
-        sentenceWithBlank: "_______ is getting cold.",
-        image: "assets/freezing.png",
-        emoji: "🍲"
-      },
-      {
-        targetWord: "house",
-        statement: "Almost at your house",
-        words: ["Almost", "at", "your", "house"],
-        distractors: ["school", "store"],
-        sentenceWithBlank: "Almost at your _______.",
-        image: "assets/autumn.png",
-        emoji: "🏡"
-      },
-      {
-        targetWord: "late",
-        statement: "We are running late",
-        words: ["We", "are", "running", "late"],
-        distractors: ["early", "ready"],
-        sentenceWithBlank: "We are running _______.",
-        image: "assets/ep2_treasure.png",
-        emoji: "⌛"
-      },
-      {
-        targetWord: "worry",
-        statement: "Do not worry now",
-        words: ["Do", "not", "worry", "now"],
-        distractors: ["laugh", "sing"],
-        sentenceWithBlank: "Do not _______ now.",
-        image: "assets/ep2_remember.png",
-        emoji: "😌"
-      },
-      {
-        targetWord: "shortcut",
-        statement: "Taking a shortcut",
-        words: ["Taking", "a", "shortcut"],
-        distractors: ["highway", "circle"],
-        sentenceWithBlank: "Taking a _______.",
-        image: "assets/ep2_rocket.png",
-        emoji: "🔀"
-      },
-      {
-        targetWord: "serve",
-        statement: "Lunch is served",
-        words: ["Lunch", "is", "served"],
-        distractors: ["cooked", "hidden"],
-        sentenceWithBlank: "Lunch is _______.",
-        image: "assets/ep2_holiday.png",
-        emoji: "🍽️"
-      }
-    ]
-  },
-  ep7: {
-    title: "PP S2 E14: Bedtime",
-    levels: [
-      {
-        targetWord: "bedtime",
-        statement: "It is almost bedtime",
-        words: ["It", "is", "almost", "bedtime"],
-        distractors: ["morning", "playtime"],
-        sentenceWithBlank: "It is almost _______.",
-        image: "assets/ep2_treasure.png",
-        emoji: "🌙"
-      },
-      {
-        targetWord: "supper",
-        statement: "Finishing their supper",
-        words: ["Finishing", "their", "supper"],
-        distractors: ["lunch", "breakfast"],
-        sentenceWithBlank: "Finishing their _______.",
-        image: "assets/ep4_paper.png",
-        emoji: "🍲"
-      },
-      {
-        targetWord: "bath",
-        statement: "Quick into the bath",
-        words: ["Quick", "into", "the", "bath"],
-        distractors: ["bed", "car"],
-        sentenceWithBlank: "Quick into the _______.",
-        image: "assets/ep3_pool.png",
-        emoji: "🛁"
-      },
-      {
-        targetWord: "pajamas",
-        statement: "Into your soft pajamas",
-        words: ["Into", "your", "soft", "pajamas"],
-        distractors: ["shoes", "coats"],
-        sentenceWithBlank: "Into your soft _______.",
-        image: "assets/scarf.png",
-        emoji: "👔"
-      },
-      {
-        targetWord: "teeth",
-        statement: "Clean your teeth now",
-        words: ["Clean", "your", "teeth", "now"],
-        distractors: ["hands", "hair"],
-        sentenceWithBlank: "Clean your _______ now.",
-        image: "assets/ep4_clean.png",
-        emoji: "🦷"
-      },
-      {
-        targetWord: "brush",
-        statement: "Brush their teeth clean",
-        words: ["Brush", "their", "teeth", "clean"],
-        distractors: ["wash", "comb"],
-        sentenceWithBlank: "_______ their teeth clean.",
-        image: "assets/ep4_clean.png",
-        emoji: "🪥"
-      },
-      {
-        targetWord: "story",
-        statement: "Read you a story",
-        words: ["Read", "you", "a", "story"],
-        distractors: ["song", "game"],
-        sentenceWithBlank: "Read you a _______.",
-        image: "assets/ep4_paper.png",
-        emoji: "📖"
-      },
-      {
-        targetWord: "book",
-        statement: "Which book do you want",
-        words: ["Which", "book", "do", "you", "want"],
-        distractors: ["toy", "ball"],
-        sentenceWithBlank: "Which _______ do you want?",
-        image: "assets/ep4_paper.png",
-        emoji: "📚"
-      },
-      {
-        targetWord: "monkey",
-        statement: "The red monkey book",
-        words: ["The", "red", "monkey", "book"],
-        distractors: ["tiger", "bear"],
-        sentenceWithBlank: "The red _______ book.",
-        image: "assets/ep2_rocket.png",
-        emoji: "🐒"
-      },
-      {
-        targetWord: "sleepy",
-        statement: "We are not sleepy",
-        words: ["We", "are", "not", "sleepy"],
-        distractors: ["awake", "happy"],
-        sentenceWithBlank: "We are not _______.",
-        image: "assets/ep2_remember.png",
-        emoji: "😴"
-      },
-      {
-        targetWord: "asleep",
-        statement: "Fell fast asleep now",
-        words: ["Fell", "fast", "asleep", "now"],
-        distractors: ["running", "jumping"],
-        sentenceWithBlank: "Fell fast _______ now.",
-        image: "assets/ep2_remember.png",
-        emoji: "💤"
-      },
-      {
-        targetWord: "splash",
-        statement: "Peppa likes splashing",
-        words: ["Peppa", "likes", "splashing"],
-        distractors: ["crying", "sleeping"],
-        sentenceWithBlank: "Peppa likes _______.",
-        image: "assets/ep3_pool.png",
-        emoji: "💦"
-      },
-      {
-        targetWord: "teddy",
-        statement: "Tucked up with teddy",
-        words: ["Tucked", "up", "with", "teddy"],
-        distractors: ["robot", "doll"],
-        sentenceWithBlank: "Tucked up with _______.",
-        image: "assets/ep2_treasure.png",
-        emoji: "🧸"
-      },
-      {
-        targetWord: "night",
-        statement: "Good night red monkey",
-        words: ["Good", "night", "red", "monkey"],
-        distractors: ["morning", "afternoon"],
-        sentenceWithBlank: "Good _______ red monkey.",
-        image: "assets/ep2_future.png",
-        emoji: "✨"
-      },
-      {
-        targetWord: "tired",
-        statement: "I am a bit tired",
-        words: ["I", "am", "a", "bit", "tired"],
-        distractors: ["active", "excited"],
-        sentenceWithBlank: "I am a bit _______.",
-        image: "assets/ep2_remember.png",
-        emoji: "🥱"
-      }
-    ]
-  },
-  ep8: {
-    title: "PP S2 E15: The Eye Test",
-    levels: [
-      {
-        targetWord: "glasses",
-        statement: "Where are my glasses",
-        words: ["Where", "are", "my", "glasses"],
-        distractors: ["hat", "shoes"],
-        sentenceWithBlank: "Where are my _______?",
-        image: "assets/ep2_remember.png",
-        emoji: "👓"
-      },
-      {
-        targetWord: "eye",
-        statement: "Give me an eye test",
-        words: ["Give", "me", "an", "eye", "test"],
-        distractors: ["ear", "hand"],
-        sentenceWithBlank: "Give me an _______ test.",
-        image: "assets/ep3_ear.png",
-        emoji: "👁️"
-      },
-      {
-        targetWord: "look",
-        statement: "Look at the chart",
-        words: ["Look", "at", "the", "chart"],
-        distractors: ["listen", "walk"],
-        sentenceWithBlank: "_______ at the chart.",
-        image: "assets/ep3_beach.png",
-        emoji: "👀"
-      },
-      {
-        targetWord: "letters",
-        statement: "Read these letters please",
-        words: ["Read", "these", "letters", "please"],
-        distractors: ["numbers", "words"],
-        sentenceWithBlank: "Read these _______ please.",
-        image: "assets/ep4_paper.png",
-        emoji: "🔤"
-      },
-      {
-        targetWord: "numbers",
-        statement: "Now read these numbers",
-        words: ["Now", "read", "these", "numbers"],
-        distractors: ["letters", "colors"],
-        sentenceWithBlank: "Now read these _______.",
-        image: "assets/ep4_paper.png",
-        emoji: "🔢"
-      },
-      {
-        targetWord: "red",
-        statement: "I can see red color",
-        words: ["I", "can", "see", "red", "color"],
-        distractors: ["blue", "green"],
-        sentenceWithBlank: "I can see _______ color.",
-        image: "assets/ep4_red.png",
-        emoji: "🟥"
-      },
-      {
-        targetWord: "green",
-        statement: "I see green color",
-        words: ["I", "see", "green", "color"],
-        distractors: ["yellow", "red"],
-        sentenceWithBlank: "I see _______ color.",
-        image: "assets/ep4_green.png",
-        emoji: "🟩"
-      },
-      {
-        targetWord: "blue",
-        statement: "Look at blue color",
-        words: ["Look", "at", "blue", "color"],
-        distractors: ["pink", "black"],
-        sentenceWithBlank: "Look at _______ color.",
-        image: "assets/ep4_blue.png",
-        emoji: "🟦"
-      },
-      {
-        targetWord: "yellow",
-        statement: "Yellow is bright color",
-        words: ["Yellow", "is", "bright", "color"],
-        distractors: ["dark", "gray"],
-        sentenceWithBlank: "_______ is bright color.",
-        image: "assets/ep3_bucket.png",
-        emoji: "🟨"
-      },
-      {
-        targetWord: "sunny",
-        statement: "Hope it is sunny today",
-        words: ["Hope", "it", "is", "sunny", "today"],
-        distractors: ["rainy", "cold"],
-        sentenceWithBlank: "Hope it is _______ today.",
-        image: "assets/ep4_morning.png",
-        emoji: "☀️"
-      },
-      {
-        targetWord: "sunglasses",
-        statement: "Wear my cool sunglasses",
-        words: ["Wear", "my", "cool", "sunglasses"],
-        distractors: ["boots", "gloves"],
-        sentenceWithBlank: "Wear my cool _______.",
-        image: "assets/ep2_remember.png",
-        emoji: "🕶️"
-      },
-      {
-        targetWord: "funny",
-        statement: "These glasses are funny",
-        words: ["These", "glasses", "are", "funny"],
-        distractors: ["sad", "boring"],
-        sentenceWithBlank: "These glasses are _______.",
-        image: "assets/ep2_holiday.png",
-        emoji: "😄"
-      },
-      {
-        targetWord: "big",
-        statement: "They are too big",
-        words: ["They", "are", "too", "big"],
-        distractors: ["small", "tiny"],
-        sentenceWithBlank: "They are too _______.",
-        image: "assets/ep3_seaside.png",
-        emoji: "🐘"
-      },
-      {
-        targetWord: "sit",
-        statement: "Please sit down here",
-        words: ["Please", "sit", "down", "here"],
-        distractors: ["stand", "jump"],
-        sentenceWithBlank: "Please _______ down here.",
-        image: "assets/ep2_wait.png",
-        emoji: "🪑"
-      },
-      {
-        targetWord: "read",
-        statement: "Can you read this",
-        words: ["Can", "you", "read", "this"],
-        distractors: ["draw", "write"],
-        sentenceWithBlank: "Can you _______ this?",
-        image: "assets/ep4_paper.png",
-        emoji: "📖"
-      }
-    ]
-  },
-  ep9: {
-    title: "PP S2 E17: Auto Garage",
-    levels: [
-      {
-        targetWord: "garage",
-        statement: "At Granddad dog garage",
-        words: ["At", "Granddad", "dog", "garage"],
-        distractors: ["house", "park"],
-        sentenceWithBlank: "At Granddad dog _______.",
-        image: "assets/ep4_box.png",
-        emoji: "🏬"
-      },
-      {
-        targetWord: "petrol",
-        statement: "Run out of petrol",
-        words: ["Run", "out", "of", "petrol"],
-        distractors: ["water", "juice"],
-        sentenceWithBlank: "Run out of _______.",
-        image: "assets/ep4_green.png",
-        emoji: "⛽"
-      },
-      {
-        targetWord: "tire",
-        statement: "Air for the tires",
-        words: ["Air", "for", "the", "tires"],
-        distractors: ["doors", "seats"],
-        sentenceWithBlank: "Air for the _______.",
-        image: "assets/ep4_box.png",
-        emoji: "🛞"
-      },
-      {
-        targetWord: "wash",
-        statement: "New automatic car wash",
-        words: ["New", "automatic", "car", "wash"],
-        distractors: ["drive", "ride"],
-        sentenceWithBlank: "New automatic car _______.",
-        image: "assets/ep3_pool.png",
-        emoji: "🧼"
-      },
-      {
-        targetWord: "ice",
-        statement: "Two ice lollies please",
-        words: ["Two", "ice", "lollies", "please"],
-        distractors: ["hot", "warm"],
-        sentenceWithBlank: "Two _______ lollies please.",
-        image: "assets/freezing.png",
-        emoji: "🍦"
-      },
-      {
-        targetWord: "broken",
-        statement: "Our car has broken",
-        words: ["Our", "car", "has", "broken"],
-        distractors: ["fixed", "new"],
-        sentenceWithBlank: "Our car has _______.",
-        image: "assets/ep2_remember.png",
-        emoji: "🛠️"
-      },
-      {
-        targetWord: "rescue",
-        statement: "To the rescue now",
-        words: ["To", "the", "rescue", "now"],
-        distractors: ["stop", "wait"],
-        sentenceWithBlank: "To the _______ now.",
-        image: "assets/ep3_rescue.png",
-        emoji: "🛟"
-      },
-      {
-        targetWord: "tow",
-        statement: "I will tow you",
-        words: ["I", "will", "tow", "you"],
-        distractors: ["push", "drop"],
-        sentenceWithBlank: "I will _______ you.",
-        image: "assets/ep2_rocket.png",
-        emoji: "🚜"
-      },
-      {
-        targetWord: "air",
-        statement: "Fill tire with air",
-        words: ["Fill", "tire", "with", "air"],
-        distractors: ["sand", "dust"],
-        sentenceWithBlank: "Fill tire with _______.",
-        image: "assets/windy.png",
-        emoji: "💨"
-      },
-      {
-        targetWord: "computer",
-        statement: "Run by a computer",
-        words: ["Run", "by", "a", "computer"],
-        distractors: ["robot", "engine"],
-        sentenceWithBlank: "Run by a _______.",
-        image: "assets/ep2_future.png",
-        emoji: "💻"
-      },
-      {
-        targetWord: "water",
-        statement: "First soapy water then",
-        words: ["First", "soapy", "water", "then"],
-        distractors: ["oil", "milk"],
-        sentenceWithBlank: "First soapy _______ then.",
-        image: "assets/ep3_water.png",
-        emoji: "💧"
-      },
-      {
-        targetWord: "switch",
-        statement: "Switch it off and",
-        words: ["Switch", "it", "off", "and"],
-        distractors: ["break", "smash"],
-        sentenceWithBlank: "_______ it off and on.",
-        image: "assets/ep2_dig.png",
-        emoji: "🔘"
-      },
-      {
-        targetWord: "stop",
-        statement: "The car has stopped",
-        words: ["The", "car", "has", "stopped"],
-        distractors: ["moved", "flown"],
-        sentenceWithBlank: "The car has _______.",
-        image: "assets/ep3_trapped.png",
-        emoji: "🛑"
-      },
-      {
-        targetWord: "help",
-        statement: "We need some help",
-        words: ["We", "need", "some", "help"],
-        distractors: ["rest", "sleep"],
-        sentenceWithBlank: "We need some _______.",
-        image: "assets/ep4_help.png",
-        emoji: "🤝"
-      },
-      {
-        targetWord: "best",
-        statement: "He is the best",
-        words: ["He", "is", "the", "best"],
-        distractors: ["worst", "slowest"],
-        sentenceWithBlank: "He is the _______.",
-        image: "assets/ep2_treasure.png",
-        emoji: "⭐"
-      }
-    ]
+  {
+    id: "VoiceGame",
+    title: "NEURAL MAZE // Voice-Controlled Challenge",
+    category: "voice",
+    icon: "🐰",
+    description: "Cyberpunk voice-controlled maze game where you use Web Speech API vocal commands ('GO UP', 'GO DOWN', 'JUMP OVER') to guide Bunny through the maze!",
+    url: "https://nova0816.github.io/VoiceGame/",
+    repoUrl: "https://github.com/nova0816/VoiceGame",
+    tags: ["Voice Control", "Web Speech API", "Cyberpunk", "Maze Game", "Fun"],
+    accent: "linear-gradient(135deg, #06b6d4, #0284c7)",
+    glow: "rgba(6, 182, 212, 0.25)"
   }
-};
+];
 
-// Game State
-let currentEpisodeKey = 'ep1';
-let levels = episodeData.ep1.levels;
-let currentLevelIndex = 0;
-let score = 0;
-let selectedWords = [];
-let soundMuted = false;
-let isCurrentLevelSolved = false;
-let currentDifficulty = 'easy';
-let matchMistakeCount = 0;
-const MAX_MATCH_MISTAKES = 15;
-let listenChoicesMemo = [];
-let levelChoicesMemo = [];
-
-// Audio Context for sound synthesis
-let audioCtx = null;
-
-function initAudio() {
-  if (!audioCtx) {
-    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-  }
-}
-
-// Play synthesized sound effects
-function playSound(type) {
-  if (soundMuted) return;
-  try {
-    initAudio();
-    if (audioCtx.state === 'suspended') {
-      audioCtx.resume();
-    }
-    
-    const now = audioCtx.currentTime;
-    
-    switch (type) {
-      case 'click': {
-        const osc = audioCtx.createOscillator();
-        const gain = audioCtx.createGain();
-        osc.type = 'sine';
-        osc.frequency.setValueAtTime(600, now);
-        osc.frequency.exponentialRampToValueAtTime(150, now + 0.08);
-        gain.gain.setValueAtTime(0.15, now);
-        gain.gain.exponentialRampToValueAtTime(0.01, now + 0.08);
-        osc.connect(gain);
-        gain.connect(audioCtx.destination);
-        osc.start(now);
-        osc.stop(now + 0.08);
-        break;
-      }
-      case 'correct': {
-        const notes = [523.25, 659.25, 783.99, 1046.50];
-        notes.forEach((freq, index) => {
-          const osc = audioCtx.createOscillator();
-          const gain = audioCtx.createGain();
-          osc.type = 'triangle';
-          osc.frequency.value = freq;
-          gain.gain.setValueAtTime(0, now + index * 0.08);
-          gain.gain.linearRampToValueAtTime(0.1, now + index * 0.08 + 0.02);
-          gain.gain.exponentialRampToValueAtTime(0.001, now + index * 0.08 + 0.3);
-          osc.connect(gain);
-          gain.connect(audioCtx.destination);
-          osc.start(now + index * 0.08);
-          osc.stop(now + index * 0.08 + 0.3);
-        });
-        break;
-      }
-      case 'incorrect': {
-        const osc = audioCtx.createOscillator();
-        const gain = audioCtx.createGain();
-        osc.type = 'sawtooth';
-        osc.frequency.setValueAtTime(220, now);
-        osc.frequency.linearRampToValueAtTime(130, now + 0.25);
-        gain.gain.setValueAtTime(0.1, now);
-        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.3);
-        osc.connect(gain);
-        gain.connect(audioCtx.destination);
-        osc.start(now);
-        osc.stop(now + 0.3);
-        break;
-      }
-      case 'victory': {
-        const notes = [261.63, 329.63, 392.00, 523.25, 659.25, 783.99, 1046.50, 1318.51];
-        notes.forEach((freq, index) => {
-          const osc = audioCtx.createOscillator();
-          const gain = audioCtx.createGain();
-          osc.type = 'triangle';
-          osc.frequency.value = freq;
-          gain.gain.setValueAtTime(0, now + index * 0.06);
-          gain.gain.linearRampToValueAtTime(0.15, now + index * 0.06 + 0.02);
-          gain.gain.exponentialRampToValueAtTime(0.001, now + index * 0.06 + 0.4);
-          osc.connect(gain);
-          gain.connect(audioCtx.destination);
-          osc.start(now + index * 0.06);
-          osc.stop(now + index * 0.06 + 0.4);
-        });
-        break;
-      }
-    }
-  } catch (e) {
-    console.error("Audio Synthesis error: ", e);
-  }
-}
-
-// Text-to-Speech synthesis
-function speak(text, slow = false) {
-  if (soundMuted) return;
-  if ('speechSynthesis' in window) {
-    window.speechSynthesis.cancel();
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = 'en-US';
-    utterance.rate = slow ? 0.65 : 0.8;
-    utterance.pitch = 1.1;
-    
-    const voices = window.speechSynthesis.getVoices();
-    const englishVoice = voices.find(v => v.lang.startsWith('en') && v.name.includes('Google')) ||
-                         voices.find(v => v.lang.startsWith('en') && v.name.includes('Natural')) ||
-                         voices.find(v => v.lang.startsWith('en'));
-    if (englishVoice) {
-      utterance.voice = englishVoice;
-    }
-    window.speechSynthesis.speak(utterance);
-  }
-}
-
-if ('speechSynthesis' in window) {
-  window.speechSynthesis.onvoiceschanged = () => {};
-}
-
-// Confetti Particle System
-const canvas = document.getElementById('confettiCanvas');
-const ctx = canvas.getContext('2d');
-let confettiActive = false;
-let confettiParticles = [];
-
-function resizeCanvas() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-}
-window.addEventListener('resize', resizeCanvas);
-resizeCanvas();
-
-class ConfettiParticle {
-  constructor() {
-    this.x = Math.random() * canvas.width;
-    this.y = Math.random() * -canvas.height - 20;
-    this.size = Math.random() * 12 + 10;
-    const colors = [
-      `hsl(${Math.random() * 20 + 10}, 95%, 55%)`,
-      `hsl(${Math.random() * 15 + 40}, 95%, 50%)`,
-      `hsl(${Math.random() * 10 + 0}, 90%, 50%)`,
-      `hsl(${Math.random() * 25 + 90}, 80%, 45%)`
-    ];
-    this.color = colors[Math.floor(Math.random() * colors.length)];
-    this.rotation = Math.random() * 360;
-    this.rotationSpeed = Math.random() * 6 - 3;
-    this.speedX = Math.random() * 4 - 2;
-    this.speedY = Math.random() * 5 + 4;
-    this.shape = Math.random() > 0.4 ? 'rect' : 'circle';
-  }
-
-  update() {
-    this.x += this.x > canvas.width || this.x < 0 ? -this.speedX : this.speedX;
-    this.y += this.speedY;
-    this.rotation += this.rotationSpeed;
-  }
-
-  draw() {
-    ctx.save();
-    ctx.translate(this.x, this.y);
-    ctx.rotate((this.rotation * Math.PI) / 180);
-    ctx.fillStyle = this.color;
-    
-    if (this.shape === 'rect') {
-      ctx.fillRect(-this.size / 2, -this.size / 2, this.size, this.size);
-    } else {
-      ctx.beginPath();
-      ctx.arc(0, 0, this.size / 2, 0, Math.PI * 2);
-      ctx.fill();
-    }
-    ctx.restore();
-  }
-}
-
-function startConfetti() {
-  confettiParticles = [];
-  for (let i = 0; i < 120; i++) {
-    confettiParticles.push(new ConfettiParticle());
-  }
-  confettiActive = true;
-  animateConfetti();
-  setTimeout(() => {
-    confettiActive = false;
-  }, 1600);
-}
-
-function animateConfetti() {
-  if (!confettiActive && confettiParticles.length === 0) {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    return;
-  }
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  
-  confettiParticles.forEach((p, index) => {
-    p.update();
-    p.draw();
-    if (p.y > canvas.height) {
-      if (confettiActive) {
-        confettiParticles[index] = new ConfettiParticle();
-      } else {
-        confettiParticles.splice(index, 1);
-      }
-    }
-  });
-  
-  requestAnimationFrame(animateConfetti);
-}
+// State
+let currentCategory = "all";
+let searchQuery = "";
 
 // DOM Elements
-const episodeScreen = document.getElementById('episodeScreen');
-const episodeCard1 = document.getElementById('episodeCard1');
-const episodeCard2 = document.getElementById('episodeCard2');
-const episodeCard3 = document.getElementById('episodeCard3');
-const episodeCard4 = document.getElementById('episodeCard4');
-const episodeCard5 = document.getElementById('episodeCard5');
-const episodeCard6 = document.getElementById('episodeCard6');
-const episodeCard7 = document.getElementById('episodeCard7');
-const episodeCard8 = document.getElementById('episodeCard8');
-const episodeCard9 = document.getElementById('episodeCard9');
-const selectedEpisodeTitle = document.getElementById('selectedEpisodeTitle');
-const startScreen = document.getElementById('startScreen');
-const backToEpisodesBtn = document.getElementById('backToEpisodesBtn');
-const levelGrid = document.getElementById('levelGrid');
-const gameContainer = document.getElementById('gameContainer');
-const menuBtn = document.getElementById('menuBtn');
-const victoryMenuBtn = document.getElementById('victoryMenuBtn');
+const appsGrid = document.getElementById("apps-grid");
+const searchInput = document.getElementById("search-input");
+const clearSearchBtn = document.getElementById("clear-search-btn");
+const categoryTabs = document.getElementById("category-tabs");
+const emptyState = document.getElementById("empty-state");
+const resetFiltersBtn = document.getElementById("reset-filters-btn");
 
-const vocabImage = document.getElementById('vocabImage');
-const speakPhraseBtn = document.getElementById('speakPhraseBtn');
-const slotsTray = document.getElementById('slotsTray');
-const wordDeck = document.getElementById('wordDeck');
-const messageBanner = document.getElementById('messageBanner');
-const messageText = document.getElementById('messageText');
-const nextLevelBtn = document.getElementById('nextLevelBtn');
-const scoreValue = document.getElementById('scoreValue');
-const progressFill = document.getElementById('progressFill');
-const levelIndicator = document.getElementById('levelIndicator');
-const soundToggle = document.getElementById('soundToggle');
-const soundOnIcon = document.getElementById('soundOnIcon');
-const soundOffIcon = document.getElementById('soundOffIcon');
-const victoryModal = document.getElementById('victoryModal');
-const playAgainBtn = document.getElementById('playAgainBtn');
-const interactionTitle = document.getElementById('interactionTitle');
-
-// Listen Mode DOM Elements
-const listenMain = document.getElementById('listenMain');
-const listenGrid = document.getElementById('listenGrid');
-const listenReplayBtn = document.getElementById('listenReplayBtn');
-const listenMessageBanner = document.getElementById('listenMessageBanner');
-const listenMessageText = document.getElementById('listenMessageText');
-const listenNextLevelBtn = document.getElementById('listenNextLevelBtn');
-const diffMatch = document.getElementById('diffMatch');
-const matchMain = document.getElementById('matchMain');
-const matchMistakesBadge = document.getElementById('matchMistakesBadge');
-const matchPicImg = document.getElementById('matchPicImg');
-const matchWordGrid = document.getElementById('matchWordGrid');
-const matchMessageBanner = document.getElementById('matchMessageBanner');
-const matchMessageText = document.getElementById('matchMessageText');
-const matchNextLevelBtn = document.getElementById('matchNextLevelBtn');
-const matchFailModal = document.getElementById('matchFailModal');
-const matchRestartBtn = document.getElementById('matchRestartBtn');
-
-// Fisher-Yates Shuffle
-function shuffle(array) {
-  const arr = [...array];
-  for (let i = arr.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [arr[i], arr[j]] = [arr[j], arr[i]];
+// Initialize Portal
+document.addEventListener("DOMContentLoaded", () => {
+  renderApps();
+  updateCategoryCounts();
+  setupEventListeners();
+  
+  if (window.lucide) {
+    lucide.createIcons();
   }
-  return arr;
-}
+});
 
-// Select Episode Function
-function selectEpisode(epKey) {
-  currentEpisodeKey = epKey;
-  levels = episodeData[epKey].levels;
-  selectedEpisodeTitle.textContent = episodeData[epKey].title;
-  renderLevelGrid();
-}
+// Setup Event Listeners
+function setupEventListeners() {
+  // Search input event
+  searchInput.addEventListener("input", (e) => {
+    searchQuery = e.target.value.trim().toLowerCase();
+    if (searchQuery.length > 0) {
+      clearSearchBtn.classList.remove("hidden");
+    } else {
+      clearSearchBtn.classList.add("hidden");
+    }
+    renderApps();
+  });
 
-// Generate the level selector grid dynamically
-function renderLevelGrid() {
-  levelGrid.innerHTML = '';
-  levels.forEach((level, index) => {
-    const card = document.createElement('button');
-    card.className = 'level-card';
-    card.setAttribute('aria-label', `Play level ${index + 1}: ${level.targetWord}`);
-    
-    card.innerHTML = `
-      <span class="level-card-icon">${level.emoji}</span>
-      <span class="level-card-title">${level.targetWord}</span>
-      <span class="level-card-num">${index + 1}</span>
-    `;
-    
-    card.addEventListener('click', () => {
-      playSound('click');
-      currentLevelIndex = index;
-      initLevel();
-      
-      startScreen.classList.add('hidden');
-      gameContainer.classList.remove('hidden');
+  // Clear search button
+  clearSearchBtn.addEventListener("click", () => {
+    searchInput.value = "";
+    searchQuery = "";
+    clearSearchBtn.classList.add("hidden");
+    searchInput.focus();
+    renderApps();
+  });
+
+  // Category Tab Click
+  categoryTabs.addEventListener("click", (e) => {
+    const tabBtn = e.target.closest(".tab-btn");
+    if (!tabBtn) return;
+
+    document.querySelectorAll(".tab-btn").forEach(btn => btn.classList.remove("active"));
+    tabBtn.classList.add("active");
+
+    currentCategory = tabBtn.dataset.category;
+    renderApps();
+  });
+
+  // Reset Filters Button
+  resetFiltersBtn.addEventListener("click", () => {
+    currentCategory = "all";
+    searchQuery = "";
+    searchInput.value = "";
+    clearSearchBtn.classList.add("hidden");
+
+    document.querySelectorAll(".tab-btn").forEach(btn => {
+      if (btn.dataset.category === "all") btn.classList.add("active");
+      else btn.classList.remove("active");
     });
-    
-    levelGrid.appendChild(card);
+
+    renderApps();
   });
 }
 
-// Get unique distractors for Normal mode
-function getRandomNormalDistractors(correctWord) {
-  const others = [];
-  levels.forEach(lvl => {
-    if (lvl.targetWord !== correctWord && !others.includes(lvl.targetWord)) {
-      others.push(lvl.targetWord);
-    }
+// Render Apps Cards
+function renderApps() {
+  const filtered = APPS_DATA.filter(app => {
+    const matchesCategory = currentCategory === "all" || app.category === currentCategory;
+    const matchesSearch = searchQuery === "" ||
+      app.title.toLowerCase().includes(searchQuery) ||
+      app.description.toLowerCase().includes(searchQuery) ||
+      app.tags.some(t => t.toLowerCase().includes(searchQuery));
+
+    return matchesCategory && matchesSearch;
   });
-  return shuffle(others).slice(0, 3);
-}
 
-// Get 2 unique random level indices as distractors for Listen mode
-function getRandomListenDistractors(correctIndex) {
-  const otherIndices = [];
-  for (let i = 0; i < levels.length; i++) {
-    if (i !== correctIndex) {
-      otherIndices.push(i);
-    }
+  if (filtered.length === 0) {
+    appsGrid.classList.add("hidden");
+    emptyState.classList.remove("hidden");
+    return;
   }
-  const shuffled = shuffle(otherIndices);
-  return [shuffled[0], shuffled[1]];
-}
 
-// Render Listen & Match Stage pictures
+  emptyState.classList.add("hidden");
+  appsGrid.classList.remove("hidden");
 
-// Render Match Stage (Image-to-Word Card Matching with Mistake Limit)
-function renderMatchStage() {
-  const currentLevel = levels[currentLevelIndex];
-  isCurrentLevelSolved = false;
-  
-  if (matchPicImg) {
-    matchPicImg.src = currentLevel.image;
-    matchPicImg.alt = currentLevel.targetWord;
-  }
-  
-  if (matchMistakesBadge) {
-    matchMistakesBadge.textContent = `Mistakes: ${matchMistakeCount} / ${MAX_MATCH_MISTAKES} ⚠️`;
-  }
-  
-  if (matchMessageBanner) matchMessageBanner.classList.add('hidden');
-  if (matchNextLevelBtn) matchNextLevelBtn.classList.add('hidden');
-  
-  const correctWord = currentLevel.targetWord;
-  const otherLevels = levels.filter((l, idx) => idx !== currentLevelIndex);
-  
-  const shuffledOther = [...otherLevels].sort(() => 0.5 - Math.random());
-  const distractor1 = shuffledOther[0] ? shuffledOther[0].targetWord : "run";
-  const distractor2 = shuffledOther[1] ? shuffledOther[1].targetWord : "play";
-  
-  const choices = [correctWord, distractor1, distractor2].sort(() => 0.5 - Math.random());
-  
-  if (matchWordGrid) {
-    matchWordGrid.innerHTML = '';
-    choices.forEach(word => {
-      const card = document.createElement('button');
-      card.className = 'match-word-card';
-      card.textContent = word;
-      
-      card.addEventListener('click', () => {
-        if (isCurrentLevelSolved) return;
-        
-        if (word.toLowerCase() === correctWord.toLowerCase()) {
-          isCurrentLevelSolved = true;
-          card.classList.add('correct');
-          score += 10;
-          scoreValue.textContent = score;
-          
-          playSound('correct');
-          speak(correctWord);
-          startConfetti();
-          
-          matchMessageText.textContent = "Awesome Match! 🎯";
-          matchMessageBanner.classList.remove('hidden');
-          matchNextLevelBtn.classList.remove('hidden');
-        } else {
-          card.classList.add('wrong');
-          playSound('incorrect');
-          matchMistakeCount++;
-          if (matchMistakesBadge) {
-            matchMistakesBadge.textContent = `Mistakes: ${matchMistakeCount} / ${MAX_MATCH_MISTAKES} ⚠️`;
-          }
-          
-          if (matchMistakeCount > MAX_MATCH_MISTAKES) {
-            playSound('incorrect');
-            if (matchFailModal) matchFailModal.classList.remove('hidden');
-          }
-        }
-      });
-      
-      matchWordGrid.appendChild(card);
-    });
+  appsGrid.innerHTML = filtered.map(app => `
+    <article class="app-card" style="--card-accent: ${app.accent}; --card-glow: ${app.glow};">
+      <div class="app-card-header">
+        <div class="app-icon-box">
+          ${app.icon}
+        </div>
+        <div class="status-badge" title="Live on GitHub Pages">
+          <span class="status-dot"></span>
+          <span>Live</span>
+        </div>
+      </div>
+
+      <div class="app-card-body">
+        <h2 class="app-title">${escapeHtml(app.title)}</h2>
+        <p class="app-description">${escapeHtml(app.description)}</p>
+
+        <div class="app-tags">
+          ${app.tags.map(tag => `<span class="tag-pill">${escapeHtml(tag)}</span>`).join('')}
+        </div>
+      </div>
+
+      <div class="card-actions">
+        <a href="${app.url}" target="_blank" class="btn-launch" rel="noopener noreferrer">
+          <span>Launch App</span>
+          <i data-lucide="external-link"></i>
+        </a>
+        <a href="${app.repoUrl}" target="_blank" class="btn-github" title="View GitHub Source Code" rel="noopener noreferrer">
+          <i data-lucide="github"></i>
+        </a>
+      </div>
+    </article>
+  `).join('');
+
+  if (window.lucide) {
+    lucide.createIcons();
   }
 }
 
-function renderListenStage() {
-  const currentLevel = levels[currentLevelIndex];
-  listenGrid.innerHTML = '';
-  
-  listenMessageBanner.classList.add('hidden');
-  listenNextLevelBtn.classList.add('hidden');
-  
-  listenChoicesMemo.forEach(lvlIndex => {
-    const optLevel = levels[lvlIndex];
-    
-    const card = document.createElement('button');
-    card.className = 'listen-pic-card';
-    card.setAttribute('aria-label', `Choose picture for: ${optLevel.targetWord}`);
-    
-    const img = document.createElement('img');
-    img.src = optLevel.image;
-    img.alt = `Illustration choice`;
-    img.className = 'listen-pic-img';
-    img.draggable = false;
-    
-    const fallback = document.createElement('div');
-    fallback.className = 'listen-pic-fallback hidden';
-    fallback.innerHTML = `<span class="fallback-emoji-small">${optLevel.emoji}</span>`;
-    
-    img.onerror = () => {
-      img.classList.add('hidden');
-      fallback.classList.remove('hidden');
-    };
-    
-    card.appendChild(img);
-    card.appendChild(fallback);
-    
-    card.addEventListener('click', () => {
-      if (isCurrentLevelSolved) return;
-      
-      if (lvlIndex === currentLevelIndex) {
-        // Correct choice!
-        isCurrentLevelSolved = true;
-        score += 10;
-        scoreValue.textContent = score;
-        card.classList.add('correct');
-        playSound('correct');
-        startConfetti();
-        
-        setTimeout(() => {
-          speak(currentLevel.targetWord);
-        }, 400);
-        
-        const congratsMessages = [
-          "Excellent job! 🎉",
-          "Fantastic! You got it! 🌟",
-          "Super star! ⭐",
-          "You are amazing! 🎈",
-          "Wow! Spot on! 🌈"
-        ];
-        listenMessageText.textContent = congratsMessages[Math.floor(Math.random() * congratsMessages.length)];
-        listenMessageBanner.classList.remove('hidden');
-        listenNextLevelBtn.classList.remove('hidden');
-      } else {
-        // Incorrect choice!
-        card.classList.add('incorrect');
-        playSound('incorrect');
-        
-        listenMessageText.textContent = "Oops! Try again. 💡";
-        listenMessageBanner.classList.remove('hidden');
-        
-        setTimeout(() => {
-          card.classList.remove('incorrect');
-        }, 800);
-      }
-    });
-    
-    listenGrid.appendChild(card);
-  });
-}
+// Update Category Count Badges
+function updateCategoryCounts() {
+  const counts = {
+    all: APPS_DATA.length,
+    language: 0,
+    english: 0,
+    kids: 0,
+    voice: 0
+  };
 
-// Initialize Level
-function initLevel() {
-  const currentLevel = levels[currentLevelIndex];
-  isCurrentLevelSolved = false;
-  selectedWords = [];
-  
-  // Hide UI elements from previous solved level
-  messageBanner.classList.add('hidden');
-  nextLevelBtn.classList.add('hidden');
-  listenMessageBanner.classList.add('hidden');
-  listenNextLevelBtn.classList.add('hidden');
-  slotsTray.classList.remove('correct', 'incorrect');
-  
-  // Update indicators
-  levelIndicator.textContent = `Level ${currentLevelIndex + 1} of ${levels.length}`;
-  progressFill.style.width = `${((currentLevelIndex) / levels.length) * 100}%`;
-  scoreValue.textContent = score;
-
-  if (currentDifficulty === 'listen') {
-    document.getElementById('gameMain').classList.add('hidden');
-    if (matchMain) matchMain.classList.add('hidden');
-    listenMain.classList.remove('hidden');
-    
-    const distractors = getRandomListenDistractors(currentLevelIndex);
-    listenChoicesMemo = shuffle([currentLevelIndex, ...distractors]);
-    
-    renderListenStage();
-    
-    setTimeout(() => {
-      speak(currentLevel.targetWord);
-    }, 500);
-  } else if (currentDifficulty === 'match') {
-    document.getElementById('gameMain').classList.add('hidden');
-    listenMain.classList.add('hidden');
-    if (matchMain) matchMain.classList.remove('hidden');
-    
-    renderMatchStage();
-  } else {
-    document.getElementById('gameMain').classList.remove('hidden');
-    listenMain.classList.add('hidden');
-    if (matchMain) matchMain.classList.add('hidden');
-    
-    // Reset fallback image state
-    vocabImage.classList.remove('hidden');
-    document.getElementById('imageFallback').classList.add('hidden');
-    
-    vocabImage.src = currentLevel.image;
-    vocabImage.alt = `Illustration for: ${currentLevel.targetWord}`;
-    
-    // Voice helper button visibility
-    if (currentDifficulty === 'easy') {
-      speakPhraseBtn.classList.remove('hidden');
-    } else {
-      speakPhraseBtn.classList.add('hidden');
-    }
-
-    // Set up choices based on difficulty
-    if (currentDifficulty === 'normal') {
-      interactionTitle.textContent = "Fill in the blank:";
-      const dists = getRandomNormalDistractors(currentLevel.targetWord);
-      levelChoicesMemo = shuffle([currentLevel.targetWord, ...dists]);
-    } else {
-      interactionTitle.textContent = "Put the words in order:";
-      levelChoicesMemo = shuffle([...currentLevel.words, ...currentLevel.distractors]);
-    }
-
-    renderSlotsTray();
-    renderWordDeck(levelChoicesMemo);
-  }
-}
-
-// Render slots tray
-function renderSlotsTray() {
-  slotsTray.innerHTML = '';
-  const currentLevel = levels[currentLevelIndex];
-  
-  if (currentDifficulty === 'normal') {
-    // Fill-in-the-blank style slots rendering
-    const parts = currentLevel.sentenceWithBlank.split("_______");
-    
-    // Render first text part
-    if (parts[0]) {
-      const textSpan = document.createElement('span');
-      textSpan.className = 'static-sentence-text';
-      textSpan.textContent = parts[0];
-      slotsTray.appendChild(textSpan);
-    }
-    
-    // Render slot
-    const slot = document.createElement('div');
-    slot.className = 'slot-placeholder';
-    if (selectedWords[0]) {
-      const card = document.createElement('div');
-      card.className = 'word-card';
-      card.textContent = selectedWords[0];
-      card.addEventListener('click', () => {
-        if (isCurrentLevelSolved) return;
-        playSound('click');
-        selectedWords = [];
-        updateGameFlow();
-      });
-      slot.appendChild(card);
-    } else {
-      slot.textContent = '?';
-    }
-    slotsTray.appendChild(slot);
-    
-    // Render second text part
-    if (parts[1]) {
-      const textSpan = document.createElement('span');
-      textSpan.className = 'static-sentence-text';
-      textSpan.textContent = parts[1];
-      slotsTray.appendChild(textSpan);
-    }
-  } else {
-    // Normal sentence ordering slots rendering
-    const slotsCount = currentLevel.words.length;
-    for (let i = 0; i < slotsCount; i++) {
-      const slot = document.createElement('div');
-      slot.className = 'slot-placeholder';
-      
-      if (selectedWords[i]) {
-        const card = document.createElement('div');
-        card.className = 'word-card';
-        card.textContent = selectedWords[i];
-        card.addEventListener('click', () => {
-          if (isCurrentLevelSolved) return;
-          playSound('click');
-          selectedWords.splice(i, 1);
-          updateGameFlow();
-        });
-        slot.appendChild(card);
-      } else {
-        slot.textContent = '?';
-      }
-      slotsTray.appendChild(slot);
-    }
-  }
-}
-
-// Render word pool deck
-function renderWordDeck(availableChoices) {
-  wordDeck.innerHTML = '';
-  let tempSelected = [...selectedWords];
-  const remainingChoices = [];
-  
-  availableChoices.forEach(choice => {
-    const index = tempSelected.indexOf(choice);
-    if (index > -1) {
-      tempSelected.splice(index, 1);
-    } else {
-      remainingChoices.push(choice);
+  APPS_DATA.forEach(app => {
+    if (counts[app.category] !== undefined) {
+      counts[app.category]++;
     }
   });
 
-  remainingChoices.forEach(word => {
-    const card = document.createElement('button');
-    card.className = 'word-card';
-    card.textContent = word;
-    
-    card.addEventListener('click', () => {
-      if (isCurrentLevelSolved) return;
-      const currentLevel = levels[currentLevelIndex];
-      const maxSlots = currentDifficulty === 'normal' ? 1 : currentLevel.words.length;
-      
-      if (selectedWords.length < maxSlots) {
-        playSound('click');
-        speak(word);
-        selectedWords.push(word);
-        updateGameFlow();
-      }
-    });
-    
-    wordDeck.appendChild(card);
+  Object.keys(counts).forEach(cat => {
+    const el = document.getElementById(`cat-count-${cat}`);
+    if (el) el.textContent = counts[cat];
   });
+
+  const totalAppsEl = document.getElementById("total-apps-count");
+  if (totalAppsEl) totalAppsEl.textContent = APPS_DATA.length;
 }
 
-// Update game flow when card is selected or deselected
-function updateGameFlow() {
-  renderSlotsTray();
-  const choices = getLevelChoices();
-  renderWordDeck(choices);
-  
-  slotsTray.classList.remove('correct', 'incorrect');
-  messageBanner.classList.add('hidden');
-  
-  const maxSlots = currentDifficulty === 'normal' ? 1 : levels[currentLevelIndex].words.length;
-  if (selectedWords.length === maxSlots) {
-    checkAnswer();
-  }
-}
-
-function getLevelChoices() {
-  return levelChoicesMemo;
-}
-
-// Check Answer
-function checkAnswer() {
-  const currentLevel = levels[currentLevelIndex];
-  let isCorrect = false;
-  
-  if (currentDifficulty === 'normal') {
-    isCorrect = (selectedWords[0].toLowerCase() === currentLevel.targetWord.toLowerCase());
-  } else {
-    isCorrect = (selectedWords.join(' ').toLowerCase() === currentLevel.statement.toLowerCase());
-  }
-  
-  if (isCorrect) {
-    isCurrentLevelSolved = true;
-    score += 10;
-    scoreValue.textContent = score;
-    slotsTray.classList.add('correct');
-    
-    playSound('correct');
-    startConfetti();
-    setTimeout(() => {
-      speak(currentDifficulty === 'normal' ? currentLevel.targetWord : currentLevel.statement);
-    }, 400);
-
-    const congratsMessages = [
-      "Excellent job! 🎉",
-      "Fantastic! You got it! 🌟",
-      "Super star! ⭐",
-      "You are amazing! 🎈",
-      "Wow! Spot on! 🌈"
-    ];
-    messageText.textContent = congratsMessages[Math.floor(Math.random() * congratsMessages.length)];
-    messageBanner.classList.remove('hidden');
-    nextLevelBtn.classList.remove('hidden');
-  } else {
-    slotsTray.classList.add('incorrect');
-    playSound('incorrect');
-    
-    if (currentDifficulty === 'normal') {
-      messageText.textContent = "Oops! Try another card. 💡";
-    } else {
-      messageText.textContent = "Oops! Try arranging the cards again. 💡";
-    }
-    messageBanner.classList.remove('hidden');
-  }
-}
-
-// Event Listeners
-speakPhraseBtn.addEventListener('click', () => {
-  playSound('click');
-  const currentLevel = levels[currentLevelIndex];
-  speak(currentLevel.statement);
-});
-
-listenReplayBtn.addEventListener('click', () => {
-  playSound('click');
-  const currentLevel = levels[currentLevelIndex];
-  speak(currentLevel.targetWord);
-});
-
-function handleNextLevel() {
-  playSound('click');
-  currentLevelIndex++;
-  
-  if (currentLevelIndex < levels.length) {
-    initLevel();
-  } else {
-    // Completed all levels! Show Victory Modal
-    progressFill.style.width = '100%';
-    playSound('victory');
-    startConfetti();
-    victoryModal.classList.remove('hidden');
-  }
-}
-
-nextLevelBtn.addEventListener('click', handleNextLevel);
-listenNextLevelBtn.addEventListener('click', handleNextLevel);
-
-if (matchNextLevelBtn) {
-  matchNextLevelBtn.addEventListener('click', handleNextLevel);
-}
-
-if (matchRestartBtn) {
-  matchRestartBtn.addEventListener('click', () => {
-    playSound('click');
-    matchMistakeCount = 0;
-    if (matchFailModal) matchFailModal.classList.add('hidden');
-    currentLevelIndex = 0;
-    score = 0;
-    scoreValue.textContent = score;
-    initLevel();
+// Utility: Escape HTML
+function escapeHtml(str) {
+  return str.replace(/[&<>"']/g, function(m) {
+    return {
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      '"': '&quot;',
+      "'": '&#039;'
+    }[m];
   });
-}
-
-// Sound Volume Mute Control
-soundToggle.addEventListener('click', () => {
-  soundMuted = !soundMuted;
-  if (soundMuted) {
-    soundOnIcon.classList.add('hidden');
-    soundOffIcon.classList.remove('hidden');
-    if ('speechSynthesis' in window) {
-      window.speechSynthesis.cancel();
-    }
-  } else {
-    soundOnIcon.classList.remove('hidden');
-    soundOffIcon.classList.add('hidden');
-    playSound('click');
-  }
-});
-
-// Landing Page & Level Selector Transitions
-episodeCard1.addEventListener('click', () => {
-  playSound('click');
-  selectEpisode('ep1');
-  episodeScreen.classList.add('hidden');
-  startScreen.classList.remove('hidden');
-});
-
-if (episodeCard2) {
-  episodeCard2.addEventListener('click', () => {
-    playSound('click');
-    selectEpisode('ep2');
-    episodeScreen.classList.add('hidden');
-    startScreen.classList.remove('hidden');
-  });
-}
-
-if (episodeCard3) {
-  episodeCard3.addEventListener('click', () => {
-    playSound('click');
-    selectEpisode('ep3');
-    episodeScreen.classList.add('hidden');
-    startScreen.classList.remove('hidden');
-  });
-}
-
-if (episodeCard4) {
-  episodeCard4.addEventListener('click', () => {
-    playSound('click');
-    selectEpisode('ep4');
-    episodeScreen.classList.add('hidden');
-    startScreen.classList.remove('hidden');
-  });
-}
-
-if (episodeCard5) {
-  episodeCard5.addEventListener('click', () => {
-    playSound('click');
-    selectEpisode('ep5');
-    episodeScreen.classList.add('hidden');
-    startScreen.classList.remove('hidden');
-  });
-}
-
-if (episodeCard6) {
-  episodeCard6.addEventListener('click', () => {
-    playSound('click');
-    selectEpisode('ep6');
-    episodeScreen.classList.add('hidden');
-    startScreen.classList.remove('hidden');
-  });
-}
-
-if (episodeCard7) {
-  episodeCard7.addEventListener('click', () => {
-    playSound('click');
-    selectEpisode('ep7');
-    episodeScreen.classList.add('hidden');
-    startScreen.classList.remove('hidden');
-  });
-}
-
-if (episodeCard8) {
-  episodeCard8.addEventListener('click', () => {
-    playSound('click');
-    selectEpisode('ep8');
-    episodeScreen.classList.add('hidden');
-    startScreen.classList.remove('hidden');
-  });
-}
-
-if (episodeCard9) {
-  episodeCard9.addEventListener('click', () => {
-    playSound('click');
-    selectEpisode('ep9');
-    episodeScreen.classList.add('hidden');
-    startScreen.classList.remove('hidden');
-  });
-}
-
-backToEpisodesBtn.addEventListener('click', () => {
-  playSound('click');
-  startScreen.classList.add('hidden');
-  episodeScreen.classList.remove('hidden');
-});
-
-// Navigation Back to Menu Click Bindings
-menuBtn.addEventListener('click', () => {
-  playSound('click');
-  gameContainer.classList.add('hidden');
-  startScreen.classList.remove('hidden');
-  if ('speechSynthesis' in window) {
-    window.speechSynthesis.cancel();
-  }
-});
-
-victoryMenuBtn.addEventListener('click', () => {
-  playSound('click');
-  victoryModal.classList.add('hidden');
-  gameContainer.classList.add('hidden');
-  episodeScreen.classList.remove('hidden');
-});
-
-// Reset Game
-function resetGame() {
-  matchMistakeCount = 0;
-  currentLevelIndex = 0;
-  score = 0;
-  victoryModal.classList.add('hidden');
-  initLevel();
-  
-  startScreen.classList.add('hidden');
-  gameContainer.classList.remove('hidden');
-}
-
-playAgainBtn.addEventListener('click', () => {
-  playSound('click');
-  resetGame();
-});
-
-// Difficulty Tab Switcher
-function setDifficulty(diff) {
-  currentDifficulty = diff;
-  const tabs = document.querySelectorAll('.diff-tab');
-  tabs.forEach(t => {
-    const tabDiff = t.dataset.diff || t.getAttribute('data-diff');
-    if (tabDiff === diff) {
-      t.classList.add('active');
-    } else {
-      t.classList.remove('active');
-    }
-  });
-}
-
-function initDifficultySelector() {
-  const tabs = document.querySelectorAll('.diff-tab');
-  tabs.forEach(tab => {
-    tab.addEventListener('click', (e) => {
-      e.preventDefault();
-      playSound('click');
-      const diff = tab.dataset.diff || tab.getAttribute('data-diff');
-      setDifficulty(diff);
-    });
-  });
-}
-
-// Bootstrap game initialization
-window.addEventListener('load', () => {
-  initDifficultySelector();
-  scoreValue.textContent = score;
-});
-
-// Image load error handler
-function handleImageError() {
-  const currentLevel = levels[currentLevelIndex];
-  const imageFallback = document.getElementById('imageFallback');
-  const fallbackEmoji = document.getElementById('fallbackEmoji');
-  
-  vocabImage.classList.add('hidden');
-  imageFallback.classList.remove('hidden');
-  fallbackEmoji.textContent = currentLevel.emoji;
 }
