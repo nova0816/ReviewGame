@@ -402,8 +402,11 @@
     }
   }
 
-  function speakOrderText(text, profile) {
-    if (!gameState.voiceEnabled || !('speechSynthesis' in window)) return;
+  function speakOrderText(text, profile, onEndCallback) {
+    if (!gameState.voiceEnabled || !('speechSynthesis' in window)) {
+      if (typeof onEndCallback === 'function') setTimeout(onEndCallback, 0);
+      return;
+    }
     window.speechSynthesis.cancel();
     
     const utterance = new SpeechSynthesisUtterance(text);
@@ -424,11 +427,28 @@
     }
 
     const audioBtn = document.getElementById('replaySpeechBtn');
+    let callbackCalled = false;
+    const handleEnd = () => {
+      if (callbackCalled) return;
+      callbackCalled = true;
+      if (audioBtn) audioBtn.classList.remove('speaking');
+      if (typeof onEndCallback === 'function') {
+        onEndCallback();
+      }
+    };
+
     if (audioBtn) {
       utterance.onstart = () => audioBtn.classList.add('speaking');
-      utterance.onend = () => audioBtn.classList.remove('speaking');
-      utterance.onerror = () => audioBtn.classList.remove('speaking');
     }
+    utterance.onend = handleEnd;
+    utterance.onerror = handleEnd;
+
+    // Safety fallback timer in case SpeechSynthesis onend fails to trigger
+    const estimatedDuration = Math.max(1200, text.length * 90);
+    setTimeout(() => {
+      if (!callbackCalled) handleEnd();
+    }, estimatedDuration);
+
     window.speechSynthesis.speak(utterance);
   }
 
@@ -499,16 +519,16 @@
         }
 
         document.getElementById('orderText').textContent = `"${walkoutSpeech}"`;
-        speakOrderText(walkoutSpeech, gameState.currentMonster);
         playSound('angry');
-
         showToast(`${gameState.currentMonster.name} waited 2 minutes and left! 🚶‍♂️`);
 
-        setTimeout(() => {
-          gameState.trayItems = [];
-          renderTray();
-          renderMonsterCustomer();
-        }, 3000);
+        speakOrderText(walkoutSpeech, gameState.currentMonster, () => {
+          setTimeout(() => {
+            gameState.trayItems = [];
+            renderTray();
+            renderMonsterCustomer();
+          }, 1000);
+        });
       }
     }, 1000);
   }
@@ -856,7 +876,6 @@
 
     playSound('cheer');
     playSound('coin');
-    speakOrderText(praisePhrase, gameState.currentMonster);
 
     let speedBonus = patienceSeconds < 30 ? 10 : 0;
     const coinsEarned = 15 + (gameState.level * 5) + speedBonus;
@@ -873,16 +892,18 @@
     saveState();
     updateHeaderStats();
 
-    setTimeout(() => {
-      gameState.trayItems = [];
-      renderTray();
+    speakOrderText(praisePhrase, gameState.currentMonster, () => {
+      setTimeout(() => {
+        gameState.trayItems = [];
+        renderTray();
 
-      if (leveledUp) {
-        openCelebrationModal(coinsEarned);
-      } else {
-        renderMonsterCustomer();
-      }
-    }, 2500);
+        if (leveledUp) {
+          openCelebrationModal(coinsEarned);
+        } else {
+          renderMonsterCustomer();
+        }
+      }, 1000);
+    });
   }
 
   // -------------------------------------------------------------------------
@@ -998,13 +1019,13 @@
       document.getElementById('orderBreakdown').innerHTML = `<div class="tag-item master-tag"><span>🤔</span> <span>0 Coins (Wrong Option)</span></div>`;
 
       playSound('clear');
-      speakOrderText(complainSpeech, gameState.currentMonster);
-
-      setTimeout(() => {
-        gameState.trayItems = [];
-        renderTray();
-        renderMonsterCustomer();
-      }, 2500);
+      speakOrderText(complainSpeech, gameState.currentMonster, () => {
+        setTimeout(() => {
+          gameState.trayItems = [];
+          renderTray();
+          renderMonsterCustomer();
+        }, 1000);
+      });
     }
   }
 
