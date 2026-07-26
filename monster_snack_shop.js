@@ -645,13 +645,13 @@
     // Show/hide Fast Food tab starting Level 7
     const fastfoodTabBtn = document.getElementById('fastfoodTabBtn');
     if (fastfoodTabBtn) {
-      fastfoodTabBtn.style.display = gameState.level >= 7 ? 'inline-block' : 'none';
+      fastfoodTabBtn.style.display = gameState.level >= 7 ? 'inline-flex' : 'none';
     }
 
     // Show/hide Cutlery tab starting Level 9
     const cutleryTabBtn = document.getElementById('cutleryTabBtn');
     if (cutleryTabBtn) {
-      cutleryTabBtn.style.display = gameState.level >= 9 ? 'inline-block' : 'none';
+      cutleryTabBtn.style.display = gameState.level >= 9 ? 'inline-flex' : 'none';
     }
   }
 
@@ -1245,10 +1245,14 @@
     // Pantry Tabs
     document.querySelectorAll('#pantryTabs .tab-btn').forEach(btn => {
       btn.addEventListener('click', (e) => {
+        const target = e.currentTarget || e.target;
         document.querySelectorAll('#pantryTabs .tab-btn').forEach(b => b.classList.remove('active'));
-        e.target.classList.add('active');
-        gameState.activeCategory = e.target.getAttribute('data-category');
+        target.classList.add('active');
+        gameState.activeCategory = target.getAttribute('data-category');
         renderPantryShelves();
+        if (target.scrollIntoView) {
+          target.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+        }
       });
     });
 
