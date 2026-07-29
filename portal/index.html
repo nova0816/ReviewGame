@@ -2,121 +2,341 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nova's Web Apps Portal | Deployed GitHub Pages</title>
-  <meta name="description" content="Central Hub for all deployed web applications, interactive learning games, and voice-controlled tools by Nova.">
-  
-  <!-- Fonts -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <!-- Auto clear cache / Disable browser caching -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta name="description" content="Vocabulary Explorer: A fun HTML5 interactive game for kids to learn English vocabulary from PP S2 E8.">
+  <title>Vocabulary Explorer: PP S2 E8</title>
+  <!-- Google Fonts for friendly rounded typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-  
-  <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
-  
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=1.4.0">
 </head>
 <body>
-  <div class="bg-glow"></div>
-  <div class="bg-grid"></div>
+  <!-- Background autumn leaf decorations -->
+  <div class="leaf-decor leaf-1">🍁</div>
+  <div class="leaf-decor leaf-2">🍂</div>
+  <div class="leaf-decor leaf-3">🍃</div>
+  <div class="leaf-decor leaf-4">🍁</div>
 
-  <div class="app-container">
-    <!-- Header Section -->
-    <header class="hero-header">
-      <div class="user-badge">
-        <span class="pulse-dot"></span>
-        <span class="user-handle">@nova0816</span>
-        <span class="badge-tag">GitHub Pages Portal</span>
+  <!-- Landing Screen: Episode Selection -->
+  <div class="episode-screen" id="episodeScreen">
+    <div class="episode-content">
+      <div class="start-logo">🎒📚🎨</div>
+      <h1 class="start-title">Vocabulary Explorer</h1>
+      <p class="start-subtitle">Select a story episode to start learning! 🔊🌟</p>
+      
+      <!-- Episode Grid -->
+      <div class="episode-grid" id="episodeGrid">
+        <!-- Standalone Game: Monster Snack Shop -->
+        <a class="episode-card active" href="monster_snack_shop.html" style="text-decoration: none;" aria-label="Play Monster Snack Shop Cafe Game">
+          <div class="episode-image-container" style="background: linear-gradient(135deg, #ff9a9e, #fecfef); display: flex; align-items: center; justify-content: center;">
+            <span style="font-size: 3rem;">👾</span>
+          </div>
+          <span class="episode-card-badge" style="background: #ff6b6b; color: #ffffff;">NEW 👾</span>
+          <span class="episode-card-title">Monster Snack Shop</span>
+          <span class="episode-card-desc">Functional Cafe Game</span>
+        </a>
+
+        <!-- Active Episode -->
+        <button class="episode-card active" id="episodeCard1" aria-label="Play PP S2 E8: Autumn Wind">
+          <div class="episode-image-container">
+            <img src="assets/autumn.png" alt="Autumn Wind illustration" class="episode-card-img">
+          </div>
+          <span class="episode-card-badge">Active 🟢</span>
+          <span class="episode-card-title">PP S2 E8</span>
+          <span class="episode-card-desc">Autumn Wind</span>
+        </button>
+
+        <!-- Active Episode 2 -->
+        <button class="episode-card active" id="episodeCard2" aria-label="Play PP S2 E9: Time Treasure">
+          <div class="episode-image-container">
+            <img src="assets/ep2_treasure.png" alt="Time Treasure illustration" class="episode-card-img">
+          </div>
+          <span class="episode-card-badge">Active 🟢</span>
+          <span class="episode-card-title">PP S2 E9</span>
+          <span class="episode-card-desc">Time Treasure</span>
+        </button>
+
+        <!-- Active Episode 3 -->
+        <button class="episode-card active" id="episodeCard3" aria-label="Play PP S2 E10: Tide Pools">
+          <div class="episode-image-container">
+            <img src="assets/ep3_seaside.png" alt="Tide Pools illustration" class="episode-card-img">
+          </div>
+          <span class="episode-card-badge">Active 🟢</span>
+          <span class="episode-card-title">PP S2 E10</span>
+          <span class="episode-card-desc">Tide Pools</span>
+        </button>
+
+        <!-- Active Episode 4 -->
+        <button class="episode-card active" id="episodeCard4" aria-label="Play PP S2 E11: Eco Clean">
+          <div class="episode-image-container">
+            <img src="assets/ep4_box.png" alt="Eco Clean illustration" class="episode-card-img">
+          </div>
+          <span class="episode-card-badge">Active 🟢</span>
+          <span class="episode-card-title">PP S2 E11</span>
+          <span class="episode-card-desc">Eco Clean</span>
+        </button>
+
+        <!-- Active Episode 5 -->
+        <button class="episode-card active" id="episodeCard5" aria-label="Play PP S2 E12: The Boat Pond">
+          <div class="episode-image-container">
+            <img src="assets/ep3_pool.png" alt="The Boat Pond illustration" class="episode-card-img">
+          </div>
+          <span class="episode-card-badge">Active 🟢</span>
+          <span class="episode-card-title">PP S2 E12</span>
+          <span class="episode-card-desc">The Boat Pond</span>
+        </button>
+
+        <!-- Active Episode 6 -->
+        <button class="episode-card active" id="episodeCard6" aria-label="Play PP S2 E13: Traffic Jam">
+          <div class="episode-image-container">
+            <img src="assets/ep2_rocket.png" alt="Traffic Jam illustration" class="episode-card-img">
+          </div>
+          <span class="episode-card-badge">Active 🟢</span>
+          <span class="episode-card-title">PP S2 E13</span>
+          <span class="episode-card-desc">Traffic Jam</span>
+        </button>
+
+        <!-- Active Episode 7 -->
+        <button class="episode-card active" id="episodeCard7" aria-label="Play PP S2 E14: Bedtime">
+          <div class="episode-image-container">
+            <img src="assets/ep2_treasure.png" alt="Bedtime illustration" class="episode-card-img">
+          </div>
+          <span class="episode-card-badge">Active 🟢</span>
+          <span class="episode-card-title">PP S2 E14</span>
+          <span class="episode-card-desc">Bedtime</span>
+        </button>
+
+        <!-- Active Episode 8 -->
+        <button class="episode-card active" id="episodeCard8" aria-label="Play PP S2 E15: The Eye Test">
+          <div class="episode-image-container">
+            <img src="assets/ep2_remember.png" alt="The Eye Test illustration" class="episode-card-img">
+          </div>
+          <span class="episode-card-badge">Active 🟢</span>
+          <span class="episode-card-title">PP S2 E15</span>
+          <span class="episode-card-desc">The Eye Test</span>
+        </button>
+
+        <!-- Active Episode 9 -->
+        <button class="episode-card active" id="episodeCard9" aria-label="Play PP S2 E17: Auto Garage">
+          <div class="episode-image-container">
+            <img src="assets/ep4_box.png" alt="Auto Garage illustration" class="episode-card-img">
+          </div>
+          <span class="episode-card-badge">Active 🟢</span>
+          <span class="episode-card-title">PP S2 E17</span>
+          <span class="episode-card-desc">Auto Garage</span>
+        </button>
+      </div>
+
+      <div class="start-footer">
+        <span class="version-tag">v2.0.0</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Start Screen Overlay (Stage & Level Selector) -->
+  <div class="start-screen hidden" id="startScreen">
+    <div class="start-content">
+      <!-- Back button to Episode Menu -->
+      <button class="back-episodes-btn" id="backToEpisodesBtn" aria-label="Go back to Episode Menu">🏠 Back to Episodes</button>
+      
+      <h2 class="start-title" style="font-size: 28px; margin-top: 10px;" id="selectedEpisodeTitle">PP S2 E8: Autumn Wind</h2>
+      <p class="start-subtitle">Choose an action and click a level! 🌟</p>
+      
+      <!-- Difficulty Selector Tab Buttons -->
+      <div class="difficulty-panel">
+        <span class="difficulty-title">Select Stage:</span>
+        <div class="difficulty-tabs">
+          <button class="diff-tab active" id="diffEasy" data-diff="easy" aria-label="Easy Stage">Easy 🟢</button>
+          <button class="diff-tab" id="diffListen" data-diff="listen" aria-label="Listen Stage">Listen 🔵</button>
+          <button class="diff-tab" id="diffMatch" data-diff="match" aria-label="Match Stage">Match 🧩</button>
+          <button class="diff-tab" id="diffNormal" data-diff="normal" aria-label="Normal Stage">Normal 🟡</button>
+          <button class="diff-tab" id="diffHard" data-diff="hard" aria-label="Hard Stage">Hard 🔴</button>
+        </div>
       </div>
       
-      <h1 class="hero-title">
-        Interactive Web Apps & <span class="gradient-text">Learning Games</span>
-      </h1>
-      
-      <p class="hero-subtitle">
-        Explore live web applications deployed directly on GitHub Pages — ranging from AI voice mazes and French language learning to fun vocabulary games!
-      </p>
+      <!-- Puzzle / Level Selection Grid -->
+      <div class="level-grid" id="levelGrid">
+        <!-- Will be populated dynamically by app.js -->
+      </div>
+    </div>
+  </div>
 
-      <!-- Stats Bar -->
-      <div class="stats-bar">
-        <div class="stat-card">
-          <span class="stat-value" id="total-apps-count">6</span>
-          <span class="stat-label">Live Web Apps</span>
+  <div class="game-container hidden" id="gameContainer">
+    <!-- Header Area -->
+    <header class="game-header">
+      <div class="header-left">
+        <h1 class="logo">🍂 Vocabulary Explorer</h1>
+      </div>
+      
+      <div class="header-right">
+        <!-- Score Board -->
+        <div class="score-board" id="scoreBoard">
+          <span class="star-icon">⭐</span>
+          <span class="score-value" id="scoreValue">0</span>
         </div>
-        <div class="stat-divider"></div>
-        <div class="stat-card">
-          <span class="stat-value">100%</span>
-          <span class="stat-label">GitHub Pages</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat-card">
-          <span class="stat-value">4</span>
-          <span class="stat-label">Categories</span>
-        </div>
+        <!-- Menu Button -->
+        <button class="icon-btn" id="menuBtn" title="Back to Menu" aria-label="Back to Menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+            <path fill-rule="evenodd" d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z" clip-rule="evenodd" />
+          </svg>
+        </button>
+        <!-- Sound Toggle -->
+        <button class="icon-btn" id="soundToggle" title="Toggle Sound" aria-label="Toggle Sound">
+          <svg id="soundOnIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+            <path d="M13.5 4.06c0-1.336-1.616-2.005-2.56-1.06l-4.5 4.5H4.508c-1.141 0-2.063.922-2.063 2.063v4.874c0 1.141.922 2.063 2.063 2.063h1.932l4.5 4.5c.944.945 2.56.276 2.56-1.06V4.06zM17.78 7.22a.75.75 0 00-1.06 1.06A7.472 7.472 0 0119 12c0 1.41-.388 2.73-1.06 3.86a.75.75 0 101.3 1.06A8.972 8.972 0 0020.5 12a8.972 8.972 0 00-2.72-4.78z" />
+            <path d="M15 9.78a.75.75 0 00-1.06 1.06A4.472 4.472 0 0114.5 12c0 .88-.25 1.7-.68 2.4a.75.75 0 101.3.75A5.972 5.972 0 0016 12a5.972 5.972 0 00-1-2.22z" />
+          </svg>
+          <svg id="soundOffIcon" class="hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+            <path d="M13.5 4.06c0-1.336-1.616-2.005-2.56-1.06l-4.5 4.5H4.508c-1.141 0-2.063.922-2.063 2.063v4.874c0 1.141.922 2.063 2.063 2.063h1.932l4.5 4.5c.944.945 2.56.276 2.56-1.06V4.06zM17.78 7.22a.75.75 0 111.06 1.06L16.06 11l2.78 2.78a.75.75 0 01-1.06 1.06L15 12.06l-2.78 2.78a.75.75 0 01-1.06-1.06L13.94 11l-2.78-2.78a.75.75 0 011.06-1.06L15 9.94l2.78-2.72z" />
+          </svg>
+        </button>
       </div>
     </header>
 
-    <!-- Controls Section: Search & Category Filters -->
-    <section class="controls-section">
-      <div class="search-wrapper">
-        <i data-lucide="search" class="search-icon"></i>
-        <input type="text" id="search-input" placeholder="Search apps, features, or keywords..." autocomplete="off">
-        <button id="clear-search-btn" class="clear-btn hidden" aria-label="Clear Search">
-          <i data-lucide="x"></i>
-        </button>
+    <!-- Progress Indicator Bar -->
+    <div class="progress-container">
+      <div class="progress-bar-wrapper">
+        <div class="progress-fill" id="progressFill"></div>
       </div>
+      <div class="level-indicator" id="levelIndicator">Level 1 of 15</div>
+    </div>
 
-      <div class="category-tabs" id="category-tabs">
-        <button class="tab-btn active" data-category="all">
-          <i data-lucide="grid"></i> All Apps (<span id="cat-count-all">5</span>)
-        </button>
-        <button class="tab-btn" data-category="language">
-          <i data-lucide="languages"></i> Language Learning (<span id="cat-count-language">1</span>)
-        </button>
-        <button class="tab-btn" data-category="english">
-          <i data-lucide="book-open"></i> Story & Verbs (<span id="cat-count-english">2</span>)
-        </button>
-        <button class="tab-btn" data-category="kids">
-          <i data-lucide="gamepad-2"></i> Kids & Memory (<span id="cat-count-kids">1</span>)
-        </button>
-        <button class="tab-btn" data-category="voice">
-          <i data-lucide="mic"></i> Voice & AI (<span id="cat-count-voice">1</span>)
-        </button>
-      </div>
-    </section>
-
-    <!-- Apps Grid -->
-    <main class="apps-grid-section">
-      <div class="apps-grid" id="apps-grid">
-        <!-- Rendered dynamically by app.js -->
-      </div>
-
-      <!-- Empty State -->
-      <div class="empty-state hidden" id="empty-state">
-        <div class="empty-icon">
-          <i data-lucide="search-x"></i>
+    <!-- Main Workspace -->
+    <main class="game-main" id="gameMain">
+      <!-- Left Panel: Picture Card -->
+      <section class="pic-panel">
+        <div class="image-frame-container">
+          <img id="vocabImage" src="assets/autumn.png" alt="Vocabulary illustration" class="vocab-image" draggable="false" onerror="handleImageError()">
+          <div id="imageFallback" class="image-fallback hidden">
+            <span id="fallbackEmoji" class="fallback-emoji">🍂</span>
+          </div>
+          <!-- Text to speech overlay button -->
+          <button class="speak-btn-overlay" id="speakPhraseBtn" title="Hear phrase" aria-label="Read complete phrase aloud">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+              <path d="M13.5 4.06c0-1.336-1.616-2.005-2.56-1.06l-4.5 4.5H4.508c-1.141 0-2.063.922-2.063 2.063v4.874c0 1.141.922 2.063 2.063 2.063h1.932l4.5 4.5c.944.945 2.56.276 2.56-1.06V4.06zM18.57 17.47a.75.75 0 11-1.06-1.06 5.972 5.972 0 000-8.42.75.75 0 111.06-1.06 7.472 7.472 0 010 10.54z" />
+              <path d="M16.44 14.34a.75.75 0 11-1.06-1.06 2.972 2.972 0 000-4.22.75.75 0 111.06-1.06 4.472 4.472 0 010 6.34z" />
+            </svg>
+            <span>Hear it!</span>
+          </button>
         </div>
-        <h3>No apps found</h3>
-        <p>Try searching for a different keyword or resetting your category filter.</p>
-        <button class="reset-filter-btn" id="reset-filters-btn">
-          <i data-lucide="rotate-ccw"></i> Reset Filters
-        </button>
-      </div>
+      </section>
+
+      <!-- Right Panel: Game Interaction -->
+      <section class="play-panel">
+        <!-- Target slots tray -->
+        <div class="slots-tray-container">
+          <h2 class="section-title" id="interactionTitle">Put the words in order:</h2>
+          <div class="slots-tray" id="slotsTray">
+            <!-- Dynamically populated slots will go here -->
+          </div>
+        </div>
+
+        <!-- Choice deck for scrambled word cards -->
+        <div class="deck-container">
+          <div class="deck" id="wordDeck">
+            <!-- Dynamically populated cards will go here -->
+          </div>
+        </div>
+
+        <!-- Control Action Row -->
+        <div class="action-row">
+          <div class="message-banner hidden" id="messageBanner">
+            <span class="message-text" id="messageText">Great job! 🎉</span>
+          </div>
+          <button class="action-btn hidden" id="nextLevelBtn">Next Level ➔</button>
+        </div>
+      </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="portal-footer">
-      <div class="footer-content">
-        <p>© 2026 <strong>nova0816</strong> | Deployed with GitHub Pages</p>
-        <div class="footer-links">
-          <a href="https://github.com/nova0816" target="_blank" rel="noopener noreferrer">
-            <i data-lucide="github"></i> GitHub Profile
-          </a>
-        </div>
+    <!-- Listen & Match Stage Workspace (shown only in Listen mode) -->
+    <div class="listen-main hidden" id="listenMain">
+      <div class="listen-instructions">
+        <span class="sound-emoji">🔊</span> Tap the matching picture!
       </div>
-    </footer>
+      
+      <!-- Replay Voice Button -->
+      <button class="speak-btn-large" id="listenReplayBtn" title="Hear phrase again" aria-label="Hear phrase again">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="36" height="36">
+          <path d="M13.5 4.06c0-1.336-1.616-2.005-2.56-1.06l-4.5 4.5H4.508c-1.141 0-2.063.922-2.063 2.063v4.874c0 1.141.922 2.063 2.063 2.063h1.932l4.5 4.5c.944.945 2.56.276 2.56-1.06V4.06zM18.57 17.47a.75.75 0 11-1.06-1.06 5.972 5.972 0 000-8.42.75.75 0 111.06-1.06 7.472 7.472 0 010 10.54z" />
+          <path d="M16.44 14.34a.75.75 0 11-1.06-1.06 2.972 2.972 0 000-4.22.75.75 0 111.06-1.06 4.472 4.472 0 010 6.34z" />
+        </svg>
+        <span>Hear It!</span>
+      </button>
+
+      <!-- 3 Picture Choices -->
+      <div class="listen-grid" id="listenGrid">
+        <!-- Will be populated dynamically by app.js -->
+      </div>
+      
+      <!-- Control Action Row for Listen Mode -->
+      <div class="action-row" style="width: 100%; max-width: 900px; margin-top: 10px;">
+        <div class="message-banner hidden" id="listenMessageBanner" style="margin-right: auto;">
+          <span class="message-text" id="listenMessageText">Great job! 🎉</span>
+        </div>
+        <button class="action-btn hidden" id="listenNextLevelBtn">Next Level ➔</button>
+      </div>
+    </div>
+
+    <!-- Match Stage Workspace (shown in Match mode) -->
+    <div class="match-main hidden" id="matchMain">
+      <div class="match-header">
+        <div class="match-instructions">🧩 Tap the matching word card!</div>
+        <div class="match-mistakes-badge" id="matchMistakesBadge">Mistakes: 0 / 15 ⚠️</div>
+      </div>
+
+      <div class="match-pic-container">
+        <img id="matchPicImg" src="assets/autumn.png" alt="Target picture" class="match-pic-img">
+      </div>
+
+      <div class="match-word-grid" id="matchWordGrid">
+        <!-- Populated dynamically by app.js -->
+      </div>
+
+      <div class="action-row" style="width: 100%; max-width: 900px; margin-top: 10px;">
+        <div class="message-banner hidden" id="matchMessageBanner" style="margin-right: auto;">
+          <span class="message-text" id="matchMessageText">Great job! 🎉</span>
+        </div>
+        <button class="action-btn hidden" id="matchNextLevelBtn">Next Level ➔</button>
+      </div>
+    </div>
   </div>
 
-  <script src="app.js"></script>
+  <!-- Victory Overlay Modal -->
+  <div class="modal-overlay hidden" id="victoryModal">
+    <div class="modal-content">
+      <div class="trophy-bounce">🏆</div>
+      <h2 class="modal-title">Vocabulary Master!</h2>
+      <p class="modal-subtitle">You completed all 15 words! You are amazing! 🌟</p>
+      
+      <div class="stars-summary">
+        <span class="star-spin">⭐</span>
+        <span class="star-spin">⭐</span>
+        <span class="star-spin">⭐</span>
+      </div>
+
+      <button class="action-btn reset-btn" id="playAgainBtn">Play Again 🔁</button>
+      <button class="action-btn reset-btn" id="victoryMenuBtn" style="margin-top: 12px; background: linear-gradient(135deg, #7e57c2 0%, #5e35b1 100%); box-shadow: 0 6px 12px rgba(94, 53, 177, 0.3), inset 0 -4px 0 rgba(0, 0, 0, 0.2);">Main Menu 🏠</button>
+    </div>
+  </div>
+
+  <!-- Match Failure Overlay Modal (Mistakes > 15) -->
+  <div class="modal-overlay hidden" id="matchFailModal">
+    <div class="modal-content">
+      <div class="trophy-bounce">⚠️</div>
+      <h2 class="modal-title">Too Many Mistakes!</h2>
+      <p class="modal-subtitle">You made more than 15 mistakes. Let's try matching again from Level 1!</p>
+      <button class="action-btn reset-btn" id="matchRestartBtn">Try Again 🔁</button>
+    </div>
+  </div>
+
+  <!-- Canvas for Confetti -->
+  <canvas id="confettiCanvas" class="confetti-canvas"></canvas>
+
+  <script src="app.js?v=1.4.0"></script>
 </body>
 </html>
