@@ -1320,7 +1320,7 @@ body {
 }
 
 .phonics-word-display {
-  font-size: 40px !important;
+  font-size: 36px !important;
   font-weight: 800 !important;
   letter-spacing: 6px !important;
   color: #263238 !important;
@@ -1339,5 +1339,13 @@ body {
   border-radius: 8px !important;
   color: #d84315 !important;
   font-weight: 800 !important;
-  font-size: 40px !important;
+  font-size: 36px !important;
+}
+
+#phonicsOptionGrid .match-word-card {
+  font-size: 36px !important;
+  font-weight: 800 !important;
+  color: #263238 !important;
+  font-family: 'Fredoka', cursive, sans-serif !important;
+  padding: 16px 12px !important;
 }
