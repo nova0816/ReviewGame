@@ -73,18 +73,138 @@
     const isImpatient = mood === 'impatient';
     const isAngry = mood === 'angry';
 
-    // Facial Feature Paths based on Mood
-    let mouthPath = isAngry 
-      ? '<path d="M 50 115 Q 70 95 90 115" stroke="#222" stroke-width="4" fill="none"/>' // Angry frown
-      : isImpatient 
-      ? '<line x1="50" y1="110" x2="90" y2="110" stroke="#222" stroke-width="4" stroke-linecap="round"/>' // Flat line
-      : '<path d="M 50 100 Q 70 125 90 100 Z" fill="#222"/>'; // Big happy smile
+    function getEyes(id, mood) {
+      if (mood === 'angry') {
+        return `<path d="M 45 70 L 62 78 M 95 78 L 112 70" stroke="#222" stroke-width="4" stroke-linecap="round"/><circle cx="55" cy="82" r="6" fill="#222"/><circle cx="95" cy="82" r="6" fill="#222"/>`;
+      }
+      if (mood === 'impatient') {
+        return `<line x1="45" y1="78" x2="65" y2="78" stroke="#222" stroke-width="4" stroke-linecap="round"/><line x1="85" y1="78" x2="105" y2="78" stroke="#222" stroke-width="4" stroke-linecap="round"/>`;
+      }
 
-    let eyeStyle = isAngry 
-      ? '<path d="M 45 75 L 60 82 M 95 82 L 110 75" stroke="#222" stroke-width="4"/><circle cx="55" cy="85" r="6" fill="#222"/><circle cx="95" cy="85" r="6" fill="#222"/>'
-      : isImpatient
-      ? '<line x1="45" y1="80" x2="65" y2="80" stroke="#222" stroke-width="4"/><line x1="85" y1="80" x2="105" y2="80" stroke="#222" stroke-width="4"/>'
-      : '<circle cx="55" cy="80" r="10" fill="#222"/><circle cx="95" cy="80" r="10" fill="#222"/><circle cx="58" cy="77" r="3" fill="#fff"/><circle cx="98" cy="77" r="3" fill="#fff"/>';
+      switch(id) {
+        case 'baby_blobby':
+          return `<circle cx="52" cy="78" r="11" fill="#222"/><circle cx="98" cy="78" r="11" fill="#222"/><circle cx="49" cy="74" r="4" fill="#fff"/><circle cx="95" cy="74" r="4" fill="#fff"/><circle cx="55" cy="81" r="2" fill="#fff"/><circle cx="101" cy="81" r="2" fill="#fff"/>`;
+        case 'gobby':
+          return `<path d="M 40 68 Q 55 60 70 70" stroke="#222" stroke-width="3" fill="none"/><path d="M 80 70 Q 95 60 110 68" stroke="#222" stroke-width="3" fill="none"/><ellipse cx="55" cy="78" rx="8" ry="10" fill="#222"/><ellipse cx="95" cy="78" rx="8" ry="10" fill="#222"/><circle cx="53" cy="75" r="3" fill="#fff"/><circle cx="93" cy="75" r="3" fill="#fff"/>`;
+        case 'fluffy':
+          return `<path d="M 45 80 Q 55 68 65 80" stroke="#222" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M 85 80 Q 95 68 105 80" stroke="#222" stroke-width="5" fill="none" stroke-linecap="round"/>`;
+        case 'sparky':
+          return `<ellipse cx="53" cy="75" rx="10" ry="12" fill="#f1c40f" stroke="#222" stroke-width="2"/><ellipse cx="97" cy="75" rx="10" ry="12" fill="#f1c40f" stroke="#222" stroke-width="2"/><line x1="53" y1="65" x2="53" y2="85" stroke="#222" stroke-width="4"/><line x1="97" y1="65" x2="97" y2="85" stroke="#222" stroke-width="4"/>`;
+        case 'mimi':
+          return `<circle cx="55" cy="78" r="9" fill="#222"/><circle cx="95" cy="78" r="9" fill="#222"/><circle cx="58" cy="75" r="3" fill="#fff"/><circle cx="98" cy="75" r="3" fill="#fff"/><path d="M 44 70 L 40 64 M 48 67 L 46 60 M 106 70 L 110 64 M 102 67 L 104 60" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>`;
+        case 'kiki':
+          return `<circle cx="42" cy="75" r="8" fill="#222"/><circle cx="70" cy="65" r="12" fill="#222"/><circle cx="98" cy="75" r="8" fill="#222"/><circle cx="44" cy="72" r="3" fill="#fff"/><circle cx="73" cy="61" r="4" fill="#fff"/><circle cx="100" cy="72" r="3" fill="#fff"/>`;
+        case 'chomper':
+          return `<circle cx="70" cy="62" r="18" fill="#fff" stroke="#222" stroke-width="3"/><circle cx="70" cy="62" r="8" fill="#00cec9"/><circle cx="70" cy="62" r="4" fill="#222"/><circle cx="73" cy="59" r="2.5" fill="#fff"/>`;
+        case 'shadow':
+          return `<ellipse cx="52" cy="75" rx="9" ry="12" fill="#2d3436"/><ellipse cx="98" cy="75" rx="9" ry="12" fill="#2d3436"/><ellipse cx="52" cy="75" rx="5" ry="7" fill="#74b9ff"/><ellipse cx="98" cy="75" rx="5" ry="7" fill="#74b9ff"/>`;
+        case 'coco':
+          return `<circle cx="48" cy="72" r="14" fill="#fff" stroke="#222" stroke-width="2"/><circle cx="50" cy="74" r="7" fill="#222"/><circle cx="94" cy="76" r="8" fill="#fff" stroke="#222" stroke-width="2"/><circle cx="93" cy="77" r="4" fill="#222"/>`;
+        case 'pip':
+          return `<circle cx="55" cy="78" r="10" fill="#222"/><circle cx="95" cy="78" r="10" fill="#222"/><polygon points="55,73 57,77 61,77 58,79 59,83 55,80 51,83 52,79 49,77 53,77" fill="#fff"/><polygon points="95,73 97,77 101,77 98,79 99,83 95,80 91,83 92,79 89,77 93,77" fill="#fff"/>`;
+        case 'noodle':
+          return `<path d="M 42 66 Q 52 60 62 68 M 88 68 Q 98 60 108 66" stroke="#222" stroke-width="3" fill="none"/><circle cx="52" cy="78" r="9" fill="#222"/><circle cx="98" cy="78" r="9" fill="#222"/><circle cx="55" cy="75" r="3" fill="#fff"/><circle cx="101" cy="75" r="3" fill="#fff"/>`;
+        case 'zippy':
+          return `<path d="M 40 68 L 52 64 L 62 70 M 110 68 L 98 64 L 88 70" stroke="#d63031" stroke-width="3.5" fill="none"/><circle cx="52" cy="78" r="9" fill="#222"/><circle cx="98" cy="78" r="9" fill="#222"/><circle cx="55" cy="75" r="3" fill="#fff"/><circle cx="101" cy="75" r="3" fill="#fff"/>`;
+        case 'puff':
+          return `<path d="M 45 76 C 45 70 65 70 65 76 C 65 82 45 82 45 76 Z" fill="#222"/><path d="M 85 76 C 85 70 105 70 105 76 C 105 82 85 82 85 76 Z" fill="#222"/><circle cx="52" cy="74" r="3" fill="#fff"/><circle cx="92" cy="74" r="3" fill="#fff"/>`;
+        case 'octo':
+          return `<ellipse cx="52" cy="70" rx="11" ry="9" fill="#fff" stroke="#222" stroke-width="2.5"/><ellipse cx="98" cy="70" rx="11" ry="9" fill="#fff" stroke="#222" stroke-width="2.5"/><rect x="45" y="68" width="14" height="4" rx="2" fill="#222"/><rect x="91" y="68" width="14" height="4" rx="2" fill="#222"/>`;
+        case 'munchkin':
+          return `<circle cx="53" cy="78" r="10" fill="#222"/><circle cx="97" cy="78" r="10" fill="#222"/><path d="M 53 74 C 53 71 50 71 50 74 C 50 76 53 78 53 79 C 53 78 56 76 56 74 C 56 71 53 71 53 74 Z" fill="#ff7675"/><path d="M 97 74 C 97 71 94 71 94 74 C 94 76 97 78 97 79 C 97 78 100 76 100 74 C 100 71 97 71 97 74 Z" fill="#ff7675"/>`;
+        case 'wobble':
+          return `<ellipse cx="52" cy="78" rx="8" ry="12" fill="#222"/><ellipse cx="98" cy="78" rx="8" ry="12" fill="#222"/><circle cx="50" cy="73" r="3.5" fill="#fff"/><circle cx="96" cy="73" r="3.5" fill="#fff"/>`;
+        case 'dino':
+          return `<path d="M 40 66 Q 55 58 70 66 M 80 66 Q 95 58 110 66" stroke="#006266" stroke-width="4" fill="none"/><circle cx="55" cy="76" r="9" fill="#222"/><circle cx="95" cy="76" r="9" fill="#222"/><circle cx="58" cy="73" r="3" fill="#fff"/><circle cx="98" cy="73" r="3" fill="#fff"/>`;
+        case 'pixel':
+          return `<rect x="42" y="68" width="18" height="14" rx="3" fill="#00cec9"/><rect x="80" y="68" width="18" height="14" rx="3" fill="#00cec9"/><rect x="48" y="72" width="6" height="6" fill="#fff"/><rect x="86" y="72" width="6" height="6" fill="#fff"/>`;
+        case 'cosmo':
+          return `<ellipse cx="53" cy="75" rx="10" ry="10" fill="#0984e3" stroke="#fff" stroke-width="2"/><ellipse cx="97" cy="75" rx="10" ry="10" fill="#0984e3" stroke="#fff" stroke-width="2"/><circle cx="55" cy="72" r="4" fill="#fff"/><circle cx="99" cy="72" r="4" fill="#fff"/>`;
+        case 'sprout':
+          return `<circle cx="53" cy="78" r="10" fill="#222"/><circle cx="97" cy="78" r="10" fill="#222"/><path d="M 53 72 C 48 76 53 82 53 82 C 53 82 58 76 53 72 Z" fill="#26de81"/><path d="M 97 72 C 92 76 97 82 97 82 C 97 82 102 76 97 72 Z" fill="#26de81"/>`;
+        case 'boba':
+          return `<circle cx="50" cy="76" r="11" fill="#2d3436"/><circle cx="90" cy="76" r="11" fill="#2d3436"/><circle cx="47" cy="72" r="4" fill="#fff"/><circle cx="87" cy="72" r="4" fill="#fff"/><circle cx="53" cy="79" r="2" fill="#fff"/><circle cx="93" cy="79" r="2" fill="#fff"/>`;
+        case 'cookie_monster':
+          return `<circle cx="48" cy="70" r="13" fill="#fff" stroke="#222" stroke-width="2"/><circle cx="46" cy="68" r="6" fill="#222"/><circle cx="96" cy="72" r="14" fill="#fff" stroke="#222" stroke-width="2"/><circle cx="98" cy="75" r="7" fill="#222"/>`;
+        case 'sunny':
+          return `<circle cx="53" cy="70" r="10" fill="#222"/><circle cx="97" cy="70" r="10" fill="#222"/><circle cx="56" cy="67" r="3.5" fill="#fff"/><circle cx="100" cy="67" r="3.5" fill="#fff"/><path d="M 38 70 L 33 70 M 112 70 L 117 70" stroke="#e67e22" stroke-width="3" stroke-linecap="round"/>`;
+        case 'frosty':
+          return `<circle cx="53" cy="76" r="10" fill="#0984e3"/><circle cx="97" cy="76" r="10" fill="#0984e3"/><polygon points="53,70 55,74 59,76 55,78 53,82 51,78 47,76 51,74" fill="#fff"/><polygon points="97,70 99,74 103,76 99,78 97,82 95,78 91,76 95,74" fill="#fff"/>`;
+        case 'twinkle':
+          return `<circle cx="53" cy="78" r="11" fill="#d63031"/><circle cx="97" cy="78" r="11" fill="#d63031"/><circle cx="50" cy="74" r="4.5" fill="#fff"/><circle cx="94" cy="74" r="4.5" fill="#fff"/><circle cx="56" cy="81" r="2.5" fill="#fff"/><circle cx="100" cy="81" r="2.5" fill="#fff"/>`;
+        case 'gummy':
+        default:
+          return `<circle cx="53" cy="78" r="9" fill="#d63031" stroke="#222" stroke-width="2"/><circle cx="97" cy="78" r="9" fill="#d63031" stroke="#222" stroke-width="2"/><circle cx="55" cy="75" r="3" fill="#fff"/><circle cx="99" cy="75" r="3" fill="#fff"/>`;
+      }
+    }
+
+    function getMouth(id, mood) {
+      if (mood === 'angry') {
+        return `<path d="M 50 115 Q 70 95 90 115" stroke="#222" stroke-width="4.5" fill="none" stroke-linecap="round"/>`;
+      }
+      if (mood === 'impatient') {
+        return `<line x1="50" y1="110" x2="90" y2="110" stroke="#222" stroke-width="4.5" stroke-linecap="round"/>`;
+      }
+
+      switch(id) {
+        case 'baby_blobby':
+          return `<circle cx="70" cy="105" r="7" fill="#222"/><ellipse cx="70" cy="105" rx="4" ry="5" fill="#ff7675"/>`;
+        case 'gobby':
+          return `<path d="M 45 98 Q 70 128 95 98 Z" fill="#222"/><polygon points="55,98 59,106 63,98" fill="#fff"/><polygon points="77,98 81,106 85,98" fill="#fff"/>`;
+        case 'fluffy':
+          return `<path d="M 48 98 Q 70 126 92 98 Z" fill="#222"/><path d="M 60 106 Q 70 122 80 106 Z" fill="#ff7675"/>`;
+        case 'sparky':
+          return `<path d="M 46 98 Q 70 126 94 98 Z" fill="#222"/><polygon points="54,98 58,105 62,98" fill="#fff"/><polygon points="78,98 82,105 86,98" fill="#fff"/>`;
+        case 'mimi':
+          return `<path d="M 52 98 Q 61 108 70 98 Q 79 108 88 98" stroke="#222" stroke-width="4" fill="none" stroke-linecap="round"/><polygon points="66,94 74,94 70,98" fill="#ff7675"/>`;
+        case 'kiki':
+          return `<path d="M 45 102 L 53 110 L 61 102 L 69 110 L 77 102 L 85 110 L 93 102" stroke="#222" stroke-width="4" fill="none" stroke-linecap="round"/>`;
+        case 'chomper':
+          return `<rect x="42" y="96" width="56" height="22" rx="6" fill="#222"/><rect x="46" y="96" width="10" height="8" rx="1" fill="#fff"/><rect x="58" y="96" width="10" height="8" rx="1" fill="#fff"/><rect x="70" y="96" width="10" height="8" rx="1" fill="#fff"/><rect x="82" y="96" width="10" height="8" rx="1" fill="#fff"/>`;
+        case 'shadow':
+          return `<path d="M 46 102 Q 58 112 70 102 Q 82 92 94 102" stroke="#2d3436" stroke-width="4" fill="none" stroke-linecap="round"/>`;
+        case 'coco':
+          return `<path d="M 52 105 Q 75 125 96 98" stroke="#222" stroke-width="4.5" fill="none" stroke-linecap="round"/>`;
+        case 'pip':
+          return `<ellipse cx="70" cy="100" rx="6" ry="7" fill="#222"/>`;
+        case 'noodle':
+          return `<path d="M 48 100 Q 70 125 92 100 Z" fill="#222"/><path d="M 64 104 Q 70 120 78 108 Z" fill="#ff7675"/>`;
+        case 'zippy':
+          return `<path d="M 46 98 Q 70 128 94 98 Z" fill="#222"/><polygon points="64,98 70,108 76,98" fill="#f1c40f"/>`;
+        case 'puff':
+          return `<circle cx="70" cy="102" r="7" fill="#222"/><path d="M 82 98 Q 88 94 94 98 M 85 104 Q 90 101 95 104" stroke="#0984e3" stroke-width="2.5" fill="none" stroke-linecap="round"/>`;
+        case 'octo':
+          return `<ellipse cx="70" cy="98" rx="8" ry="10" fill="#222" stroke="#d63031" stroke-width="2"/><ellipse cx="70" cy="98" rx="4" ry="6" fill="#ff7675"/>`;
+        case 'munchkin':
+          return `<path d="M 48 98 Q 70 126 92 98 Z" fill="#222"/><path d="M 48 98 Q 58 106 68 98 Q 78 106 88 98" stroke="#fff" stroke-width="3" fill="none"/>`;
+        case 'wobble':
+          return `<path d="M 46 100 Q 58 114 70 102 Q 82 114 94 100" stroke="#222" stroke-width="4.5" fill="none" stroke-linecap="round"/>`;
+        case 'dino':
+          return `<path d="M 44 96 Q 70 126 96 96 Z" fill="#222"/><polygon points="50,96 54,103 58,96" fill="#fff"/><polygon points="64,96 68,103 72,96" fill="#fff"/><polygon points="78,96 82,103 86,96" fill="#fff"/>`;
+        case 'pixel':
+          return `<rect x="45" y="98" width="50" height="12" rx="2" fill="#222"/><rect x="49" y="102" width="8" height="4" fill="#00cec9"/><rect x="61" y="102" width="8" height="4" fill="#00cec9"/><rect x="73" y="102" width="8" height="4" fill="#00cec9"/><rect x="85" y="102" width="8" height="4" fill="#00cec9"/>`;
+        case 'cosmo':
+          return `<path d="M 50 100 Q 70 120 90 100" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/>`;
+        case 'sprout':
+          return `<path d="M 48 98 Q 70 122 92 98" stroke="#222" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M 70 106 C 70 114 78 114 78 106 Z" fill="#26de81"/>`;
+        case 'boba':
+          return `<path d="M 48 98 Q 70 124 92 98 Z" fill="#222"/><ellipse cx="70" cy="106" rx="5" ry="6" fill="#ff7675"/>`;
+        case 'cookie_monster':
+          return `<path d="M 42 94 Q 70 130 98 94 Z" fill="#222"/><circle cx="48" cy="94" r="3" fill="#e1b12c"/><circle cx="92" cy="94" r="3" fill="#e1b12c"/>`;
+        case 'sunny':
+          return `<path d="M 44 94 Q 70 128 96 94 Z" fill="#222"/><path d="M 54 106 Q 70 122 86 106 Z" fill="#ff7675"/>`;
+        case 'frosty':
+          return `<path d="M 46 98 Q 70 124 94 98 Z" fill="#222"/><polygon points="56,98 60,105 64,98" fill="#81ecec"/><polygon points="76,98 80,105 84,98" fill="#81ecec"/>`;
+        case 'twinkle':
+          return `<path d="M 48 98 Q 70 124 92 98 Z" fill="#222"/><path d="M 58 104 Q 70 118 82 104 Z" fill="#fd79a8"/>`;
+        case 'gummy':
+        default:
+          return `<ellipse cx="70" cy="95" rx="16" ry="12" fill="#fff" opacity="0.5"/><path d="M 62 94 Q 70 104 78 94" stroke="#222" stroke-width="3" fill="none"/><circle cx="70" cy="90" r="3.5" fill="#222"/>`;
+      }
+    }
+
+    const eyeStyle = getEyes(id, mood);
+    const mouthPath = getMouth(id, mood);
 
     switch (id) {
       case 'baby_blobby': // Pink Blobby
