@@ -2229,7 +2229,7 @@ function renderPhonicsStage() {
     
     choices.forEach(optionText => {
       const card = document.createElement('button');
-      card.className = 'phonics-option-card';
+      card.className = 'match-word-card';
       card.textContent = optionText;
       
       card.addEventListener('click', () => {

@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=5.0.0">
+  <link rel="stylesheet" href="style.css?v=6.0.0">
 </head>
 <body>
   <!-- Background autumn leaf decorations -->
@@ -306,33 +306,27 @@
     </div>
 
     <!-- Phonics Stage Workspace (shown in Phonics mode) -->
-    <div class="phonics-main hidden" id="phonicsMain">
-      <div class="phonics-header">
-        <div class="phonics-instructions">🔤 Listen and tap the missing sound!</div>
+    <div class="match-main hidden" id="phonicsMain">
+      <div class="match-header">
+        <div class="match-instructions">🔤 Listen and tap the missing sound!</div>
+        <button class="match-mistakes-badge" id="phonicsReplayBtn" style="background: #fff3e0; color: #e65100; border-color: #ffb74d; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;">
+          🔊 Hear It!
+        </button>
       </div>
 
-      <!-- Replay Voice Button -->
-      <button class="speak-btn-large" id="phonicsReplayBtn" title="Hear phrase again" aria-label="Hear phrase again">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="36" height="36">
-          <path d="M13.5 4.06c0-1.336-1.616-2.005-2.56-1.06l-4.5 4.5H4.508c-1.141 0-2.063.922-2.063 2.063v4.874c0 1.141.922 2.063 2.063 2.063h1.932l4.5 4.5c.944.945 2.56.276 2.56-1.06V4.06zM18.57 17.47a.75.75 0 11-1.06-1.06 5.972 5.972 0 000-8.42.75.75 0 111.06-1.06 7.472 7.472 0 010 10.54z" />
-          <path d="M16.44 14.34a.75.75 0 11-1.06-1.06 2.972 2.972 0 000-4.22.75.75 0 111.06-1.06 4.472 4.472 0 010 6.34z" />
-        </svg>
-        <span>Hear It!</span>
-      </button>
-
-      <div class="phonics-pic-container" style="width: 200px !important; height: 200px !important; max-width: 200px !important; max-height: 200px !important; margin: 0 auto !important;">
-        <img id="phonicsPicImg" src="assets/autumn.png" alt="Target picture" class="phonics-pic-img" style="width: 100% !important; height: 100% !important; max-width: 200px !important; max-height: 200px !important; object-fit: cover !important;">
+      <div class="match-pic-container">
+        <img id="phonicsPicImg" src="assets/autumn.png" alt="Target picture" class="match-pic-img">
       </div>
 
       <!-- Word Display with Blanked Phonic -->
-      <div class="phonics-word-card" id="phonicsWordCard" style="width: 100% !important; max-width: 550px !important; margin: 12px auto !important; padding: 16px 24px !important; text-align: center !important;">
-        <div class="phonics-word-display" id="phonicsWordDisplay" style="font-size: 48px !important; font-weight: 800 !important; letter-spacing: 8px !important; color: #263238 !important;">
+      <div class="phonics-word-card" id="phonicsWordCard">
+        <div class="phonics-word-display" id="phonicsWordDisplay">
           <!-- Populated dynamically by app.js -->
         </div>
       </div>
 
-      <!-- 3 Option Cards -->
-      <div class="phonics-option-grid" id="phonicsOptionGrid" style="width: 100% !important; max-width: 550px !important; display: grid !important; grid-template-columns: repeat(3, 1fr) !important; gap: 16px !important; margin: 12px auto !important;">
+      <!-- 3 Option Cards Grid (matching Match stage layout) -->
+      <div class="match-word-grid" id="phonicsOptionGrid">
         <!-- Populated dynamically by app.js -->
       </div>
 
@@ -376,6 +370,6 @@
   <!-- Canvas for Confetti -->
   <canvas id="confettiCanvas" class="confetti-canvas"></canvas>
 
-  <script src="app.js?v=5.0.0"></script>
+  <script src="app.js?v=6.0.0"></script>
 </body>
 </html>
