@@ -1531,6 +1531,16 @@ const matchWordGrid = document.getElementById('matchWordGrid');
 const matchMessageBanner = document.getElementById('matchMessageBanner');
 const matchMessageText = document.getElementById('matchMessageText');
 const matchNextLevelBtn = document.getElementById('matchNextLevelBtn');
+
+// Phonics Stage DOM Elements
+const phonicsMain = document.getElementById('phonicsMain');
+const phonicsPicImg = document.getElementById('phonicsPicImg');
+const phonicsWordDisplay = document.getElementById('phonicsWordDisplay');
+const phonicsOptionGrid = document.getElementById('phonicsOptionGrid');
+const phonicsReplayBtn = document.getElementById('phonicsReplayBtn');
+const phonicsMessageBanner = document.getElementById('phonicsMessageBanner');
+const phonicsMessageText = document.getElementById('phonicsMessageText');
+const phonicsNextLevelBtn = document.getElementById('phonicsNextLevelBtn');
 const matchFailModal = document.getElementById('matchFailModal');
 const matchRestartBtn = document.getElementById('matchRestartBtn');
 
@@ -1770,6 +1780,7 @@ function initLevel() {
   if (currentDifficulty === 'listen') {
     document.getElementById('gameMain').classList.add('hidden');
     if (matchMain) matchMain.classList.add('hidden');
+    if (phonicsMain) phonicsMain.classList.add('hidden');
     listenMain.classList.remove('hidden');
     
     const distractors = getRandomListenDistractors(currentLevelIndex);
@@ -1783,13 +1794,27 @@ function initLevel() {
   } else if (currentDifficulty === 'match') {
     document.getElementById('gameMain').classList.add('hidden');
     listenMain.classList.add('hidden');
+    if (phonicsMain) phonicsMain.classList.add('hidden');
     if (matchMain) matchMain.classList.remove('hidden');
     
     renderMatchStage();
+  } else if (currentDifficulty === 'phonics') {
+    document.getElementById('gameMain').classList.add('hidden');
+    listenMain.classList.add('hidden');
+    if (matchMain) matchMain.classList.add('hidden');
+    if (phonicsMain) phonicsMain.classList.add('hidden');
+    if (phonicsMain) phonicsMain.classList.remove('hidden');
+    
+    renderPhonicsStage();
+    
+    setTimeout(() => {
+      speak(currentLevel.targetWord);
+    }, 500);
   } else {
     document.getElementById('gameMain').classList.remove('hidden');
     listenMain.classList.add('hidden');
     if (matchMain) matchMain.classList.add('hidden');
+    if (phonicsMain) phonicsMain.classList.add('hidden');
     
     // Reset fallback image state
     vocabImage.classList.remove('hidden');
@@ -2004,6 +2029,66 @@ listenReplayBtn.addEventListener('click', () => {
   speak(currentLevel.targetWord);
 });
 
+
+// Render Phonics Stage
+function renderPhonicsStage() {
+  const currentLevel = levels[currentLevelIndex];
+  phonicsMessageBanner.classList.add('hidden');
+  phonicsNextLevelBtn.classList.add('hidden');
+  
+  if (phonicsPicImg) {
+    phonicsPicImg.src = currentLevel.image;
+    phonicsPicImg.alt = `Illustration for: ${currentLevel.targetWord}`;
+  }
+  
+  const info = getPhonicsInfo(currentLevel.targetWord);
+  phonicsWordDisplay.innerHTML = info.display;
+  
+  const choices = shuffle([info.target, ...info.distractors]);
+  phonicsOptionGrid.innerHTML = '';
+  
+  choices.forEach(optionText => {
+    const card = document.createElement('button');
+    card.className = 'phonics-option-card';
+    card.textContent = optionText;
+    
+    card.addEventListener('click', () => {
+      if (isCurrentLevelSolved) return;
+      playSound('click');
+      
+      if (optionText.toLowerCase() === info.target.toLowerCase()) {
+        isCurrentLevelSolved = true;
+        card.classList.add('correct');
+        score += 10;
+        scoreValue.textContent = score;
+        playSound('correct');
+        startConfetti();
+        
+        // Show full revealed word in gold/green
+        phonicsWordDisplay.innerHTML = currentLevel.targetWord.toUpperCase();
+        
+        setTimeout(() => {
+          speak(currentLevel.targetWord);
+        }, 300);
+        
+        phonicsMessageText.textContent = "Awesome Phonics Skill! 🌟";
+        phonicsMessageBanner.classList.remove('hidden');
+        phonicsNextLevelBtn.classList.remove('hidden');
+      } else {
+        card.classList.add('wrong');
+        playSound('incorrect');
+        phonicsMessageText.textContent = "Oops! Try another sound. 💡";
+        phonicsMessageBanner.classList.remove('hidden');
+        setTimeout(() => {
+          card.classList.remove('wrong');
+        }, 600);
+      }
+    });
+    
+    phonicsOptionGrid.appendChild(card);
+  });
+}
+
 function handleNextLevel() {
   playSound('click');
   currentLevelIndex++;
@@ -2021,6 +2106,18 @@ function handleNextLevel() {
 
 nextLevelBtn.addEventListener('click', handleNextLevel);
 listenNextLevelBtn.addEventListener('click', handleNextLevel);
+
+if (phonicsReplayBtn) {
+  phonicsReplayBtn.addEventListener('click', () => {
+    playSound('click');
+    const currentLevel = levels[currentLevelIndex];
+    speak(currentLevel.targetWord);
+  });
+}
+
+if (phonicsNextLevelBtn) {
+  phonicsNextLevelBtn.addEventListener('click', handleNextLevel);
+}
 
 if (matchNextLevelBtn) {
   matchNextLevelBtn.addEventListener('click', handleNextLevel);

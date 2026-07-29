@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=1.4.0">
+  <link rel="stylesheet" href="style.css?v=2.1.0">
 </head>
 <body>
   <!-- Background autumn leaf decorations -->
@@ -154,6 +154,7 @@
           <button class="diff-tab active" id="diffEasy" data-diff="easy" aria-label="Easy Stage">Easy 🟢</button>
           <button class="diff-tab" id="diffListen" data-diff="listen" aria-label="Listen Stage">Listen 🔵</button>
           <button class="diff-tab" id="diffMatch" data-diff="match" aria-label="Match Stage">Match 🧩</button>
+          <button class="diff-tab" id="diffPhonics" data-diff="phonics" aria-label="Phonics Stage">Phonics 🔤</button>
           <button class="diff-tab" id="diffNormal" data-diff="normal" aria-label="Normal Stage">Normal 🟡</button>
           <button class="diff-tab" id="diffHard" data-diff="hard" aria-label="Hard Stage">Hard 🔴</button>
         </div>
@@ -304,6 +305,45 @@
         <button class="action-btn hidden" id="matchNextLevelBtn">Next Level ➔</button>
       </div>
     </div>
+
+    <!-- Phonics Stage Workspace (shown in Phonics mode) -->
+    <div class="phonics-main hidden" id="phonicsMain">
+      <div class="phonics-header">
+        <div class="phonics-instructions">🔤 Listen and tap the missing sound!</div>
+      </div>
+
+      <!-- Replay Voice Button -->
+      <button class="speak-btn-large" id="phonicsReplayBtn" title="Hear phrase again" aria-label="Hear phrase again">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="36" height="36">
+          <path d="M13.5 4.06c0-1.336-1.616-2.005-2.56-1.06l-4.5 4.5H4.508c-1.141 0-2.063.922-2.063 2.063v4.874c0 1.141.922 2.063 2.063 2.063h1.932l4.5 4.5c.944.945 2.56.276 2.56-1.06V4.06zM18.57 17.47a.75.75 0 11-1.06-1.06 5.972 5.972 0 000-8.42.75.75 0 111.06-1.06 7.472 7.472 0 010 10.54z" />
+          <path d="M16.44 14.34a.75.75 0 11-1.06-1.06 2.972 2.972 0 000-4.22.75.75 0 111.06-1.06 4.472 4.472 0 010 6.34z" />
+        </svg>
+        <span>Hear It!</span>
+      </button>
+
+      <div class="phonics-pic-container">
+        <img id="phonicsPicImg" src="assets/autumn.png" alt="Target picture" class="phonics-pic-img">
+      </div>
+
+      <!-- Word Display with Blanked Phonic -->
+      <div class="phonics-word-card" id="phonicsWordCard">
+        <div class="phonics-word-display" id="phonicsWordDisplay">
+          <!-- Populated dynamically by app.js -->
+        </div>
+      </div>
+
+      <!-- 3 Option Cards -->
+      <div class="phonics-option-grid" id="phonicsOptionGrid">
+        <!-- Populated dynamically by app.js -->
+      </div>
+
+      <div class="action-row" style="width: 100%; max-width: 900px; margin-top: 10px;">
+        <div class="message-banner hidden" id="phonicsMessageBanner" style="margin-right: auto;">
+          <span class="message-text" id="phonicsMessageText">Great job! 🎉</span>
+        </div>
+        <button class="action-btn hidden" id="phonicsNextLevelBtn">Next Level ➔</button>
+      </div>
+    </div>
   </div>
 
   <!-- Victory Overlay Modal -->
@@ -337,6 +377,6 @@
   <!-- Canvas for Confetti -->
   <canvas id="confettiCanvas" class="confetti-canvas"></canvas>
 
-  <script src="app.js?v=1.4.0"></script>
+  <script src="app.js?v=2.1.0"></script>
 </body>
 </html>
