@@ -985,8 +985,20 @@
     }
   }
 
+  function autoScrollToMonster() {
+    const target = document.getElementById('speechWrapper') || document.getElementById('monsterContainer');
+    if (target && target.scrollIntoView) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }
+
   function verifyOrder() {
     if (!gameState.currentOrder || gameState.currentOrder.isActionMission) return;
+
+    // Auto-scroll back up smoothly to show monster's face & animated reaction
+    autoScrollToMonster();
 
     const trayCounts = {};
     gameState.trayItems.forEach(id => trayCounts[id] = (trayCounts[id] || 0) + 1);
@@ -1175,6 +1187,7 @@
     const modal = document.getElementById('actionModal');
     modal.classList.remove('active');
     stopPatienceTimer();
+    autoScrollToMonster();
 
     if (selectedActionOption.isCorrect) {
       // 2. Correct Option: Award coins & complete mission
