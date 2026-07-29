@@ -421,27 +421,27 @@
       question: "Excuse me, where is the toilet, please?",
       correct: "You go straight and turn right!",
       options: [
-        { text: "You go straight and turn right! 🚻", isCorrect: true },
-        { text: "I don't know! 🤷", isCorrect: false },
-        { text: "It is on the moon! 🌙", isCorrect: false }
+        { text: "You go straight and turn right!", isCorrect: true },
+        { text: "I don't know!", isCorrect: false },
+        { text: "It is on the moon!", isCorrect: false }
       ]
     },
     {
       question: "Hello! What time does the cafe close?",
       correct: "We close at 8 o'clock!",
       options: [
-        { text: "We close at 8 o'clock! 🕗", isCorrect: true },
-        { text: "I don't know! 🤷", isCorrect: false },
-        { text: "We never sleep! 👁️", isCorrect: false }
+        { text: "We close at 8 o'clock!", isCorrect: true },
+        { text: "I don't know!", isCorrect: false },
+        { text: "We never sleep!", isCorrect: false }
       ]
     },
     {
       question: "Hi! How do I get to the sunny park?",
       correct: "Turn left and walk two blocks!",
       options: [
-        { text: "Turn left and walk two blocks! 🌳", isCorrect: true },
-        { text: "I don't know! 🤷", isCorrect: false },
-        { text: "Fly into the clouds! ☁️", isCorrect: false }
+        { text: "Turn left and walk two blocks!", isCorrect: true },
+        { text: "I don't know!", isCorrect: false },
+        { text: "Fly into the clouds!", isCorrect: false }
       ]
     }
   ];
@@ -590,7 +590,8 @@
     }
     window.speechSynthesis.cancel();
     
-    const utterance = new SpeechSynthesisUtterance(text);
+    const cleanSpeechText = (text || '').replace(/[\u{1F300}-\u{1F9FF}]|[\u{1F600}-\u{1F64F}]|[\u{1F680}-\u{1F6FF}]|[\u{2600}-\u{26FF}]|[\u{2700}-\u{27BF}]/gu, '').trim();
+    const utterance = new SpeechSynthesisUtterance(cleanSpeechText);
     utterance.pitch = profile ? profile.pitch : 1.0;
     utterance.rate = profile ? profile.speed : 1.0;
     utterance.lang = 'en-US';
