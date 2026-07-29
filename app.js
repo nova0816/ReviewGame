@@ -1263,6 +1263,171 @@ const episodeData = {
   }
 };
 
+
+// Phonics Stage Mappings & Helper
+const phonicsDataMap = {
+  // Episode 1
+  "autumn": { target: "au", display: "<span class='phonics-blank-slot'>_ _</span>t u m n", distractors: ["ou", "ea"] },
+  "windy": { target: "i", display: "w <span class='phonics-blank-slot'>_</span> n d y", distractors: ["e", "u"] },
+  "freezing": { target: "ee", display: "f r <span class='phonics-blank-slot'>_ _</span> z i n g", distractors: ["ea", "oo"] },
+  "heating": { target: "ea", display: "h <span class='phonics-blank-slot'>_ _</span> t i n g", distractors: ["ee", "oa"] },
+  "scarf": { target: "ar", display: "s c <span class='phonics-blank-slot'>_ _</span> f", distractors: ["or", "er"] },
+  "pond": { target: "o", display: "p <span class='phonics-blank-slot'>_</span> n d", distractors: ["a", "u"] },
+  "muddy": { target: "u", display: "m <span class='phonics-blank-slot'>_</span> d d y", distractors: ["a", "o"] },
+  "shake": { target: "sh", display: "<span class='phonics-blank-slot'>_ _</span> a k e", distractors: ["ch", "th"] },
+  "lean": { target: "ea", display: "l <span class='phonics-blank-slot'>_ _</span> a n", distractors: ["ee", "oa"] },
+  "suppose": { target: "pp", display: "s u <span class='phonics-blank-slot'>_ _</span> o s e", distractors: ["bb", "tt"] },
+  "thin": { target: "th", display: "<span class='phonics-blank-slot'>_ _</span> i n", distractors: ["sh", "ch"] },
+  "heavy": { target: "ea", display: "h <span class='phonics-blank-slot'>_ _</span> v y", distractors: ["ee", "ou"] },
+  "weight": { target: "ei", display: "w <span class='phonics-blank-slot'>_ _</span> g h t", distractors: ["ai", "ea"] },
+  "favorite": { target: "or", display: "f a v <span class='phonics-blank-slot'>_ _</span> i t e", distractors: ["er", "ar"] },
+  "luck": { target: "ck", display: "l u <span class='phonics-blank-slot'>_ _</span>", distractors: ["ch", "sh"] },
+
+  // Episode 2
+  "rocket": { target: "ck", display: "r o <span class='phonics-blank-slot'>_ _</span> e t", distractors: ["ch", "sh"] },
+  "dig": { target: "i", display: "d <span class='phonics-blank-slot'>_</span> g", distractors: ["a", "u"] },
+  "bury": { target: "u", display: "b <span class='phonics-blank-slot'>_</span> r y", distractors: ["a", "e"] },
+  "grow": { target: "gr", display: "<span class='phonics-blank-slot'>_ _</span> o w", distractors: ["cl", "br"] },
+  "squeaky": { target: "ea", display: "s q u <span class='phonics-blank-slot'>_ _</span> k y", distractors: ["ee", "oo"] },
+  "arrive": { target: "rr", display: "a <span class='phonics-blank-slot'>_ _</span> i v e", distractors: ["tt", "pp"] },
+  "treasure": { target: "ea", display: "t r <span class='phonics-blank-slot'>_ _</span> s u r e", distractors: ["ee", "oa"] },
+  "wait": { target: "ai", display: "w <span class='phonics-blank-slot'>_ _</span> t", distractors: ["ay", "ee"] },
+  "record": { target: "or", display: "r e c <span class='phonics-blank-slot'>_ _</span> d", distractors: ["er", "ar"] },
+  "holiday": { target: "ay", display: "h o l i d <span class='phonics-blank-slot'>_ _</span>", distractors: ["ai", "ee"] },
+  "remain": { target: "ai", display: "r e m <span class='phonics-blank-slot'>_ _</span> n", distractors: ["ay", "ee"] },
+  "future": { target: "u", display: "f <span class='phonics-blank-slot'>_</span> t u r e", distractors: ["a", "o"] },
+  "remember": { target: "er", display: "r e m e m b <span class='phonics-blank-slot'>_ _</span>", distractors: ["ar", "or"] },
+  "daily": { target: "ai", display: "d <span class='phonics-blank-slot'>_ _</span> l y", distractors: ["ay", "ee"] },
+  "choice": { target: "oi", display: "c h <span class='phonics-blank-slot'>_ _</span> c e", distractors: ["ou", "ea"] },
+
+  // Episode 3
+  "seaside": { target: "ea", display: "s <span class='phonics-blank-slot'>_ _</span> a s i d e", distractors: ["ee", "oa"] },
+  "beach": { target: "ch", display: "b e a <span class='phonics-blank-slot'>_ _</span>", distractors: ["sh", "th"] },
+  "pool": { target: "oo", display: "p <span class='phonics-blank-slot'>_ _</span> l", distractors: ["ee", "oa"] },
+  "glitter": { target: "tt", display: "g l i <span class='phonics-blank-slot'>_ _</span> e r", distractors: ["ss", "pp"] },
+  "collection": { target: "ct", display: "c o l l e <span class='phonics-blank-slot'>_ _</span> i o n", distractors: ["st", "pt"] },
+  "bucket": { target: "ck", display: "b u <span class='phonics-blank-slot'>_ _</span> e t", distractors: ["ch", "sh"] },
+  "crab": { target: "a", display: "c r <span class='phonics-blank-slot'>_</span> b", distractors: ["e", "o"] },
+  "pinch": { target: "ch", display: "p i n <span class='phonics-blank-slot'>_ _</span>", distractors: ["sh", "th"] },
+  "ear": { target: "ear", display: "<span class='phonics-blank-slot'>_ _ _</span>", distractors: ["air", "eer"] },
+  "seashell": { target: "sh", display: "s e a <span class='phonics-blank-slot'>_ _</span> e l l", distractors: ["ch", "th"] },
+  "rocky": { target: "ck", display: "r o <span class='phonics-blank-slot'>_ _</span> y", distractors: ["ch", "sh"] },
+  "rescue": { target: "sc", display: "r e <span class='phonics-blank-slot'>_ _</span> u e", distractors: ["st", "sp"] },
+  "pretend": { target: "pr", display: "<span class='phonics-blank-slot'>_ _</span> e t e n d", distractors: ["tr", "br"] },
+  "special": { target: "sp", display: "<span class='phonics-blank-slot'>_ _</span> e c i a l", distractors: ["st", "cl"] },
+  "sand": { target: "a", display: "s <span class='phonics-blank-slot'>_</span> n d", distractors: ["e", "u"] },
+
+  // Episode 4
+  "bottle": { target: "tt", display: "b o <span class='phonics-blank-slot'>_ _</span> l e", distractors: ["bb", "pp"] },
+  "box": { target: "o", display: "b <span class='phonics-blank-slot'>_</span> x", distractors: ["a", "i"] },
+  "paper": { target: "er", display: "p a p <span class='phonics-blank-slot'>_ _</span>", distractors: ["ar", "or"] },
+  "clean": { target: "l", display: "c <span class='phonics-blank-slot'>_</span> e a n", distractors: ["r", "t"] },
+  "quiet": { target: "qu", display: "<span class='phonics-blank-slot'>_ _</span> i e t", distractors: ["kw", "ch"] },
+  "morning": { target: "or", display: "m <span class='phonics-blank-slot'>_ _</span> n i n g", distractors: ["ar", "er"] },
+  "empty": { target: "p", display: "e m <span class='phonics-blank-slot'>_</span> t y", distractors: ["b", "t"] },
+  "green": { target: "ee", display: "g r <span class='phonics-blank-slot'>_ _</span> n", distractors: ["ea", "oo"] },
+  "blue": { target: "ue", display: "b l <span class='phonics-blank-slot'>_ _</span>", distractors: ["ew", "oo"] },
+  "red": { target: "e", display: "r <span class='phonics-blank-slot'>_</span> d", distractors: ["a", "i"] },
+  "car": { target: "ar", display: "c <span class='phonics-blank-slot'>_ _</span>", distractors: ["or", "er"] },
+  "ready": { target: "ea", display: "r <span class='phonics-blank-slot'>_ _</span> d y", distractors: ["ee", "oa"] },
+  "recycle": { target: "c", display: "r e <span class='phonics-blank-slot'>_</span> y c l e", distractors: ["k", "s"] },
+  "help": { target: "e", display: "h <span class='phonics-blank-slot'>_</span> l p", distractors: ["a", "u"] },
+  "finish": { target: "sh", display: "f i n i <span class='phonics-blank-slot'>_ _</span>", distractors: ["ch", "th"] },
+
+  // Episode 5
+  "boat": { target: "oa", display: "b <span class='phonics-blank-slot'>_ _</span> t", distractors: ["ou", "ee"] },
+  "duck": { target: "ck", display: "d u <span class='phonics-blank-slot'>_ _</span>", distractors: ["ch", "sh"] },
+  "fast": { target: "st", display: "f a <span class='phonics-blank-slot'>_ _</span>", distractors: ["sk", "sp"] },
+  "push": { target: "sh", display: "p u <span class='phonics-blank-slot'>_ _</span>", distractors: ["ch", "th"] },
+  "race": { target: "a", display: "r <span class='phonics-blank-slot'>_</span> c e", distractors: ["e", "o"] },
+  "breath": { target: "ea", display: "b r <span class='phonics-blank-slot'>_ _</span> t h", distractors: ["ee", "oo"] },
+  "winner": { target: "nn", display: "w i <span class='phonics-blank-slot'>_ _</span> e r", distractors: ["mm", "tt"] },
+  "blow": { target: "ow", display: "b l <span class='phonics-blank-slot'>_ _</span>", distractors: ["ou", "ee"] },
+  "happy": { target: "pp", display: "h a <span class='phonics-blank-slot'>_ _</span> y", distractors: ["bb", "tt"] },
+  "idea": { target: "ea", display: "i d <span class='phonics-blank-slot'>_ _</span>", distractors: ["ee", "oa"] },
+  "wish": { target: "sh", display: "w i <span class='phonics-blank-slot'>_ _</span>", distractors: ["ch", "th"] },
+  "enjoy": { target: "oy", display: "e n j <span class='phonics-blank-slot'>_ _</span>", distractors: ["oi", "ay"] },
+
+  // Episode 6
+  "traffic": { target: "ff", display: "t r a <span class='phonics-blank-slot'>_ _</span> i c", distractors: ["tt", "pp"] },
+  "jam": { target: "a", display: "j <span class='phonics-blank-slot'>_</span> m", distractors: ["u", "e"] },
+  "potato": { target: "o", display: "p o t a t <span class='phonics-blank-slot'>_</span>", distractors: ["a", "e"] },
+  "lunch": { target: "ch", display: "l u n <span class='phonics-blank-slot'>_ _</span>", distractors: ["sh", "ck"] },
+  "oven": { target: "o", display: "<span class='phonics-blank-slot'>_</span> v e n", distractors: ["u", "a"] },
+  "clock": { target: "o", display: "c l <span class='phonics-blank-slot'>_</span> c k", distractors: ["a", "u"] },
+  "stuck": { target: "st", display: "<span class='phonics-blank-slot'>_ _</span> u c k", distractors: ["sp", "sk"] },
+  "road": { target: "oa", display: "r <span class='phonics-blank-slot'>_ _</span> d", distractors: ["ou", "ee"] },
+  "slow": { target: "ow", display: "s l <span class='phonics-blank-slot'>_ _</span>", distractors: ["ou", "ee"] },
+  "food": { target: "oo", display: "f <span class='phonics-blank-slot'>_ _</span> d", distractors: ["ee", "oa"] },
+  "house": { target: "ou", display: "h <span class='phonics-blank-slot'>_ _</span> s e", distractors: ["ow", "ee"] },
+  "late": { target: "a", display: "l <span class='phonics-blank-slot'>_</span> t e", distractors: ["o", "i"] },
+  "worry": { target: "rr", display: "w o <span class='phonics-blank-slot'>_ _</span> y", distractors: ["ll", "tt"] },
+  "shortcut": { target: "sh", display: "<span class='phonics-blank-slot'>_ _</span> o r t c u t", distractors: ["ch", "th"] },
+  "serve": { target: "er", display: "s <span class='phonics-blank-slot'>_ _</span> v e", distractors: ["ar", "or"] },
+
+  // Episode 7
+  "bedtime": { target: "e", display: "b <span class='phonics-blank-slot'>_</span> d t i m e", distractors: ["a", "i"] },
+  "supper": { target: "pp", display: "s u <span class='phonics-blank-slot'>_ _</span> e r", distractors: ["bb", "tt"] },
+  "bath": { target: "th", display: "b a <span class='phonics-blank-slot'>_ _</span>", distractors: ["sh", "ch"] },
+  "pajamas": { target: "a", display: "p <span class='phonics-blank-slot'>_</span> j a m a s", distractors: ["e", "u"] },
+  "teeth": { target: "th", display: "t e e <span class='phonics-blank-slot'>_ _</span>", distractors: ["sh", "ch"] },
+  "brush": { target: "sh", display: "b r u <span class='phonics-blank-slot'>_ _</span>", distractors: ["ch", "th"] },
+  "story": { target: "or", display: "s t <span class='phonics-blank-slot'>_ _</span> y", distractors: ["ar", "er"] },
+  "book": { target: "oo", display: "b <span class='phonics-blank-slot'>_ _</span> k", distractors: ["ee", "oa"] },
+  "monkey": { target: "ey", display: "m o n k <span class='phonics-blank-slot'>_ _</span>", distractors: ["ay", "ee"] },
+  "sleepy": { target: "ee", display: "s l <span class='phonics-blank-slot'>_ _</span> p y", distractors: ["ea", "oo"] },
+  "asleep": { target: "ee", display: "a s l <span class='phonics-blank-slot'>_ _</span> p", distractors: ["ea", "oo"] },
+  "splash": { target: "sh", display: "s p l a <span class='phonics-blank-slot'>_ _</span>", distractors: ["ch", "ck"] },
+  "teddy": { target: "dd", display: "t e <span class='phonics-blank-slot'>_ _</span> y", distractors: ["bb", "tt"] },
+  "night": { target: "ight", display: "n <span class='phonics-blank-slot'>_ _ _ _</span>", distractors: ["ite", "ate"] },
+  "tired": { target: "i", display: "t <span class='phonics-blank-slot'>_</span> r e d", distractors: ["a", "o"] },
+
+  // Episode 8
+  "glasses": { target: "ss", display: "g l a <span class='phonics-blank-slot'>_ _</span> e s", distractors: ["tt", "pp"] },
+  "eye": { target: "y", display: "e <span class='phonics-blank-slot'>_</span> e", distractors: ["i", "a"] },
+  "look": { target: "oo", display: "l <span class='phonics-blank-slot'>_ _</span> k", distractors: ["ee", "oa"] },
+  "letters": { target: "tt", display: "l e <span class='phonics-blank-slot'>_ _</span> e r s", distractors: ["dd", "pp"] },
+  "numbers": { target: "er", display: "n u m b <span class='phonics-blank-slot'>_ _</span> s", distractors: ["ar", "or"] },
+  "blue": { target: "ue", display: "b l <span class='phonics-blank-slot'>_ _</span>", distractors: ["ew", "oo"] },
+  "yellow": { target: "ll", display: "y e <span class='phonics-blank-slot'>_ _</span> o w", distractors: ["rr", "tt"] },
+  "sunny": { target: "nn", display: "s u <span class='phonics-blank-slot'>_ _</span> y", distractors: ["mm", "tt"] },
+  "sunglasses": { target: "ss", display: "s u n g l a <span class='phonics-blank-slot'>_ _</span> e s", distractors: ["tt", "pp"] },
+  "funny": { target: "nn", display: "f u <span class='phonics-blank-slot'>_ _</span> y", distractors: ["mm", "tt"] },
+  "big": { target: "i", display: "b <span class='phonics-blank-slot'>_</span> g", distractors: ["a", "u"] },
+  "sit": { target: "i", display: "s <span class='phonics-blank-slot'>_</span> t", distractors: ["a", "o"] },
+  "read": { target: "ea", display: "r <span class='phonics-blank-slot'>_ _</span> a d", distractors: ["ee", "oa"] },
+
+  // Episode 9
+  "garage": { target: "ar", display: "g <span class='phonics-blank-slot'>_ _</span> a g e", distractors: ["or", "er"] },
+  "petrol": { target: "e", display: "p <span class='phonics-blank-slot'>_</span> t r o l", distractors: ["a", "u"] },
+  "tire": { target: "i", display: "t <span class='phonics-blank-slot'>_</span> r e", distractors: ["y", "e"] },
+  "wash": { target: "sh", display: "w a <span class='phonics-blank-slot'>_ _</span>", distractors: ["ch", "th"] },
+  "ice": { target: "i", display: "<span class='phonics-blank-slot'>_</span> c e", distractors: ["e", "a"] },
+  "broken": { target: "o", display: "b r <span class='phonics-blank-slot'>_</span> k e n", distractors: ["a", "u"] },
+  "tow": { target: "ow", display: "t <span class='phonics-blank-slot'>_ _</span>", distractors: ["ou", "ee"] },
+  "air": { target: "air", display: "<span class='phonics-blank-slot'>_ _ _</span>", distractors: ["ear", "are"] },
+  "computer": { target: "er", display: "c o m p u t <span class='phonics-blank-slot'>_ _</span>", distractors: ["ar", "or"] },
+  "water": { target: "er", display: "w a t <span class='phonics-blank-slot'>_ _</span>", distractors: ["ar", "or"] },
+  "switch": { target: "tc", display: "s w i <span class='phonics-blank-slot'>_ _</span> h", distractors: ["sh", "ck"] },
+  "stop": { target: "st", display: "<span class='phonics-blank-slot'>_ _</span> o p", distractors: ["sp", "sk"] },
+  "best": { target: "st", display: "b e <span class='phonics-blank-slot'>_ _</span>", distractors: ["sk", "sp"] }
+};
+
+function getPhonicsInfo(word) {
+  if (!word) return { target: "a", display: "<span class='phonics-blank-slot'>_</span>", distractors: ["e", "i"] };
+  const cleanWord = word.toLowerCase().trim();
+  if (phonicsDataMap[cleanWord]) {
+    return phonicsDataMap[cleanWord];
+  }
+  if (cleanWord.length > 2) {
+    const mid = Math.floor(cleanWord.length / 2);
+    const char = cleanWord[mid];
+    const display = cleanWord.substring(0, mid) + "<span class='phonics-blank-slot'>_</span>" + cleanWord.substring(mid + 1);
+    return { target: char, display: display, distractors: ["a", "e"] };
+  }
+  return { target: cleanWord[0], display: "<span class='phonics-blank-slot'>_</span>" + cleanWord.substring(1), distractors: ["b", "s"] };
+}
+
 // Game State
 let currentEpisodeKey = 'ep1';
 let levels = episodeData.ep1.levels;
