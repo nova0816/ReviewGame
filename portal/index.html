@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=4.1.0">
+  <link rel="stylesheet" href="style.css?v=5.0.0">
 </head>
 <body>
   <!-- Background autumn leaf decorations -->
@@ -320,19 +320,19 @@
         <span>Hear It!</span>
       </button>
 
-      <div class="phonics-pic-container">
-        <img id="phonicsPicImg" src="assets/autumn.png" alt="Target picture" class="phonics-pic-img">
+      <div class="phonics-pic-container" style="width: 200px !important; height: 200px !important; max-width: 200px !important; max-height: 200px !important; margin: 0 auto !important;">
+        <img id="phonicsPicImg" src="assets/autumn.png" alt="Target picture" class="phonics-pic-img" style="width: 100% !important; height: 100% !important; max-width: 200px !important; max-height: 200px !important; object-fit: cover !important;">
       </div>
 
       <!-- Word Display with Blanked Phonic -->
-      <div class="phonics-word-card" id="phonicsWordCard">
-        <div class="phonics-word-display" id="phonicsWordDisplay">
+      <div class="phonics-word-card" id="phonicsWordCard" style="width: 100% !important; max-width: 550px !important; margin: 12px auto !important; padding: 16px 24px !important; text-align: center !important;">
+        <div class="phonics-word-display" id="phonicsWordDisplay" style="font-size: 48px !important; font-weight: 800 !important; letter-spacing: 8px !important; color: #263238 !important;">
           <!-- Populated dynamically by app.js -->
         </div>
       </div>
 
       <!-- 3 Option Cards -->
-      <div class="phonics-option-grid" id="phonicsOptionGrid">
+      <div class="phonics-option-grid" id="phonicsOptionGrid" style="width: 100% !important; max-width: 550px !important; display: grid !important; grid-template-columns: repeat(3, 1fr) !important; gap: 16px !important; margin: 12px auto !important;">
         <!-- Populated dynamically by app.js -->
       </div>
 
@@ -376,6 +376,6 @@
   <!-- Canvas for Confetti -->
   <canvas id="confettiCanvas" class="confetti-canvas"></canvas>
 
-  <script src="app.js?v=4.1.0"></script>
+  <script src="app.js?v=5.0.0"></script>
 </body>
 </html>
