@@ -1742,7 +1742,9 @@ function renderLevelGrid() {
       <span class="level-card-num">${index + 1}</span>
     `;
     
-    card.addEventListener('click', () => {
+    card.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
       playSound('click');
       currentLevelIndex = index;
       
@@ -2475,6 +2477,15 @@ function initDifficultySelector() {
       playSound('click');
       const diff = tab.dataset.diff || tab.getAttribute('data-diff');
       setDifficulty(diff);
+      
+      // Auto launch game for selected difficulty stage immediately!
+      if (startScreen) startScreen.classList.add('hidden');
+      if (gameContainer) gameContainer.classList.remove('hidden');
+      try {
+        initLevel();
+      } catch (err) {
+        console.error("Error in initLevel from tab:", err);
+      }
     });
   });
 }

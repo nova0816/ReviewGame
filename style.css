@@ -799,6 +799,10 @@ body {
   gap: 4px;
 }
 
+.level-card * {
+  pointer-events: none;
+}
+
 .level-card-icon {
   font-size: 24px;
 }
