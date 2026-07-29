@@ -374,6 +374,31 @@
     "Sorry, these are not the right items!"
   ];
 
+  const FOOD_ANGRY_PHRASES = [
+    "Where is my food, please? I am hungry!",
+    "Excuse me, is my order ready yet?",
+    "Hurry up, please! My tummy is rumbling!",
+    "Where is my snack, please? I am starving!",
+    "Hello! Don't forget my food, please!",
+    "Excuse me, I have been waiting for my food!"
+  ];
+
+  const CUTLERY_ANGRY_PHRASES = [
+    "Excuse me! Where are my cutlery supplies, please?",
+    "Hello, can I get my napkin and utensils, please?",
+    "Excuse me! I need my fork and plate to eat!",
+    "Where are my supplies, please? I cannot eat without them!",
+    "Excuse me! Please don't forget my cutlery!"
+  ];
+
+  const ACTION_ANGRY_PHRASES = [
+    "Excuse me! Can someone help answer my question, please?",
+    "Hello! Could someone please give me an answer?",
+    "Excuse me! I am still waiting for an answer, please!",
+    "Is anyone there? Can someone help me, please?",
+    "Excuse me! Please help answer my question!"
+  ];
+
   const TIMEOUT_WALKOUT_PHRASES = [
     "It's been too long, I don't want them anymore! Goodbye!",
     "I waited too long, I am leaving now! Bye!",
@@ -653,12 +678,14 @@
         updateMonsterMoodVisuals('angry');
         playSound('angry');
 
-        let angrySpeech = "Where is my food, please? I am hungry!";
+        let phrasePool = FOOD_ANGRY_PHRASES;
         if (gameState.currentOrder && gameState.currentOrder.isActionMission) {
-          angrySpeech = "Excuse me! Can someone help answer my question, please?";
+          phrasePool = ACTION_ANGRY_PHRASES;
         } else if (gameState.currentOrder && gameState.currentOrder.isCutlery) {
-          angrySpeech = "Excuse me! Where are my cutlery supplies, please?";
+          phrasePool = CUTLERY_ANGRY_PHRASES;
         }
+
+        const angrySpeech = phrasePool[Math.floor(Math.random() * phrasePool.length)];
 
         speakOrderText(angrySpeech, gameState.currentMonster);
         showToast(`${gameState.currentMonster.name} is angry! 😡`);
