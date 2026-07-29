@@ -56,19 +56,19 @@
 
   // Level Descriptions & Features (Levels 1 to 10)
   const LEVEL_DESCRIPTIONS = {
-    1: "Level 1: Unlocked Baby Blobby 🍼! Basic foods & single item requests.",
-    2: "Level 2: Unlocked Gobby 👺! Plural nouns & size adjectives.",
-    3: "Level 3: Unlocked Fluffy 🐻! 2 combined food items in single order.",
-    4: "Level 4: Unlocked Sparky 🐲! Varied functional request dialogue patterns.",
-    5: "Level 5: Unlocked Mimi 🐰! 3 combined food items with adjectives.",
-    6: "Level 6: Unlocked Kiki 👾! (Master Mode) Read & listen directly.",
-    7: "Level 7: Unlocked Chomper 👁️! Unlocked 12 New Foods (Fast Food tab)!",
-    8: "Level 8: Unlocked Shadow 👻! Cashier Register Payment step added!",
-    9: "Level 9: Unlocked Coco 🥥! Unlocked 12 Cutlery & Supplies items!",
-    10: "Level 10: Unlocked Pip 🌟! Task & Social Guidance Missions unlocked!"
+    1: "Level 1: Unlocked Baby Blobby 🍼 & Gobby 👺! Single item requests.",
+    2: "Level 2: Unlocked Fluffy 🐻 & Sparky 🐲! Plural nouns & size adjectives.",
+    3: "Level 3: Unlocked Mimi 🐰 & Kiki 👾! 2 combined food items per order.",
+    4: "Level 4: Unlocked Chomper 👁️ & Shadow 👻! Varied dialogue patterns.",
+    5: "Level 5: Unlocked Coco 🥥 & Pip 🌟! 3 combined food items with adjectives.",
+    6: "Level 6: Unlocked Noodle 🍜 & Zippy ⚡! (Master Mode) Read & listen directly.",
+    7: "Level 7: Unlocked Puff ☁️ & Octo 🐙! Unlocked 12 New Foods (Fast Food tab)!",
+    8: "Level 8: Unlocked Munchkin 🧁 & Wobble 🍮! Cashier Register Payment step added!",
+    9: "Level 9: Unlocked Dino 🦖 & Pixel 🎮! Unlocked 12 Cutlery & Supplies items!",
+    10: "Level 10: Unlocked Cosmo 🚀 & Sprout 🌱! Task & Social Guidance Missions unlocked!"
   };
 
-  // SVG Renderer Engine for All 10 Silly Monster Characters (Happy, Impatient, Angry)
+  // SVG Renderer Engine for All 20 Silly Monster Characters (Happy, Impatient, Angry)
   function getMonsterSvg(id, mood) {
     const isImpatient = mood === 'impatient';
     const isAngry = mood === 'angry';
@@ -158,26 +158,127 @@
         </svg>`;
 
       case 'pip': // Star Monster
-      default:
         return `<svg viewBox="0 0 140 140">
           <polygon points="70,15 88,52 128,56 98,84 106,124 70,103 34,124 42,84 12,56 52,52" fill="#ffdd59" stroke="#ffa801" stroke-width="4"/>
+          ${eyeStyle} ${mouthPath}
+        </svg>`;
+
+      case 'noodle': // Noodle Monster
+        return `<svg viewBox="0 0 140 140">
+          <path d="M 25 50 Q 70 30 115 50 Q 125 100 110 120 Q 70 135 30 120 Q 15 100 25 50 Z" fill="#ff7675" stroke="#d63031" stroke-width="4"/>
+          <path d="M 40 30 Q 50 15 60 30 M 70 25 Q 80 10 90 25 M 100 30 Q 110 15 120 30" stroke="#fdcb6e" stroke-width="4" fill="none" stroke-linecap="round"/>
+          ${eyeStyle} ${mouthPath}
+        </svg>`;
+
+      case 'zippy': // Lightning Volt Monster
+        return `<svg viewBox="0 0 140 140">
+          <polygon points="70,10 85,45 105,45 80,75 110,75 45,130 60,85 40,85" fill="#f1c40f" stroke="#f39c12" stroke-width="4"/>
+          ${eyeStyle} ${mouthPath}
+        </svg>`;
+
+      case 'puff': // Cloud Monster
+        return `<svg viewBox="0 0 140 140">
+          <path d="M 35 100 C 15 100 15 70 30 65 C 20 40 50 30 65 45 C 80 25 110 35 110 60 C 125 65 125 95 105 100 Z" fill="#74b9ff" stroke="#0984e3" stroke-width="4"/>
+          ${eyeStyle} ${mouthPath}
+        </svg>`;
+
+      case 'octo': // Octopus Monster
+        return `<svg viewBox="0 0 140 140">
+          <path d="M 30 60 C 30 20 110 20 110 60 C 110 85 100 100 95 125 C 85 105 75 125 70 105 C 65 125 55 105 45 125 C 40 100 30 85 30 60 Z" fill="#e84393" stroke="#d63031" stroke-width="4"/>
+          ${eyeStyle} ${mouthPath}
+        </svg>`;
+
+      case 'munchkin': // Cupcake Monster
+        return `<svg viewBox="0 0 140 140">
+          <path d="M 30 75 Q 70 50 110 75 L 95 125 Q 70 135 45 125 Z" fill="#a29bfe" stroke="#6c5ce7" stroke-width="4"/>
+          <path d="M 35 75 Q 70 25 105 75 Z" fill="#fd79a8" stroke="#e84393" stroke-width="3"/>
+          <circle cx="70" cy="30" r="10" fill="#d63031"/>
+          ${eyeStyle} ${mouthPath}
+        </svg>`;
+
+      case 'wobble': // Jelly Pudding Monster
+        return `<svg viewBox="0 0 140 140">
+          <path d="M 40 45 Q 70 35 100 45 L 115 115 Q 70 130 25 115 Z" fill="#55efc4" stroke="#00b894" stroke-width="4"/>
+          ${eyeStyle} ${mouthPath}
+          <ellipse cx="70" cy="45" rx="30" ry="8" fill="#81ecec" opacity="0.6"/>
+        </svg>`;
+
+      case 'dino': // Dino Monster
+        return `<svg viewBox="0 0 140 140">
+          <rect x="30" y="45" width="80" height="75" rx="35" fill="#00b894" stroke="#006266" stroke-width="4"/>
+          <polygon points="40,45 30,30 50,40" fill="#fdcb6e"/>
+          <polygon points="70,40 70,20 80,35" fill="#fdcb6e"/>
+          <polygon points="100,45 110,30 95,40" fill="#fdcb6e"/>
+          ${eyeStyle} ${mouthPath}
+        </svg>`;
+
+      case 'pixel': // Pixel Robot Monster
+        return `<svg viewBox="0 0 140 140">
+          <rect x="25" y="35" width="90" height="85" rx="14" fill="#6c5ce7" stroke="#341f97" stroke-width="4"/>
+          <rect x="63" y="10" width="14" height="25" fill="#341f97"/>
+          <circle cx="70" cy="10" r="8" fill="#ff7675"/>
+          ${eyeStyle} ${mouthPath}
+        </svg>`;
+
+      case 'cosmo': // Cosmo Astronaut Monster
+        return `<svg viewBox="0 0 140 140">
+          <circle cx="70" cy="75" r="48" fill="#0984e3" stroke="#2c3e50" stroke-width="4"/>
+          <circle cx="70" cy="75" r="40" fill="#74b9ff" opacity="0.3"/>
+          <polygon points="70,12 80,28 60,28" fill="#f1c40f"/>
+          ${eyeStyle} ${mouthPath}
+        </svg>`;
+
+      case 'sprout': // Plant Seedling Monster
+      default:
+        return `<svg viewBox="0 0 140 140">
+          <path d="M 30 60 C 30 30 110 30 110 60 C 110 110 30 110 30 60 Z" fill="#2ed573" stroke="#26de81" stroke-width="4"/>
+          <path d="M 70 35 C 50 15 70 5 70 5 C 70 5 90 15 70 35 Z" fill="#7bed9f" stroke="#26de81" stroke-width="3"/>
           ${eyeStyle} ${mouthPath}
         </svg>`;
     }
   }
 
-  // Silly Monster Profiles (1 New Monster Unlocked Per Level)
+  // Silly Monster Profiles (2 New Monsters Unlocked Per Level - 20 Monsters Total!)
   const MONSTER_PROFILES = [
+    // Level 1
     { id: 'baby_blobby', name: 'Baby Blobby 🍼', pitch: 1.85, speed: 1.15, voiceType: 'child', unlockLevel: 1, getSvg: (m) => getMonsterSvg('baby_blobby', m) },
-    { id: 'gobby', name: 'Gobby 👺', pitch: 1.6, speed: 1.1, voiceType: 'squeaky', unlockLevel: 2, getSvg: (m) => getMonsterSvg('gobby', m) },
-    { id: 'fluffy', name: 'Fluffy 🐻', pitch: 0.55, speed: 0.75, voiceType: 'deep', unlockLevel: 3, getSvg: (m) => getMonsterSvg('fluffy', m) },
-    { id: 'sparky', name: 'Sparky 🐲', pitch: 1.45, speed: 1.25, voiceType: 'energetic', unlockLevel: 4, getSvg: (m) => getMonsterSvg('sparky', m) },
-    { id: 'mimi', name: 'Mimi 🐰', pitch: 1.55, speed: 1.05, voiceType: 'cute', unlockLevel: 5, getSvg: (m) => getMonsterSvg('mimi', m) },
-    { id: 'kiki', name: 'Kiki 👾', pitch: 1.75, speed: 1.3, voiceType: 'alien', unlockLevel: 6, getSvg: (m) => getMonsterSvg('kiki', m) },
-    { id: 'chomper', name: 'Chomper 👁️', pitch: 1.35, speed: 0.95, voiceType: 'bouncy', unlockLevel: 7, getSvg: (m) => getMonsterSvg('chomper', m) },
-    { id: 'shadow', name: 'Shadow 👻', pitch: 0.8, speed: 0.7, voiceType: 'whisper', unlockLevel: 8, getSvg: (m) => getMonsterSvg('shadow', m) },
-    { id: 'coco', name: 'Coco 🥥', pitch: 0.7, speed: 1.1, voiceType: 'raspy', unlockLevel: 9, getSvg: (m) => getMonsterSvg('coco', m) },
-    { id: 'pip', name: 'Pip 🌟', pitch: 1.95, speed: 1.35, voiceType: 'tiny', unlockLevel: 10, getSvg: (m) => getMonsterSvg('pip', m) }
+    { id: 'gobby', name: 'Gobby 👺', pitch: 1.6, speed: 1.1, voiceType: 'squeaky', unlockLevel: 1, getSvg: (m) => getMonsterSvg('gobby', m) },
+
+    // Level 2
+    { id: 'fluffy', name: 'Fluffy 🐻', pitch: 0.55, speed: 0.75, voiceType: 'deep', unlockLevel: 2, getSvg: (m) => getMonsterSvg('fluffy', m) },
+    { id: 'sparky', name: 'Sparky 🐲', pitch: 1.45, speed: 1.25, voiceType: 'energetic', unlockLevel: 2, getSvg: (m) => getMonsterSvg('sparky', m) },
+
+    // Level 3
+    { id: 'mimi', name: 'Mimi 🐰', pitch: 1.55, speed: 1.05, voiceType: 'cute', unlockLevel: 3, getSvg: (m) => getMonsterSvg('mimi', m) },
+    { id: 'kiki', name: 'Kiki 👾', pitch: 1.75, speed: 1.3, voiceType: 'alien', unlockLevel: 3, getSvg: (m) => getMonsterSvg('kiki', m) },
+
+    // Level 4
+    { id: 'chomper', name: 'Chomper 👁️', pitch: 1.35, speed: 0.95, voiceType: 'bouncy', unlockLevel: 4, getSvg: (m) => getMonsterSvg('chomper', m) },
+    { id: 'shadow', name: 'Shadow 👻', pitch: 0.8, speed: 0.7, voiceType: 'whisper', unlockLevel: 4, getSvg: (m) => getMonsterSvg('shadow', m) },
+
+    // Level 5
+    { id: 'coco', name: 'Coco 🥥', pitch: 0.7, speed: 1.1, voiceType: 'raspy', unlockLevel: 5, getSvg: (m) => getMonsterSvg('coco', m) },
+    { id: 'pip', name: 'Pip 🌟', pitch: 1.95, speed: 1.35, voiceType: 'tiny', unlockLevel: 5, getSvg: (m) => getMonsterSvg('pip', m) },
+
+    // Level 6
+    { id: 'noodle', name: 'Noodle 🍜', pitch: 1.65, speed: 1.2, voiceType: 'cute', unlockLevel: 6, getSvg: (m) => getMonsterSvg('noodle', m) },
+    { id: 'zippy', name: 'Zippy ⚡', pitch: 1.8, speed: 1.4, voiceType: 'energetic', unlockLevel: 6, getSvg: (m) => getMonsterSvg('zippy', m) },
+
+    // Level 7
+    { id: 'puff', name: 'Puff ☁️', pitch: 1.7, speed: 1.0, voiceType: 'child', unlockLevel: 7, getSvg: (m) => getMonsterSvg('puff', m) },
+    { id: 'octo', name: 'Octo 🐙', pitch: 1.2, speed: 1.1, voiceType: 'bouncy', unlockLevel: 7, getSvg: (m) => getMonsterSvg('octo', m) },
+
+    // Level 8
+    { id: 'munchkin', name: 'Munchkin 🧁', pitch: 1.9, speed: 1.1, voiceType: 'squeaky', unlockLevel: 8, getSvg: (m) => getMonsterSvg('munchkin', m) },
+    { id: 'wobble', name: 'Wobble 🍮', pitch: 0.9, speed: 0.85, voiceType: 'raspy', unlockLevel: 8, getSvg: (m) => getMonsterSvg('wobble', m) },
+
+    // Level 9
+    { id: 'dino', name: 'Dino 🦖', pitch: 0.65, speed: 0.9, voiceType: 'deep', unlockLevel: 9, getSvg: (m) => getMonsterSvg('dino', m) },
+    { id: 'pixel', name: 'Pixel 🎮', pitch: 1.5, speed: 1.3, voiceType: 'alien', unlockLevel: 9, getSvg: (m) => getMonsterSvg('pixel', m) },
+
+    // Level 10
+    { id: 'cosmo', name: 'Cosmo 🚀', pitch: 1.1, speed: 1.15, voiceType: 'energetic', unlockLevel: 10, getSvg: (m) => getMonsterSvg('cosmo', m) },
+    { id: 'sprout', name: 'Sprout 🌱', pitch: 1.8, speed: 1.2, voiceType: 'tiny', unlockLevel: 10, getSvg: (m) => getMonsterSvg('sprout', m) }
   ];
 
   const NUMBER_WORDS = ['one', 'two', 'three', 'four'];
