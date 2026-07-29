@@ -1296,77 +1296,28 @@ body {
   animation: shake 0.4s ease-in-out;
 }
 
-/* Phonics Stage Styles */
+/* Phonics Stage Styles (Extends Match Stage) */
 .diff-tab[data-diff="phonics"].active {
-  background: #ff7043;
-  color: #ffffff;
-  box-shadow: 0 4px 10px rgba(255, 112, 67, 0.4);
-}
-
-.phonics-main {
-  width: 100%;
-  max-width: 900px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
-  margin: 0 auto;
-}
-
-.phonics-header {
-  width: 100%;
-  text-align: center;
-}
-
-.phonics-instructions {
-  font-size: 22px;
-  font-weight: 800;
-  color: #d84315;
   background: #fbe9e7;
-  padding: 12px 28px;
-  border-radius: 50px;
-  display: inline-block;
-  box-shadow: 0 4px 12px rgba(216, 67, 21, 0.15);
-}
-
-.phonics-pic-container {
-  width: 200px !important;
-  height: 200px !important;
-  max-width: 200px !important;
-  max-height: 200px !important;
-  border-radius: var(--border-radius-lg) !important;
-  overflow: hidden !important;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
-  border: 5px solid #ffffff !important;
-  background: #fff3e0 !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  margin: 0 auto !important;
-}
-
-.phonics-pic-img {
-  width: 100% !important;
-  height: 100% !important;
-  max-width: 200px !important;
-  max-height: 200px !important;
-  object-fit: cover !important;
+  border-color: #ff7043;
+  color: #d84315;
+  box-shadow: 0 4px 0 #ff7043;
 }
 
 .phonics-word-card {
-  background: #ffffff;
-  border: 4px solid #ffab91;
-  border-radius: var(--border-radius-md);
-  padding: 14px 28px;
-  box-shadow: 0 6px 0 #ff8a65;
-  text-align: center;
   width: 100%;
   max-width: 450px;
-  margin: 6px auto;
+  margin: 10px auto;
+  text-align: center;
+  background: #ffffff;
+  border: 3px solid #ffab91;
+  border-radius: var(--border-radius-md);
+  padding: 10px 20px;
+  box-shadow: 0 4px 0 #ff8a65;
 }
 
 .phonics-word-display {
-  font-size: 38px;
+  font-size: 32px;
   font-weight: 800;
   letter-spacing: 6px;
   color: #263238;
@@ -1374,73 +1325,12 @@ body {
 }
 
 .phonics-blank-slot {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  min-width: 44px;
-  height: 48px;
-  border-bottom: 5px solid #ff7043;
-  background: #fbe9e7;
-  border-radius: 8px;
+  display: inline-block;
+  min-width: 32px;
   padding: 0 6px;
+  border-bottom: 4px solid #ff7043;
+  background: #fbe9e7;
+  border-radius: 6px;
   color: #d84315;
-  text-align: center;
   font-weight: 800;
-  animation: pulse 1.5s infinite;
-}
-
-.phonics-option-grid {
-  width: 100% !important;
-  max-width: 550px !important;
-  display: grid !important;
-  grid-template-columns: repeat(3, 1fr) !important;
-  gap: 18px !important;
-  margin: 12px auto !important;
-}
-
-.phonics-option-card {
-  background: #ffffff !important;
-  border: 4px solid #ffcc80 !important;
-  border-radius: var(--border-radius-md) !important;
-  padding: 20px 12px !important;
-  font-size: 34px !important;
-  font-weight: 800 !important;
-  color: #e65100 !important;
-  text-align: center !important;
-  cursor: pointer !important;
-  box-shadow: 0 8px 0 #ffe0b2 !important;
-  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
-  font-family: 'Fredoka', cursive, sans-serif !important;
-  min-height: 75px !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-}
-
-.phonics-option-card:hover {
-  transform: translateY(-5px) !important;
-  border-color: #ff9800 !important;
-  box-shadow: 0 12px 0 #ff9800 !important;
-  color: #e65100 !important;
-}
-
-.phonics-option-card:active {
-  transform: translateY(3px) !important;
-  box-shadow: 0 3px 0 #ff9800 !important;
-}
-
-.phonics-option-card.correct {
-  background: #e8f5e9 !important;
-  border-color: var(--color-success) !important;
-  color: var(--color-success) !important;
-  box-shadow: 0 8px 0 var(--color-success) !important;
-  animation: pulse 0.4s ease-out !important;
-}
-
-.phonics-option-card.wrong {
-  background: #ffebee !important;
-  border-color: var(--color-danger) !important;
-  color: var(--color-danger) !important;
-  box-shadow: 0 8px 0 var(--color-danger) !important;
-  animation: shake 0.4s ease-in-out !important;
 }
