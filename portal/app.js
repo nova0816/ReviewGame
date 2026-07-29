@@ -2222,7 +2222,7 @@ function renderPhonicsStage() {
   
   const info = getPhonicsInfo(currentLevel.targetWord);
   if (phonicsWordDisplay) {
-    phonicsWordDisplay.style.fontSize = "36px";
+    phonicsWordDisplay.style.fontSize = "26px";
     phonicsWordDisplay.style.fontWeight = "800";
     phonicsWordDisplay.style.letterSpacing = "6px";
     phonicsWordDisplay.style.color = "#263238";
