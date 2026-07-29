@@ -1077,8 +1077,12 @@
     const promptEl = document.getElementById('cashierPromptText');
     promptEl.textContent = `Customer asks: "How much is it?" 🔊`;
 
-    // Speak price amount
-    speakOrderText(`That will be ${price} coins, please!`, gameState.currentMonster);
+    // Speak price amount at normal 1.0x speed so numbers are perfectly clear
+    const cashierVoice = gameState.currentMonster 
+      ? { ...gameState.currentMonster, speed: 1.0 } 
+      : { speed: 1.0, pitch: 1.0 };
+
+    speakOrderText(`That will be ${price} coins, please!`, cashierVoice);
 
     modal.classList.add('active');
   }
@@ -1110,7 +1114,12 @@
     } else {
       playSound('angry');
       showToast(`Incorrect total! Customer said ${expected} coins. 🧮`);
-      speakOrderText(`No, I heard ${expected} coins!`, gameState.currentMonster);
+
+      const cashierVoice = gameState.currentMonster 
+        ? { ...gameState.currentMonster, speed: 1.0 } 
+        : { speed: 1.0, pitch: 1.0 };
+
+      speakOrderText(`No, I heard ${expected} coins!`, cashierVoice);
       gameState.typedCashierVal = '';
       document.getElementById('cashierTypedValue').textContent = '0';
     }
@@ -1397,7 +1406,10 @@
     document.getElementById('cashierEnterBtn').addEventListener('click', handleNumpadEnter);
     document.getElementById('cashierReplayBtn').addEventListener('click', () => {
       const price = gameState.currentOrder ? gameState.currentOrder.price || 35 : 35;
-      speakOrderText(`That will be ${price} coins, please!`, gameState.currentMonster);
+      const cashierVoice = gameState.currentMonster 
+        ? { ...gameState.currentMonster, speed: 1.0 } 
+        : { speed: 1.0, pitch: 1.0 };
+      speakOrderText(`That will be ${price} coins, please!`, cashierVoice);
     });
 
     // Pantry Tabs
