@@ -2282,6 +2282,10 @@ function setDifficulty(diff) {
       t.classList.remove('active');
     }
   });
+
+  if (gameContainer && !gameContainer.classList.contains('hidden')) {
+    initLevel();
+  }
 }
 
 function initDifficultySelector() {
@@ -2292,11 +2296,6 @@ function initDifficultySelector() {
       playSound('click');
       const diff = tab.dataset.diff || tab.getAttribute('data-diff');
       setDifficulty(diff);
-      
-      // Auto launch game for selected difficulty stage
-      initLevel();
-      if (startScreen) startScreen.classList.add('hidden');
-      if (gameContainer) gameContainer.classList.remove('hidden');
     });
   });
 }

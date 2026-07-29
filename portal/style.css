@@ -749,6 +749,13 @@ body {
   box-shadow: 0 4px 0 #ab47bc;
 }
 
+.diff-tab.active[data-diff="phonics"] {
+  background: #fbe9e7;
+  border-color: #ff7043;
+  color: #d84315;
+  box-shadow: 0 4px 0 #ff7043;
+}
+
 .diff-tab.active[data-diff="normal"] {
   background: #fef9e7;
   border-color: #f1c40f;
