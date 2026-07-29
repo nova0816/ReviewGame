@@ -58,10 +58,10 @@
   const LEVEL_DESCRIPTIONS = {
     1: "Level 1: 8 Monster Customers Unlocked! (Blobby, Gobby, Fluffy, Sparky, Mimi, Kiki, Chomper, Shadow)",
     2: "Level 2: Unlocked Coco 🥥 & Pip 🌟! Plural nouns & size adjectives.",
-    3: "Level 3: Unlocked Noodle 🍜 & Zippy ⚡! 2 combined food items per order.",
+    3: "Level 3: Unlocked Noodle 🍜 & Zippy ⚡! (Master Mode) Read & listen directly.",
     4: "Level 4: Unlocked Puff ☁️ & Octo 🐙! Varied dialogue patterns.",
     5: "Level 5: Unlocked Munchkin 🧁 & Wobble 🍮! 3 combined food items with adjectives.",
-    6: "Level 6: Unlocked Dino 🦖 & Pixel 🎮! (Master Mode) Read & listen directly.",
+    6: "Level 6: Unlocked Dino 🦖 & Pixel 🎮! 3 combined food items.",
     7: "Level 7: Unlocked Cosmo 🚀 & Sprout 🌱! Unlocked 12 New Foods (Fast Food tab)!",
     8: "Level 8: Unlocked Boba 🧋 & Chip 🍪! Cashier Register Payment step added!",
     9: "Level 9: Unlocked Sunny ☀️ & Frosty 🍧! Unlocked 12 Cutlery & Supplies items!",
@@ -917,8 +917,8 @@
     } else {
       actionBtn.style.display = 'none';
 
-      if (gameState.level >= 6) {
-        // Level 6+: Master Reading Mode
+      if (gameState.level >= 3) {
+        // Level 3+: Master Reading Mode
         const tag = document.createElement('div');
         tag.className = 'tag-item master-tag';
         tag.innerHTML = `<span>🎓</span> <span>Master Mode: Read the text!</span>`;
