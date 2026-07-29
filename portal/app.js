@@ -2221,7 +2221,13 @@ function renderPhonicsStage() {
   }
   
   const info = getPhonicsInfo(currentLevel.targetWord);
-  if (phonicsWordDisplay) phonicsWordDisplay.innerHTML = info.display;
+  if (phonicsWordDisplay) {
+    phonicsWordDisplay.style.fontSize = "40px";
+    phonicsWordDisplay.style.fontWeight = "800";
+    phonicsWordDisplay.style.letterSpacing = "6px";
+    phonicsWordDisplay.style.color = "#263238";
+    phonicsWordDisplay.innerHTML = info.display;
+  }
   
   const choices = shuffle([info.target, ...info.distractors]);
   if (phonicsOptionGrid) {
