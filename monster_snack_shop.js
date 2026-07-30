@@ -9,23 +9,45 @@
   // 1. DATABASE & CONFIGURATIONS
   // -------------------------------------------------------------------------
 
-  // All 36 Food & Cutlery Items Database
+  // All 51 Food & Cutlery Items Database
   const ALL_ITEMS = [
-    // Level 1-6 Base Foods (12 Items)
+    // Level 1 Base Foods (6 Items)
     { id: 'red_apple', name: 'Red Apple', pluralName: 'Red Apples', category: 'fruits', adjective: 'red', unlockLevel: 1 },
     { id: 'green_apple', name: 'Green Apple', pluralName: 'Green Apples', category: 'fruits', adjective: 'green', unlockLevel: 1 },
     { id: 'banana', name: 'Banana', pluralName: 'Bananas', category: 'fruits', adjective: 'yellow', unlockLevel: 1 },
-    { id: 'berries', name: 'Berries', pluralName: 'Berries', category: 'fruits', adjective: 'blue', unlockLevel: 1 },
-    { id: 'donut', name: 'Donut', pluralName: 'Donuts', category: 'bakery', adjective: 'big', unlockLevel: 1 },
     { id: 'cookie', name: 'Cookie', pluralName: 'Cookies', category: 'bakery', adjective: 'small', unlockLevel: 1 },
-    { id: 'croissant', name: 'Croissant', pluralName: 'Croissants', category: 'bakery', adjective: 'warm', unlockLevel: 1 },
-    { id: 'cake', name: 'Cake', pluralName: 'Cakes', category: 'bakery', adjective: 'sweet', unlockLevel: 1 },
-    { id: 'cocoa', name: 'Cocoa', pluralName: 'Cocoas', category: 'drinks', adjective: 'warm', unlockLevel: 1 },
     { id: 'milk', name: 'Milk', pluralName: 'Milk', category: 'drinks', adjective: 'cold', unlockLevel: 1 },
     { id: 'juice', name: 'Juice', pluralName: 'Juices', category: 'drinks', adjective: 'red', unlockLevel: 1 },
-    { id: 'iced_tea', name: 'Iced Tea', pluralName: 'Iced Teas', category: 'drinks', adjective: 'iced', unlockLevel: 1 },
 
-    // Level 7 New Foods (12 Items)
+    // Level 2 Unlocked Foods (+3 Items: Berries, Donut, Iced Tea)
+    { id: 'berries', name: 'Berries', pluralName: 'Berries', category: 'fruits', adjective: 'blue', unlockLevel: 2 },
+    { id: 'donut', name: 'Donut', pluralName: 'Donuts', category: 'bakery', adjective: 'big', unlockLevel: 2 },
+    { id: 'iced_tea', name: 'Iced Tea', pluralName: 'Iced Teas', category: 'drinks', adjective: 'iced', unlockLevel: 2 },
+
+    // Level 3 Unlocked Foods (+3 Items: Croissant, Cake, Cocoa)
+    { id: 'croissant', name: 'Croissant', pluralName: 'Croissants', category: 'bakery', adjective: 'warm', unlockLevel: 3 },
+    { id: 'cake', name: 'Cake', pluralName: 'Cakes', category: 'bakery', adjective: 'sweet', unlockLevel: 3 },
+    { id: 'cocoa', name: 'Cocoa', pluralName: 'Cocoas', category: 'drinks', adjective: 'warm', unlockLevel: 3 },
+
+    // Level 4 Unlocked Foods (+4 Items: Grape, Mango, Waffle, Muffin)
+    { id: 'grape', name: 'Grape', pluralName: 'Grapes', category: 'fruits', adjective: 'sweet', unlockLevel: 4 },
+    { id: 'mango', name: 'Mango', pluralName: 'Mangoes', category: 'fruits', adjective: 'ripe', unlockLevel: 4 },
+    { id: 'waffle', name: 'Waffle', pluralName: 'Waffles', category: 'bakery', adjective: 'warm', unlockLevel: 4 },
+    { id: 'muffin', name: 'Muffin', pluralName: 'Muffins', category: 'bakery', adjective: 'sweet', unlockLevel: 4 },
+
+    // Level 5 Unlocked Foods (+4 Items: Peach, Cherry, Pretzel, Smoothie)
+    { id: 'peach', name: 'Peach', pluralName: 'Peaches', category: 'fruits', adjective: 'juicy', unlockLevel: 5 },
+    { id: 'cherry', name: 'Cherry', pluralName: 'Cherries', category: 'fruits', adjective: 'red', unlockLevel: 5 },
+    { id: 'pretzel', name: 'Pretzel', pluralName: 'Pretzels', category: 'bakery', adjective: 'salty', unlockLevel: 5 },
+    { id: 'smoothie', name: 'Smoothie', pluralName: 'Smoothies', category: 'drinks', adjective: 'fruity', unlockLevel: 5 },
+
+    // Level 6 Unlocked Foods (+4 Items: Pineapple, Brownie, Lemonade, Hot Chocolate)
+    { id: 'pineapple', name: 'Pineapple', pluralName: 'Pineapples', category: 'fruits', adjective: 'tropical', unlockLevel: 6 },
+    { id: 'brownie', name: 'Brownie', pluralName: 'Brownies', category: 'bakery', adjective: 'rich', unlockLevel: 6 },
+    { id: 'lemonade', name: 'Lemonade', pluralName: 'Lemonades', category: 'drinks', adjective: 'sour', unlockLevel: 6 },
+    { id: 'hot_cocoa_marshmallow', name: 'Hot Chocolate', pluralName: 'Hot Chocolates', category: 'drinks', adjective: 'warm', unlockLevel: 6 },
+
+    // Level 7 Unlocked Fast Foods (+7 Items)
     { id: 'orange', name: 'Orange', pluralName: 'Oranges', category: 'fruits', adjective: 'fresh', unlockLevel: 7 },
     { id: 'strawberry', name: 'Strawberry', pluralName: 'Strawberries', category: 'fruits', adjective: 'sweet', unlockLevel: 7 },
     { id: 'watermelon', name: 'Watermelon', pluralName: 'Watermelons', category: 'fruits', adjective: 'juicy', unlockLevel: 7 },
@@ -33,11 +55,14 @@
     { id: 'burger', name: 'Burger', pluralName: 'Burgers', category: 'fastfood', adjective: 'big', unlockLevel: 7 },
     { id: 'fries', name: 'Fries', pluralName: 'Fries', category: 'fastfood', adjective: 'crunchy', unlockLevel: 7 },
     { id: 'icecream', name: 'Ice Cream', pluralName: 'Ice Creams', category: 'bakery', adjective: 'cold', unlockLevel: 7 },
-    { id: 'cupcake', name: 'Cupcake', pluralName: 'Cupcakes', category: 'bakery', adjective: 'sweet', unlockLevel: 7 },
-    { id: 'pancake', name: 'Pancake', pluralName: 'Pancakes', category: 'bakery', adjective: 'warm', unlockLevel: 7 },
-    { id: 'hot_tea', name: 'Hot Tea', pluralName: 'Hot Teas', category: 'drinks', adjective: 'hot', unlockLevel: 7 },
-    { id: 'soda', name: 'Soda', pluralName: 'Sodas', category: 'drinks', adjective: 'fizzy', unlockLevel: 7 },
-    { id: 'water', name: 'Water', pluralName: 'Water', category: 'drinks', adjective: 'cold', unlockLevel: 7 },
+
+    // Level 8 Unlocked Foods (+6 Items)
+    { id: 'cupcake', name: 'Cupcake', pluralName: 'Cupcakes', category: 'bakery', adjective: 'sweet', unlockLevel: 8 },
+    { id: 'pancake', name: 'Pancake', pluralName: 'Pancakes', category: 'bakery', adjective: 'warm', unlockLevel: 8 },
+    { id: 'hot_tea', name: 'Hot Tea', pluralName: 'Hot Teas', category: 'drinks', adjective: 'hot', unlockLevel: 8 },
+    { id: 'soda', name: 'Soda', pluralName: 'Sodas', category: 'drinks', adjective: 'fizzy', unlockLevel: 8 },
+    { id: 'water', name: 'Water', pluralName: 'Water', category: 'drinks', adjective: 'cold', unlockLevel: 8 },
+    { id: 'iced_coffee', name: 'Iced Coffee', pluralName: 'Iced Coffees', category: 'drinks', adjective: 'cold', unlockLevel: 8 },
 
     // Level 9 Cutlery & Supplies (12 Items)
     { id: 'tissue', name: 'Tissue', pluralName: 'Tissues', category: 'cutlery', adjective: 'clean', unlockLevel: 9 },
@@ -51,21 +76,25 @@
     { id: 'bowl', name: 'Bowl', pluralName: 'Bowls', category: 'cutlery', adjective: 'soup', unlockLevel: 9 },
     { id: 'chopsticks', name: 'Chopsticks', pluralName: 'Chopsticks', category: 'cutlery', adjective: 'wooden', unlockLevel: 9 },
     { id: 'tray', name: 'Tray', pluralName: 'Trays', category: 'cutlery', adjective: 'serving', unlockLevel: 9 },
-    { id: 'wet_wipe', name: 'Wet Wipe', pluralName: 'Wet Wipes', category: 'cutlery', adjective: 'wet', unlockLevel: 9 }
+    { id: 'wet_wipe', name: 'Wet Wipe', pluralName: 'Wet Wipes', category: 'cutlery', adjective: 'wet', unlockLevel: 9 },
+
+    // Level 10 Final Gourmet Items (+2 Items: Pie, Boba Drink)
+    { id: 'pie', name: 'Pie', pluralName: 'Pies', category: 'bakery', adjective: 'crispy', unlockLevel: 10 },
+    { id: 'boba_tea', name: 'Boba Drink', pluralName: 'Boba Drinks', category: 'drinks', adjective: 'sweet', unlockLevel: 10 }
   ];
 
   // Level Descriptions & Features (Levels 1 to 10)
   const LEVEL_DESCRIPTIONS = {
-    1: "Level 1: 8 Monster Customers Unlocked! (Blobby, Gobby, Fluffy, Sparky, Mimi, Kiki, Chomper, Shadow)",
-    2: "Level 2: Unlocked Coco 🥥 & Pip 🌟! Plural nouns & size adjectives.",
-    3: "Level 3: Unlocked Noodle 🍜 & Zippy ⚡! (Master Mode) Read & listen directly.",
-    4: "Level 4: Unlocked Puff ☁️ & Octo 🐙! Varied dialogue patterns.",
-    5: "Level 5: Unlocked Munchkin 🧁 & Wobble 🍮! 3 combined food items with adjectives.",
-    6: "Level 6: Unlocked Dino 🦖 & Pixel 🎮! 3 combined food items.",
-    7: "Level 7: Unlocked Cosmo 🚀 & Sprout 🌱! Unlocked 12 New Foods (Fast Food tab)!",
-    8: "Level 8: Unlocked Boba 🧋 & Chip 🍪! Cashier Register Payment step added!",
+    1: "Level 1: 8 Monsters & 6 Base Foods Unlocked! (Apples, Banana, Cookie, Milk, Juice)",
+    2: "Level 2: Unlocked Coco 🥥 & Pip 🌟! Unlocked Berries 🫐, Donut 🍩, Iced Tea 🧊!",
+    3: "Level 3: Unlocked Noodle 🍜 & Zippy ⚡! Unlocked Croissant 🥐, Cake 🍰, Cocoa ☕!",
+    4: "Level 4: Unlocked Puff ☁️ & Octo 🐙! Unlocked Grape 🍇, Mango 🥭, Waffle 🧇, Muffin 🧁!",
+    5: "Level 5: Unlocked Munchkin 🧁 & Wobble 🍮! Unlocked Peach 🍑, Cherry 🍒, Pretzel 🥨, Smoothie 🥤!",
+    6: "Level 6: Unlocked Dino 🦖 & Pixel 🎮! Unlocked Pineapple 🍍, Brownie 🍫, Lemonade 🍋, Hot Chocolate ☕!",
+    7: "Level 7: Unlocked Cosmo 🚀 & Sprout 🌱! Unlocked Fast Food tab (Pizza, Burger, Fries, Ice Cream)!",
+    8: "Level 8: Unlocked Boba 🧋 & Chip 🍪! Unlocked Cupcake, Pancake, Soda, Water, Iced Coffee! Cashier payment step added!",
     9: "Level 9: Unlocked Sunny ☀️ & Frosty 🍧! Unlocked 12 Cutlery & Supplies items!",
-    10: "Level 10: Unlocked Twinkle 🦄 & Gummy 🍬! Task & Social Guidance Missions unlocked!"
+    10: "Level 10: Unlocked Twinkle 🦄 & Gummy 🍬! Unlocked Pie 🥧 & Boba Drink 🧋! Task Guidance Missions unlocked!"
   };
 
   // SVG Renderer Engine for All 26 Silly Monster Characters (Happy, Impatient, Angry)
@@ -1361,9 +1390,24 @@
   // 10. SELF-LEARNING EXPLORER MODE
   // -------------------------------------------------------------------------
 
-  function openSelfLearnModal() {
+  function openSelfLearnModal(isLevelUpTrigger = false) {
     gameState.isSelfLearning = true;
+    gameState.isLevelUpSelfLearn = isLevelUpTrigger;
     const modal = document.getElementById('selfLearnModal');
+    const banner = document.getElementById('learnLevelUpBanner');
+    const bannerText = document.getElementById('learnBannerText');
+    const startBtn = document.getElementById('startNextLevelBtn');
+
+    if (isLevelUpTrigger) {
+      banner.style.display = 'flex';
+      startBtn.style.display = 'block';
+      bannerText.textContent = `Welcome to Level ${gameState.level}! Practice your NEW! ✨ items below before serving customer orders!`;
+      startBtn.textContent = `Start Level ${gameState.level}! 🚀`;
+    } else {
+      banner.style.display = 'none';
+      startBtn.style.display = 'none';
+    }
+
     renderSelfLearnGrid('all');
     modal.classList.add('active');
   }
@@ -1376,9 +1420,11 @@
     const items = category === 'all' ? unlocked : unlocked.filter(i => i.category === category);
 
     items.forEach(item => {
+      const isNew = item.unlockLevel === gameState.level;
       const card = document.createElement('div');
-      card.className = 'learn-card';
+      card.className = `learn-card ${isNew ? 'newly-unlocked-card' : ''}`;
       card.innerHTML = `
+        ${isNew ? '<span class="new-item-badge">NEW! ✨</span>' : ''}
         <div class="food-emoji">${getFoodIconHtml(item.id, 'size-lg')}</div>
         <div class="food-title">${item.name}</div>
         <div class="food-badge">${item.adjective}</div>
@@ -1395,8 +1441,14 @@
   }
 
   function closeSelfLearnModal() {
+    const wasLevelUp = gameState.isLevelUpSelfLearn;
     gameState.isSelfLearning = false;
+    gameState.isLevelUpSelfLearn = false;
     document.getElementById('selfLearnModal').classList.remove('active');
+
+    if (wasLevelUp) {
+      renderMonsterCustomer();
+    }
   }
 
   // -------------------------------------------------------------------------
@@ -1604,11 +1656,12 @@
       });
     });
 
-    // Level Celebration Continue Button
+    // Level Celebration Continue Button -> Opens Self-Learning Mode first to highlight new items!
     document.getElementById('nextLevelBtn').addEventListener('click', () => {
       document.getElementById('celebrationModal').classList.remove('active');
-      renderMonsterCustomer();
+      openSelfLearnModal(true);
     });
+    document.getElementById('startNextLevelBtn').addEventListener('click', closeSelfLearnModal);
   }
 
   if (document.readyState === 'loading') {
