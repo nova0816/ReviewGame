@@ -14,30 +14,30 @@
     // Level 1-6 Base Foods (12 Items)
     { id: 'red_apple', name: 'Red Apple', pluralName: 'Red Apples', category: 'fruits', adjective: 'red', unlockLevel: 1 },
     { id: 'green_apple', name: 'Green Apple', pluralName: 'Green Apples', category: 'fruits', adjective: 'green', unlockLevel: 1 },
-    { id: 'banana', name: 'Yellow Banana', pluralName: 'Yellow Bananas', category: 'fruits', adjective: 'yellow', unlockLevel: 1 },
-    { id: 'berries', name: 'Blue Berries', pluralName: 'Blue Berries', category: 'fruits', adjective: 'blue', unlockLevel: 1 },
-    { id: 'donut', name: 'Big Donut', pluralName: 'Big Donuts', category: 'bakery', adjective: 'big', unlockLevel: 1 },
-    { id: 'cookie', name: 'Small Cookie', pluralName: 'Small Cookies', category: 'bakery', adjective: 'small', unlockLevel: 1 },
-    { id: 'croissant', name: 'Warm Croissant', pluralName: 'Warm Croissants', category: 'bakery', adjective: 'warm', unlockLevel: 1 },
-    { id: 'cake', name: 'Sweet Cake', pluralName: 'Sweet Cakes', category: 'bakery', adjective: 'sweet', unlockLevel: 1 },
-    { id: 'cocoa', name: 'Warm Cocoa', pluralName: 'Warm Cocoas', category: 'drinks', adjective: 'warm', unlockLevel: 1 },
-    { id: 'milk', name: 'Cold Milk', pluralName: 'Cold Milk', category: 'drinks', adjective: 'cold', unlockLevel: 1 },
-    { id: 'juice', name: 'Red Juice', pluralName: 'Red Juices', category: 'drinks', adjective: 'red', unlockLevel: 1 },
+    { id: 'banana', name: 'Banana', pluralName: 'Bananas', category: 'fruits', adjective: 'yellow', unlockLevel: 1 },
+    { id: 'berries', name: 'Berries', pluralName: 'Berries', category: 'fruits', adjective: 'blue', unlockLevel: 1 },
+    { id: 'donut', name: 'Donut', pluralName: 'Donuts', category: 'bakery', adjective: 'big', unlockLevel: 1 },
+    { id: 'cookie', name: 'Cookie', pluralName: 'Cookies', category: 'bakery', adjective: 'small', unlockLevel: 1 },
+    { id: 'croissant', name: 'Croissant', pluralName: 'Croissants', category: 'bakery', adjective: 'warm', unlockLevel: 1 },
+    { id: 'cake', name: 'Cake', pluralName: 'Cakes', category: 'bakery', adjective: 'sweet', unlockLevel: 1 },
+    { id: 'cocoa', name: 'Cocoa', pluralName: 'Cocoas', category: 'drinks', adjective: 'warm', unlockLevel: 1 },
+    { id: 'milk', name: 'Milk', pluralName: 'Milk', category: 'drinks', adjective: 'cold', unlockLevel: 1 },
+    { id: 'juice', name: 'Juice', pluralName: 'Juices', category: 'drinks', adjective: 'red', unlockLevel: 1 },
     { id: 'iced_tea', name: 'Iced Tea', pluralName: 'Iced Teas', category: 'drinks', adjective: 'iced', unlockLevel: 1 },
 
     // Level 7 New Foods (12 Items)
-    { id: 'orange', name: 'Fresh Orange', pluralName: 'Fresh Oranges', category: 'fruits', adjective: 'fresh', unlockLevel: 7 },
-    { id: 'strawberry', name: 'Sweet Strawberry', pluralName: 'Sweet Strawberries', category: 'fruits', adjective: 'sweet', unlockLevel: 7 },
-    { id: 'watermelon', name: 'Juicy Watermelon', pluralName: 'Juicy Watermelons', category: 'fruits', adjective: 'juicy', unlockLevel: 7 },
-    { id: 'pizza', name: 'Hot Pizza', pluralName: 'Hot Pizzas', category: 'fastfood', adjective: 'hot', unlockLevel: 7 },
-    { id: 'burger', name: 'Big Burger', pluralName: 'Big Burgers', category: 'fastfood', adjective: 'big', unlockLevel: 7 },
-    { id: 'fries', name: 'Crunchy Fries', pluralName: 'Crunchy Fries', category: 'fastfood', adjective: 'crunchy', unlockLevel: 7 },
-    { id: 'icecream', name: 'Cold Ice Cream', pluralName: 'Cold Ice Creams', category: 'bakery', adjective: 'cold', unlockLevel: 7 },
-    { id: 'cupcake', name: 'Sweet Cupcake', pluralName: 'Sweet Cupcakes', category: 'bakery', adjective: 'sweet', unlockLevel: 7 },
-    { id: 'pancake', name: 'Warm Pancake', pluralName: 'Warm Pancakes', category: 'bakery', adjective: 'warm', unlockLevel: 7 },
+    { id: 'orange', name: 'Orange', pluralName: 'Oranges', category: 'fruits', adjective: 'fresh', unlockLevel: 7 },
+    { id: 'strawberry', name: 'Strawberry', pluralName: 'Strawberries', category: 'fruits', adjective: 'sweet', unlockLevel: 7 },
+    { id: 'watermelon', name: 'Watermelon', pluralName: 'Watermelons', category: 'fruits', adjective: 'juicy', unlockLevel: 7 },
+    { id: 'pizza', name: 'Pizza', pluralName: 'Pizzas', category: 'fastfood', adjective: 'hot', unlockLevel: 7 },
+    { id: 'burger', name: 'Burger', pluralName: 'Burgers', category: 'fastfood', adjective: 'big', unlockLevel: 7 },
+    { id: 'fries', name: 'Fries', pluralName: 'Fries', category: 'fastfood', adjective: 'crunchy', unlockLevel: 7 },
+    { id: 'icecream', name: 'Ice Cream', pluralName: 'Ice Creams', category: 'bakery', adjective: 'cold', unlockLevel: 7 },
+    { id: 'cupcake', name: 'Cupcake', pluralName: 'Cupcakes', category: 'bakery', adjective: 'sweet', unlockLevel: 7 },
+    { id: 'pancake', name: 'Pancake', pluralName: 'Pancakes', category: 'bakery', adjective: 'warm', unlockLevel: 7 },
     { id: 'hot_tea', name: 'Hot Tea', pluralName: 'Hot Teas', category: 'drinks', adjective: 'hot', unlockLevel: 7 },
-    { id: 'soda', name: 'Fizzy Soda', pluralName: 'Fizzy Sodas', category: 'drinks', adjective: 'fizzy', unlockLevel: 7 },
-    { id: 'water', name: 'Cold Water', pluralName: 'Cold Water', category: 'drinks', adjective: 'cold', unlockLevel: 7 },
+    { id: 'soda', name: 'Soda', pluralName: 'Sodas', category: 'drinks', adjective: 'fizzy', unlockLevel: 7 },
+    { id: 'water', name: 'Water', pluralName: 'Water', category: 'drinks', adjective: 'cold', unlockLevel: 7 },
 
     // Level 9 Cutlery & Supplies (12 Items)
     { id: 'tissue', name: 'Tissue', pluralName: 'Tissues', category: 'cutlery', adjective: 'clean', unlockLevel: 9 },
@@ -56,35 +56,155 @@
 
   // Level Descriptions & Features (Levels 1 to 10)
   const LEVEL_DESCRIPTIONS = {
-    1: "Level 1: Basic foods & single item requests.",
-    2: "Level 2: Plural nouns & size adjectives.",
-    3: "Level 3: 2 combined food items in single order.",
-    4: "Level 4: Varied functional request dialogue patterns.",
-    5: "Level 5: 3 combined food items with adjectives.",
-    6: "Level 6 (Master Mode): Picture icon clues removed! Read & listen directly.",
-    7: "Level 7: Unlocked 12 New Foods (Orange, Pizza, Burger, Ice Cream...)!",
-    8: "Level 8: Cashier Register Payment step added for food orders!",
-    9: "Level 9: Unlocked 12 Cutlery & Supplies items (Tissue, Fork, Plate...)!",
-    10: "Level 10: Task & Social Guidance Missions unlocked! Use '🙋 Action' button."
+    1: "Level 1: 8 Monster Customers Unlocked! (Blobby, Gobby, Fluffy, Sparky, Mimi, Kiki, Chomper, Shadow)",
+    2: "Level 2: Unlocked Coco 🥥 & Pip 🌟! Plural nouns & size adjectives.",
+    3: "Level 3: Unlocked Noodle 🍜 & Zippy ⚡! (Master Mode) Read & listen directly.",
+    4: "Level 4: Unlocked Puff ☁️ & Octo 🐙! Varied dialogue patterns.",
+    5: "Level 5: Unlocked Munchkin 🧁 & Wobble 🍮! 3 combined food items with adjectives.",
+    6: "Level 6: Unlocked Dino 🦖 & Pixel 🎮! 3 combined food items.",
+    7: "Level 7: Unlocked Cosmo 🚀 & Sprout 🌱! Unlocked 12 New Foods (Fast Food tab)!",
+    8: "Level 8: Unlocked Boba 🧋 & Chip 🍪! Cashier Register Payment step added!",
+    9: "Level 9: Unlocked Sunny ☀️ & Frosty 🍧! Unlocked 12 Cutlery & Supplies items!",
+    10: "Level 10: Unlocked Twinkle 🦄 & Gummy 🍬! Task & Social Guidance Missions unlocked!"
   };
 
-  // SVG Renderer Engine for All 10 Silly Monster Characters (Happy, Impatient, Angry)
+  // SVG Renderer Engine for All 26 Silly Monster Characters (Happy, Impatient, Angry)
   function getMonsterSvg(id, mood) {
     const isImpatient = mood === 'impatient';
     const isAngry = mood === 'angry';
 
-    // Facial Feature Paths based on Mood
-    let mouthPath = isAngry 
-      ? '<path d="M 50 115 Q 70 95 90 115" stroke="#222" stroke-width="4" fill="none"/>' // Angry frown
-      : isImpatient 
-      ? '<line x1="50" y1="110" x2="90" y2="110" stroke="#222" stroke-width="4" stroke-linecap="round"/>' // Flat line
-      : '<path d="M 50 100 Q 70 125 90 100 Z" fill="#222"/>'; // Big happy smile
+    function getEyes(id, mood) {
+      if (mood === 'angry') {
+        return `<path d="M 45 70 L 62 78 M 95 78 L 112 70" stroke="#222" stroke-width="4" stroke-linecap="round"/><circle cx="55" cy="82" r="6" fill="#222"/><circle cx="95" cy="82" r="6" fill="#222"/>`;
+      }
+      if (mood === 'impatient') {
+        return `<line x1="45" y1="78" x2="65" y2="78" stroke="#222" stroke-width="4" stroke-linecap="round"/><line x1="85" y1="78" x2="105" y2="78" stroke="#222" stroke-width="4" stroke-linecap="round"/>`;
+      }
 
-    let eyeStyle = isAngry 
-      ? '<path d="M 45 75 L 60 82 M 95 82 L 110 75" stroke="#222" stroke-width="4"/><circle cx="55" cy="85" r="6" fill="#222"/><circle cx="95" cy="85" r="6" fill="#222"/>'
-      : isImpatient
-      ? '<line x1="45" y1="80" x2="65" y2="80" stroke="#222" stroke-width="4"/><line x1="85" y1="80" x2="105" y2="80" stroke="#222" stroke-width="4"/>'
-      : '<circle cx="55" cy="80" r="10" fill="#222"/><circle cx="95" cy="80" r="10" fill="#222"/><circle cx="58" cy="77" r="3" fill="#fff"/><circle cx="98" cy="77" r="3" fill="#fff"/>';
+      switch(id) {
+        case 'baby_blobby':
+          return `<circle cx="52" cy="78" r="11" fill="#222"/><circle cx="98" cy="78" r="11" fill="#222"/><circle cx="49" cy="74" r="4" fill="#fff"/><circle cx="95" cy="74" r="4" fill="#fff"/><circle cx="55" cy="81" r="2" fill="#fff"/><circle cx="101" cy="81" r="2" fill="#fff"/>`;
+        case 'gobby':
+          return `<path d="M 40 68 Q 55 60 70 70" stroke="#222" stroke-width="3" fill="none"/><path d="M 80 70 Q 95 60 110 68" stroke="#222" stroke-width="3" fill="none"/><ellipse cx="55" cy="78" rx="8" ry="10" fill="#222"/><ellipse cx="95" cy="78" rx="8" ry="10" fill="#222"/><circle cx="53" cy="75" r="3" fill="#fff"/><circle cx="93" cy="75" r="3" fill="#fff"/>`;
+        case 'fluffy':
+          return `<path d="M 45 80 Q 55 68 65 80" stroke="#222" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M 85 80 Q 95 68 105 80" stroke="#222" stroke-width="5" fill="none" stroke-linecap="round"/>`;
+        case 'sparky':
+          return `<ellipse cx="53" cy="75" rx="10" ry="12" fill="#f1c40f" stroke="#222" stroke-width="2"/><ellipse cx="97" cy="75" rx="10" ry="12" fill="#f1c40f" stroke="#222" stroke-width="2"/><line x1="53" y1="65" x2="53" y2="85" stroke="#222" stroke-width="4"/><line x1="97" y1="65" x2="97" y2="85" stroke="#222" stroke-width="4"/>`;
+        case 'mimi':
+          return `<circle cx="55" cy="78" r="9" fill="#222"/><circle cx="95" cy="78" r="9" fill="#222"/><circle cx="58" cy="75" r="3" fill="#fff"/><circle cx="98" cy="75" r="3" fill="#fff"/><path d="M 44 70 L 40 64 M 48 67 L 46 60 M 106 70 L 110 64 M 102 67 L 104 60" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>`;
+        case 'kiki':
+          return `<circle cx="42" cy="75" r="8" fill="#222"/><circle cx="70" cy="65" r="12" fill="#222"/><circle cx="98" cy="75" r="8" fill="#222"/><circle cx="44" cy="72" r="3" fill="#fff"/><circle cx="73" cy="61" r="4" fill="#fff"/><circle cx="100" cy="72" r="3" fill="#fff"/>`;
+        case 'chomper':
+          return `<circle cx="70" cy="62" r="18" fill="#fff" stroke="#222" stroke-width="3"/><circle cx="70" cy="62" r="8" fill="#00cec9"/><circle cx="70" cy="62" r="4" fill="#222"/><circle cx="73" cy="59" r="2.5" fill="#fff"/>`;
+        case 'shadow':
+          return `<ellipse cx="52" cy="75" rx="9" ry="12" fill="#2d3436"/><ellipse cx="98" cy="75" rx="9" ry="12" fill="#2d3436"/><ellipse cx="52" cy="75" rx="5" ry="7" fill="#74b9ff"/><ellipse cx="98" cy="75" rx="5" ry="7" fill="#74b9ff"/>`;
+        case 'coco':
+          return `<circle cx="48" cy="72" r="14" fill="#fff" stroke="#222" stroke-width="2"/><circle cx="50" cy="74" r="7" fill="#222"/><circle cx="94" cy="76" r="8" fill="#fff" stroke="#222" stroke-width="2"/><circle cx="93" cy="77" r="4" fill="#222"/>`;
+        case 'pip':
+          return `<circle cx="55" cy="78" r="10" fill="#222"/><circle cx="95" cy="78" r="10" fill="#222"/><polygon points="55,73 57,77 61,77 58,79 59,83 55,80 51,83 52,79 49,77 53,77" fill="#fff"/><polygon points="95,73 97,77 101,77 98,79 99,83 95,80 91,83 92,79 89,77 93,77" fill="#fff"/>`;
+        case 'noodle':
+          return `<path d="M 42 66 Q 52 60 62 68 M 88 68 Q 98 60 108 66" stroke="#222" stroke-width="3" fill="none"/><circle cx="52" cy="78" r="9" fill="#222"/><circle cx="98" cy="78" r="9" fill="#222"/><circle cx="55" cy="75" r="3" fill="#fff"/><circle cx="101" cy="75" r="3" fill="#fff"/>`;
+        case 'zippy':
+          return `<path d="M 40 68 L 52 64 L 62 70 M 110 68 L 98 64 L 88 70" stroke="#d63031" stroke-width="3.5" fill="none"/><circle cx="52" cy="78" r="9" fill="#222"/><circle cx="98" cy="78" r="9" fill="#222"/><circle cx="55" cy="75" r="3" fill="#fff"/><circle cx="101" cy="75" r="3" fill="#fff"/>`;
+        case 'puff':
+          return `<path d="M 45 76 C 45 70 65 70 65 76 C 65 82 45 82 45 76 Z" fill="#222"/><path d="M 85 76 C 85 70 105 70 105 76 C 105 82 85 82 85 76 Z" fill="#222"/><circle cx="52" cy="74" r="3" fill="#fff"/><circle cx="92" cy="74" r="3" fill="#fff"/>`;
+        case 'octo':
+          return `<ellipse cx="52" cy="70" rx="11" ry="9" fill="#fff" stroke="#222" stroke-width="2.5"/><ellipse cx="98" cy="70" rx="11" ry="9" fill="#fff" stroke="#222" stroke-width="2.5"/><rect x="45" y="68" width="14" height="4" rx="2" fill="#222"/><rect x="91" y="68" width="14" height="4" rx="2" fill="#222"/>`;
+        case 'munchkin':
+          return `<circle cx="53" cy="78" r="10" fill="#222"/><circle cx="97" cy="78" r="10" fill="#222"/><path d="M 53 74 C 53 71 50 71 50 74 C 50 76 53 78 53 79 C 53 78 56 76 56 74 C 56 71 53 71 53 74 Z" fill="#ff7675"/><path d="M 97 74 C 97 71 94 71 94 74 C 94 76 97 78 97 79 C 97 78 100 76 100 74 C 100 71 97 71 97 74 Z" fill="#ff7675"/>`;
+        case 'wobble':
+          return `<ellipse cx="52" cy="78" rx="8" ry="12" fill="#222"/><ellipse cx="98" cy="78" rx="8" ry="12" fill="#222"/><circle cx="50" cy="73" r="3.5" fill="#fff"/><circle cx="96" cy="73" r="3.5" fill="#fff"/>`;
+        case 'dino':
+          return `<path d="M 40 66 Q 55 58 70 66 M 80 66 Q 95 58 110 66" stroke="#006266" stroke-width="4" fill="none"/><circle cx="55" cy="76" r="9" fill="#222"/><circle cx="95" cy="76" r="9" fill="#222"/><circle cx="58" cy="73" r="3" fill="#fff"/><circle cx="98" cy="73" r="3" fill="#fff"/>`;
+        case 'pixel':
+          return `<rect x="42" y="68" width="18" height="14" rx="3" fill="#00cec9"/><rect x="80" y="68" width="18" height="14" rx="3" fill="#00cec9"/><rect x="48" y="72" width="6" height="6" fill="#fff"/><rect x="86" y="72" width="6" height="6" fill="#fff"/>`;
+        case 'cosmo':
+          return `<ellipse cx="53" cy="75" rx="10" ry="10" fill="#0984e3" stroke="#fff" stroke-width="2"/><ellipse cx="97" cy="75" rx="10" ry="10" fill="#0984e3" stroke="#fff" stroke-width="2"/><circle cx="55" cy="72" r="4" fill="#fff"/><circle cx="99" cy="72" r="4" fill="#fff"/>`;
+        case 'sprout':
+          return `<circle cx="53" cy="78" r="10" fill="#222"/><circle cx="97" cy="78" r="10" fill="#222"/><path d="M 53 72 C 48 76 53 82 53 82 C 53 82 58 76 53 72 Z" fill="#26de81"/><path d="M 97 72 C 92 76 97 82 97 82 C 97 82 102 76 97 72 Z" fill="#26de81"/>`;
+        case 'boba':
+          return `<circle cx="50" cy="76" r="11" fill="#2d3436"/><circle cx="90" cy="76" r="11" fill="#2d3436"/><circle cx="47" cy="72" r="4" fill="#fff"/><circle cx="87" cy="72" r="4" fill="#fff"/><circle cx="53" cy="79" r="2" fill="#fff"/><circle cx="93" cy="79" r="2" fill="#fff"/>`;
+        case 'cookie_monster':
+          return `<circle cx="48" cy="70" r="13" fill="#fff" stroke="#222" stroke-width="2"/><circle cx="46" cy="68" r="6" fill="#222"/><circle cx="96" cy="72" r="14" fill="#fff" stroke="#222" stroke-width="2"/><circle cx="98" cy="75" r="7" fill="#222"/>`;
+        case 'sunny':
+          return `<circle cx="53" cy="70" r="10" fill="#222"/><circle cx="97" cy="70" r="10" fill="#222"/><circle cx="56" cy="67" r="3.5" fill="#fff"/><circle cx="100" cy="67" r="3.5" fill="#fff"/><path d="M 38 70 L 33 70 M 112 70 L 117 70" stroke="#e67e22" stroke-width="3" stroke-linecap="round"/>`;
+        case 'frosty':
+          return `<circle cx="53" cy="76" r="10" fill="#0984e3"/><circle cx="97" cy="76" r="10" fill="#0984e3"/><polygon points="53,70 55,74 59,76 55,78 53,82 51,78 47,76 51,74" fill="#fff"/><polygon points="97,70 99,74 103,76 99,78 97,82 95,78 91,76 95,74" fill="#fff"/>`;
+        case 'twinkle':
+          return `<circle cx="53" cy="78" r="11" fill="#d63031"/><circle cx="97" cy="78" r="11" fill="#d63031"/><circle cx="50" cy="74" r="4.5" fill="#fff"/><circle cx="94" cy="74" r="4.5" fill="#fff"/><circle cx="56" cy="81" r="2.5" fill="#fff"/><circle cx="100" cy="81" r="2.5" fill="#fff"/>`;
+        case 'gummy':
+        default:
+          return `<circle cx="53" cy="78" r="9" fill="#d63031" stroke="#222" stroke-width="2"/><circle cx="97" cy="78" r="9" fill="#d63031" stroke="#222" stroke-width="2"/><circle cx="55" cy="75" r="3" fill="#fff"/><circle cx="99" cy="75" r="3" fill="#fff"/>`;
+      }
+    }
+
+    function getMouth(id, mood) {
+      if (mood === 'angry') {
+        return `<path d="M 50 115 Q 70 95 90 115" stroke="#222" stroke-width="4.5" fill="none" stroke-linecap="round"/>`;
+      }
+      if (mood === 'impatient') {
+        return `<line x1="50" y1="110" x2="90" y2="110" stroke="#222" stroke-width="4.5" stroke-linecap="round"/>`;
+      }
+
+      switch(id) {
+        case 'baby_blobby':
+          return `<circle cx="70" cy="105" r="7" fill="#222"/><ellipse cx="70" cy="105" rx="4" ry="5" fill="#ff7675"/>`;
+        case 'gobby':
+          return `<path d="M 45 98 Q 70 128 95 98 Z" fill="#222"/><polygon points="55,98 59,106 63,98" fill="#fff"/><polygon points="77,98 81,106 85,98" fill="#fff"/>`;
+        case 'fluffy':
+          return `<path d="M 48 98 Q 70 126 92 98 Z" fill="#222"/><path d="M 60 106 Q 70 122 80 106 Z" fill="#ff7675"/>`;
+        case 'sparky':
+          return `<path d="M 46 98 Q 70 126 94 98 Z" fill="#222"/><polygon points="54,98 58,105 62,98" fill="#fff"/><polygon points="78,98 82,105 86,98" fill="#fff"/>`;
+        case 'mimi':
+          return `<path d="M 52 98 Q 61 108 70 98 Q 79 108 88 98" stroke="#222" stroke-width="4" fill="none" stroke-linecap="round"/><polygon points="66,94 74,94 70,98" fill="#ff7675"/>`;
+        case 'kiki':
+          return `<path d="M 45 102 L 53 110 L 61 102 L 69 110 L 77 102 L 85 110 L 93 102" stroke="#222" stroke-width="4" fill="none" stroke-linecap="round"/>`;
+        case 'chomper':
+          return `<rect x="42" y="96" width="56" height="22" rx="6" fill="#222"/><rect x="46" y="96" width="10" height="8" rx="1" fill="#fff"/><rect x="58" y="96" width="10" height="8" rx="1" fill="#fff"/><rect x="70" y="96" width="10" height="8" rx="1" fill="#fff"/><rect x="82" y="96" width="10" height="8" rx="1" fill="#fff"/>`;
+        case 'shadow':
+          return `<path d="M 46 102 Q 58 112 70 102 Q 82 92 94 102" stroke="#2d3436" stroke-width="4" fill="none" stroke-linecap="round"/>`;
+        case 'coco':
+          return `<path d="M 52 105 Q 75 125 96 98" stroke="#222" stroke-width="4.5" fill="none" stroke-linecap="round"/>`;
+        case 'pip':
+          return `<ellipse cx="70" cy="100" rx="6" ry="7" fill="#222"/>`;
+        case 'noodle':
+          return `<path d="M 48 100 Q 70 125 92 100 Z" fill="#222"/><path d="M 64 104 Q 70 120 78 108 Z" fill="#ff7675"/>`;
+        case 'zippy':
+          return `<path d="M 46 98 Q 70 128 94 98 Z" fill="#222"/><polygon points="64,98 70,108 76,98" fill="#f1c40f"/>`;
+        case 'puff':
+          return `<circle cx="70" cy="102" r="7" fill="#222"/><path d="M 82 98 Q 88 94 94 98 M 85 104 Q 90 101 95 104" stroke="#0984e3" stroke-width="2.5" fill="none" stroke-linecap="round"/>`;
+        case 'octo':
+          return `<ellipse cx="70" cy="98" rx="8" ry="10" fill="#222" stroke="#d63031" stroke-width="2"/><ellipse cx="70" cy="98" rx="4" ry="6" fill="#ff7675"/>`;
+        case 'munchkin':
+          return `<path d="M 48 98 Q 70 126 92 98 Z" fill="#222"/><path d="M 48 98 Q 58 106 68 98 Q 78 106 88 98" stroke="#fff" stroke-width="3" fill="none"/>`;
+        case 'wobble':
+          return `<path d="M 46 100 Q 58 114 70 102 Q 82 114 94 100" stroke="#222" stroke-width="4.5" fill="none" stroke-linecap="round"/>`;
+        case 'dino':
+          return `<path d="M 44 96 Q 70 126 96 96 Z" fill="#222"/><polygon points="50,96 54,103 58,96" fill="#fff"/><polygon points="64,96 68,103 72,96" fill="#fff"/><polygon points="78,96 82,103 86,96" fill="#fff"/>`;
+        case 'pixel':
+          return `<rect x="45" y="98" width="50" height="12" rx="2" fill="#222"/><rect x="49" y="102" width="8" height="4" fill="#00cec9"/><rect x="61" y="102" width="8" height="4" fill="#00cec9"/><rect x="73" y="102" width="8" height="4" fill="#00cec9"/><rect x="85" y="102" width="8" height="4" fill="#00cec9"/>`;
+        case 'cosmo':
+          return `<path d="M 50 100 Q 70 120 90 100" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/>`;
+        case 'sprout':
+          return `<path d="M 48 98 Q 70 122 92 98" stroke="#222" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M 70 106 C 70 114 78 114 78 106 Z" fill="#26de81"/>`;
+        case 'boba':
+          return `<path d="M 48 98 Q 70 124 92 98 Z" fill="#222"/><ellipse cx="70" cy="106" rx="5" ry="6" fill="#ff7675"/>`;
+        case 'cookie_monster':
+          return `<path d="M 42 94 Q 70 130 98 94 Z" fill="#222"/><circle cx="48" cy="94" r="3" fill="#e1b12c"/><circle cx="92" cy="94" r="3" fill="#e1b12c"/>`;
+        case 'sunny':
+          return `<path d="M 44 94 Q 70 128 96 94 Z" fill="#222"/><path d="M 54 106 Q 70 122 86 106 Z" fill="#ff7675"/>`;
+        case 'frosty':
+          return `<path d="M 46 98 Q 70 124 94 98 Z" fill="#222"/><polygon points="56,98 60,105 64,98" fill="#81ecec"/><polygon points="76,98 80,105 84,98" fill="#81ecec"/>`;
+        case 'twinkle':
+          return `<path d="M 48 98 Q 70 124 92 98 Z" fill="#222"/><path d="M 58 104 Q 70 118 82 104 Z" fill="#fd79a8"/>`;
+        case 'gummy':
+        default:
+          return `<ellipse cx="70" cy="95" rx="16" ry="12" fill="#fff" opacity="0.5"/><path d="M 62 94 Q 70 104 78 94" stroke="#222" stroke-width="3" fill="none"/><circle cx="70" cy="90" r="3.5" fill="#222"/>`;
+      }
+    }
+
+    const eyeStyle = getEyes(id, mood);
+    const mouthPath = getMouth(id, mood);
 
     switch (id) {
       case 'baby_blobby': // Pink Blobby
@@ -158,26 +278,182 @@
         </svg>`;
 
       case 'pip': // Star Monster
-      default:
         return `<svg viewBox="0 0 140 140">
           <polygon points="70,15 88,52 128,56 98,84 106,124 70,103 34,124 42,84 12,56 52,52" fill="#ffdd59" stroke="#ffa801" stroke-width="4"/>
+          ${eyeStyle} ${mouthPath}
+        </svg>`;
+
+      case 'noodle': // Noodle Monster
+        return `<svg viewBox="0 0 140 140">
+          <path d="M 25 50 Q 70 30 115 50 Q 125 100 110 120 Q 70 135 30 120 Q 15 100 25 50 Z" fill="#ff7675" stroke="#d63031" stroke-width="4"/>
+          <path d="M 40 30 Q 50 15 60 30 M 70 25 Q 80 10 90 25 M 100 30 Q 110 15 120 30" stroke="#fdcb6e" stroke-width="4" fill="none" stroke-linecap="round"/>
+          ${eyeStyle} ${mouthPath}
+        </svg>`;
+
+      case 'zippy': // Lightning Volt Monster
+        return `<svg viewBox="0 0 140 140">
+          <polygon points="70,10 85,45 105,45 80,75 110,75 45,130 60,85 40,85" fill="#f1c40f" stroke="#f39c12" stroke-width="4"/>
+          ${eyeStyle} ${mouthPath}
+        </svg>`;
+
+      case 'puff': // Cloud Monster
+        return `<svg viewBox="0 0 140 140">
+          <path d="M 35 100 C 15 100 15 70 30 65 C 20 40 50 30 65 45 C 80 25 110 35 110 60 C 125 65 125 95 105 100 Z" fill="#74b9ff" stroke="#0984e3" stroke-width="4"/>
+          ${eyeStyle} ${mouthPath}
+        </svg>`;
+
+      case 'octo': // Octopus Monster
+        return `<svg viewBox="0 0 140 140">
+          <path d="M 30 60 C 30 20 110 20 110 60 C 110 85 100 100 95 125 C 85 105 75 125 70 105 C 65 125 55 105 45 125 C 40 100 30 85 30 60 Z" fill="#e84393" stroke="#d63031" stroke-width="4"/>
+          ${eyeStyle} ${mouthPath}
+        </svg>`;
+
+      case 'munchkin': // Cupcake Monster
+        return `<svg viewBox="0 0 140 140">
+          <path d="M 30 75 Q 70 50 110 75 L 95 125 Q 70 135 45 125 Z" fill="#a29bfe" stroke="#6c5ce7" stroke-width="4"/>
+          <path d="M 35 75 Q 70 25 105 75 Z" fill="#fd79a8" stroke="#e84393" stroke-width="3"/>
+          <circle cx="70" cy="30" r="10" fill="#d63031"/>
+          ${eyeStyle} ${mouthPath}
+        </svg>`;
+
+      case 'wobble': // Jelly Pudding Monster
+        return `<svg viewBox="0 0 140 140">
+          <path d="M 40 45 Q 70 35 100 45 L 115 115 Q 70 130 25 115 Z" fill="#55efc4" stroke="#00b894" stroke-width="4"/>
+          ${eyeStyle} ${mouthPath}
+          <ellipse cx="70" cy="45" rx="30" ry="8" fill="#81ecec" opacity="0.6"/>
+        </svg>`;
+
+      case 'dino': // Dino Monster
+        return `<svg viewBox="0 0 140 140">
+          <rect x="30" y="45" width="80" height="75" rx="35" fill="#00b894" stroke="#006266" stroke-width="4"/>
+          <polygon points="40,45 30,30 50,40" fill="#fdcb6e"/>
+          <polygon points="70,40 70,20 80,35" fill="#fdcb6e"/>
+          <polygon points="100,45 110,30 95,40" fill="#fdcb6e"/>
+          ${eyeStyle} ${mouthPath}
+        </svg>`;
+
+      case 'pixel': // Pixel Robot Monster
+        return `<svg viewBox="0 0 140 140">
+          <rect x="25" y="35" width="90" height="85" rx="14" fill="#6c5ce7" stroke="#341f97" stroke-width="4"/>
+          <rect x="63" y="10" width="14" height="25" fill="#341f97"/>
+          <circle cx="70" cy="10" r="8" fill="#ff7675"/>
+          ${eyeStyle} ${mouthPath}
+        </svg>`;
+
+      case 'cosmo': // Cosmo Astronaut Monster
+        return `<svg viewBox="0 0 140 140">
+          <circle cx="70" cy="75" r="48" fill="#0984e3" stroke="#2c3e50" stroke-width="4"/>
+          <circle cx="70" cy="75" r="40" fill="#74b9ff" opacity="0.3"/>
+          <polygon points="70,12 80,28 60,28" fill="#f1c40f"/>
+          ${eyeStyle} ${mouthPath}
+        </svg>`;
+
+      case 'sprout': // Plant Seedling Monster
+        return `<svg viewBox="0 0 140 140">
+          <path d="M 30 60 C 30 30 110 30 110 60 C 110 110 30 110 30 60 Z" fill="#2ed573" stroke="#26de81" stroke-width="4"/>
+          <path d="M 70 35 C 50 15 70 5 70 5 C 70 5 90 15 70 35 Z" fill="#7bed9f" stroke="#26de81" stroke-width="3"/>
+          ${eyeStyle} ${mouthPath}
+        </svg>`;
+
+      case 'boba': // Boba Pearl Monster
+        return `<svg viewBox="0 0 140 140">
+          <path d="M 35 40 L 105 40 L 95 125 Q 70 135 45 125 Z" fill="#ffeaa7" stroke="#fdcb6e" stroke-width="4"/>
+          <circle cx="50" cy="105" r="7" fill="#2d3436"/>
+          <circle cx="70" cy="110" r="7" fill="#2d3436"/>
+          <circle cx="90" cy="105" r="7" fill="#2d3436"/>
+          <line x1="70" y1="40" x2="70" y2="10" stroke="#ff7675" stroke-width="6" stroke-linecap="round"/>
+          ${eyeStyle} ${mouthPath}
+        </svg>`;
+
+      case 'cookie_monster': // Cookie Monster
+        return `<svg viewBox="0 0 140 140">
+          <circle cx="70" cy="75" r="48" fill="#e1b12c" stroke="#cd84f1" stroke-width="4"/>
+          <circle cx="45" cy="45" r="6" fill="#4b6584"/>
+          <circle cx="95" cy="45" r="6" fill="#4b6584"/>
+          <circle cx="35" cy="90" r="6" fill="#4b6584"/>
+          <circle cx="105" cy="90" r="6" fill="#4b6584"/>
+          ${eyeStyle} ${mouthPath}
+        </svg>`;
+
+      case 'sunny': // Sun Monster
+        return `<svg viewBox="0 0 140 140">
+          <polygon points="70,10 80,30 100,15 100,38 125,35 112,55 135,70 112,85 125,105 100,102 100,125 80,110 70,130 60,110 40,125 40,102 15,105 28,85 5,70 28,55 15,35 40,38 40,15 60,30" fill="#f1c40f" stroke="#e67e22" stroke-width="3"/>
+          <circle cx="70" cy="70" r="35" fill="#f39c12"/>
+          ${eyeStyle} ${mouthPath}
+        </svg>`;
+
+      case 'frosty': // Snow Ice Monster
+        return `<svg viewBox="0 0 140 140">
+          <path d="M 40 50 Q 70 20 100 50 L 110 115 Q 70 130 30 115 Z" fill="#81ecec" stroke="#00cec9" stroke-width="4"/>
+          <path d="M 35 50 Q 70 30 105 50" fill="#74b9ff" stroke="#0984e3" stroke-width="3"/>
+          ${eyeStyle} ${mouthPath}
+        </svg>`;
+
+      case 'twinkle': // Unicorn Horn Monster
+        return `<svg viewBox="0 0 140 140">
+          <path d="M 30 55 C 30 25 110 25 110 55 L 115 115 Q 70 130 25 115 Z" fill="#fd79a8" stroke="#e84393" stroke-width="4"/>
+          <polygon points="70,5 62,35 78,35" fill="#ffeaa7" stroke="#fdcb6e" stroke-width="3"/>
+          ${eyeStyle} ${mouthPath}
+        </svg>`;
+
+      case 'gummy': // Candy Bear Monster
+      default:
+        return `<svg viewBox="0 0 140 140">
+          <circle cx="35" cy="40" r="16" fill="#ff7675" stroke="#d63031" stroke-width="3"/>
+          <circle cx="105" cy="40" r="16" fill="#ff7675" stroke="#d63031" stroke-width="3"/>
+          <rect x="28" y="45" width="84" height="75" rx="35" fill="#ff7675" stroke="#d63031" stroke-width="4"/>
           ${eyeStyle} ${mouthPath}
         </svg>`;
     }
   }
 
-  // Silly Monster Profiles
+  // Silly Monster Profiles (8 Starting Monsters at L1, +2 Monsters Per Level Up To Level 10 - 26 Total!)
   const MONSTER_PROFILES = [
-    { id: 'baby_blobby', name: 'Baby Blobby 🍼', pitch: 1.85, speed: 1.15, voiceType: 'child', getSvg: (m) => getMonsterSvg('baby_blobby', m) },
-    { id: 'gobby', name: 'Gobby 👺', pitch: 1.6, speed: 1.1, voiceType: 'squeaky', getSvg: (m) => getMonsterSvg('gobby', m) },
-    { id: 'fluffy', name: 'Fluffy 🐻', pitch: 0.55, speed: 0.75, voiceType: 'deep', getSvg: (m) => getMonsterSvg('fluffy', m) },
-    { id: 'sparky', name: 'Sparky 🐲', pitch: 1.45, speed: 1.25, voiceType: 'energetic', getSvg: (m) => getMonsterSvg('sparky', m) },
-    { id: 'mimi', name: 'Mimi 🐰', pitch: 1.55, speed: 1.05, voiceType: 'cute', getSvg: (m) => getMonsterSvg('mimi', m) },
-    { id: 'kiki', name: 'Kiki 👾', pitch: 1.75, speed: 1.3, voiceType: 'alien', getSvg: (m) => getMonsterSvg('kiki', m) },
-    { id: 'chomper', name: 'Chomper 👁️', pitch: 1.35, speed: 0.95, voiceType: 'bouncy', getSvg: (m) => getMonsterSvg('chomper', m) },
-    { id: 'shadow', name: 'Shadow 👻', pitch: 0.8, speed: 0.7, voiceType: 'whisper', getSvg: (m) => getMonsterSvg('shadow', m) },
-    { id: 'coco', name: 'Coco 🥥', pitch: 0.7, speed: 1.1, voiceType: 'raspy', getSvg: (m) => getMonsterSvg('coco', m) },
-    { id: 'pip', name: 'Pip 🌟', pitch: 1.95, speed: 1.35, voiceType: 'tiny', getSvg: (m) => getMonsterSvg('pip', m) }
+    // Level 1 (8 Monsters Starting Pool)
+    { id: 'baby_blobby', name: 'Baby Blobby 🍼', pitch: 1.85, speed: 1.15, voiceType: 'child', unlockLevel: 1, getSvg: (m) => getMonsterSvg('baby_blobby', m) },
+    { id: 'gobby', name: 'Gobby 👺', pitch: 1.6, speed: 1.1, voiceType: 'squeaky', unlockLevel: 1, getSvg: (m) => getMonsterSvg('gobby', m) },
+    { id: 'fluffy', name: 'Fluffy 🐻', pitch: 0.55, speed: 0.75, voiceType: 'deep', unlockLevel: 1, getSvg: (m) => getMonsterSvg('fluffy', m) },
+    { id: 'sparky', name: 'Sparky 🐲', pitch: 1.45, speed: 1.25, voiceType: 'energetic', unlockLevel: 1, getSvg: (m) => getMonsterSvg('sparky', m) },
+    { id: 'mimi', name: 'Mimi 🐰', pitch: 1.55, speed: 1.05, voiceType: 'cute', unlockLevel: 1, getSvg: (m) => getMonsterSvg('mimi', m) },
+    { id: 'kiki', name: 'Kiki 👾', pitch: 1.75, speed: 1.3, voiceType: 'alien', unlockLevel: 1, getSvg: (m) => getMonsterSvg('kiki', m) },
+    { id: 'chomper', name: 'Chomper 👁️', pitch: 1.35, speed: 0.95, voiceType: 'bouncy', unlockLevel: 1, getSvg: (m) => getMonsterSvg('chomper', m) },
+    { id: 'shadow', name: 'Shadow 👻', pitch: 0.8, speed: 0.7, voiceType: 'whisper', unlockLevel: 1, getSvg: (m) => getMonsterSvg('shadow', m) },
+
+    // Level 2 (+2 Monsters -> 10 Total)
+    { id: 'coco', name: 'Coco 🥥', pitch: 0.7, speed: 1.1, voiceType: 'raspy', unlockLevel: 2, getSvg: (m) => getMonsterSvg('coco', m) },
+    { id: 'pip', name: 'Pip 🌟', pitch: 1.95, speed: 1.35, voiceType: 'tiny', unlockLevel: 2, getSvg: (m) => getMonsterSvg('pip', m) },
+
+    // Level 3 (+2 Monsters -> 12 Total)
+    { id: 'noodle', name: 'Noodle 🍜', pitch: 1.65, speed: 1.2, voiceType: 'cute', unlockLevel: 3, getSvg: (m) => getMonsterSvg('noodle', m) },
+    { id: 'zippy', name: 'Zippy ⚡', pitch: 1.8, speed: 1.4, voiceType: 'energetic', unlockLevel: 3, getSvg: (m) => getMonsterSvg('zippy', m) },
+
+    // Level 4 (+2 Monsters -> 14 Total)
+    { id: 'puff', name: 'Puff ☁️', pitch: 1.7, speed: 1.0, voiceType: 'child', unlockLevel: 4, getSvg: (m) => getMonsterSvg('puff', m) },
+    { id: 'octo', name: 'Octo 🐙', pitch: 1.2, speed: 1.1, voiceType: 'bouncy', unlockLevel: 4, getSvg: (m) => getMonsterSvg('octo', m) },
+
+    // Level 5 (+2 Monsters -> 16 Total)
+    { id: 'munchkin', name: 'Munchkin 🧁', pitch: 1.9, speed: 1.1, voiceType: 'squeaky', unlockLevel: 5, getSvg: (m) => getMonsterSvg('munchkin', m) },
+    { id: 'wobble', name: 'Wobble 🍮', pitch: 0.9, speed: 0.85, voiceType: 'raspy', unlockLevel: 5, getSvg: (m) => getMonsterSvg('wobble', m) },
+
+    // Level 6 (+2 Monsters -> 18 Total)
+    { id: 'dino', name: 'Dino 🦖', pitch: 0.65, speed: 0.9, voiceType: 'deep', unlockLevel: 6, getSvg: (m) => getMonsterSvg('dino', m) },
+    { id: 'pixel', name: 'Pixel 🎮', pitch: 1.5, speed: 1.3, voiceType: 'alien', unlockLevel: 6, getSvg: (m) => getMonsterSvg('pixel', m) },
+
+    // Level 7 (+2 Monsters -> 20 Total)
+    { id: 'cosmo', name: 'Cosmo 🚀', pitch: 1.1, speed: 1.15, voiceType: 'energetic', unlockLevel: 7, getSvg: (m) => getMonsterSvg('cosmo', m) },
+    { id: 'sprout', name: 'Sprout 🌱', pitch: 1.8, speed: 1.2, voiceType: 'tiny', unlockLevel: 7, getSvg: (m) => getMonsterSvg('sprout', m) },
+
+    // Level 8 (+2 Monsters -> 22 Total)
+    { id: 'boba', name: 'Boba 🧋', pitch: 1.6, speed: 1.1, voiceType: 'cute', unlockLevel: 8, getSvg: (m) => getMonsterSvg('boba', m) },
+    { id: 'cookie_monster', name: 'Chip 🍪', pitch: 1.4, speed: 1.0, voiceType: 'bouncy', unlockLevel: 8, getSvg: (m) => getMonsterSvg('cookie_monster', m) },
+
+    // Level 9 (+2 Monsters -> 24 Total)
+    { id: 'sunny', name: 'Sunny ☀️', pitch: 1.75, speed: 1.25, voiceType: 'child', unlockLevel: 9, getSvg: (m) => getMonsterSvg('sunny', m) },
+    { id: 'frosty', name: 'Frosty 🍧', pitch: 0.75, speed: 0.8, voiceType: 'whisper', unlockLevel: 9, getSvg: (m) => getMonsterSvg('frosty', m) },
+
+    // Level 10 (+2 Monsters -> 26 Total)
+    { id: 'twinkle', name: 'Twinkle 🦄', pitch: 1.85, speed: 1.1, voiceType: 'cute', unlockLevel: 10, getSvg: (m) => getMonsterSvg('twinkle', m) },
+    { id: 'gummy', name: 'Gummy 🍬', pitch: 1.5, speed: 1.2, voiceType: 'child', unlockLevel: 10, getSvg: (m) => getMonsterSvg('gummy', m) }
   ];
 
   const NUMBER_WORDS = ['one', 'two', 'three', 'four'];
@@ -218,6 +494,31 @@
     "Sorry, these are not the right items!"
   ];
 
+  const FOOD_ANGRY_PHRASES = [
+    "Where is my food, please? I am hungry!",
+    "Excuse me, is my order ready yet?",
+    "Hurry up, please! My tummy is rumbling!",
+    "Where is my snack, please? I am starving!",
+    "Hello! Don't forget my food, please!",
+    "Excuse me, I have been waiting for my food!"
+  ];
+
+  const CUTLERY_ANGRY_PHRASES = [
+    "Excuse me! Where are my cutlery supplies, please?",
+    "Hello, can I get my napkin and utensils, please?",
+    "Excuse me! I need my fork and plate to eat!",
+    "Where are my supplies, please? I cannot eat without them!",
+    "Excuse me! Please don't forget my cutlery!"
+  ];
+
+  const ACTION_ANGRY_PHRASES = [
+    "Excuse me! Can someone help answer my question, please?",
+    "Hello! Could someone please give me an answer?",
+    "Excuse me! I am still waiting for an answer, please!",
+    "Is anyone there? Can someone help me, please?",
+    "Excuse me! Please help answer my question!"
+  ];
+
   const TIMEOUT_WALKOUT_PHRASES = [
     "It's been too long, I don't want them anymore! Goodbye!",
     "I waited too long, I am leaving now! Bye!",
@@ -240,27 +541,27 @@
       question: "Excuse me, where is the toilet, please?",
       correct: "You go straight and turn right!",
       options: [
-        { text: "You go straight and turn right! 🚻", isCorrect: true },
-        { text: "I don't know! 🤷", isCorrect: false },
-        { text: "It is on the moon! 🌙", isCorrect: false }
+        { text: "You go straight and turn right!", isCorrect: true },
+        { text: "I don't know!", isCorrect: false },
+        { text: "It is on the moon!", isCorrect: false }
       ]
     },
     {
       question: "Hello! What time does the cafe close?",
       correct: "We close at 8 o'clock!",
       options: [
-        { text: "We close at 8 o'clock! 🕗", isCorrect: true },
-        { text: "I don't know! 🤷", isCorrect: false },
-        { text: "We never sleep! 👁️", isCorrect: false }
+        { text: "We close at 8 o'clock!", isCorrect: true },
+        { text: "I don't know!", isCorrect: false },
+        { text: "We never sleep!", isCorrect: false }
       ]
     },
     {
       question: "Hi! How do I get to the sunny park?",
       correct: "Turn left and walk two blocks!",
       options: [
-        { text: "Turn left and walk two blocks! 🌳", isCorrect: true },
-        { text: "I don't know! 🤷", isCorrect: false },
-        { text: "Fly into the clouds! ☁️", isCorrect: false }
+        { text: "Turn left and walk two blocks!", isCorrect: true },
+        { text: "I don't know!", isCorrect: false },
+        { text: "Fly into the clouds!", isCorrect: false }
       ]
     }
   ];
@@ -409,7 +710,8 @@
     }
     window.speechSynthesis.cancel();
     
-    const utterance = new SpeechSynthesisUtterance(text);
+    const cleanSpeechText = (text || '').replace(/[\u{1F300}-\u{1F9FF}]|[\u{1F600}-\u{1F64F}]|[\u{1F680}-\u{1F6FF}]|[\u{2600}-\u{26FF}]|[\u{2700}-\u{27BF}]/gu, '').trim();
+    const utterance = new SpeechSynthesisUtterance(cleanSpeechText);
     utterance.pitch = profile ? profile.pitch : 1.0;
     utterance.rate = profile ? profile.speed : 1.0;
     utterance.lang = 'en-US';
@@ -497,12 +799,14 @@
         updateMonsterMoodVisuals('angry');
         playSound('angry');
 
-        let angrySpeech = "Where is my food, please? I am hungry!";
+        let phrasePool = FOOD_ANGRY_PHRASES;
         if (gameState.currentOrder && gameState.currentOrder.isActionMission) {
-          angrySpeech = "Excuse me! Can someone help answer my question, please?";
+          phrasePool = ACTION_ANGRY_PHRASES;
         } else if (gameState.currentOrder && gameState.currentOrder.isCutlery) {
-          angrySpeech = "Excuse me! Where are my cutlery supplies, please?";
+          phrasePool = CUTLERY_ANGRY_PHRASES;
         }
+
+        const angrySpeech = phrasePool[Math.floor(Math.random() * phrasePool.length)];
 
         speakOrderText(angrySpeech, gameState.currentMonster);
         showToast(`${gameState.currentMonster.name} is angry! 😡`);
@@ -731,7 +1035,9 @@
   }
 
   function renderMonsterCustomer() {
-    const monster = MONSTER_PROFILES[Math.floor(Math.random() * MONSTER_PROFILES.length)];
+    const availableMonsters = MONSTER_PROFILES.filter(m => (m.unlockLevel || 1) <= gameState.level);
+    const monsterPool = availableMonsters.length > 0 ? availableMonsters : [MONSTER_PROFILES[0]];
+    const monster = monsterPool[Math.floor(Math.random() * monsterPool.length)];
     gameState.currentMonster = monster;
 
     updateMonsterMoodVisuals('happy');
@@ -759,8 +1065,8 @@
     } else {
       actionBtn.style.display = 'none';
 
-      if (gameState.level >= 6) {
-        // Level 6+: Master Reading Mode
+      if (gameState.level >= 3) {
+        // Level 3+: Master Reading Mode
         const tag = document.createElement('div');
         tag.className = 'tag-item master-tag';
         tag.innerHTML = `<span>🎓</span> <span>Master Mode: Read the text!</span>`;
@@ -827,8 +1133,20 @@
     }
   }
 
+  function autoScrollToMonster() {
+    const target = document.getElementById('speechWrapper') || document.getElementById('monsterContainer');
+    if (target && target.scrollIntoView) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }
+
   function verifyOrder() {
     if (!gameState.currentOrder || gameState.currentOrder.isActionMission) return;
+
+    // Auto-scroll back up smoothly to show monster's face & animated reaction
+    autoScrollToMonster();
 
     const trayCounts = {};
     gameState.trayItems.forEach(id => trayCounts[id] = (trayCounts[id] || 0) + 1);
@@ -919,8 +1237,12 @@
     const promptEl = document.getElementById('cashierPromptText');
     promptEl.textContent = `Customer asks: "How much is it?" 🔊`;
 
-    // Speak price amount
-    speakOrderText(`That will be ${price} coins, please!`, gameState.currentMonster);
+    // Speak price amount at normal 1.0x speed so numbers are perfectly clear
+    const cashierVoice = gameState.currentMonster 
+      ? { ...gameState.currentMonster, speed: 1.0 } 
+      : { speed: 1.0, pitch: 1.0 };
+
+    speakOrderText(`That will be ${price} coins, please!`, cashierVoice);
 
     modal.classList.add('active');
   }
@@ -952,7 +1274,12 @@
     } else {
       playSound('angry');
       showToast(`Incorrect total! Customer said ${expected} coins. 🧮`);
-      speakOrderText(`No, I heard ${expected} coins!`, gameState.currentMonster);
+
+      const cashierVoice = gameState.currentMonster 
+        ? { ...gameState.currentMonster, speed: 1.0 } 
+        : { speed: 1.0, pitch: 1.0 };
+
+      speakOrderText(`No, I heard ${expected} coins!`, cashierVoice);
       gameState.typedCashierVal = '';
       document.getElementById('cashierTypedValue').textContent = '0';
     }
@@ -1008,6 +1335,7 @@
     const modal = document.getElementById('actionModal');
     modal.classList.remove('active');
     stopPatienceTimer();
+    autoScrollToMonster();
 
     if (selectedActionOption.isCorrect) {
       // 2. Correct Option: Award coins & complete mission
@@ -1239,7 +1567,10 @@
     document.getElementById('cashierEnterBtn').addEventListener('click', handleNumpadEnter);
     document.getElementById('cashierReplayBtn').addEventListener('click', () => {
       const price = gameState.currentOrder ? gameState.currentOrder.price || 35 : 35;
-      speakOrderText(`That will be ${price} coins, please!`, gameState.currentMonster);
+      const cashierVoice = gameState.currentMonster 
+        ? { ...gameState.currentMonster, speed: 1.0 } 
+        : { speed: 1.0, pitch: 1.0 };
+      speakOrderText(`That will be ${price} coins, please!`, cashierVoice);
     });
 
     // Pantry Tabs
