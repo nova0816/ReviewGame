@@ -894,7 +894,7 @@ const episodeData = {
         words: ["Taking", "a", "shortcut"],
         distractors: ["highway", "circle"],
         sentenceWithBlank: "Taking a _______.",
-        image: "assets/ep2_rocket.png",
+        image: "assets/ep6_shortcut.png",
         emoji: "🔀"
       },
       {
@@ -903,7 +903,7 @@ const episodeData = {
         words: ["Lunch", "is", "served"],
         distractors: ["cooked", "hidden"],
         sentenceWithBlank: "Lunch is _______.",
-        image: "assets/ep2_holiday.png",
+        image: "assets/ep6_serve.png",
         emoji: "🍽️"
       }
     ]
