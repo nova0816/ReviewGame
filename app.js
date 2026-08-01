@@ -1,3 +1,8 @@
+window.onStageTabClick = function(diff) {
+  try { playSound('click'); } catch (e) {}
+  setDifficulty(diff);
+};
+
 
 // Global Native OnClick Handlers for Bulletproof Navigation
 window.onEpisodeCardClick = function(epKey) {
