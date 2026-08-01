@@ -2414,16 +2414,34 @@ playAgainBtn.addEventListener('click', () => {
   resetGame();
 });
 
-// Difficulty Tab Switcher
+// Difficulty Tab Switcher (Bulletproof Inline DOM Highlighting)
 function setDifficulty(diff) {
   currentDifficulty = diff;
+  
+  const stageStyles = {
+    easy: { bg: "#e8f8f5", border: "#2ecc71", color: "#27ae60", shadow: "0 4px 0 #2ecc71" },
+    listen: { bg: "#ebf5fb", border: "#3498db", color: "#2980b9", shadow: "0 4px 0 #3498db" },
+    match: { bg: "#f3e5f5", border: "#ab47bc", color: "#7b1fa2", shadow: "0 4px 0 #ab47bc" },
+    phonics: { bg: "#fbe9e7", border: "#ff7043", color: "#d84315", shadow: "0 4px 0 #ff7043" },
+    normal: { bg: "#fef9e7", border: "#f1c40f", color: "#d4ac0d", shadow: "0 4px 0 #f1c40f" }
+  };
+  
   const tabs = document.querySelectorAll('.diff-tab');
   tabs.forEach(t => {
-    const tabDiff = t.dataset.diff || t.getAttribute('data-diff');
+    const tabDiff = t.dataset.diff || t.getAttribute('data-diff') || (t.id ? t.id.replace('diff', '').toLowerCase() : '');
     if (tabDiff === diff) {
       t.classList.add('active');
+      const style = stageStyles[diff] || stageStyles.easy;
+      t.style.background = style.bg;
+      t.style.borderColor = style.border;
+      t.style.color = style.color;
+      t.style.boxShadow = style.shadow;
     } else {
       t.classList.remove('active');
+      t.style.background = "#ffffff";
+      t.style.borderColor = "#e8ded4";
+      t.style.color = "#555555";
+      t.style.boxShadow = "none";
     }
   });
 
