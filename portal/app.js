@@ -1,3 +1,19 @@
+window.onMenuClick = function() {
+  try { playSound('click'); } catch (e) {}
+  const gmContainer = document.getElementById('gameContainer');
+  const stScr = document.getElementById('startScreen');
+  if (gmContainer) gmContainer.classList.add('hidden');
+  if (stScr) stScr.classList.remove('hidden');
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+  }
+};
+
+window.onNextLevelClick = function() {
+  try { playSound('click'); } catch (e) {}
+  handleNextLevel();
+};
+
 window.onStageTabClick = function(diff) {
   try { playSound('click'); } catch (e) {}
   setDifficulty(diff);
@@ -2497,4 +2513,9 @@ function handleImageError() {
   vocabImage.classList.add('hidden');
   imageFallback.classList.remove('hidden');
   fallbackEmoji.textContent = currentLevel.emoji;
+}
+
+
+if (nextLevelBtn) {
+  nextLevelBtn.addEventListener('click', handleNextLevel);
 }
