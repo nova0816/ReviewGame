@@ -1,3 +1,9 @@
+window.onMatchAudioClick = function() {
+  if (levels && levels[currentLevelIndex]) {
+    speak(levels[currentLevelIndex].targetWord);
+  }
+};
+
 window.onMenuClick = function() {
   try { playSound('click'); } catch (e) {}
   const gmContainer = document.getElementById('gameContainer');
