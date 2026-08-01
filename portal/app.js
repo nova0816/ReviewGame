@@ -2329,7 +2329,13 @@ function renderPhonicsStage() {
   }
 }
 
+let isNavigatingNextLevel = false;
+
 function handleNextLevel() {
+  if (isNavigatingNextLevel) return;
+  isNavigatingNextLevel = true;
+  setTimeout(() => { isNavigatingNextLevel = false; }, 400);
+
   playSound('click');
   currentLevelIndex++;
   
@@ -2337,10 +2343,10 @@ function handleNextLevel() {
     initLevel();
   } else {
     // Completed all levels! Show Victory Modal
-    progressFill.style.width = '100%';
+    if (progressFill) progressFill.style.width = '100%';
     playSound('victory');
     startConfetti();
-    victoryModal.classList.remove('hidden');
+    if (victoryModal) victoryModal.classList.remove('hidden');
   }
 }
 
