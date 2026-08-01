@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=25.0.0">
+  <link rel="stylesheet" href="style.css?v=26.0.0">
 </head>
 <body>
   <!-- Background autumn leaf decorations -->
@@ -123,7 +123,7 @@
       </div>
 
       <div class="start-footer">
-        <span class="version-tag">v25.0.0</span>
+        <span class="version-tag">v26.0.0</span>
       </div>
     </div>
   </div>
@@ -277,7 +277,7 @@
     <!-- Match Stage Workspace (shown in Match mode) -->
     <div class="match-main hidden" id="matchMain">
       <div class="match-header">
-        <div class="match-instructions">🧩 Listen and match the correct word to the picture!</div>
+        <div class="match-instructions">🧩 Look at the picture and match the correct word!</div>
         <div class="match-mistakes-badge" id="matchMistakesBadge">
           <span>Mistakes: </span><strong id="matchMistakesCount">0</strong>/15
         </div>
@@ -285,14 +285,7 @@
 
       <div class="match-pic-container" style="position: relative;">
         <img id="matchPicImg" src="assets/autumn.png" alt="Target picture" class="match-pic-img">
-        <button class="speak-btn-overlay" id="matchAudioBtn" onclick="onMatchAudioClick()" title="Hear word" aria-label="Listen to target word audio">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
-            <path d="M13.5 4.06c0-1.336-1.616-2.005-2.56-1.06l-4.5 4.5H4.508c-1.141 0-2.063.922-2.063 2.063v4.874c0 1.141.922 2.063 2.063 2.063h1.932l4.5 4.5c.944.945 2.56.276 2.56-1.06V4.06zM18.57 17.47a.75.75 0 11-1.06-1.06 5.972 5.972 0 000-8.42.75.75 0 111.06-1.06 7.472 7.472 0 010 10.54z" />
-            <path d="M16.44 14.34a.75.75 0 11-1.06-1.06 2.972 2.972 0 000-4.22.75.75 0 111.06-1.06 4.472 4.472 0 010 6.34z" />
-          </svg>
-          <span>Hear It!</span>
-        </button>
-      </div>
+        </div>
 
       <!-- 3 Word Option Cards Grid -->
       <div class="match-word-grid" id="matchWordGrid">
@@ -372,6 +365,6 @@
   <!-- Canvas for Confetti -->
   <canvas id="confettiCanvas" class="confetti-canvas"></canvas>
 
-  <script src="app.js?v=25.0.0"></script>
+  <script src="app.js?v=26.0.0"></script>
 </body>
 </html>
