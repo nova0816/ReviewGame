@@ -917,7 +917,7 @@ const episodeData = {
         words: ["It", "is", "almost", "bedtime"],
         distractors: ["morning", "playtime"],
         sentenceWithBlank: "It is almost _______.",
-        image: "assets/ep2_treasure.png",
+        image: "assets/ep7_bedtime.png",
         emoji: "🌙"
       },
       {
@@ -926,7 +926,7 @@ const episodeData = {
         words: ["Finishing", "their", "supper"],
         distractors: ["lunch", "breakfast"],
         sentenceWithBlank: "Finishing their _______.",
-        image: "assets/ep4_paper.png",
+        image: "assets/ep7_supper.png",
         emoji: "🍲"
       },
       {
@@ -935,7 +935,7 @@ const episodeData = {
         words: ["Quick", "into", "the", "bath"],
         distractors: ["bed", "car"],
         sentenceWithBlank: "Quick into the _______.",
-        image: "assets/ep3_pool.png",
+        image: "assets/ep7_bath.png",
         emoji: "🛁"
       },
       {
@@ -944,7 +944,7 @@ const episodeData = {
         words: ["Into", "your", "soft", "pajamas"],
         distractors: ["shoes", "coats"],
         sentenceWithBlank: "Into your soft _______.",
-        image: "assets/scarf.png",
+        image: "assets/ep7_pajamas.png",
         emoji: "👔"
       },
       {
@@ -953,7 +953,7 @@ const episodeData = {
         words: ["Clean", "your", "teeth", "now"],
         distractors: ["hands", "hair"],
         sentenceWithBlank: "Clean your _______ now.",
-        image: "assets/ep4_clean.png",
+        image: "assets/ep7_teeth.png",
         emoji: "🦷"
       },
       {
@@ -962,7 +962,7 @@ const episodeData = {
         words: ["Brush", "their", "teeth", "clean"],
         distractors: ["wash", "comb"],
         sentenceWithBlank: "_______ their teeth clean.",
-        image: "assets/ep4_clean.png",
+        image: "assets/ep7_brush.png",
         emoji: "🪥"
       },
       {
@@ -971,7 +971,7 @@ const episodeData = {
         words: ["Read", "you", "a", "story"],
         distractors: ["song", "game"],
         sentenceWithBlank: "Read you a _______.",
-        image: "assets/ep4_paper.png",
+        image: "assets/ep7_story.png",
         emoji: "📖"
       },
       {
@@ -980,7 +980,7 @@ const episodeData = {
         words: ["Which", "book", "do", "you", "want"],
         distractors: ["toy", "ball"],
         sentenceWithBlank: "Which _______ do you want?",
-        image: "assets/ep4_paper.png",
+        image: "assets/ep7_book.png",
         emoji: "📚"
       },
       {
@@ -1025,7 +1025,7 @@ const episodeData = {
         words: ["Tucked", "up", "with", "teddy"],
         distractors: ["robot", "doll"],
         sentenceWithBlank: "Tucked up with _______.",
-        image: "assets/ep2_treasure.png",
+        image: "assets/ep7_teddy.png",
         emoji: "🧸"
       },
       {
@@ -1057,7 +1057,7 @@ const episodeData = {
         words: ["Where", "are", "my", "glasses"],
         distractors: ["hat", "shoes"],
         sentenceWithBlank: "Where are my _______?",
-        image: "assets/ep2_remember.png",
+        image: "assets/ep8_glasses.png",
         emoji: "👓"
       },
       {
@@ -1066,7 +1066,7 @@ const episodeData = {
         words: ["Give", "me", "an", "eye", "test"],
         distractors: ["ear", "hand"],
         sentenceWithBlank: "Give me an _______ test.",
-        image: "assets/ep3_ear.png",
+        image: "assets/ep8_eye.png",
         emoji: "👁️"
       },
       {
@@ -1183,7 +1183,7 @@ const episodeData = {
         words: ["Can", "you", "read", "this"],
         distractors: ["draw", "write"],
         sentenceWithBlank: "Can you _______ this?",
-        image: "assets/ep4_paper.png",
+        image: "assets/ep8_read.png",
         emoji: "📖"
       }
     ]
@@ -1197,7 +1197,7 @@ const episodeData = {
         words: ["At", "Granddad", "dog", "garage"],
         distractors: ["house", "park"],
         sentenceWithBlank: "At Granddad dog _______.",
-        image: "assets/ep4_box.png",
+        image: "assets/ep9_garage.png",
         emoji: "🏬"
       },
       {
