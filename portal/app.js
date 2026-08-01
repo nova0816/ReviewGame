@@ -1,6 +1,17 @@
 window.onStageTabClick = function(diff) {
   try { playSound('click'); } catch (e) {}
   setDifficulty(diff);
+  
+  // Instant Launch Game for Selected Stage
+  const stScr = document.getElementById('startScreen');
+  const gmContainer = document.getElementById('gameContainer');
+  if (stScr) stScr.classList.add('hidden');
+  if (gmContainer) gmContainer.classList.remove('hidden');
+  try {
+    initLevel();
+  } catch (err) {
+    console.error("Error in initLevel on stage tab click:", err);
+  }
 };
 
 
