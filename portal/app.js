@@ -2337,85 +2337,21 @@ soundToggle.addEventListener('click', () => {
   }
 });
 
-// Landing Page & Level Selector Transitions
-episodeCard1.addEventListener('click', () => {
-  playSound('click');
-  selectEpisode('ep1');
-  episodeScreen.classList.add('hidden');
-  startScreen.classList.remove('hidden');
+// Landing Page & Level Selector Transitions (Bulletproof Dynamic Handler)
+const allEpisodeCards = document.querySelectorAll('.episode-card');
+allEpisodeCards.forEach((card, index) => {
+  card.addEventListener('click', (e) => {
+    e.preventDefault();
+    playSound('click');
+    const epNum = index + 1;
+    const epKey = `ep${epNum}`;
+    if (episodeData[epKey]) {
+      selectEpisode(epKey);
+      if (episodeScreen) episodeScreen.classList.add('hidden');
+      if (startScreen) startScreen.classList.remove('hidden');
+    }
+  });
 });
-
-if (episodeCard2) {
-  episodeCard2.addEventListener('click', () => {
-    playSound('click');
-    selectEpisode('ep2');
-    episodeScreen.classList.add('hidden');
-    startScreen.classList.remove('hidden');
-  });
-}
-
-if (episodeCard3) {
-  episodeCard3.addEventListener('click', () => {
-    playSound('click');
-    selectEpisode('ep3');
-    episodeScreen.classList.add('hidden');
-    startScreen.classList.remove('hidden');
-  });
-}
-
-if (episodeCard4) {
-  episodeCard4.addEventListener('click', () => {
-    playSound('click');
-    selectEpisode('ep4');
-    episodeScreen.classList.add('hidden');
-    startScreen.classList.remove('hidden');
-  });
-}
-
-if (episodeCard5) {
-  episodeCard5.addEventListener('click', () => {
-    playSound('click');
-    selectEpisode('ep5');
-    episodeScreen.classList.add('hidden');
-    startScreen.classList.remove('hidden');
-  });
-}
-
-if (episodeCard6) {
-  episodeCard6.addEventListener('click', () => {
-    playSound('click');
-    selectEpisode('ep6');
-    episodeScreen.classList.add('hidden');
-    startScreen.classList.remove('hidden');
-  });
-}
-
-if (episodeCard7) {
-  episodeCard7.addEventListener('click', () => {
-    playSound('click');
-    selectEpisode('ep7');
-    episodeScreen.classList.add('hidden');
-    startScreen.classList.remove('hidden');
-  });
-}
-
-if (episodeCard8) {
-  episodeCard8.addEventListener('click', () => {
-    playSound('click');
-    selectEpisode('ep8');
-    episodeScreen.classList.add('hidden');
-    startScreen.classList.remove('hidden');
-  });
-}
-
-if (episodeCard9) {
-  episodeCard9.addEventListener('click', () => {
-    playSound('click');
-    selectEpisode('ep9');
-    episodeScreen.classList.add('hidden');
-    startScreen.classList.remove('hidden');
-  });
-}
 
 backToEpisodesBtn.addEventListener('click', () => {
   playSound('click');
