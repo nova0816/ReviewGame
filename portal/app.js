@@ -6,6 +6,7 @@ window.onMatchAudioClick = function() {
 
 window.onMenuClick = function() {
   try { playSound('click'); } catch (e) {}
+  currentLevelIndex = 0;
   const gmContainer = document.getElementById('gameContainer');
   const stScr = document.getElementById('startScreen');
   if (gmContainer) gmContainer.classList.add('hidden');
@@ -22,9 +23,10 @@ window.onNextLevelClick = function() {
 
 window.onStageTabClick = function(diff) {
   try { playSound('click'); } catch (e) {}
+  currentLevelIndex = 0;
   setDifficulty(diff);
   
-  // Instant Launch Game for Selected Stage
+  // Instant Launch Game for Selected Stage starting at Level 1
   const stScr = document.getElementById('startScreen');
   const gmContainer = document.getElementById('gameContainer');
   if (stScr) stScr.classList.add('hidden');
