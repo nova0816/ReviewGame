@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=13.0.0">
+  <link rel="stylesheet" href="style.css?v=14.0.0">
 </head>
 <body>
   <!-- Background autumn leaf decorations -->
@@ -32,7 +32,7 @@
       <!-- Episode Grid -->
       <div class="episode-grid" id="episodeGrid">
         <!-- Active Episode -->
-        <button class="episode-card active" id="episodeCard1" aria-label="Play PP S2 E8: Autumn Wind">
+        <button class="episode-card active" id="episodeCard1" onclick="onEpisodeCardClick('ep1')" aria-label="Play PP S2 E8: Autumn Wind">
           <div class="episode-image-container">
             <img src="assets/autumn.png" alt="Autumn Wind illustration" class="episode-card-img">
           </div>
@@ -42,7 +42,7 @@
         </button>
 
         <!-- Active Episode 2 -->
-        <button class="episode-card active" id="episodeCard2" aria-label="Play PP S2 E9: Time Treasure">
+        <button class="episode-card active" id="episodeCard2" onclick="onEpisodeCardClick('ep2')" aria-label="Play PP S2 E9: Time Treasure">
           <div class="episode-image-container">
             <img src="assets/ep2_treasure.png" alt="Time Treasure illustration" class="episode-card-img">
           </div>
@@ -52,7 +52,7 @@
         </button>
 
         <!-- Active Episode 3 -->
-        <button class="episode-card active" id="episodeCard3" aria-label="Play PP S2 E10: Tide Pools">
+        <button class="episode-card active" id="episodeCard3" onclick="onEpisodeCardClick('ep3')" aria-label="Play PP S2 E10: Tide Pools">
           <div class="episode-image-container">
             <img src="assets/ep3_seaside.png" alt="Tide Pools illustration" class="episode-card-img">
           </div>
@@ -62,7 +62,7 @@
         </button>
 
         <!-- Active Episode 4 -->
-        <button class="episode-card active" id="episodeCard4" aria-label="Play PP S2 E11: Eco Clean">
+        <button class="episode-card active" id="episodeCard4" onclick="onEpisodeCardClick('ep4')" aria-label="Play PP S2 E11: Eco Clean">
           <div class="episode-image-container">
             <img src="assets/ep4_box.png" alt="Eco Clean illustration" class="episode-card-img">
           </div>
@@ -72,7 +72,7 @@
         </button>
 
         <!-- Active Episode 5 -->
-        <button class="episode-card active" id="episodeCard5" aria-label="Play PP S2 E12: The Boat Pond">
+        <button class="episode-card active" id="episodeCard5" onclick="onEpisodeCardClick('ep5')" aria-label="Play PP S2 E12: The Boat Pond">
           <div class="episode-image-container">
             <img src="assets/ep3_pool.png" alt="The Boat Pond illustration" class="episode-card-img">
           </div>
@@ -82,7 +82,7 @@
         </button>
 
         <!-- Active Episode 6 -->
-        <button class="episode-card active" id="episodeCard6" aria-label="Play PP S2 E13: Traffic Jam">
+        <button class="episode-card active" id="episodeCard6" onclick="onEpisodeCardClick('ep6')" aria-label="Play PP S2 E13: Traffic Jam">
           <div class="episode-image-container">
             <img src="assets/ep2_rocket.png" alt="Traffic Jam illustration" class="episode-card-img">
           </div>
@@ -92,7 +92,7 @@
         </button>
 
         <!-- Active Episode 7 -->
-        <button class="episode-card active" id="episodeCard7" aria-label="Play PP S2 E14: Bedtime">
+        <button class="episode-card active" id="episodeCard7" onclick="onEpisodeCardClick('ep7')" aria-label="Play PP S2 E14: Bedtime">
           <div class="episode-image-container">
             <img src="assets/ep2_treasure.png" alt="Bedtime illustration" class="episode-card-img">
           </div>
@@ -102,7 +102,7 @@
         </button>
 
         <!-- Active Episode 8 -->
-        <button class="episode-card active" id="episodeCard8" aria-label="Play PP S2 E15: The Eye Test">
+        <button class="episode-card active" id="episodeCard8" onclick="onEpisodeCardClick('ep8')" aria-label="Play PP S2 E15: The Eye Test">
           <div class="episode-image-container">
             <img src="assets/ep2_remember.png" alt="The Eye Test illustration" class="episode-card-img">
           </div>
@@ -112,7 +112,7 @@
         </button>
 
         <!-- Active Episode 9 -->
-        <button class="episode-card active" id="episodeCard9" aria-label="Play PP S2 E17: Auto Garage">
+        <button class="episode-card active" id="episodeCard9" onclick="onEpisodeCardClick('ep9')" aria-label="Play PP S2 E17: Auto Garage">
           <div class="episode-image-container">
             <img src="assets/ep4_box.png" alt="Auto Garage illustration" class="episode-card-img">
           </div>
@@ -306,6 +306,6 @@
   <!-- Canvas for Confetti -->
   <canvas id="confettiCanvas" class="confetti-canvas"></canvas>
 
-  <script src="app.js?v=13.0.0"></script>
+  <script src="app.js?v=14.0.0"></script>
 </body>
 </html>

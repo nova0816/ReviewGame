@@ -1,3 +1,30 @@
+
+// Global Native OnClick Handlers for Bulletproof Navigation
+window.onEpisodeCardClick = function(epKey) {
+  try { playSound('click'); } catch (e) {}
+  if (episodeData && episodeData[epKey]) {
+    selectEpisode(epKey);
+    const epScr = document.getElementById('episodeScreen');
+    const stScr = document.getElementById('startScreen');
+    if (epScr) epScr.classList.add('hidden');
+    if (stScr) stScr.classList.remove('hidden');
+  }
+};
+
+window.onLevelCardClick = function(index) {
+  try { playSound('click'); } catch (e) {}
+  currentLevelIndex = index;
+  const stScr = document.getElementById('startScreen');
+  const gmContainer = document.getElementById('gameContainer');
+  if (stScr) stScr.classList.add('hidden');
+  if (gmContainer) gmContainer.classList.remove('hidden');
+  try {
+    initLevel();
+  } catch (err) {
+    console.error("Error in initLevel:", err);
+  }
+};
+
 // Vocabulary Explorer Game Logic - Multi-Episode Database
 
 const episodeData = {
@@ -1735,6 +1762,7 @@ function renderLevelGrid() {
     const card = document.createElement('button');
     card.className = 'level-card';
     card.setAttribute('aria-label', `Play level ${index + 1}: ${level.targetWord}`);
+    card.setAttribute('onclick', `onLevelCardClick(${index})`);
     
     card.innerHTML = `
       <span class="level-card-icon">${level.emoji}</span>
@@ -1743,19 +1771,7 @@ function renderLevelGrid() {
     `;
     
     card.addEventListener('click', (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      playSound('click');
-      currentLevelIndex = index;
-      
-      if (startScreen) startScreen.classList.add('hidden');
-      if (gameContainer) gameContainer.classList.remove('hidden');
-      
-      try {
-        initLevel();
-      } catch (err) {
-        console.error("Error in initLevel:", err);
-      }
+      onLevelCardClick(index);
     });
     
     levelGrid.appendChild(card);
