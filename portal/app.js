@@ -362,6 +362,60 @@ const episodeData = {
         sentenceWithBlank: "Lunch is _______.",
         image: "assets/ep6_serve.png",
         emoji: "🍽️"
+      },
+      {
+        targetWord: "way",
+        statement: "Is this the way",
+        words: ["Is", "this", "the", "way"],
+        distractors: ["road", "path"],
+        sentenceWithBlank: "Is this the _______?",
+        image: "assets/ep6_way.png",
+        emoji: "🛣️"
+      },
+      {
+        targetWord: "different",
+        statement: "Take a different road",
+        words: ["Take", "a", "different", "road"],
+        distractors: ["same", "long"],
+        sentenceWithBlank: "Take a _______ road.",
+        image: "assets/ep6_different.png",
+        emoji: "🔀"
+      },
+      {
+        targetWord: "bumpy",
+        statement: "It is very bumpy",
+        words: ["It", "is", "very", "bumpy"],
+        distractors: ["smooth", "flat"],
+        sentenceWithBlank: "It is very _______.",
+        image: "assets/ep6_bumpy.png",
+        emoji: "〰️"
+      },
+      {
+        targetWord: "always",
+        statement: "He always knows way",
+        words: ["He", "always", "knows", "way"],
+        distractors: ["never", "seldom"],
+        sentenceWithBlank: "He _______ knows way.",
+        image: "assets/ep6_always.png",
+        emoji: "⏱️"
+      },
+      {
+        targetWord: "never",
+        statement: "We will never get home",
+        words: ["We", "will", "never", "get", "home"],
+        distractors: ["always", "forever"],
+        sentenceWithBlank: "We will _______ get home.",
+        image: "assets/ep6_never.png",
+        emoji: "🛑"
+      },
+      {
+        targetWord: "plenty",
+        statement: "Plenty of time left",
+        words: ["Plenty", "of", "time", "left"],
+        distractors: ["little", "no"],
+        sentenceWithBlank: "_______ of time left.",
+        image: "assets/ep6_plenty.png",
+        emoji: "🥔"
       }
     ]
   },
@@ -873,6 +927,12 @@ const phonicsDataMap = {
   "worry": { target: "rr", display: "w o <span class='phonics-blank-slot'>_ _</span> y", distractors: ["ll", "tt"] },
   "shortcut": { target: "sh", display: "<span class='phonics-blank-slot'>_ _</span> o r t c u t", distractors: ["ch", "th"] },
   "serve": { target: "er", display: "s <span class='phonics-blank-slot'>_ _</span> v e", distractors: ["ar", "or"] },
+  "way": { target: "ay", display: "w <span class='phonics-blank-slot'>_ _</span>", distractors: ["ai", "ee"] },
+  "different": { target: "er", display: "d i <span class='phonics-blank-slot'>_ _</span> e r e n t", distractors: ["ar", "or"] },
+  "bumpy": { target: "u", display: "b <span class='phonics-blank-slot'>_</span> m p y", distractors: ["a", "o"] },
+  "always": { target: "al", display: "<span class='phonics-blank-slot'>_ _</span> w a y s", distractors: ["el", "ol"] },
+  "never": { target: "er", display: "n e v <span class='phonics-blank-slot'>_ _</span>", distractors: ["ar", "or"] },
+  "plenty": { target: "y", display: "p l e n t <span class='phonics-blank-slot'>_</span>", distractors: ["e", "i"] },
 
   // Episode 7
   "bedtime": { target: "e", display: "b <span class='phonics-blank-slot'>_</span> d t i m e", distractors: ["a", "i"] },
