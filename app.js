@@ -560,7 +560,7 @@ const episodeData = {
         words: ["Green", "box", "for", "bottles"],
         distractors: ["Yellow", "Black"],
         sentenceWithBlank: "_______ box for bottles.",
-        image: "assets/ep4_green.png",
+        image: "assets/ep8_green.png",
         emoji: "🟩"
       },
       {
@@ -569,7 +569,7 @@ const episodeData = {
         words: ["Blue", "box", "for", "cans"],
         distractors: ["White", "Purple"],
         sentenceWithBlank: "_______ box for cans.",
-        image: "assets/ep4_blue.png",
+        image: "assets/ep8_blue.png",
         emoji: "🟦"
       },
       {
@@ -578,7 +578,7 @@ const episodeData = {
         words: ["Red", "box", "for", "paper"],
         distractors: ["Orange", "Brown"],
         sentenceWithBlank: "_______ box for paper.",
-        image: "assets/ep4_red.png",
+        image: "assets/ep8_red.png",
         emoji: "🟥"
       },
       {
@@ -989,7 +989,7 @@ const episodeData = {
         words: ["The", "red", "monkey", "book"],
         distractors: ["tiger", "bear"],
         sentenceWithBlank: "The red _______ book.",
-        image: "assets/ep2_rocket.png",
+        image: "assets/ep7_monkey.png",
         emoji: "🐒"
       },
       {
@@ -998,7 +998,7 @@ const episodeData = {
         words: ["We", "are", "not", "sleepy"],
         distractors: ["awake", "happy"],
         sentenceWithBlank: "We are not _______.",
-        image: "assets/ep2_remember.png",
+        image: "assets/ep7_sleepy.png",
         emoji: "😴"
       },
       {
@@ -1007,7 +1007,7 @@ const episodeData = {
         words: ["Fell", "fast", "asleep", "now"],
         distractors: ["running", "jumping"],
         sentenceWithBlank: "Fell fast _______ now.",
-        image: "assets/ep2_remember.png",
+        image: "assets/ep7_asleep.png",
         emoji: "💤"
       },
       {
@@ -1016,7 +1016,7 @@ const episodeData = {
         words: ["Peppa", "likes", "splashing"],
         distractors: ["crying", "sleeping"],
         sentenceWithBlank: "Peppa likes _______.",
-        image: "assets/ep3_pool.png",
+        image: "assets/ep7_splash.png",
         emoji: "💦"
       },
       {
@@ -1034,7 +1034,7 @@ const episodeData = {
         words: ["Good", "night", "red", "monkey"],
         distractors: ["morning", "afternoon"],
         sentenceWithBlank: "Good _______ red monkey.",
-        image: "assets/ep2_future.png",
+        image: "assets/ep7_night.png",
         emoji: "✨"
       },
       {
@@ -1043,7 +1043,7 @@ const episodeData = {
         words: ["I", "am", "a", "bit", "tired"],
         distractors: ["active", "excited"],
         sentenceWithBlank: "I am a bit _______.",
-        image: "assets/ep2_remember.png",
+        image: "assets/ep7_tired.png",
         emoji: "🥱"
       }
     ]
@@ -1075,7 +1075,7 @@ const episodeData = {
         words: ["Look", "at", "the", "chart"],
         distractors: ["listen", "walk"],
         sentenceWithBlank: "_______ at the chart.",
-        image: "assets/ep3_beach.png",
+        image: "assets/ep8_look.png",
         emoji: "👀"
       },
       {
@@ -1084,7 +1084,7 @@ const episodeData = {
         words: ["Read", "these", "letters", "please"],
         distractors: ["numbers", "words"],
         sentenceWithBlank: "Read these _______ please.",
-        image: "assets/ep4_paper.png",
+        image: "assets/ep8_letters.png",
         emoji: "🔤"
       },
       {
@@ -1093,7 +1093,7 @@ const episodeData = {
         words: ["Now", "read", "these", "numbers"],
         distractors: ["letters", "colors"],
         sentenceWithBlank: "Now read these _______.",
-        image: "assets/ep4_paper.png",
+        image: "assets/ep8_numbers.png",
         emoji: "🔢"
       },
       {
@@ -1129,7 +1129,7 @@ const episodeData = {
         words: ["Yellow", "is", "bright", "color"],
         distractors: ["dark", "gray"],
         sentenceWithBlank: "_______ is bright color.",
-        image: "assets/ep3_bucket.png",
+        image: "assets/ep8_yellow.png",
         emoji: "🟨"
       },
       {
