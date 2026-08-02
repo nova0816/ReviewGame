@@ -713,12 +713,7 @@ const episodeData = {
         emoji: "🏆"
       },
       {
-        targetWord: "paper",
-        statement: "Made a paper boat",
-        words: ["Made", "a", "paper", "boat"],
-        distractors: ["stone", "glass"],
-        sentenceWithBlank: "Made a _______ boat.",
-        image: "assets/ep5_paper.png",
+        targetWord: "sail", statement: "Sail your boat", words: ["Sail", "your", "boat"], distractors: ["sink", "hold"], sentenceWithBlank: "_______ your boat.", image: "assets/ep5_sail.png",
         emoji: "📄"
       },
       {
@@ -1278,7 +1273,7 @@ const episodeData = {
         words: ["Run", "by", "a", "computer"],
         distractors: ["robot", "engine"],
         sentenceWithBlank: "Run by a _______.",
-        image: "assets/ep2_future.png",
+        image: "assets/ep9_computer.png",
         emoji: "💻"
       },
       {
@@ -1296,7 +1291,7 @@ const episodeData = {
         words: ["Switch", "it", "off", "and"],
         distractors: ["break", "smash"],
         sentenceWithBlank: "_______ it off and on.",
-        image: "assets/ep2_dig.png",
+        image: "assets/ep9_switch.png",
         emoji: "🔘"
       },
       {
@@ -1305,16 +1300,11 @@ const episodeData = {
         words: ["The", "car", "has", "stopped"],
         distractors: ["moved", "flown"],
         sentenceWithBlank: "The car has _______.",
-        image: "assets/ep3_trapped.png",
+        image: "assets/ep9_stop.png",
         emoji: "🛑"
       },
       {
-        targetWord: "help",
-        statement: "We need some help",
-        words: ["We", "need", "some", "help"],
-        distractors: ["rest", "sleep"],
-        sentenceWithBlank: "We need some _______.",
-        image: "assets/ep4_help.png",
+        targetWord: "engine", statement: "Check car engine", words: ["Check", "car", "engine"], distractors: ["wheel", "door"], sentenceWithBlank: "Check car _______.", image: "assets/ep9_engine.png",
         emoji: "🤝"
       },
       {
@@ -1323,7 +1313,7 @@ const episodeData = {
         words: ["He", "is", "the", "best"],
         distractors: ["worst", "slowest"],
         sentenceWithBlank: "He is the _______.",
-        image: "assets/ep2_treasure.png",
+        image: "assets/ep9_best.png",
         emoji: "⭐"
       }
     ]
