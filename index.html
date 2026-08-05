@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=35.3.0">
+  <link rel="stylesheet" href="style.css?v=36.0.0">
 </head>
 <body>
   <!-- Background autumn leaf decorations -->
@@ -120,10 +120,19 @@
           <span class="episode-card-title">PP S2 E17</span>
           <span class="episode-card-desc">Auto Garage</span>
         </button>
+              <!-- Active Episode 10 -->
+        <button class="episode-card active" id="episodeCard10" onclick="onEpisodeCardClick('ep10')" aria-label="Play PP S2 E18: Foggy Day">
+          <div class="episode-image-container">
+            <img src="assets/ep10_fog.png" alt="Foggy Day illustration" class="episode-card-img">
+          </div>
+          <span class="episode-card-badge">Active 🟢</span>
+          <span class="episode-card-title">PP S2 E18</span>
+          <span class="episode-card-desc">Foggy Day</span>
+        </button>
       </div>
 
       <div class="start-footer">
-        <span class="version-tag">v35.3.0</span>
+        <span class="version-tag">v36.0.0</span>
       </div>
     </div>
   </div>
@@ -365,6 +374,6 @@
   <!-- Canvas for Confetti -->
   <canvas id="confettiCanvas" class="confetti-canvas"></canvas>
 
-  <script src="app.js?v=35.3.0"></script>
+  <script src="app.js?v=36.0.0"></script>
 </body>
 </html>

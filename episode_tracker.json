@@ -1,5 +1,5 @@
 {
-  "current_published_count": 9,
+  "current_published_count": 10,
   "episodes": [
     {
       "episode_num": 1,
@@ -62,6 +62,13 @@
       "code_title": "PP S2 E17",
       "subtitle": "Auto Garage",
       "video_id": "BybRP6WQsgA",
+      "status": "published"
+    },
+    {
+      "episode_num": 10,
+      "code_title": "PP S2 E18",
+      "subtitle": "Foggy Day",
+      "video_id": "cYPDoM73za8",
       "status": "published"
     }
   ]

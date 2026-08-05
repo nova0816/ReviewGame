@@ -968,6 +968,23 @@ const phonicsDataMap = {
 
   // Episode 9
   "garage": { target: "ar", display: "g <span class='phonics-blank-slot'>_ _</span> a g e", distractors: ["or", "er"] },
+
+  // Episode 10
+  "fog": { target: "o", display: "f <span class='phonics-blank-slot'>_</span> g", distractors: ["a", "u"] },
+  "thick": { target: "th", display: "<span class='phonics-blank-slot'>_ _</span> i c k", distractors: ["ch", "sh"] },
+  "white": { target: "i", display: "w h <span class='phonics-blank-slot'>_</span> t e", distractors: ["a", "o"] },
+  "blanket": { target: "an", display: "b l <span class='phonics-blank-slot'>_ _</span> k e t", distractors: ["on", "en"] },
+  "cloud": { target: "ou", display: "c l <span class='phonics-blank-slot'>_ _</span> d", distractors: ["ow", "oo"] },
+  "lost": { target: "o", display: "l <span class='phonics-blank-slot'>_</span> s t", distractors: ["a", "u"] },
+  "disappear": { target: "ear", display: "d i s a p p <span class='phonics-blank-slot'>_ _ _</span>", distractors: ["eer", "air"] },
+  "hide": { target: "i", display: "h <span class='phonics-blank-slot'>_</span> d e", distractors: ["a", "o"] },
+  "find": { target: "ind", display: "f <span class='phonics-blank-slot'>_ _ _</span>", distractors: ["end", "ond"] },
+  "path": { target: "th", display: "p a <span class='phonics-blank-slot'>_ _</span>", distractors: ["sh", "ch"] },
+  "slide": { target: "sl", display: "<span class='phonics-blank-slot'>_ _</span> i d e", distractors: ["cl", "fl"] },
+  "swing": { target: "sw", display: "<span class='phonics-blank-slot'>_ _</span> i n g", distractors: ["st", "sp"] },
+  "horn": { target: "or", display: "h <span class='phonics-blank-slot'>_ _</span> n", distractors: ["ar", "er"] },
+  "sound": { target: "ou", display: "s <span class='phonics-blank-slot'>_ _</span> n d", distractors: ["ow", "oo"] },
+  "safe": { target: "a", display: "s <span class='phonics-blank-slot'>_</span> f e", distractors: ["e", "o"] },
   "petrol": { target: "e", display: "p <span class='phonics-blank-slot'>_</span> t r o l", distractors: ["a", "u"] },
   "tire": { target: "i", display: "t <span class='phonics-blank-slot'>_</span> r e", distractors: ["y", "e"] },
   "wash": { target: "sh", display: "w a <span class='phonics-blank-slot'>_ _</span>", distractors: ["ch", "th"] },
