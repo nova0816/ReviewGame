@@ -1,5 +1,5 @@
 {
-  "current_published_count": 10,
+  "current_published_count": 11,
   "episodes": [
     {
       "episode_num": 1,
@@ -69,6 +69,13 @@
       "code_title": "PP S2 E18",
       "subtitle": "Foggy Day",
       "video_id": "cYPDoM73za8",
+      "status": "published"
+    },
+    {
+      "episode_num": 11,
+      "code_title": "PP S2 E19",
+      "subtitle": "Jumble Sale",
+      "video_id": "9DZQyRdvSVw",
       "status": "published"
     }
   ]
