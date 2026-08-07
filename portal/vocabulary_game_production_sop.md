@@ -17,6 +17,12 @@ This Standard Operating Procedure (SOP) documents the complete, consolidated end
 
 ## 🔬 Phase 1: Video Transcript & CEFR A1/A2 Word Selection Rule
 
+### 🎯 Mandatory Triple Verification Criteria for Every Episode:
+1. **Criterion 1 (Strict CEFR A1 / A2 Only):** Every selected target word MUST be classified as CEFR A1 Starter or A2 Elementary in the Cambridge English Vocabulary Profile for 7-year-old ESL learners. No high-level or obscure words allowed.
+2. **Criterion 2 (100% Authentic Episode Transcript):** Every selected word MUST be directly spoken by characters in the video episode dialogue.
+3. **Criterion 3 (100% Zero Duplicates Across Game):** Every selected word MUST be audited against `global_vocabulary_registry.md` to ensure zero duplicates across all episodes.
+
+
 To ensure words are 100% authentic to the video episode while remaining age-appropriate for a 7-year-old ESL student:
 
 1. **Transcript Fetching:** Download episode transcripts using `youtube-transcript-api` in Python.

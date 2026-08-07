@@ -862,27 +862,26 @@ const episodeData = {
       { targetWord: "safe", statement: "Safe back at the car", words: ["Safe", "back", "at", "the", "car"], distractors: ["danger", "lost"], sentenceWithBlank: "_______ back at the car.", image: "assets/ep10_safe.png", emoji: "🏡" }
     ]
   },
-  ep11: {
+    ep11: {
     title: "PP S2 E19: Jumble Sale",
     levels: [
-      { targetWord: "jumble", statement: "School jumble sale today", words: ["School", "jumble", "sale", "today"], distractors: ["party", "concert"], sentenceWithBlank: "School _______ sale today.", image: "assets/ep11_jumble.png", emoji: "🏷️" },
-      { targetWord: "sale", statement: "Selling items at sale", words: ["Selling", "items", "at", "sale"], distractors: ["store", "market"], sentenceWithBlank: "Selling items at _______.", image: "assets/ep11_sale.png", emoji: "🛍️" },
-      { targetWord: "stall", statement: "Set up market stall", words: ["Set", "up", "market", "stall"], distractors: ["table", "shelf"], sentenceWithBlank: "Set up market _______.", image: "assets/ep11_stall.png", emoji: "🎪" },
-      { targetWord: "roof", statement: "Raise money for roof", words: ["Raise", "money", "for", "roof"], distractors: ["floor", "door"], sentenceWithBlank: "Raise money for _______.", image: "assets/ep11_roof.png", emoji: "🏠" },
-      { targetWord: "donate", statement: "Donate your old toys", words: ["Donate", "your", "old", "toys"], distractors: ["keep", "throw"], sentenceWithBlank: "_______ your old toys.", image: "assets/ep11_donate.png", emoji: "🎁" },
-      { targetWord: "chair", statement: "Daddy Pig red chair", words: ["Daddy", "Pig", "red", "chair"], distractors: ["sofa", "bed"], sentenceWithBlank: "Daddy Pig red _______.", image: "assets/ep11_chair.png", emoji: "🪑" },
-      { targetWord: "antique", statement: "Very rare antique item", words: ["Very", "rare", "antique", "item"], distractors: ["new", "modern"], sentenceWithBlank: "Very rare _______ item.", image: "assets/ep11_antique.png", emoji: "🏺" },
-      { targetWord: "valuable", statement: "Is this chair valuable", words: ["Is", "this", "chair", "valuable"], distractors: ["cheap", "broken"], sentenceWithBlank: "Is this chair _______?", image: "assets/ep11_valuable.png", emoji: "💎" },
-      { targetWord: "coin", statement: "Clinking shiny gold coins", words: ["Clinking", "shiny", "gold", "coins"], distractors: ["paper", "bills"], sentenceWithBlank: "Clinking shiny gold _______.", image: "assets/ep11_coin.png", emoji: "🪙" },
-      { targetWord: "buy", statement: "Buy back your chair", words: ["Buy", "back", "your", "chair"], distractors: ["sell", "take"], sentenceWithBlank: "_______ back your chair.", image: "assets/ep11_buy.png", emoji: "💳" },
-      { targetWord: "sell", statement: "Sell toys at stall", words: ["Sell", "toys", "at", "stall"], distractors: ["buy", "hide"], sentenceWithBlank: "_______ toys at stall.", image: "assets/ep11_sell.png", emoji: "🏷️" },
-      { targetWord: "toy", statement: "Donate old teddy toy", words: ["Donate", "old", "teddy", "toy"], distractors: ["book", "cup"], sentenceWithBlank: "Donate old teddy _______.", image: "assets/ep11_toy.png", emoji: "🧸" },
-      { targetWord: "money", statement: "Raise lots of money", words: ["Raise", "lots", "of", "money"], distractors: ["food", "water"], sentenceWithBlank: "Raise lots of _______.", image: "assets/ep11_money.png", emoji: "💵" },
-      { targetWord: "roofing", statement: "Fixing new playgroup roof", words: ["Fixing", "new", "playgroup", "roof"], distractors: ["painting", "washing"], sentenceWithBlank: "Fixing new playgroup _______.", image: "assets/ep11_roofing.png", emoji: "🔨" },
-      { targetWord: "bargain", statement: "Got a great bargain", words: ["Got", "a", "great", "bargain"], distractors: ["loss", "waste"], sentenceWithBlank: "Got a great _______.", image: "assets/ep11_bargain.png", emoji: "🏷️" }
+      { targetWord: "roof", statement: "We need a new roof", words: ["We", "need", "a", "new", "roof"], distractors: ["floor", "door"], sentenceWithBlank: "We need a new _______.", image: "assets/ep11_roof.png", emoji: "🏠" },
+      { targetWord: "sale", statement: "Having a jumble sale today", words: ["Having", "a", "jumble", "sale", "today"], distractors: ["party", "concert"], sentenceWithBlank: "Having a jumble _______ today.", image: "assets/ep11_sale.png", emoji: "🛍️" },
+      { targetWord: "chair", statement: "Daddy Pig loves his chair", words: ["Daddy", "Pig", "loves", "his", "chair"], distractors: ["sofa", "bed"], sentenceWithBlank: "Daddy Pig loves his _______.", image: "assets/ep11_chair.png", emoji: "🪑" },
+      { targetWord: "buy", statement: "I want to buy it back", words: ["I", "want", "to", "buy", "it", "back"], distractors: ["sell", "take"], sentenceWithBlank: "I want to _______ it back.", image: "assets/ep11_buy.png", emoji: "💳" },
+      { targetWord: "sell", statement: "We sell things at school", words: ["We", "sell", "things", "at", "school"], distractors: ["buy", "hide"], sentenceWithBlank: "We _______ things at school.", image: "assets/ep11_sell.png", emoji: "🏷️" },
+      { targetWord: "money", statement: "To raise money for roof", words: ["To", "raise", "money", "for", "roof"], distractors: ["food", "water"], sentenceWithBlank: "To raise _______ for roof.", image: "assets/ep11_money.png", emoji: "💵" },
+      { targetWord: "toy", statement: "Bring an old toy to help", words: ["Bring", "an", "old", "toy", "to", "help"], distractors: ["book", "cup"], sentenceWithBlank: "Bring an old _______ to help.", image: "assets/ep11_toy.png", emoji: "🧸" },
+      { targetWord: "give", statement: "I can give my teddy", words: ["I", "can", "give", "my", "teddy"], distractors: ["take", "keep"], sentenceWithBlank: "I can _______ my teddy.", image: "assets/ep11_give.png", emoji: "🎁" },
+      { targetWord: "bring", statement: "Everyone brings old things", words: ["Everyone", "brings", "old", "things"], distractors: ["leaves", "breaks"], sentenceWithBlank: "Everyone _______ old things.", image: "assets/ep11_bring.png", emoji: "📦" },
+      { targetWord: "old", statement: "Give away our old items", words: ["Give", "away", "our", "old", "items"], distractors: ["new", "fresh"], sentenceWithBlank: "Give away our _______ items.", image: "assets/ep11_old.png", emoji: "🕰️" },
+      { targetWord: "cost", statement: "How much does it cost", words: ["How", "much", "does", "it", "cost"], distractors: ["weigh", "look"], sentenceWithBlank: "How much does it _______?", image: "assets/ep11_cost.png", emoji: "🏷️" },
+      { targetWord: "penny", statement: "It costs only one penny", words: ["It", "costs", "only", "one", "penny"], distractors: ["dollar", "pound"], sentenceWithBlank: "It costs only one _______.", image: "assets/ep11_penny.png", emoji: "🪙" },
+      { targetWord: "fix", statement: "Enough money to fix roof", words: ["Enough", "money", "to", "fix", "roof"], distractors: ["break", "wash"], sentenceWithBlank: "Enough money to _______ roof.", image: "assets/ep11_fix.png", emoji: "🔨" },
+      { targetWord: "cup", statement: "George has a toy cup", words: ["George", "has", "a", "toy", "cup"], distractors: ["plate", "fork"], sentenceWithBlank: "George has a toy _______.", image: "assets/ep11_cup.png", emoji: "☕" },
+      { targetWord: "coin", statement: "Clinking shiny gold coins", words: ["Clinking", "shiny", "gold", "coins"], distractors: ["paper", "bills"], sentenceWithBlank: "Clinking shiny gold _______.", image: "assets/ep11_coin.png", emoji: "🪙" }
     ]
-  }
-};
+  }};
 
 
 // Phonics Stage Mappings & Helper
@@ -1046,34 +1045,22 @@ const phonicsDataMap = {
   "sound": { target: "ou", display: "s <span class='phonics-blank-slot'>_ _</span> n d", distractors: ["ow", "oo"] },
   "safe": { target: "a", display: "s <span class='phonics-blank-slot'>_</span> f e", distractors: ["e", "o"] },
 
-  // Episode 11
-  "jumble": { target: "j", display: "<span class='phonics-blank-slot'>_</span> u m b l e", distractors: ["g", "ch"] },
-  "sale": { target: "a", display: "s <span class='phonics-blank-slot'>_</span> l e", distractors: ["e", "o"] },
-  "stall": { target: "all", display: "s t <span class='phonics-blank-slot'>_ _ _</span>", distractors: ["oll", "ell"] },
+    // Episode 11 (Strict A1/A2 Authentic Dialogue)
   "roof": { target: "oo", display: "r <span class='phonics-blank-slot'>_ _</span> f", distractors: ["ee", "oa"] },
-  "donate": { target: "ate", display: "d o n <span class='phonics-blank-slot'>_ _ _</span>", distractors: ["ite", "ete"] },
+  "sale": { target: "a", display: "s <span class='phonics-blank-slot'>_</span> l e", distractors: ["e", "o"] },
   "chair": { target: "ch", display: "<span class='phonics-blank-slot'>_ _</span> a i r", distractors: ["sh", "th"] },
-  "antique": { target: "que", display: "a n t i <span class='phonics-blank-slot'>_ _ _</span>", distractors: ["cke", "kue"] },
-  "valuable": { target: "al", display: "v <span class='phonics-blank-slot'>_ _</span> u a b l e", distractors: ["el", "ol"] },
-  "coin": { target: "oi", display: "c <span class='phonics-blank-slot'>_ _</span> n", distractors: ["ou", "ea"] },
   "buy": { target: "uy", display: "b <span class='phonics-blank-slot'>_ _</span>", distractors: ["ay", "ey"] },
   "sell": { target: "ll", display: "s e <span class='phonics-blank-slot'>_ _</span>", distractors: ["ss", "tt"] },
-  "toy": { target: "oy", display: "t <span class='phonics-blank-slot'>_ _</span>", distractors: ["oi", "ay"] },
   "money": { target: "ey", display: "m o n <span class='phonics-blank-slot'>_ _</span>", distractors: ["ay", "ee"] },
-  "roofing": { target: "ing", display: "r o o f <span class='phonics-blank-slot'>_ _ _</span>", distractors: ["ong", "ang"] },
-  "bargain": { target: "ar", display: "b <span class='phonics-blank-slot'>_ _</span> g a i n", distractors: ["or", "er"] },
-  "petrol": { target: "e", display: "p <span class='phonics-blank-slot'>_</span> t r o l", distractors: ["a", "u"] },
-  "tire": { target: "i", display: "t <span class='phonics-blank-slot'>_</span> r e", distractors: ["y", "e"] },
-  "wash": { target: "sh", display: "w a <span class='phonics-blank-slot'>_ _</span>", distractors: ["ch", "th"] },
-  "ice": { target: "i", display: "<span class='phonics-blank-slot'>_</span> c e", distractors: ["e", "a"] },
-  "broken": { target: "o", display: "b r <span class='phonics-blank-slot'>_</span> k e n", distractors: ["a", "u"] },
-  "tow": { target: "ow", display: "t <span class='phonics-blank-slot'>_ _</span>", distractors: ["ou", "ee"] },
-  "air": { target: "air", display: "<span class='phonics-blank-slot'>_ _ _</span>", distractors: ["ear", "are"] },
-  "computer": { target: "er", display: "c o m p u t <span class='phonics-blank-slot'>_ _</span>", distractors: ["ar", "or"] },
-  "water": { target: "er", display: "w a t <span class='phonics-blank-slot'>_ _</span>", distractors: ["ar", "or"] },
-  "switch": { target: "tc", display: "s w i <span class='phonics-blank-slot'>_ _</span> h", distractors: ["sh", "ck"] },
-  "stop": { target: "st", display: "<span class='phonics-blank-slot'>_ _</span> o p", distractors: ["sp", "sk"] },
-  "best": { target: "st", display: "b e <span class='phonics-blank-slot'>_ _</span>", distractors: ["sk", "sp"] }
+  "toy": { target: "oy", display: "t <span class='phonics-blank-slot'>_ _</span>", distractors: ["oi", "ay"] },
+  "give": { target: "i", display: "g <span class='phonics-blank-slot'>_</span> v e", distractors: ["a", "o"] },
+  "bring": { target: "br", display: "<span class='phonics-blank-slot'>_ _</span> i n g", distractors: ["cr", "dr"] },
+  "old": { target: "o", display: "<span class='phonics-blank-slot'>_</span> l d", distractors: ["a", "u"] },
+  "cost": { target: "o", display: "c <span class='phonics-blank-slot'>_</span> s t", distractors: ["a", "u"] },
+  "penny": { target: "nn", display: "p e <span class='phonics-blank-slot'>_ _</span> y", distractors: ["mm", "pp"] },
+  "fix": { target: "i", display: "f <span class='phonics-blank-slot'>_</span> x", distractors: ["a", "o"] },
+  "cup": { target: "u", display: "c <span class='phonics-blank-slot'>_</span> p", distractors: ["a", "o"] },
+  "coin": { target: "oi", display: "c <span class='phonics-blank-slot'>_ _</span> n", distractors: ["ou", "ea"] }
 };
 
 function getPhonicsInfo(word) {
