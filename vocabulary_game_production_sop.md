@@ -97,3 +97,16 @@ When the user triggers **"generate next 2 episodes"**:
    - Extract transcript and select 15 CEFR A1/A2 words directly spoken in the episode.
    - Generate **15 dedicated, 100% unique 3D Pixar PNGs** per episode (zero image reuse).
    - Unlock card on `index.html`, update `app.js`, sync `portal/`, and push live to both `main` and `gh-pages` branches on GitHub.
+
+
+---
+
+## ⏳ Phase 8: Image Quota Management & Automated Scheduling SOP
+
+When generating images for an episode:
+1. **Sequential Image Generation:** Generate dedicated 3D Pixar images sequentially using `generate_image`.
+2. **Quota Exhaustion Handling:** If an API quota error occurs (`429 Too Many Requests` / `RESOURCE_EXHAUSTED`):
+   - Extract the exact `quotaResetTimeStamp` or `quotaResetDelay` from the error response.
+   - Immediately schedule a timer using the `schedule` tool for the exact quota reset duration.
+   - Do **NOT** poll or loop. Wait for the background timer notification.
+3. **Post-Reset Batch Completion:** Upon timer trigger, resume generating the remaining images, then execute python integration scripts, update `global_vocabulary_registry.md`, sync `portal/`, and push live to `main` & `gh-pages` together in a single consolidated step.
