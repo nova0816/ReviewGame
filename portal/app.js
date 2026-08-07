@@ -556,6 +556,24 @@ const episodeData = {
         sentenceWithBlank: "I am a bit _______.",
         image: "assets/ep7_tired.png",
         emoji: "🥱"
+      },
+      {
+        targetWord: "stay",
+        statement: "Can they stay over",
+        words: ["Can", "they", "stay", "over"],
+        distractors: ["leave", "run"],
+        sentenceWithBlank: "Can they _______ over?",
+        image: "assets/ep7_stay.png",
+        emoji: "🏠"
+      },
+      {
+        targetWord: "over",
+        statement: "Sleepover for bedtime",
+        words: ["Sleepover", "for", "bedtime"],
+        distractors: ["morning", "daytime"],
+        sentenceWithBlank: "Sleep_______ for bedtime.",
+        image: "assets/ep7_over.png",
+        emoji: "🌙"
       }
     ]
   },
@@ -950,6 +968,8 @@ const phonicsDataMap = {
   "teddy": { target: "dd", display: "t e <span class='phonics-blank-slot'>_ _</span> y", distractors: ["bb", "tt"] },
   "night": { target: "ight", display: "n <span class='phonics-blank-slot'>_ _ _ _</span>", distractors: ["ite", "ate"] },
   "tired": { target: "i", display: "t <span class='phonics-blank-slot'>_</span> r e d", distractors: ["a", "o"] },
+  "stay": { target: "ay", display: "s t <span class='phonics-blank-slot'>_ _</span>", distractors: ["ai", "ee"] },
+  "over": { target: "er", display: "o v <span class='phonics-blank-slot'>_ _</span>", distractors: ["ar", "or"] },
 
   // Episode 8
   "glasses": { target: "ss", display: "g l a <span class='phonics-blank-slot'>_ _</span> e s", distractors: ["tt", "pp"] },
