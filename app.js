@@ -841,6 +841,46 @@ const episodeData = {
         emoji: "⭐"
       }
     ]
+  },
+  ep10: {
+    title: "PP S2 E18: Foggy Day",
+    levels: [
+      { targetWord: "fog", statement: "It is a foggy day", words: ["It", "is", "a", "foggy", "day"], distractors: ["sunny", "rainy"], sentenceWithBlank: "It is a _______ day.", image: "assets/ep10_fog.png", emoji: "🌫️" },
+      { targetWord: "thick", statement: "The fog is very thick", words: ["The", "fog", "is", "very", "thick"], distractors: ["thin", "clear"], sentenceWithBlank: "The fog is very _______.", image: "assets/ep10_thick.png", emoji: "☁️" },
+      { targetWord: "white", statement: "Everything looks white", words: ["Everything", "looks", "white"], distractors: ["black", "green"], sentenceWithBlank: "Everything looks _______.", image: "assets/ep10_white.png", emoji: "⚪" },
+      { targetWord: "blanket", statement: "Fog like a white blanket", words: ["Fog", "like", "a", "white", "blanket"], distractors: ["towel", "pillow"], sentenceWithBlank: "Fog like a white _______.", image: "assets/ep10_blanket.png", emoji: "🛋️" },
+      { targetWord: "cloud", statement: "Cloud on the ground", words: ["Cloud", "on", "the", "ground"], distractors: ["sky", "tree"], sentenceWithBlank: "_______ on the ground.", image: "assets/ep10_cloud.png", emoji: "☁️" },
+      { targetWord: "lost", statement: "We are almost lost", words: ["We", "are", "almost", "lost"], distractors: ["found", "home"], sentenceWithBlank: "We are almost _______.", image: "assets/ep10_lost.png", emoji: "❓" },
+      { targetWord: "disappear", statement: "The ducks disappear", words: ["The", "ducks", "disappear"], distractors: ["appear", "fly"], sentenceWithBlank: "The ducks _______.", image: "assets/ep10_disappear.png", emoji: "👻" },
+      { targetWord: "hide", statement: "Hide in the fog", words: ["Hide", "in", "the", "fog"], distractors: ["seek", "run"], sentenceWithBlank: "_______ in the fog.", image: "assets/ep10_hide.png", emoji: "🙈" },
+      { targetWord: "find", statement: "Find our way back", words: ["Find", "our", "way", "back"], distractors: ["lose", "forget"], sentenceWithBlank: "_______ our way back.", image: "assets/ep10_find.png", emoji: "🔍" },
+      { targetWord: "path", statement: "Follow the park path", words: ["Follow", "the", "park", "path"], distractors: ["grass", "river"], sentenceWithBlank: "Follow the park _______.", image: "assets/ep10_path.png", emoji: "🛣️" },
+      { targetWord: "slide", statement: "Found the playground slide", words: ["Found", "the", "playground", "slide"], distractors: ["swing", "bench"], sentenceWithBlank: "Found the playground _______.", image: "assets/ep10_slide.png", emoji: "🛝" },
+      { targetWord: "swing", statement: "Found the park swing", words: ["Found", "the", "park", "swing"], distractors: ["slide", "gate"], sentenceWithBlank: "Found the park _______.", image: "assets/ep10_swing.png", emoji: "🧺" },
+      { targetWord: "horn", statement: "Beep the car horn", words: ["Beep", "the", "car", "horn"], distractors: ["bell", "drum"], sentenceWithBlank: "Beep the car _______.", image: "assets/ep10_horn.png", emoji: "📢" },
+      { targetWord: "sound", statement: "Listen to the sound", words: ["Listen", "to", "the", "sound"], distractors: ["sight", "smell"], sentenceWithBlank: "Listen to the _______.", image: "assets/ep10_sound.png", emoji: "🔊" },
+      { targetWord: "safe", statement: "Safe back at the car", words: ["Safe", "back", "at", "the", "car"], distractors: ["danger", "lost"], sentenceWithBlank: "_______ back at the car.", image: "assets/ep10_safe.png", emoji: "🏡" }
+    ]
+  },
+  ep11: {
+    title: "PP S2 E19: Jumble Sale",
+    levels: [
+      { targetWord: "jumble", statement: "School jumble sale today", words: ["School", "jumble", "sale", "today"], distractors: ["party", "concert"], sentenceWithBlank: "School _______ sale today.", image: "assets/ep11_jumble.png", emoji: "🏷️" },
+      { targetWord: "sale", statement: "Selling items at sale", words: ["Selling", "items", "at", "sale"], distractors: ["store", "market"], sentenceWithBlank: "Selling items at _______.", image: "assets/ep11_sale.png", emoji: "🛍️" },
+      { targetWord: "stall", statement: "Set up market stall", words: ["Set", "up", "market", "stall"], distractors: ["table", "shelf"], sentenceWithBlank: "Set up market _______.", image: "assets/ep11_stall.png", emoji: "🎪" },
+      { targetWord: "roof", statement: "Raise money for roof", words: ["Raise", "money", "for", "roof"], distractors: ["floor", "door"], sentenceWithBlank: "Raise money for _______.", image: "assets/ep11_roof.png", emoji: "🏠" },
+      { targetWord: "donate", statement: "Donate your old toys", words: ["Donate", "your", "old", "toys"], distractors: ["keep", "throw"], sentenceWithBlank: "_______ your old toys.", image: "assets/ep11_donate.png", emoji: "🎁" },
+      { targetWord: "chair", statement: "Daddy Pig red chair", words: ["Daddy", "Pig", "red", "chair"], distractors: ["sofa", "bed"], sentenceWithBlank: "Daddy Pig red _______.", image: "assets/ep11_chair.png", emoji: "🪑" },
+      { targetWord: "antique", statement: "Very rare antique item", words: ["Very", "rare", "antique", "item"], distractors: ["new", "modern"], sentenceWithBlank: "Very rare _______ item.", image: "assets/ep11_antique.png", emoji: "🏺" },
+      { targetWord: "valuable", statement: "Is this chair valuable", words: ["Is", "this", "chair", "valuable"], distractors: ["cheap", "broken"], sentenceWithBlank: "Is this chair _______?", image: "assets/ep11_valuable.png", emoji: "💎" },
+      { targetWord: "coin", statement: "Clinking shiny gold coins", words: ["Clinking", "shiny", "gold", "coins"], distractors: ["paper", "bills"], sentenceWithBlank: "Clinking shiny gold _______.", image: "assets/ep11_coin.png", emoji: "🪙" },
+      { targetWord: "buy", statement: "Buy back your chair", words: ["Buy", "back", "your", "chair"], distractors: ["sell", "take"], sentenceWithBlank: "_______ back your chair.", image: "assets/ep11_buy.png", emoji: "💳" },
+      { targetWord: "sell", statement: "Sell toys at stall", words: ["Sell", "toys", "at", "stall"], distractors: ["buy", "hide"], sentenceWithBlank: "_______ toys at stall.", image: "assets/ep11_sell.png", emoji: "🏷️" },
+      { targetWord: "toy", statement: "Donate old teddy toy", words: ["Donate", "old", "teddy", "toy"], distractors: ["book", "cup"], sentenceWithBlank: "Donate old teddy _______.", image: "assets/ep11_toy.png", emoji: "🧸" },
+      { targetWord: "money", statement: "Raise lots of money", words: ["Raise", "lots", "of", "money"], distractors: ["food", "water"], sentenceWithBlank: "Raise lots of _______.", image: "assets/ep11_money.png", emoji: "💵" },
+      { targetWord: "roofing", statement: "Fixing new playgroup roof", words: ["Fixing", "new", "playgroup", "roof"], distractors: ["painting", "washing"], sentenceWithBlank: "Fixing new playgroup _______.", image: "assets/ep11_roofing.png", emoji: "🔨" },
+      { targetWord: "bargain", statement: "Got a great bargain", words: ["Got", "a", "great", "bargain"], distractors: ["loss", "waste"], sentenceWithBlank: "Got a great _______.", image: "assets/ep11_bargain.png", emoji: "🏷️" }
+    ]
   }
 };
 
