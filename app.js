@@ -1955,6 +1955,18 @@ soundToggle.addEventListener('click', () => {
   }
 });
 
+
+// Global Episode Card Click Handler for Main Menu
+function onEpisodeCardClick(epKey) {
+  if (typeof playSound === 'function') playSound('click');
+  if (typeof episodeData !== 'undefined' && episodeData[epKey]) {
+    selectEpisode(epKey);
+    if (typeof episodeScreen !== 'undefined' && episodeScreen) episodeScreen.classList.add('hidden');
+    if (typeof startScreen !== 'undefined' && startScreen) startScreen.classList.remove('hidden');
+  }
+}
+window.onEpisodeCardClick = onEpisodeCardClick;
+
 // Landing Page & Level Selector Transitions (Bulletproof Dynamic Handler)
 const allEpisodeCards = document.querySelectorAll('.episode-card');
 allEpisodeCards.forEach((card, index) => {
