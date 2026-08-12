@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=39.2.0">
+  <link rel="stylesheet" href="style.css?v=40.0.0">
 </head>
 <body>
   <!-- Background autumn leaf decorations -->
@@ -147,10 +147,19 @@
           <span class="episode-card-title">PP S2 E20</span>
           <span class="episode-card-desc">Swimming</span>
         </button>
+              <!-- Active Episode 13 -->
+        <button class="episode-card active" id="episodeCard13" onclick="onEpisodeCardClick('ep13')" aria-label="Play PP S2 E21: Tiny Creatures">
+          <div class="episode-image-container">
+            <img src="assets/ep13_snail.png" alt="Tiny Creatures illustration" class="episode-card-img">
+          </div>
+          <span class="episode-card-badge">Active 🟢</span>
+          <span class="episode-card-title">PP S2 E21</span>
+          <span class="episode-card-desc">Tiny Creatures</span>
+        </button>
       </div>
 
       <div class="start-footer">
-        <span class="version-tag">v39.2.0</span>
+        <span class="version-tag">v40.0.0</span>
       </div>
     </div>
   </div>
@@ -392,6 +401,6 @@
   <!-- Canvas for Confetti -->
   <canvas id="confettiCanvas" class="confetti-canvas"></canvas>
 
-  <script src="app.js?v=39.2.0"></script>
+  <script src="app.js?v=40.0.0"></script>
 </body>
 </html>

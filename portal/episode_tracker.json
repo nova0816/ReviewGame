@@ -1,5 +1,5 @@
 {
-  "current_published_count": 12,
+  "current_published_count": 13,
   "episodes": [
     {
       "episode_num": 1,
@@ -83,6 +83,13 @@
       "code_title": "PP S2 E20",
       "subtitle": "Swimming",
       "video_id": "RJS4FfeDFe8",
+      "status": "published"
+    },
+    {
+      "episode_num": 13,
+      "code_title": "PP S2 E21",
+      "subtitle": "Tiny Creatures",
+      "video_id": "AoHm2ST8ymk",
       "status": "published"
     }
   ]

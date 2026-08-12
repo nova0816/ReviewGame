@@ -1099,6 +1099,23 @@ const phonicsDataMap = {
   "can": { target: "a", display: "c <span class='phonics-blank-slot'>_</span> n", distractors: ["e", "o"] },
   "jump": { target: "j", display: "<span class='phonics-blank-slot'>_</span> u m p", distractors: ["g", "ch"] },
   "warm": { target: "ar", display: "w <span class='phonics-blank-slot'>_ _</span> m", distractors: ["or", "er"] },
+
+  // Episode 13 (PP S2 E21: Tiny Creatures)
+  "snail": { target: "ai", display: "s n <span class='phonics-blank-slot'>_ _</span> l", distractors: ["ay", "ee"] },
+  "bee": { target: "ee", display: "b <span class='phonics-blank-slot'>_ _</span>", distractors: ["ea", "oo"] },
+  "garden": { target: "ar", display: "g <span class='phonics-blank-slot'>_ _</span> d e n", distractors: ["or", "er"] },
+  "flower": { target: "ow", display: "f l <span class='phonics-blank-slot'>_ _</span> e r", distractors: ["ou", "aw"] },
+  "leaf": { target: "ea", display: "l <span class='phonics-blank-slot'>_ _</span> f", distractors: ["ee", "oa"] },
+  "buzz": { target: "zz", display: "b u <span class='phonics-blank-slot'>_ _</span>", distractors: ["ss", "ff"] },
+  "crawl": { target: "aw", display: "c r <span class='phonics-blank-slot'>_ _</span> l", distractors: ["ow", "ou"] },
+  "fly": { target: "y", display: "f l <span class='phonics-blank-slot'>_</span>", distractors: ["i", "e"] },
+  "sweet": { target: "ee", display: "s w <span class='phonics-blank-slot'>_ _</span> t", distractors: ["ea", "oo"] },
+  "shell": { target: "sh", display: "<span class='phonics-blank-slot'>_ _</span> e l l", distractors: ["ch", "th"] },
+  "plant": { target: "an", display: "p l <span class='phonics-blank-slot'>_ _</span> t", distractors: ["on", "en"] },
+  "ant": { target: "a", display: "<span class='phonics-blank-slot'>_</span> n t", distractors: ["e", "o"] },
+  "worm": { target: "or", display: "w <span class='phonics-blank-slot'>_ _</span> m", distractors: ["ar", "er"] },
+  "bug": { target: "u", display: "b <span class='phonics-blank-slot'>_</span> g", distractors: ["a", "o"] },
+  "tiny": { target: "y", display: "t i n <span class='phonics-blank-slot'>_</span>", distractors: ["e", "i"] }
 };
 
 function getPhonicsInfo(word) {
