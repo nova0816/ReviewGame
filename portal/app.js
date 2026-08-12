@@ -881,7 +881,28 @@ const episodeData = {
       { targetWord: "cup", statement: "George has a toy cup", words: ["George", "has", "a", "toy", "cup"], distractors: ["plate", "fork"], sentenceWithBlank: "George has a toy _______.", image: "assets/ep11_cup.png", emoji: "☕" },
       { targetWord: "coin", statement: "Clinking shiny gold coins", words: ["Clinking", "shiny", "gold", "coins"], distractors: ["paper", "bills"], sentenceWithBlank: "Clinking shiny gold _______.", image: "assets/ep11_coin.png", emoji: "🪙" }
     ]
-  }};
+  },
+  ep12: {
+    title: "PP S2 E20: Swimming",
+    levels: [
+      { targetWord: "swim", statement: "Peppa loves to swim", words: ["Peppa", "loves", "to", "swim"], distractors: ["run", "fly"], sentenceWithBlank: "Peppa loves to _______.", image: "assets/ep12_swim.png", emoji: "🏊" },
+      { targetWord: "costume", statement: "Put on swimming costume", words: ["Put", "on", "swimming", "costume"], distractors: ["coat", "boots"], sentenceWithBlank: "Put on swimming _______.", image: "assets/ep12_costume.png", emoji: "🩱" },
+      { targetWord: "towel", statement: "Dry with warm towel", words: ["Dry", "with", "warm", "towel"], distractors: ["hat", "sock"], sentenceWithBlank: "Dry with warm _______.", image: "assets/ep12_towel.png", emoji: "🧣" },
+      { targetWord: "armbands", statement: "George wears floaty armbands", words: ["George", "wears", "floaty", "armbands"], distractors: ["gloves", "glasses"], sentenceWithBlank: "George wears floaty _______.", image: "assets/ep12_armbands.png", emoji: "🟠" },
+      { targetWord: "kick", statement: "Kick your little feet", words: ["Kick", "your", "little", "feet"], distractors: ["clap", "wave"], sentenceWithBlank: "_______ your little feet.", image: "assets/ep12_kick.png", emoji: "💦" },
+      { targetWord: "legs", statement: "Kick your swimming legs", words: ["Kick", "your", "swimming", "legs"], distractors: ["arms", "ears"], sentenceWithBlank: "Kick your swimming _______.", image: "assets/ep12_legs.png", emoji: "🦵" },
+      { targetWord: "deep", statement: "Water is very deep", words: ["Water", "is", "very", "deep"], distractors: ["high", "dry"], sentenceWithBlank: "Water is very _______.", image: "assets/ep12_deep.png", emoji: "🌊" },
+      { targetWord: "shallow", statement: "Stand in shallow water", words: ["Stand", "in", "shallow", "water"], distractors: ["deep", "dark"], sentenceWithBlank: "Stand in _______ water.", image: "assets/ep12_shallow.png", emoji: "🏖️" },
+      { targetWord: "dive", statement: "Watch Daddy Pig dive", words: ["Watch", "Daddy", "Pig", "dive"], distractors: ["sleep", "sit"], sentenceWithBlank: "Watch Daddy Pig _______.", image: "assets/ep12_dive.png", emoji: "🤿" },
+      { targetWord: "drop", statement: "Do not drop toy", words: ["Do", "not", "drop", "toy"], distractors: ["hold", "catch"], sentenceWithBlank: "Do not _______ toy.", image: "assets/ep12_drop.png", emoji: "💧" },
+      { targetWord: "float", statement: "Armbands help you float", words: ["Armbands", "help", "you", "float"], distractors: ["fall", "sink"], sentenceWithBlank: "Armbands help you _______.", image: "assets/ep12_float.png", emoji: "🛟" },
+      { targetWord: "feet", statement: "Splashing with your feet", words: ["Splashing", "with", "your", "feet"], distractors: ["nose", "hair"], sentenceWithBlank: "Splashing with your _______.", image: "assets/ep12_feet.png", emoji: "🦶" },
+      { targetWord: "can", statement: "Richard watering can dropped", words: ["Richard", "watering", "can", "dropped"], distractors: ["cup", "box"], sentenceWithBlank: "Richard watering _______ dropped.", image: "assets/ep12_can.png", emoji: "🫗" },
+      { targetWord: "jump", statement: "Jump into the pool", words: ["Jump", "into", "the", "pool"], distractors: ["walk", "hide"], sentenceWithBlank: "_______ into the pool.", image: "assets/ep12_jump.png", emoji: "🦘" },
+      { targetWord: "warm", statement: "Water is lovely warm", words: ["Water", "is", "lovely", "warm"], distractors: ["freezing", "cold"], sentenceWithBlank: "Water is lovely _______.", image: "assets/ep12_warm.png", emoji: "☀️" }
+    ]
+  }
+};
 
 
 // Phonics Stage Mappings & Helper
