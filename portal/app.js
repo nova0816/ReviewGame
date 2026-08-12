@@ -1060,7 +1060,24 @@ const phonicsDataMap = {
   "penny": { target: "nn", display: "p e <span class='phonics-blank-slot'>_ _</span> y", distractors: ["mm", "pp"] },
   "fix": { target: "i", display: "f <span class='phonics-blank-slot'>_</span> x", distractors: ["a", "o"] },
   "cup": { target: "u", display: "c <span class='phonics-blank-slot'>_</span> p", distractors: ["a", "o"] },
-  "coin": { target: "oi", display: "c <span class='phonics-blank-slot'>_ _</span> n", distractors: ["ou", "ea"] }
+  "coin": { target: "oi", display: "c <span class='phonics-blank-slot'>_ _</span> n", distractors: ["ou", "ea"] },
+
+  // Episode 12 (PP S2 E20: Swimming)
+  "swim": { target: "sw", display: "<span class='phonics-blank-slot'>_ _</span> i m", distractors: ["st", "sp"] },
+  "costume": { target: "u", display: "c o s t <span class='phonics-blank-slot'>_</span> m e", distractors: ["a", "o"] },
+  "towel": { target: "ow", display: "t <span class='phonics-blank-slot'>_ _</span> e l", distractors: ["ou", "aw"] },
+  "armbands": { target: "ar", display: "<span class='phonics-blank-slot'>_ _</span> m b a n d s", distractors: ["or", "er"] },
+  "kick": { target: "ck", display: "k i <span class='phonics-blank-slot'>_ _</span>", distractors: ["ch", "sh"] },
+  "legs": { target: "e", display: "l <span class='phonics-blank-slot'>_</span> g s", distractors: ["a", "i"] },
+  "deep": { target: "ee", display: "d <span class='phonics-blank-slot'>_ _</span> p", distractors: ["ea", "oo"] },
+  "shallow": { target: "sh", display: "<span class='phonics-blank-slot'>_ _</span> a l l o w", distractors: ["ch", "th"] },
+  "dive": { target: "i", display: "d <span class='phonics-blank-slot'>_</span> v e", distractors: ["a", "o"] },
+  "drop": { target: "dr", display: "<span class='phonics-blank-slot'>_ _</span> o p", distractors: ["tr", "br"] },
+  "float": { target: "oa", display: "f l <span class='phonics-blank-slot'>_ _</span> t", distractors: ["ou", "ee"] },
+  "feet": { target: "ee", display: "f <span class='phonics-blank-slot'>_ _</span> t", distractors: ["ea", "oo"] },
+  "can": { target: "a", display: "c <span class='phonics-blank-slot'>_</span> n", distractors: ["e", "o"] },
+  "jump": { target: "j", display: "<span class='phonics-blank-slot'>_</span> u m p", distractors: ["g", "ch"] },
+  "warm": { target: "ar", display: "w <span class='phonics-blank-slot'>_ _</span> m", distractors: ["or", "er"] },
 };
 
 function getPhonicsInfo(word) {

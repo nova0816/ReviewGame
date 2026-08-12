@@ -1,5 +1,5 @@
 {
-  "current_published_count": 11,
+  "current_published_count": 12,
   "episodes": [
     {
       "episode_num": 1,
@@ -76,6 +76,13 @@
       "code_title": "PP S2 E19",
       "subtitle": "Jumble Sale",
       "video_id": "9DZQyRdvSVw",
+      "status": "published"
+    },
+    {
+      "episode_num": 12,
+      "code_title": "PP S2 E20",
+      "subtitle": "Swimming",
+      "video_id": "RJS4FfeDFe8",
       "status": "published"
     }
   ]
