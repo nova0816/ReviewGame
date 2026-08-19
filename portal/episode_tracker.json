@@ -1,5 +1,5 @@
 {
-  "current_published_count": 13,
+  "current_published_count": 14,
   "episodes": [
     {
       "episode_num": 1,
@@ -90,6 +90,13 @@
       "code_title": "PP S2 E21",
       "subtitle": "Tiny Creatures",
       "video_id": "AoHm2ST8ymk",
+      "status": "published"
+    },
+    {
+      "episode_num": 14,
+      "code_title": "PP S2 E22",
+      "subtitle": "Daddy Pig's Office",
+      "video_id": "oZVlkda3V4A",
       "status": "published"
     }
   ]

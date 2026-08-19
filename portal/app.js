@@ -1115,7 +1115,24 @@ const phonicsDataMap = {
   "ant": { target: "a", display: "<span class='phonics-blank-slot'>_</span> n t", distractors: ["e", "o"] },
   "worm": { target: "or", display: "w <span class='phonics-blank-slot'>_ _</span> m", distractors: ["ar", "er"] },
   "bug": { target: "u", display: "b <span class='phonics-blank-slot'>_</span> g", distractors: ["a", "o"] },
-  "tiny": { target: "y", display: "t i n <span class='phonics-blank-slot'>_</span>", distractors: ["e", "i"] }
+  "tiny": { target: "y", display: "t i n <span class='phonics-blank-slot'>_</span>", distractors: ["e", "i"] },
+
+  // Episode 14 (PP S2 E22: Daddy Pig's Office)
+  "office": { target: "ff", display: "o <span class='phonics-blank-slot'>_ _</span> i c e", distractors: ["ss", "tt"] },
+  "desk": { target: "e", display: "d <span class='phonics-blank-slot'>_</span> s k", distractors: ["a", "i"] },
+  "stamp": { target: "st", display: "<span class='phonics-blank-slot'>_ _</span> a m p", distractors: ["sp", "sw"] },
+  "ink": { target: "nk", display: "i <span class='phonics-blank-slot'>_ _</span>", distractors: ["ng", "nd"] },
+  "draw": { target: "aw", display: "d r <span class='phonics-blank-slot'>_ _</span>", distractors: ["ow", "ou"] },
+  "pen": { target: "e", display: "p <span class='phonics-blank-slot'>_</span> n", distractors: ["a", "u"] },
+  "print": { target: "pr", display: "<span class='phonics-blank-slot'>_ _</span> i n t", distractors: ["tr", "br"] },
+  "copy": { target: "o", display: "c <span class='phonics-blank-slot'>_</span> p y", distractors: ["a", "u"] },
+  "work": { target: "or", display: "w <span class='phonics-blank-slot'>_ _</span> k", distractors: ["ar", "er"] },
+  "job": { target: "j", display: "<span class='phonics-blank-slot'>_</span> o b", distractors: ["g", "ch"] },
+  "pencil": { target: "en", display: "p <span class='phonics-blank-slot'>_ _</span> c i l", distractors: ["on", "an"] },
+  "shape": { target: "sh", display: "<span class='phonics-blank-slot'>_ _</span> a p e", distractors: ["ch", "th"] },
+  "press": { target: "ss", display: "p r e <span class='phonics-blank-slot'>_ _</span>", distractors: ["ff", "ll"] },
+  "tall": { target: "all", display: "t <span class='phonics-blank-slot'>_ _ _</span>", distractors: ["oll", "ell"] },
+  "busy": { target: "u", display: "b <span class='phonics-blank-slot'>_</span> s y", distractors: ["i", "e"] },
 };
 
 function getPhonicsInfo(word) {
