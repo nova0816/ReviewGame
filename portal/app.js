@@ -901,6 +901,46 @@ const episodeData = {
       { targetWord: "jump", statement: "Jump into the pool", words: ["Jump", "into", "the", "pool"], distractors: ["walk", "hide"], sentenceWithBlank: "_______ into the pool.", image: "assets/ep12_jump.png", emoji: "🦘" },
       { targetWord: "warm", statement: "Water is lovely warm", words: ["Water", "is", "lovely", "warm"], distractors: ["freezing", "cold"], sentenceWithBlank: "Water is lovely _______.", image: "assets/ep12_warm.png", emoji: "☀️" }
     ]
+  },
+  ep13: {
+    title: "PP S2 E21: Tiny Creatures",
+    levels: [
+      { targetWord: "snail", statement: "Look at the little snail", words: ["Look", "at", "the", "little", "snail"], distractors: ["frog", "duck"], sentenceWithBlank: "Look at the little _______.", image: "assets/ep13_snail.png", emoji: "🐌" },
+      { targetWord: "bee", statement: "A busy buzzing bee", words: ["A", "busy", "buzzing", "bee"], distractors: ["bird", "cat"], sentenceWithBlank: "A busy buzzing _______.", image: "assets/ep13_bee.png", emoji: "🐝" },
+      { targetWord: "garden", statement: "Grandpa Pig lovely garden", words: ["Grandpa", "Pig", "lovely", "garden"], distractors: ["bedroom", "kitchen"], sentenceWithBlank: "Grandpa Pig lovely _______.", image: "assets/ep13_garden.png", emoji: "🌻" },
+      { targetWord: "flower", statement: "Bee on pretty flower", words: ["Bee", "on", "pretty", "flower"], distractors: ["chair", "table"], sentenceWithBlank: "Bee on pretty _______.", image: "assets/ep13_flower.png", emoji: "🌸" },
+      { targetWord: "leaf", statement: "Snail eating green leaf", words: ["Snail", "eating", "green", "leaf"], distractors: ["rock", "sand"], sentenceWithBlank: "Snail eating green _______.", image: "assets/ep13_leaf.png", emoji: "🍃" },
+      { targetWord: "buzz", statement: "Bees make a buzz", words: ["Bees", "make", "a", "buzz"], distractors: ["hiss", "bark"], sentenceWithBlank: "Bees make a _______.", image: "assets/ep13_buzz.png", emoji: "⚡" },
+      { targetWord: "crawl", statement: "Snails crawl very slowly", words: ["Snails", "crawl", "very", "slowly"], distractors: ["jump", "fly"], sentenceWithBlank: "Snails _______ very slowly.", image: "assets/ep13_crawl.png", emoji: "🐛" },
+      { targetWord: "fly", statement: "Bees fly to flowers", words: ["Bees", "fly", "to", "flowers"], distractors: ["swim", "dig"], sentenceWithBlank: "Bees _______ to flowers.", image: "assets/ep13_fly.png", emoji: "🪽" },
+      { targetWord: "sweet", statement: "Honey tastes very sweet", words: ["Honey", "tastes", "very", "sweet"], distractors: ["sour", "salty"], sentenceWithBlank: "Honey tastes very _______.", image: "assets/ep13_sweet.png", emoji: "🍯" },
+      { targetWord: "shell", statement: "Snail carries its shell", words: ["Snail", "carries", "its", "shell"], distractors: ["hat", "shoe"], sentenceWithBlank: "Snail carries its _______.", image: "assets/ep13_shell.png", emoji: "🐚" },
+      { targetWord: "plant", statement: "Grandpa loves each plant", words: ["Grandpa", "loves", "each", "plant"], distractors: ["car", "boat"], sentenceWithBlank: "Grandpa loves each _______.", image: "assets/ep13_plant.png", emoji: "🪴" },
+      { targetWord: "ant", statement: "A tiny crawling ant", words: ["A", "tiny", "crawling", "ant"], distractors: ["lion", "horse"], sentenceWithBlank: "A tiny crawling _______.", image: "assets/ep13_ant.png", emoji: "🐜" },
+      { targetWord: "worm", statement: "A wiggly earth worm", words: ["A", "wiggly", "earth", "worm"], distractors: ["fish", "bird"], sentenceWithBlank: "A wiggly earth _______.", image: "assets/ep13_worm.png", emoji: "🪱" },
+      { targetWord: "bug", statement: "Find a garden bug", words: ["Find", "a", "garden", "bug"], distractors: ["toy", "ball"], sentenceWithBlank: "Find a garden _______.", image: "assets/ep13_bug.png", emoji: "🐞" },
+      { targetWord: "tiny", statement: "They are tiny creatures", words: ["They", "are", "tiny", "creatures"], distractors: ["huge", "giant"], sentenceWithBlank: "They are _______ creatures.", image: "assets/ep13_tiny.png", emoji: "🔍" }
+    ]
+  },
+  ep14: {
+    title: "PP S2 E22: Daddy Pig's Office",
+    levels: [
+      { targetWord: "office", statement: "Visit Daddy Pig office", words: ["Visit", "Daddy", "Pig", "office"], distractors: ["house", "park"], sentenceWithBlank: "Visit Daddy Pig _______.", image: "assets/ep14_office.png", emoji: "🏢" },
+      { targetWord: "desk", statement: "Sit at the desk", words: ["Sit", "at", "the", "desk"], distractors: ["bed", "sofa"], sentenceWithBlank: "Sit at the _______.", image: "assets/ep14_desk.png", emoji: "🛋️" },
+      { targetWord: "stamp", statement: "Press with rubber stamp", words: ["Press", "with", "rubber", "stamp"], distractors: ["scissor", "glue"], sentenceWithBlank: "Press with rubber _______.", image: "assets/ep14_stamp.png", emoji: "⭐" },
+      { targetWord: "ink", statement: "Stamp in red ink", words: ["Stamp", "in", "red", "ink"], distractors: ["milk", "juice"], sentenceWithBlank: "Stamp in red _______.", image: "assets/ep14_ink.png", emoji: "🟦" },
+      { targetWord: "draw", statement: "Draw shapes with pens", words: ["Draw", "shapes", "with", "pens"], distractors: ["eat", "sleep"], sentenceWithBlank: "_______ shapes with pens.", image: "assets/ep14_draw.png", emoji: "🎨" },
+      { targetWord: "pen", statement: "Color with felt pen", words: ["Color", "with", "felt", "pen"], distractors: ["brush", "stick"], sentenceWithBlank: "Color with felt _______.", image: "assets/ep14_pen.png", emoji: "🖊️" },
+      { targetWord: "print", statement: "Print out the paper", words: ["Print", "out", "the", "paper"], distractors: ["hide", "break"], sentenceWithBlank: "_______ out the paper.", image: "assets/ep14_print.png", emoji: "🖨️" },
+      { targetWord: "copy", statement: "Make a paper copy", words: ["Make", "a", "paper", "copy"], distractors: ["mess", "tear"], sentenceWithBlank: "Make a paper _______.", image: "assets/ep14_copy.png", emoji: "📑" },
+      { targetWord: "work", statement: "Hard at work today", words: ["Hard", "at", "work", "today"], distractors: ["play", "rest"], sentenceWithBlank: "Hard at _______ today.", image: "assets/ep14_work.png", emoji: "💼" },
+      { targetWord: "job", statement: "What is your job", words: ["What", "is", "your", "job"], distractors: ["name", "game"], sentenceWithBlank: "What is your _______?", image: "assets/ep14_job.png", emoji: "👔" },
+      { targetWord: "pencil", statement: "Sharpen the red pencil", words: ["Sharpen", "the", "red", "pencil"], distractors: ["eraser", "ruler"], sentenceWithBlank: "Sharpen the red _______.", image: "assets/ep14_pencil.png", emoji: "✏️" },
+      { targetWord: "shape", statement: "Drawing a triangle shape", words: ["Drawing", "a", "triangle", "shape"], distractors: ["color", "letter"], sentenceWithBlank: "Drawing a triangle _______.", image: "assets/ep14_shape.png", emoji: "🔺" },
+      { targetWord: "press", statement: "Press the blue button", words: ["Press", "the", "blue", "button"], distractors: ["pull", "kick"], sentenceWithBlank: "_______ the blue button.", image: "assets/ep14_press.png", emoji: "🔘" },
+      { targetWord: "tall", statement: "Office in tall building", words: ["Office", "in", "tall", "building"], distractors: ["short", "tiny"], sentenceWithBlank: "Office in _______ building.", image: "assets/ep14_tall.png", emoji: "🏙️" },
+      { targetWord: "busy", statement: "Everyone is very busy", words: ["Everyone", "is", "very", "busy"], distractors: ["lazy", "asleep"], sentenceWithBlank: "Everyone is very _______.", image: "assets/ep14_busy.png", emoji: "⏰" }
+    ]
   }
 };
 
