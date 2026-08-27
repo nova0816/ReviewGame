@@ -1173,6 +1173,23 @@ const phonicsDataMap = {
   "press": { target: "ss", display: "p r e <span class='phonics-blank-slot'>_ _</span>", distractors: ["ff", "ll"] },
   "tall": { target: "all", display: "t <span class='phonics-blank-slot'>_ _ _</span>", distractors: ["oll", "ell"] },
   "busy": { target: "u", display: "b <span class='phonics-blank-slot'>_</span> s y", distractors: ["i", "e"] },
+
+  // Episode 15 (PP S2 E23: Pirate Island)
+  "island": { target: "is", display: "<span class='phonics-blank-slot'>_ _</span> l a n d", distractors: ["es", "as"] },
+  "pirate": { target: "ar", display: "p i <span class='phonics-blank-slot'>_ _</span> t e", distractors: ["er", "or"] },
+  "ship": { target: "sh", display: "<span class='phonics-blank-slot'>_ _</span> i p", distractors: ["ch", "th"] },
+  "captain": { target: "ai", display: "c a p t <span class='phonics-blank-slot'>_ _</span> n", distractors: ["ay", "ee"] },
+  "map": { target: "a", display: "m <span class='phonics-blank-slot'>_</span> p", distractors: ["e", "o"] },
+  "gold": { target: "old", display: "g <span class='phonics-blank-slot'>_ _ _</span>", distractors: ["old", "ild"] },
+  "chest": { target: "ch", display: "<span class='phonics-blank-slot'>_ _</span> e s t", distractors: ["sh", "th"] },
+  "spade": { target: "sp", display: "<span class='phonics-blank-slot'>_ _</span> a d e", distractors: ["st", "sw"] },
+  "sea": { target: "ea", display: "s <span class='phonics-blank-slot'>_ _</span>", distractors: ["ee", "oa"] },
+  "flag": { target: "fl", display: "<span class='phonics-blank-slot'>_ _</span> a g", distractors: ["pl", "cl"] },
+  "hat": { target: "a", display: "h <span class='phonics-blank-slot'>_</span> t", distractors: ["e", "o"] },
+  "spot": { target: "sp", display: "<span class='phonics-blank-slot'>_ _</span> o t", distractors: ["st", "sw"] },
+  "jelly": { target: "ll", display: "j e <span class='phonics-blank-slot'>_ _</span> y", distractors: ["ff", "ss"] },
+  "step": { target: "st", display: "<span class='phonics-blank-slot'>_ _</span> e p", distractors: ["sp", "sw"] },
+  "wave": { target: "a", display: "w <span class='phonics-blank-slot'>_</span> v e", distractors: ["o", "e"] }
 };
 
 function getPhonicsInfo(word) {

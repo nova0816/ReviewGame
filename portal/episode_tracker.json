@@ -1,5 +1,5 @@
 {
-  "current_published_count": 14,
+  "current_published_count": 15,
   "episodes": [
     {
       "episode_num": 1,
@@ -97,6 +97,13 @@
       "code_title": "PP S2 E22",
       "subtitle": "Daddy Pig's Office",
       "video_id": "oZVlkda3V4A",
+      "status": "published"
+    },
+    {
+      "episode_num": 15,
+      "code_title": "PP S2 E23",
+      "subtitle": "Pirate Island",
+      "video_id": "9DJGDPuIxl0",
       "status": "published"
     }
   ]
