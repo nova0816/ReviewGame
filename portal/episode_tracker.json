@@ -1,5 +1,5 @@
 {
-  "current_published_count": 15,
+  "current_published_count": 16,
   "episodes": [
     {
       "episode_num": 1,
@@ -104,6 +104,13 @@
       "code_title": "PP S2 E23",
       "subtitle": "Pirate Island",
       "video_id": "9DJGDPuIxl0",
+      "status": "published"
+    },
+    {
+      "episode_num": 16,
+      "code_title": "PP S2 E24",
+      "subtitle": "George Catches a Cold",
+      "video_id": "RieCntTdGSQ",
       "status": "published"
     }
   ]

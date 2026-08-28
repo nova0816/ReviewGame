@@ -941,6 +941,46 @@ const episodeData = {
       { targetWord: "tall", statement: "Office in tall building", words: ["Office", "in", "tall", "building"], distractors: ["short", "tiny"], sentenceWithBlank: "Office in _______ building.", image: "assets/ep14_tall.png", emoji: "🏙️" },
       { targetWord: "busy", statement: "Everyone is very busy", words: ["Everyone", "is", "very", "busy"], distractors: ["lazy", "asleep"], sentenceWithBlank: "Everyone is very _______.", image: "assets/ep14_busy.png", emoji: "⏰" }
     ]
+  },
+  ep15: {
+    title: "PP S2 E23: Pirate Island",
+    levels: [
+      { targetWord: "island", statement: "Sailing to Pirate island", words: ["Sailing", "to", "Pirate", "island"], distractors: ["park", "house"], sentenceWithBlank: "Sailing to Pirate _______.", image: "assets/ep15_island.png", emoji: "🏝️" },
+      { targetWord: "pirate", statement: "Grandpa Pig is a pirate", words: ["Grandpa", "Pig", "is", "a", "pirate"], distractors: ["doctor", "baker"], sentenceWithBlank: "Grandpa Pig is a _______.", image: "assets/ep15_pirate.png", emoji: "🏴‍☠️" },
+      { targetWord: "ship", statement: "All aboard pirate ship", words: ["All", "aboard", "pirate", "ship"], distractors: ["car", "bus"], sentenceWithBlank: "All aboard pirate _______.", image: "assets/ep15_ship.png", emoji: "⛵" },
+      { targetWord: "captain", statement: "Grandpa Pig is captain", words: ["Grandpa", "Pig", "is", "captain"], distractors: ["cook", "sailor"], sentenceWithBlank: "Grandpa Pig is _______.", image: "assets/ep15_captain.png", emoji: "⚓" },
+      { targetWord: "map", statement: "Follow the treasure map", words: ["Follow", "the", "treasure", "map"], distractors: ["book", "card"], sentenceWithBlank: "Follow the treasure _______.", image: "assets/ep15_map.png", emoji: "🗺️" },
+      { targetWord: "gold", statement: "Chest filled with gold", words: ["Chest", "filled", "with", "gold"], distractors: ["wood", "stone"], sentenceWithBlank: "Chest filled with _______.", image: "assets/ep15_gold.png", emoji: "🪙" },
+      { targetWord: "chest", statement: "Bury the treasure chest", words: ["Bury", "the", "treasure", "chest"], distractors: ["box", "bag"], sentenceWithBlank: "Bury the treasure _______.", image: "assets/ep15_chest.png", emoji: "🧰" },
+      { targetWord: "spade", statement: "Dig with sand spade", words: ["Dig", "with", "sand", "spade"], distractors: ["fork", "spoon"], sentenceWithBlank: "Dig with sand _______.", image: "assets/ep15_spade.png", emoji: "🏖️" },
+      { targetWord: "sea", statement: "Sail across blue sea", words: ["Sail", "across", "blue", "sea"], distractors: ["sky", "grass"], sentenceWithBlank: "Sail across blue _______.", image: "assets/ep15_sea.png", emoji: "🌊" },
+      { targetWord: "flag", statement: "Raise the pirate flag", words: ["Raise", "the", "pirate", "flag"], distractors: ["kite", "balloon"], sentenceWithBlank: "Raise the pirate _______.", image: "assets/ep15_flag.png", emoji: "🏴" },
+      { targetWord: "hat", statement: "Wear a pirate hat", words: ["Wear", "a", "pirate", "hat"], distractors: ["shoe", "coat"], sentenceWithBlank: "Wear a pirate _______.", image: "assets/ep15_hat.png", emoji: "🎩" },
+      { targetWord: "spot", statement: "X marks treasure spot", words: ["X", "marks", "treasure", "spot"], distractors: ["line", "tree"], sentenceWithBlank: "X marks treasure _______.", image: "assets/ep15_spot.png", emoji: "❌" },
+      { targetWord: "jelly", statement: "Yummy jelly in chest", words: ["Yummy", "jelly", "in", "chest"], distractors: ["bread", "soup"], sentenceWithBlank: "Yummy _______ in chest.", image: "assets/ep15_jelly.png", emoji: "🍮" },
+      { targetWord: "step", statement: "Count ten steps forward", words: ["Count", "ten", "steps", "forward"], distractors: ["jumps", "turns"], sentenceWithBlank: "Count ten _______ forward.", image: "assets/ep15_step.png", emoji: "👣" },
+      { targetWord: "wave", statement: "Riding over sea waves", words: ["Riding", "over", "sea", "waves"], distractors: ["clouds", "hills"], sentenceWithBlank: "Riding over sea _______.", image: "assets/ep15_wave.png", emoji: "🌊" }
+    ]
+  },
+  ep16: {
+    title: "PP S2 E24: George Catches a Cold",
+    levels: [
+      { targetWord: "cold", statement: "George caught a cold", words: ["George", "caught", "a", "cold"], distractors: ["fever", "cough"], sentenceWithBlank: "George caught a _______.", image: "assets/ep16_cold.png", emoji: "🤒" },
+      { targetWord: "rain", statement: "Playing in the rain", words: ["Playing", "in", "the", "rain"], distractors: ["snow", "sun"], sentenceWithBlank: "Playing in the _______.", image: "assets/ep16_rain.png", emoji: "🌧️" },
+      { targetWord: "doctor", statement: "Call for the doctor", words: ["Call", "for", "the", "doctor"], distractors: ["pilot", "driver"], sentenceWithBlank: "Call for the _______.", image: "assets/ep16_doctor.png", emoji: "👨‍⚕️" },
+      { targetWord: "medicine", statement: "Take your warm medicine", words: ["Take", "your", "warm", "medicine"], distractors: ["candy", "juice"], sentenceWithBlank: "Take your warm _______.", image: "assets/ep16_medicine.png", emoji: "🥄" },
+      { targetWord: "sick", statement: "Little George feels sick", words: ["Little", "George", "feels", "sick"], distractors: ["happy", "strong"], sentenceWithBlank: "Little George feels _______.", image: "assets/ep16_sick.png", emoji: "🛏️" },
+      { targetWord: "cough", statement: "Hear him cough softly", words: ["Hear", "him", "cough", "softly"], distractors: ["sing", "laugh"], sentenceWithBlank: "Hear him _______ softly.", image: "assets/ep16_cough.png", emoji: "😷" },
+      { targetWord: "rest", statement: "Get plenty of rest", words: ["Get", "plenty", "of", "rest"], distractors: ["work", "run"], sentenceWithBlank: "Get plenty of _______.", image: "assets/ep16_rest.png", emoji: "🌙" },
+      { targetWord: "throat", statement: "Doctor checks sore throat", words: ["Doctor", "checks", "sore", "throat"], distractors: ["nose", "ear"], sentenceWithBlank: "Doctor checks sore _______.", image: "assets/ep16_throat.png", emoji: "🧣" },
+      { targetWord: "tongue", statement: "Say ahh show tongue", words: ["Say", "ahh", "show", "tongue"], distractors: ["teeth", "lips"], sentenceWithBlank: "Say ahh show _______.", image: "assets/ep16_tongue.png", emoji: "👅" },
+      { targetWord: "stick", statement: "Doctor holds wooden stick", words: ["Doctor", "holds", "wooden", "stick"], distractors: ["spoon", "fork"], sentenceWithBlank: "Doctor holds wooden _______.", image: "assets/ep16_stick.png", emoji: "🪵" },
+      { targetWord: "milk", statement: "Drink a glass of milk", words: ["Drink", "a", "glass", "of", "milk"], distractors: ["soda", "tea"], sentenceWithBlank: "Drink a glass of _______.", image: "assets/ep16_milk.png", emoji: "🥛" },
+      { targetWord: "ill", statement: "George is feeling ill", words: ["George", "is", "feeling", "ill"], distractors: ["fine", "great"], sentenceWithBlank: "George is feeling _______.", image: "assets/ep16_ill.png", emoji: "🤒" },
+      { targetWord: "wear", statement: "Must wear your rain hat", words: ["Must", "wear", "your", "rain", "hat"], distractors: ["lose", "drop"], sentenceWithBlank: "Must _______ your rain hat.", image: "assets/ep16_wear.png", emoji: "👒" },
+      { targetWord: "sneeze", statement: "George makes a big sneeze", words: ["George", "makes", "a", "big", "sneeze"], distractors: ["smile", "shout"], sentenceWithBlank: "George makes a big _______.", image: "assets/ep16_sneeze.png", emoji: "🤧" },
+      { targetWord: "cover", statement: "Cover with warm blanket", words: ["Cover", "with", "warm", "blanket"], distractors: ["open", "wash"], sentenceWithBlank: "_______ with warm blanket.", image: "assets/ep16_cover.png", emoji: "🛌" }
+    ]
   }
 };
 
