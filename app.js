@@ -69,7 +69,7 @@ window.onLevelCardClick = function(index) {
 
 const episodeData = {
   ep1: {
-    title: "PP S2 E8: Autumn Wind",
+    title: "Episode 1: Autumn Breezes",
     levels: [
       {
         targetWord: "Autumn",
@@ -226,7 +226,7 @@ const episodeData = {
     ]
   },
   ep6: {
-    title: "PP S2 E13: Traffic Jam",
+    title: "Episode 6: City Traffic Jam",
     levels: [
       {
         targetWord: "traffic",
@@ -420,7 +420,7 @@ const episodeData = {
     ]
   },
   ep7: {
-    title: "PP S2 E14: Bedtime",
+    title: "Episode 7: Cozy Bedtime Routine",
     levels: [
       {
         targetWord: "bedtime",
@@ -578,7 +578,7 @@ const episodeData = {
     ]
   },
   ep8: {
-    title: "PP S2 E15: The Eye Test",
+    title: "Episode 8: The Eye Checkup",
     levels: [
       {
         targetWord: "glasses",
@@ -718,7 +718,7 @@ const episodeData = {
     ]
   },
   ep9: {
-    title: "PP S2 E17: Auto Garage",
+    title: "Episode 9: Auto Repair Garage",
     levels: [
       {
         targetWord: "garage",
@@ -843,7 +843,7 @@ const episodeData = {
     ]
   },
   ep10: {
-    title: "PP S2 E18: Foggy Day",
+    title: "Episode 10: Misty Foggy Day",
     levels: [
       { targetWord: "fog", statement: "It is a foggy day", words: ["It", "is", "a", "foggy", "day"], distractors: ["sunny", "rainy"], sentenceWithBlank: "It is a _______ day.", image: "assets/ep10_fog.png", emoji: "🌫️" },
       { targetWord: "thick", statement: "The fog is very thick", words: ["The", "fog", "is", "very", "thick"], distractors: ["thin", "clear"], sentenceWithBlank: "The fog is very _______.", image: "assets/ep10_thick.png", emoji: "☁️" },
@@ -863,7 +863,7 @@ const episodeData = {
     ]
   },
     ep11: {
-    title: "PP S2 E19: Jumble Sale",
+    title: "Episode 11: School Jumble Sale",
     levels: [
       { targetWord: "roof", statement: "We need a new roof", words: ["We", "need", "a", "new", "roof"], distractors: ["floor", "door"], sentenceWithBlank: "We need a new _______.", image: "assets/ep11_roof.png", emoji: "🏠" },
       { targetWord: "sale", statement: "Having a jumble sale today", words: ["Having", "a", "jumble", "sale", "today"], distractors: ["party", "concert"], sentenceWithBlank: "Having a jumble _______ today.", image: "assets/ep11_sale.png", emoji: "🛍️" },
@@ -883,7 +883,7 @@ const episodeData = {
     ]
   },
   ep12: {
-    title: "PP S2 E20: Swimming",
+    title: "Episode 12: Indoor Pool Fun",
     levels: [
       { targetWord: "swim", statement: "Peppa loves to swim", words: ["Peppa", "loves", "to", "swim"], distractors: ["run", "fly"], sentenceWithBlank: "Peppa loves to _______.", image: "assets/ep12_swim.png", emoji: "🏊" },
       { targetWord: "costume", statement: "Put on swimming costume", words: ["Put", "on", "swimming", "costume"], distractors: ["coat", "boots"], sentenceWithBlank: "Put on swimming _______.", image: "assets/ep12_costume.png", emoji: "🩱" },
@@ -903,7 +903,7 @@ const episodeData = {
     ]
   },
   ep13: {
-    title: "PP S2 E21: Tiny Creatures",
+    title: "Episode 13: Garden Tiny Friends",
     levels: [
       { targetWord: "snail", statement: "Look at the little snail", words: ["Look", "at", "the", "little", "snail"], distractors: ["frog", "duck"], sentenceWithBlank: "Look at the little _______.", image: "assets/ep13_snail.png", emoji: "🐌" },
       { targetWord: "bee", statement: "A busy buzzing bee", words: ["A", "busy", "buzzing", "bee"], distractors: ["bird", "cat"], sentenceWithBlank: "A busy buzzing _______.", image: "assets/ep13_bee.png", emoji: "🐝" },
@@ -923,7 +923,7 @@ const episodeData = {
     ]
   },
   ep14: {
-    title: "PP S2 E22: Daddy Pig's Office",
+    title: "Episode 14: Fun at the Office",
     levels: [
       { targetWord: "office", statement: "Visit Daddy Pig office", words: ["Visit", "Daddy", "Pig", "office"], distractors: ["house", "park"], sentenceWithBlank: "Visit Daddy Pig _______.", image: "assets/ep14_office.png", emoji: "🏢" },
       { targetWord: "desk", statement: "Sit at the desk", words: ["Sit", "at", "the", "desk"], distractors: ["bed", "sofa"], sentenceWithBlank: "Sit at the _______.", image: "assets/ep14_desk.png", emoji: "🛋️" },
@@ -943,7 +943,7 @@ const episodeData = {
     ]
   },
   ep15: {
-    title: "PP S2 E23: Pirate Island",
+    title: "Episode 15: Pirate Island Voyage",
     levels: [
       { targetWord: "island", statement: "Sailing to Pirate island", words: ["Sailing", "to", "Pirate", "island"], distractors: ["park", "house"], sentenceWithBlank: "Sailing to Pirate _______.", image: "assets/ep15_island.png", emoji: "🏝️" },
       { targetWord: "pirate", statement: "Grandpa Pig is a pirate", words: ["Grandpa", "Pig", "is", "a", "pirate"], distractors: ["doctor", "baker"], sentenceWithBlank: "Grandpa Pig is a _______.", image: "assets/ep15_pirate.png", emoji: "🏴‍☠️" },
@@ -963,7 +963,7 @@ const episodeData = {
     ]
   },
   ep16: {
-    title: "PP S2 E24: George Catches a Cold",
+    title: "Episode 16: Catching a Cold Day",
     levels: [
       { targetWord: "cold", statement: "George caught a cold", words: ["George", "caught", "a", "cold"], distractors: ["fever", "cough"], sentenceWithBlank: "George caught a _______.", image: "assets/ep16_cold.png", emoji: "🤒" },
       { targetWord: "rain", statement: "Playing in the rain", words: ["Playing", "in", "the", "rain"], distractors: ["snow", "sun"], sentenceWithBlank: "Playing in the _______.", image: "assets/ep16_rain.png", emoji: "🌧️" },
