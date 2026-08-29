@@ -88,9 +88,15 @@ Before revising game source code for an episode:
 
 ## ⚖️ Phase 6: Rebranding & Copyright Compliance
 
-- Use generic code titles (e.g. *PP S2 E8*, *PP S2 E9*, *PP S2 E10*).
-- Replace trademarked subtitles with generic descriptive titles (*Autumn Wind, Time Treasure, Tide Pools, Eco Clean*).
-- Ensure 0 occurrences of protected brand names exist in `.html`, `.js`, or `.css` files.
+1. **Copyright-Safe Episode Naming Mandate:**
+   - **NEVER** use exact trademarked show episode titles (e.g. avoid titles like *"Peppa Pig"*, *"George Catches a Cold"*, *"Daddy Pig's Office"*).
+   - Transform all episode titles and main menu cards into original, copyright-safe, descriptive titles (e.g., *"Catching a Cold Day"*, *"Fun at the Office"*, *"Pirate Island Voyage"*, *"Garden Tiny Friends"*, *"Indoor Pool Fun"*).
+2. **Code Titles & Subtitles:**
+   - Use generic code titles (e.g. *Episode 1*, *Episode 2*, *Episode 16*).
+   - Replace trademarked subtitles with generic descriptive adventure titles (*Autumn Wind, Time Treasure, Tide Pools, Eco Clean*).
+3. **Protected Brand Names Check:**
+   - Ensure 0 occurrences of protected brand names exist in `.html`, `.js`, or `.css` files.
+
 
 ---
 
