@@ -981,6 +981,26 @@ const episodeData = {
       { targetWord: "sneeze", statement: "George makes a big sneeze", words: ["George", "makes", "a", "big", "sneeze"], distractors: ["smile", "shout"], sentenceWithBlank: "George makes a big _______.", image: "assets/ep16_sneeze.png", emoji: "🤧" },
       { targetWord: "cover", statement: "Cover with warm blanket", words: ["Cover", "with", "warm", "blanket"], distractors: ["open", "wash"], sentenceWithBlank: "_______ with warm blanket.", image: "assets/ep16_cover.png", emoji: "🛌" }
     ]
+  },
+  ep17: {
+    title: "Episode 17: Hot Air Balloon Voyage",
+    levels: [
+      { targetWord: "balloon", statement: "Ride in hot air balloon", words: ["Ride", "in", "hot", "air", "balloon"], distractors: ["rocket", "plane"], sentenceWithBlank: "Ride in hot air _______.", image: "assets/ep17_balloon.png", emoji: "🎈" },
+      { targetWord: "basket", statement: "Climb into wicker basket", words: ["Climb", "into", "wicker", "basket"], distractors: ["box", "bag"], sentenceWithBlank: "Climb into wicker _______.", image: "assets/ep17_basket.png", emoji: "🧺" },
+      { targetWord: "sky", statement: "Float high into blue sky", words: ["Float", "high", "into", "blue", "sky"], distractors: ["water", "grass"], sentenceWithBlank: "Float high into blue _______.", image: "assets/ep17_sky.png", emoji: "🌤️" },
+      { targetWord: "high", statement: "Floating so high up", words: ["Floating", "so", "high", "up"], distractors: ["low", "down"], sentenceWithBlank: "Floating so _______ up.", image: "assets/ep17_high.png", emoji: "☁️" },
+      { targetWord: "tree", statement: "Look at green trees below", words: ["Look", "at", "green", "trees", "below"], distractors: ["rocks", "cars"], sentenceWithBlank: "Look at green _______ below.", image: "assets/ep17_tree.png", emoji: "🌳" },
+      { targetWord: "view", statement: "What a wonderful view", words: ["What", "a", "wonderful", "view"], distractors: ["sound", "noise"], sentenceWithBlank: "What a wonderful _______.", image: "assets/ep17_view.png", emoji: "🖼️" },
+      { targetWord: "above", statement: "Floating above the clouds", words: ["Floating", "above", "the", "clouds"], distractors: ["under", "inside"], sentenceWithBlank: "Floating _______ the clouds.", image: "assets/ep17_above.png", emoji: "☁️" },
+      { targetWord: "up", statement: "Going up into sky", words: ["Going", "up", "into", "sky"], distractors: ["down", "back"], sentenceWithBlank: "Going _______ into sky.", image: "assets/ep17_up.png", emoji: "⬆️" },
+      { targetWord: "rope", statement: "Untie the balloon rope", words: ["Untie", "the", "balloon", "rope"], distractors: ["string", "ribbon"], sentenceWithBlank: "Untie the balloon _______.", image: "assets/ep17_rope.png", emoji: "🪢" },
+      { targetWord: "flame", statement: "Hot air from the flame", words: ["Hot", "air", "from", "the", "flame"], distractors: ["water", "ice"], sentenceWithBlank: "Hot air from the _______.", image: "assets/ep17_flame.png", emoji: "🔥" },
+      { targetWord: "prize", statement: "Win a raffle prize", words: ["Win", "a", "raffle", "prize"], distractors: ["loss", "debt"], sentenceWithBlank: "Win a raffle _______.", image: "assets/ep17_prize.png", emoji: "🏆" },
+      { targetWord: "ticket", statement: "Hold winning ticket", words: ["Hold", "winning", "ticket"], distractors: ["paper", "card"], sentenceWithBlank: "Hold winning _______.", image: "assets/ep17_ticket.png", emoji: "🎟️" },
+      { targetWord: "down", statement: "Look down at houses", words: ["Look", "down", "at", "houses"], distractors: ["up", "ahead"], sentenceWithBlank: "Look _______ at houses.", image: "assets/ep17_down.png", emoji: "⬇️" },
+      { targetWord: "far", statement: "We can see very far", words: ["We", "can", "see", "very", "far"], distractors: ["near", "close"], sentenceWithBlank: "We can see very _______.", image: "assets/ep17_far.png", emoji: "🔭" },
+      { targetWord: "soft", statement: "A lovely soft landing", words: ["A", "lovely", "soft", "landing"], distractors: ["hard", "rough"], sentenceWithBlank: "A lovely _______ landing.", image: "assets/ep17_soft.png", emoji: "☁️" }
+    ]
   }
 };
 
