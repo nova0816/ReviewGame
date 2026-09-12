@@ -18,7 +18,7 @@ This Standard Operating Procedure (SOP) documents the complete, consolidated end
 ## 🔬 Phase 1: Video Transcript & CEFR A1/A2 Word Selection Rule
 
 ### 🎯 Mandatory Triple Verification Criteria for Every Episode:
-1. **Criterion 1 (Strict CEFR A1 / A2 Only):** Every selected target word MUST be classified as CEFR A1 Starter or A2 Elementary in the Cambridge English Vocabulary Profile for 7-year-old ESL learners. No high-level or obscure words allowed.
+1. **Criterion 1 (CEFR A1 / A2 Priority with Max 2 B1 Fallback):** Selected target words MUST be classified as CEFR A1 Starter or A2 Elementary in the Cambridge English Vocabulary Profile for 7-year-old ESL learners. If insufficient unique A1/A2 words remain in the episode transcript, at most **2 B1 words** may be selected per episode.
 2. **Criterion 2 (100% Authentic Episode Transcript):** Every selected word MUST be directly spoken by characters in the video episode dialogue.
 3. **Criterion 3 (100% Zero Duplicates Across Game):** Every selected word MUST be audited against `global_vocabulary_registry.md` to ensure zero duplicates across all episodes.
 
@@ -26,10 +26,10 @@ This Standard Operating Procedure (SOP) documents the complete, consolidated end
 To ensure words are 100% authentic to the video episode while remaining age-appropriate for a 7-year-old ESL student:
 
 1. **Transcript Fetching:** Download episode transcripts using `youtube-transcript-api` in Python.
-2. **Strict A1/A2 Selection (No Word Replacements):**
-   - Filter the transcript words to identify those belonging to **CEFR A1** (Top 1,000 words) and **CEFR A2** (Top 2,500 words).
-   - **CRITICAL RULE:** Pick 15 target words **directly spoken in the episode** that pass the CEFR A1/A2 filter.
-   - **Automatic Rejection:** Ignore any B1, B2, C1, C2 words spoken in the video episode during word selection.
+2. **CEFR A1/A2 Selection (With Max 2 B1 Fallback):**
+   - Filter transcript words to identify those belonging to **CEFR A1** and **CEFR A2**.
+   - **CRITICAL RULE:** Pick 15 target words **directly spoken in the episode**. Prioritize A1/A2 words; if unavailable/exhausted, allow at most **2 B1 words** per episode.
+   - **Automatic Rejection:** Ignore B2, C1, C2 words spoken in the video episode during word selection.
 3. **Curate 15 Target Vocabulary Items:**
    - Target Word (CEFR A1/A2 directly from show)
    - Full Sentence Statement (authentic to show)

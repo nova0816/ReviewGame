@@ -1,5 +1,5 @@
 {
-  "current_published_count": 17,
+  "current_published_count": 18,
   "episodes": [
     {
       "episode_num": 1,
@@ -118,6 +118,13 @@
       "code_title": "Episode 17",
       "subtitle": "Hot Air Balloon Voyage",
       "video_id": "NfJncP5JF5o",
+      "status": "published"
+    },
+    {
+      "episode_num": 18,
+      "code_title": "Episode 18",
+      "subtitle": "Little Brother's Birthday Party",
+      "video_id": "Mcq7TDBPWj0",
       "status": "published"
     }
   ]

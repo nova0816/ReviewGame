@@ -1001,6 +1001,26 @@ const episodeData = {
       { targetWord: "far", statement: "We can see very far", words: ["We", "can", "see", "very", "far"], distractors: ["near", "close"], sentenceWithBlank: "We can see very _______.", image: "assets/ep17_far.png", emoji: "🔭" },
       { targetWord: "soft", statement: "A lovely soft landing", words: ["A", "lovely", "soft", "landing"], distractors: ["hard", "rough"], sentenceWithBlank: "A lovely _______ landing.", image: "assets/ep17_soft.png", emoji: "☁️" }
     ]
+  },
+  ep18: {
+    title: "Episode 18: Little Brother's Birthday Party",
+    levels: [
+      { targetWord: "birthday", statement: "Happy birthday to you", words: ["Happy", "birthday", "to", "you"], distractors: ["holiday", "morning"], sentenceWithBlank: "Happy _______ to you.", image: "assets/ep18_birthday.png", emoji: "🎂" },
+      { targetWord: "party", statement: "Welcome to the party", words: ["Welcome", "to", "the", "party"], distractors: ["school", "office"], sentenceWithBlank: "Welcome to the _______.", image: "assets/ep18_party.png", emoji: "🎉" },
+      { targetWord: "present", statement: "Open your birthday present", words: ["Open", "your", "birthday", "present"], distractors: ["book", "letter"], sentenceWithBlank: "Open your birthday _______.", image: "assets/ep18_present.png", emoji: "🎁" },
+      { targetWord: "cake", statement: "A big chocolate cake", words: ["A", "big", "chocolate", "cake"], distractors: ["bread", "soup"], sentenceWithBlank: "A big chocolate _______.", image: "assets/ep18_cake.png", emoji: "🍰" },
+      { targetWord: "candle", statement: "Blow out the candles", words: ["Blow", "out", "the", "candles"], distractors: ["lights", "lamps"], sentenceWithBlank: "Blow out the _______.", image: "assets/ep18_candle.png", emoji: "🕯️" },
+      { targetWord: "dinosaur", statement: "A green toy dinosaur", words: ["A", "green", "toy", "dinosaur"], distractors: ["bear", "duck"], sentenceWithBlank: "A green toy _______.", image: "assets/ep18_dinosaur.png", emoji: "🦖" },
+      { targetWord: "sing", statement: "Let us sing happy birthday", words: ["Let", "us", "sing", "happy", "birthday"], distractors: ["read", "talk"], sentenceWithBlank: "Let us _______ happy birthday.", image: "assets/ep18_sing.png", emoji: "🎤" },
+      { targetWord: "card", statement: "Open your birthday card", words: ["Open", "your", "birthday", "card"], distractors: ["map", "page"], sentenceWithBlank: "Open your birthday _______.", image: "assets/ep18_card.png", emoji: "💌" },
+      { targetWord: "game", statement: "Play fun party games", words: ["Play", "fun", "party", "games"], distractors: ["work", "test"], sentenceWithBlank: "Play fun party _______.", image: "assets/ep18_game.png", emoji: "🎈" },
+      { targetWord: "song", statement: "Sing a party song", words: ["Sing", "a", "party", "song"], distractors: ["story", "rhyme"], sentenceWithBlank: "Sing a party _______.", image: "assets/ep18_song.png", emoji: "🎵" },
+      { targetWord: "ribbon", statement: "Tie a red ribbon", words: ["Tie", "a", "red", "ribbon"], distractors: ["string", "rope"], sentenceWithBlank: "Tie a red _______.", image: "assets/ep18_ribbon.png", emoji: "🎀" },
+      { targetWord: "crown", statement: "Wear a party crown", words: ["Wear", "a", "party", "crown"], distractors: ["hat", "cap"], sentenceWithBlank: "Wear a party _______.", image: "assets/ep18_crown.png", emoji: "👑" },
+      { targetWord: "fun", statement: "Having so much fun", words: ["Having", "so", "much", "fun"], distractors: ["sadness", "work"], sentenceWithBlank: "Having so much _______.", image: "assets/ep18_fun.png", emoji: "🥳" },
+      { targetWord: "surprise", statement: "A lovely birthday surprise", words: ["A", "lovely", "birthday", "surprise"], distractors: ["secret", "mistake"], sentenceWithBlank: "A lovely birthday _______.", image: "assets/ep18_surprise.png", emoji: "🎁" },
+      { targetWord: "cheer", statement: "Everyone gives a big cheer", words: ["Everyone", "gives", "a", "big", "cheer"], distractors: ["shout", "cry"], sentenceWithBlank: "Everyone gives a big _______.", image: "assets/ep18_cheer.png", emoji: "📣" }
+    ]
   }
 };
 
