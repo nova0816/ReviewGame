@@ -1021,6 +1021,26 @@ const episodeData = {
       { targetWord: "surprise", statement: "A lovely birthday surprise", words: ["A", "lovely", "birthday", "surprise"], distractors: ["secret", "mistake"], sentenceWithBlank: "A lovely birthday _______.", image: "assets/ep18_surprise.png", emoji: "🎁" },
       { targetWord: "cheer", statement: "Everyone gives a big cheer", words: ["Everyone", "gives", "a", "big", "cheer"], distractors: ["shout", "cry"], sentenceWithBlank: "Everyone gives a big _______.", image: "assets/ep18_cheer.png", emoji: "📣" }
     ]
+  },
+  ep19: {
+    title: "Episode 19: Meadow Grass Adventure",
+    levels: [
+      { targetWord: "grass", statement: "The long green grass", words: ["The", "long", "green", "grass"], distractors: ["mud", "water"], sentenceWithBlank: "The long green _______.", image: "assets/ep19_grass.png", emoji: "🌿" },
+      { targetWord: "lawn", statement: "Cut the garden lawn", words: ["Cut", "the", "garden", "lawn"], distractors: ["roof", "floor"], sentenceWithBlank: "Cut the garden _______.", image: "assets/ep19_lawn.png", emoji: "🏡" },
+      { targetWord: "mower", statement: "Push the lawn mower", words: ["Push", "the", "lawn", "mower"], distractors: ["tractor", "bike"], sentenceWithBlank: "Push the lawn _______.", image: "assets/ep19_mower.png", emoji: "🚜" },
+      { targetWord: "cut", statement: "Time to cut the grass", words: ["Time", "to", "cut", "the", "grass"], distractors: ["grow", "plant"], sentenceWithBlank: "Time to _______ the grass.", image: "assets/ep19_cut.png", emoji: "✂️" },
+      { targetWord: "ball", statement: "Where is the lost ball", words: ["Where", "is", "the", "lost", "ball"], distractors: ["box", "toy"], sentenceWithBlank: "Where is the lost _______?", image: "assets/ep19_ball.png", emoji: "⚽" },
+      { targetWord: "blade", statement: "Tall blades of grass", words: ["Tall", "blades", "of", "grass"], distractors: ["stems", "roots"], sentenceWithBlank: "Tall _______ of grass.", image: "assets/ep19_blade.png", emoji: "🌱" },
+      { targetWord: "short", statement: "Trim the grass short", words: ["Trim", "the", "grass", "short"], distractors: ["long", "high"], sentenceWithBlank: "Trim the grass _______.", image: "assets/ep19_short.png", emoji: "📐" },
+      { targetWord: "neat", statement: "The garden looks neat", words: ["The", "garden", "looks", "neat"], distractors: ["messy", "dirty"], sentenceWithBlank: "The garden looks _______.", image: "assets/ep19_neat.png", emoji: "✨" },
+      { targetWord: "noise", statement: "Loud mower noise", words: ["Loud", "mower", "noise"], distractors: ["silence", "music"], sentenceWithBlank: "Loud mower _______.", image: "assets/ep19_noise.png", emoji: "🔊" },
+      { targetWord: "run", statement: "Run through the meadow", words: ["Run", "through", "the", "meadow"], distractors: ["walk", "sleep"], sentenceWithBlank: "_______ through the meadow.", image: "assets/ep19_run.png", emoji: "🏃" },
+      { targetWord: "seek", statement: "Play hide and seek", words: ["Play", "hide", "and", "seek"], distractors: ["find", "look"], sentenceWithBlank: "Play hide and _______.", image: "assets/ep19_seek.png", emoji: "🙈" },
+      { targetWord: "yard", statement: "Clean the front yard", words: ["Clean", "the", "front", "yard"], distractors: ["house", "room"], sentenceWithBlank: "Clean the front _______.", image: "assets/ep19_yard.png", emoji: "🏠" },
+      { targetWord: "search", statement: "Search for the lost ball", words: ["Search", "for", "the", "lost", "ball"], distractors: ["forget", "hide"], sentenceWithBlank: "_______ for the lost ball.", image: "assets/ep19_search.png", emoji: "🔍" },
+      { targetWord: "field", statement: "A big grassy field", words: ["A", "big", "grassy", "field"], distractors: ["forest", "desert"], sentenceWithBlank: "A big grassy _______.", image: "assets/ep19_field.png", emoji: "🏞️" },
+      { targetWord: "clover", statement: "Patches of wild clover", words: ["Patches", "of", "wild", "clover"], distractors: ["weeds", "moss"], sentenceWithBlank: "Patches of wild _______.", image: "assets/ep19_clover.png", emoji: "🍀" }
+    ]
   }
 };
 

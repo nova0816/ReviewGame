@@ -1,5 +1,5 @@
 {
-  "current_published_count": 18,
+  "current_published_count": 19,
   "episodes": [
     {
       "episode_num": 1,
@@ -125,6 +125,13 @@
       "code_title": "Episode 18",
       "subtitle": "Little Brother's Birthday Party",
       "video_id": "Mcq7TDBPWj0",
+      "status": "published"
+    },
+    {
+      "episode_num": 19,
+      "code_title": "Episode 19",
+      "subtitle": "Meadow Grass Adventure",
+      "video_id": "8ee6wKEKTuY",
       "status": "published"
     }
   ]
