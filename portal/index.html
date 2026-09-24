@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=47.1.0">
+  <link rel="stylesheet" href="style.css?v=48.0.0">
 </head>
 <body>
   <!-- Background autumn leaf decorations -->
@@ -210,10 +210,29 @@
           <span class="episode-card-title">Episode 19</span>
           <span class="episode-card-desc">Meadow Grass Adventure</span>
         </button>
+              <!-- Active Episode 20 -->
+        <button class="episode-card active" id="episodeCard20" onclick="onEpisodeCardClick('ep20')" aria-label="Play Episode 20: Friendly Postman Mail">
+          <div class="episode-image-container">
+            <img src="assets/ep20_postman.png" alt="Friendly Postman Mail illustration" class="episode-card-img">
+          </div>
+          <span class="episode-card-badge">Active 🟢</span>
+          <span class="episode-card-title">Episode 20</span>
+          <span class="episode-card-desc">Friendly Postman Mail</span>
+        </button>
+
+        <!-- Active Episode 21 -->
+        <button class="episode-card active" id="episodeCard21" onclick="onEpisodeCardClick('ep21')" aria-label="Play Episode 21: Art Painting Fun">
+          <div class="episode-image-container">
+            <img src="assets/ep21_paint.png" alt="Art Painting Fun illustration" class="episode-card-img">
+          </div>
+          <span class="episode-card-badge">Active 🟢</span>
+          <span class="episode-card-title">Episode 21</span>
+          <span class="episode-card-desc">Art Painting Fun</span>
+        </button>
       </div>
 
       <div class="start-footer">
-        <span class="version-tag">v47.1.0</span>
+        <span class="version-tag">v48.0.0</span>
       </div>
     </div>
   </div>
@@ -455,6 +474,6 @@
   <!-- Canvas for Confetti -->
   <canvas id="confettiCanvas" class="confetti-canvas"></canvas>
 
-  <script src="app.js?v=47.1.0"></script>
+  <script src="app.js?v=48.0.0"></script>
 </body>
 </html>

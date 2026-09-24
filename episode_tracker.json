@@ -1,5 +1,5 @@
 {
-  "current_published_count": 19,
+  "current_published_count": 21,
   "episodes": [
     {
       "episode_num": 1,
@@ -132,6 +132,20 @@
       "code_title": "Episode 19",
       "subtitle": "Meadow Grass Adventure",
       "video_id": "8ee6wKEKTuY",
+      "status": "published"
+    },
+    {
+      "episode_num": 20,
+      "code_title": "Episode 20",
+      "subtitle": "Friendly Postman Mail",
+      "video_id": "Zo\u00ebZebra",
+      "status": "published"
+    },
+    {
+      "episode_num": 21,
+      "code_title": "Episode 21",
+      "subtitle": "Art Painting Fun",
+      "video_id": "Painting",
       "status": "published"
     }
   ]

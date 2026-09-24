@@ -1041,6 +1041,46 @@ const episodeData = {
       { targetWord: "field", statement: "A big grassy field", words: ["A", "big", "grassy", "field"], distractors: ["forest", "desert"], sentenceWithBlank: "A big grassy _______.", image: "assets/ep19_field.png", emoji: "🏞️" },
       { targetWord: "clover", statement: "Patches of wild clover", words: ["Patches", "of", "wild", "clover"], distractors: ["weeds", "moss"], sentenceWithBlank: "Patches of wild _______.", image: "assets/ep19_clover.png", emoji: "🍀" }
     ]
+  },
+  ep20: {
+    title: "Episode 20: Friendly Postman Mail",
+    levels: [
+      { targetWord: "postman", statement: "Friendly postman delivers mail", words: ["Friendly", "postman", "delivers", "mail"], distractors: ["baker", "pilot"], sentenceWithBlank: "Friendly _______ delivers mail.", image: "assets/ep20_postman.png", emoji: "📫" },
+      { targetWord: "letter", statement: "Send a birthday letter", words: ["Send", "a", "birthday", "letter"], distractors: ["book", "card"], sentenceWithBlank: "Send a birthday _______.", image: "assets/ep20_letter.png", emoji: "✉️" },
+      { targetWord: "envelope", statement: "Card inside an envelope", words: ["Card", "inside", "an", "envelope"], distractors: ["box", "bag"], sentenceWithBlank: "Card inside an _______.", image: "assets/ep20_envelope.png", emoji: "📨" },
+      { targetWord: "mail", statement: "Deliver morning mail", words: ["Deliver", "the", "morning", "mail"], distractors: ["food", "milk"], sentenceWithBlank: "Deliver the morning _______.", image: "assets/ep20_mail.png", emoji: "📬" },
+      { targetWord: "post", statement: "Drop into post box", words: ["Drop", "into", "the", "post", "box"], distractors: ["trash", "basket"], sentenceWithBlank: "Drop into the _______ box.", image: "assets/ep20_post.png", emoji: "📮" },
+      { targetWord: "bag", statement: "Heavy postman mail bag", words: ["Heavy", "postman", "mail", "bag"], distractors: ["hat", "coat"], sentenceWithBlank: "Heavy postman mail _______.", image: "assets/ep20_bag.png", emoji: "💼" },
+      { targetWord: "deliver", statement: "Deliver letters to houses", words: ["Deliver", "letters", "to", "houses"], distractors: ["throw", "keep"], sentenceWithBlank: "_______ letters to houses.", image: "assets/ep20_deliver.png", emoji: "🚶‍♂️" },
+      { targetWord: "invite", statement: "Party invite in envelope", words: ["Party", "invite", "in", "envelope"], distractors: ["bill", "ticket"], sentenceWithBlank: "Party _______ in envelope.", image: "assets/ep20_invite.png", emoji: "💌" },
+      { targetWord: "ring", statement: "Ring the front doorbell", words: ["Ring", "the", "front", "doorbell"], distractors: ["knock", "push"], sentenceWithBlank: "_______ the front doorbell.", image: "assets/ep20_ring.png", emoji: "🔔" },
+      { targetWord: "bell", statement: "Hear the door bell", words: ["Hear", "the", "door", "bell"], distractors: ["horn", "drum"], sentenceWithBlank: "Hear the door _______.", image: "assets/ep20_bell.png", emoji: "🛎️" },
+      { targetWord: "door", statement: "Open the front door", words: ["Open", "the", "front", "door"], distractors: ["window", "gate"], sentenceWithBlank: "Open the front _______.", image: "assets/ep20_door.png", emoji: "🚪" },
+      { targetWord: "street", statement: "Walk down town street", words: ["Walk", "down", "town", "street"], distractors: ["river", "park"], sentenceWithBlank: "Walk down town _______.", image: "assets/ep20_street.png", emoji: "🛣️" },
+      { targetWord: "van", statement: "Drive blue mail van", words: ["Drive", "blue", "mail", "van"], distractors: ["boat", "car"], sentenceWithBlank: "Drive blue mail _______.", image: "assets/ep20_van.png", emoji: "🚐" },
+      { targetWord: "pack", statement: "Pack letters neatly", words: ["Pack", "the", "letters", "neatly"], distractors: ["drop", "lose"], sentenceWithBlank: "_______ the letters neatly.", image: "assets/ep20_pack.png", emoji: "📦" },
+      { targetWord: "message", statement: "Read special party message", words: ["Read", "special", "party", "message"], distractors: ["song", "riddle"], sentenceWithBlank: "Read special party _______.", image: "assets/ep20_message.png", emoji: "📜" }
+    ]
+  },
+  ep21: {
+    title: "Episode 21: Art Painting Fun",
+    levels: [
+      { targetWord: "paint", statement: "Mix colorful bright paint", words: ["Mix", "colorful", "bright", "paint"], distractors: ["water", "ink"], sentenceWithBlank: "Mix colorful bright _______.", image: "assets/ep21_paint.png", emoji: "🎨" },
+      { targetWord: "picture", statement: "Paint a pretty picture", words: ["Paint", "a", "pretty", "picture"], distractors: ["statue", "poster"], sentenceWithBlank: "Paint a pretty _______.", image: "assets/ep21_picture.png", emoji: "🖼️" },
+      { targetWord: "color", statement: "Choose your favorite color", words: ["Choose", "your", "favorite", "color"], distractors: ["shape", "size"], sentenceWithBlank: "Choose your favorite _______.", image: "assets/ep21_color.png", emoji: "🖍️" },
+      { targetWord: "art", statement: "Fun in preschool art class", words: ["Fun", "in", "preschool", "art", "class"], distractors: ["math", "gym"], sentenceWithBlank: "Fun in preschool _______ class.", image: "assets/ep21_art.png", emoji: "🎭" },
+      { targetWord: "easel", statement: "Paper on wooden easel", words: ["Paper", "on", "wooden", "easel"], distractors: ["desk", "shelf"], sentenceWithBlank: "Paper on wooden _______.", image: "assets/ep21_easel.png", emoji: "🖌️" },
+      { targetWord: "mix", statement: "Mix red and yellow paint", words: ["Mix", "red", "and", "yellow"], distractors: ["separate", "pour"], sentenceWithBlank: "_______ red and yellow paint.", image: "assets/ep21_mix.png", emoji: "🧪" },
+      { targetWord: "dip", statement: "Dip brush into paint", words: ["Dip", "the", "brush", "into"], distractors: ["wipe", "wash"], sentenceWithBlank: "_______ brush into paint.", image: "assets/ep21_dip.png", emoji: "🖌️" },
+      { targetWord: "wall", statement: "Hang pictures on wall", words: ["Hang", "pictures", "on", "wall"], distractors: ["floor", "door"], sentenceWithBlank: "Hang pictures on _______.", image: "assets/ep21_wall.png", emoji: "🧱" },
+      { targetWord: "handprint", statement: "Make a bright handprint", words: ["Make", "a", "bright", "handprint"], distractors: ["footprint", "stamp"], sentenceWithBlank: "Make a bright _______.", image: "assets/ep21_handprint.png", emoji: "🖐️" },
+      { targetWord: "circle", statement: "Paint a big circle", words: ["Paint", "a", "big", "circle"], distractors: ["square", "star"], sentenceWithBlank: "Paint a big _______.", image: "assets/ep21_circle.png", emoji: "⭕" },
+      { targetWord: "stripe", statement: "Add a yellow stripe", words: ["Add", "a", "yellow", "stripe"], distractors: ["dot", "cross"], sentenceWithBlank: "Add a yellow _______.", image: "assets/ep21_stripe.png", emoji: "🎗️" },
+      { targetWord: "apron", statement: "Wear an art apron", words: ["Wear", "an", "art", "apron"], distractors: ["coat", "shirt"], sentenceWithBlank: "Wear an art _______.", image: "assets/ep21_apron.png", emoji: "🦺" },
+      { targetWord: "dry", statement: "Wait for paint to dry", words: ["Wait", "for", "paint", "to", "dry"], distractors: ["wet", "run"], sentenceWithBlank: "Wait for paint to _______.", image: "assets/ep21_dry.png", emoji: "☀️" },
+      { targetWord: "bright", statement: "Paint with bright colors", words: ["Paint", "with", "bright", "colors"], distractors: ["dark", "dull"], sentenceWithBlank: "Paint with _______ colors.", image: "assets/ep21_bright.png", emoji: "✨" },
+      { targetWord: "create", statement: "Create a beautiful artwork", words: ["Create", "a", "beautiful", "artwork"], distractors: ["destroy", "break"], sentenceWithBlank: "_______ a beautiful artwork.", image: "assets/ep21_create.png", emoji: "🌟" }
+    ]
   }
 };
 
