@@ -18,17 +18,19 @@ This Standard Operating Procedure (SOP) documents the complete, consolidated end
 ## 🔬 Phase 1: Video Transcript & CEFR A1/A2 Word Selection Rule
 
 ### 🎯 Mandatory Triple Verification Criteria for Every Episode:
-1. **Criterion 1 (CEFR A1 / A2 Priority with Max 2 B1 Fallback):** Selected target words MUST be classified as CEFR A1 Starter or A2 Elementary in the Cambridge English Vocabulary Profile for 7-year-old ESL learners. If insufficient unique A1/A2 words remain in the episode transcript, at most **2 B1 words** may be selected per episode.
-2. **Criterion 2 (100% Authentic Episode Transcript):** Every selected word MUST be directly spoken by characters in the video episode dialogue.
-3. **Criterion 3 (100% Zero Duplicates Across Game):** Every selected word MUST be audited against `global_vocabulary_registry.md` to ensure zero duplicates across all episodes.
+1. **Criterion 1 (CEFR A1 / A2 Priority with Max 2 B1 Fallback):** Selected target words MUST be classified as CEFR A1 Starter or A2 Elementary in the Cambridge English Vocabulary Profile for 7-year-old ESL learners. If insufficient unique A1/A2 words remain in the episode transcript, at most **2 B1 words** may be selected per episode. No B2/C1/C2 words allowed.
+2. **Criterion 2 (100% Authentic Episode Transcript Verification):** Every selected target word MUST be verified directly against the official video episode dialogue transcript.
+3. **Criterion 3 (Zero Duplicates Priority with Max 3 Reused Spoken Word Fallback):** Selected target words MUST be audited against `global_vocabulary_registry.md`. If all unique A1/A2/B1 words in the episode transcript are exhausted, at most **3 words** previously used in earlier episodes may be selected from the transcript to preserve 100% transcript authenticity.
 
 
 To ensure words are 100% authentic to the video episode while remaining age-appropriate for a 7-year-old ESL student:
 
 1. **Transcript Fetching:** Download episode transcripts using `youtube-transcript-api` in Python.
-2. **CEFR A1/A2 Selection (With Max 2 B1 Fallback):**
+2. **CEFR A1/A2 Selection (With Max 2 B1 Fallback & Reused Spoken Word Cap):**
    - Filter transcript words to identify those belonging to **CEFR A1** and **CEFR A2**.
    - **CRITICAL RULE:** Pick 15 target words **directly spoken in the episode**. Prioritize A1/A2 words; if unavailable/exhausted, allow at most **2 B1 words** per episode.
+   - **100% Transcript Verification:** Verify that 100% of selected target words are directly spoken in the episode dialogue transcript.
+   - **Zero Duplicates & Fallback Limit:** Check against `global_vocabulary_registry.md`. If unique transcript words are exhausted, up to **3 words** from earlier episodes are permitted (must still be directly spoken in the transcript).
    - **Automatic Rejection:** Ignore B2, C1, C2 words spoken in the video episode during word selection.
 3. **Curate 15 Target Vocabulary Items:**
    - Target Word (CEFR A1/A2 directly from show)
