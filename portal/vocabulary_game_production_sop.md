@@ -53,12 +53,14 @@ Evaluate all 15 curated A1/A2 words using the **3-Tier Psycholinguistic Concrete
 
 ---
 
-## 🎨 Phase 3: 100% Unique 3D Pixar Cartoon Rule (Zero Image Reuse)
+56: ## 🎨 Phase 3: 100% Unique 3D Pixar Cartoon Rule (Zero Image Reuse)
+57: 
+58: **CRITICAL QUALITY MANDATE:**
+59: 1. **Zero Image Reuse:** **NEVER reuse an image across multiple levels or episodes.** Every single target word across every episode must have its OWN unique, 100% dedicated, highly accurate image. Saving API quota by reusing images is **STRICTLY PROHIBITED**.
+60: 2. **Visual Accuracy & Story Context:** Every image prompt must accurately reflect the target word within its **full sentence statement** and **video episode storyline context**.
+61: 3. **Format:** Use **100% 3D Pixar/Disney style PNG cartoon illustrations** or multi-panel comics for abstract concepts.
+62: 4. **Context-Driven Visual Alignment (No Out-of-Context Gadgets):** NEVER visually illustrate words out of context with unrelated literal objects/gadgets (e.g. for `control` in *"Garden out of control"*, NEVER render a remote control gadget; render an overgrown wild garden taking over paths. For `rusty` in *"A bit old and rusty mower"*, render a rusty lawn mower, not a key).
 
-**CRITICAL QUALITY MANDATE:**
-1. **Zero Image Reuse:** **NEVER reuse an image across multiple levels or episodes.** Every single target word across every episode must have its OWN unique, 100% dedicated, highly accurate image. Saving API quota by reusing images is **STRICTLY PROHIBITED**.
-2. **Visual Accuracy:** Every image prompt must accurately reflect the specific target word and sentence context.
-3. **Format:** Use **100% 3D Pixar/Disney style PNG cartoon illustrations** or multi-panel comics for abstract concepts.
 
 ---
 
