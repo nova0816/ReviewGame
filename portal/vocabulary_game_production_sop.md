@@ -32,6 +32,7 @@ To ensure words are 100% authentic to the video episode while remaining age-appr
    - **100% Transcript Verification:** Verify that 100% of selected target words are directly spoken in the episode dialogue transcript.
    - **Zero Duplicates & Fallback Limit:** Check against `global_vocabulary_registry.md`. If unique transcript words are exhausted, up to **3 words** from earlier episodes are permitted (must still be directly spoken in the transcript).
    - **Automatic Rejection:** Ignore B2, C1, C2 words spoken in the video episode during word selection.
+   - **Natural Target Phrase Mandate:** When a target concept forms a multi-word phrasal verb, compound idiom, or fixed collocation where a single word distorts story meaning (e.g., `out of control` instead of `control`, `post box` instead of `post`, `wind up` instead of `wind`, `pop out` instead of `pop`), select the **complete natural phrase** (`out of control`, `wind up`, `pop out`, `post box`).
 3. **Curate 15 Target Vocabulary Items:**
    - Target Word (CEFR A1/A2 directly from show)
    - Full Sentence Statement (authentic to show)

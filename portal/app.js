@@ -1039,7 +1039,7 @@ const episodeData = {
       { targetWord: "motor", statement: "Grandpa drives motor mower", words: ["Grandpa", "drives", "motor", "mower"], distractors: ["cart", "sled"], sentenceWithBlank: "Grandpa drives _______ mower.", image: "assets/ep19_motor.png", emoji: "🚜" },
       { targetWord: "catch", statement: "Catch the spotty ball", words: ["Catch", "the", "spotty", "ball"], distractors: ["kick", "drop"], sentenceWithBlank: "_______ the spotty ball.", image: "assets/ep19_catch.png", emoji: "🙌" },
       { targetWord: "found", statement: "Found the old mower", words: ["Found", "the", "old", "mower"], distractors: ["lost", "hid"], sentenceWithBlank: "_______ the old mower.", image: "assets/ep19_found.png", emoji: "🔍" },
-      { targetWord: "control", statement: "Garden out of control", words: ["Garden", "out", "of", "control"], distractors: ["order", "shape"], sentenceWithBlank: "Garden out of _______.", image: "assets/ep19_control.png", emoji: "🌿" }
+      { targetWord: "out of control", statement: "Garden out of control", words: ["Garden", "out", "of", "control"], distractors: ["in order", "tidy"], sentenceWithBlank: "Garden _______.", image: "assets/ep19_control.png", emoji: "🌿" }
     ]
   },
   ep20: {
@@ -1049,12 +1049,12 @@ const episodeData = {
       { targetWord: "letter", statement: "Send a birthday letter", words: ["Send", "a", "birthday", "letter"], distractors: ["book", "card"], sentenceWithBlank: "Send a birthday _______.", image: "assets/ep20_letter.png", emoji: "✉️" },
       { targetWord: "envelope", statement: "Card inside an envelope", words: ["Card", "inside", "an", "envelope"], distractors: ["box", "bag"], sentenceWithBlank: "Card inside an _______.", image: "assets/ep20_envelope.png", emoji: "📨" },
       { targetWord: "mail", statement: "Deliver morning mail", words: ["Deliver", "the", "morning", "mail"], distractors: ["food", "milk"], sentenceWithBlank: "Deliver the morning _______.", image: "assets/ep20_mail.png", emoji: "📬" },
-      { targetWord: "post", statement: "Drop into post box", words: ["Drop", "into", "the", "post", "box"], distractors: ["trash", "basket"], sentenceWithBlank: "Drop into the _______ box.", image: "assets/ep20_post.png", emoji: "📮" },
+      { targetWord: "post box", statement: "Drop into post box", words: ["Drop", "into", "the", "post", "box"], distractors: ["trash bin", "basket"], sentenceWithBlank: "Drop into the _______.", image: "assets/ep20_post.png", emoji: "📮" },
       { targetWord: "bag", statement: "Heavy postman mail bag", words: ["Heavy", "postman", "mail", "bag"], distractors: ["hat", "coat"], sentenceWithBlank: "Heavy postman mail _______.", image: "assets/ep20_bag.png", emoji: "💼" },
       { targetWord: "deliver", statement: "Deliver letters to houses", words: ["Deliver", "letters", "to", "houses"], distractors: ["throw", "keep"], sentenceWithBlank: "_______ letters to houses.", image: "assets/ep20_deliver.png", emoji: "🚶‍♂️" },
       { targetWord: "invite", statement: "Party invite in envelope", words: ["Party", "invite", "in", "envelope"], distractors: ["bill", "ticket"], sentenceWithBlank: "Party _______ in envelope.", image: "assets/ep20_invite.png", emoji: "💌" },
       { targetWord: "ring", statement: "Ring the front doorbell", words: ["Ring", "the", "front", "doorbell"], distractors: ["knock", "push"], sentenceWithBlank: "_______ the front doorbell.", image: "assets/ep20_ring.png", emoji: "🔔" },
-      { targetWord: "bell", statement: "Hear the door bell", words: ["Hear", "the", "door", "bell"], distractors: ["horn", "drum"], sentenceWithBlank: "Hear the door _______.", image: "assets/ep20_bell.png", emoji: "🛎️" },
+      { targetWord: "door bell", statement: "Hear the door bell", words: ["Hear", "the", "door", "bell"], distractors: ["car horn", "drum"], sentenceWithBlank: "Hear the _______.", image: "assets/ep20_bell.png", emoji: "🛎️" },
       { targetWord: "door", statement: "Open the front door", words: ["Open", "the", "front", "door"], distractors: ["window", "gate"], sentenceWithBlank: "Open the front _______.", image: "assets/ep20_door.png", emoji: "🚪" },
       { targetWord: "street", statement: "Walk down town street", words: ["Walk", "down", "town", "street"], distractors: ["river", "park"], sentenceWithBlank: "Walk down town _______.", image: "assets/ep20_street.png", emoji: "🛣️" },
       { targetWord: "van", statement: "Drive blue mail van", words: ["Drive", "blue", "mail", "van"], distractors: ["boat", "car"], sentenceWithBlank: "Drive blue mail _______.", image: "assets/ep20_van.png", emoji: "🚐" },
@@ -1092,13 +1092,13 @@ const episodeData = {
       { targetWord: "early", statement: "Wake up early morning", words: ["Wake", "up", "early", "morning"], distractors: ["late", "night"], sentenceWithBlank: "Wake up _______ morning.", image: "assets/ep22_early.png", emoji: "🌅" },
       { targetWord: "morning", statement: "Sunny early morning time", words: ["Sunny", "early", "morning", "time"], distractors: ["evening", "dusk"], sentenceWithBlank: "Sunny early _______ time.", image: "assets/ep22_morning.png", emoji: "☀️" },
       { targetWord: "mend", statement: "Mend the broken clock", words: ["Mend", "the", "broken", "clock"], distractors: ["break", "drop"], sentenceWithBlank: "_______ the broken clock.", image: "assets/ep22_mend.png", emoji: "🛠️" },
-      { targetWord: "wind", statement: "Wind up the clock key", words: ["Wind", "up", "the", "clock", "key"], distractors: ["stop", "push"], sentenceWithBlank: "_______ up the clock key.", image: "assets/ep22_wind.png", emoji: "🔑" },
+      { targetWord: "wind up", statement: "Wind up the clock key", words: ["Wind", "up", "the", "clock", "key"], distractors: ["stop", "drop"], sentenceWithBlank: "_______ the clock key.", image: "assets/ep22_wind.png", emoji: "🔑" },
       { targetWord: "wooden", statement: "A little wooden clock house", words: ["A", "little", "wooden", "clock", "house"], distractors: ["glass", "metal"], sentenceWithBlank: "A little _______ clock house.", image: "assets/ep22_wooden.png", emoji: "🪵" },
       { targetWord: "wait", statement: "Wait for cuckoo to pop out", words: ["Wait", "for", "cuckoo", "to", "pop"], distractors: ["leave", "run"], sentenceWithBlank: "_______ for cuckoo to pop out.", image: "assets/ep22_wait.png", emoji: "⏳" },
       { targetWord: "stare", statement: "Stare at the clock face", words: ["Stare", "at", "the", "clock", "face"], distractors: ["blink", "glance"], sentenceWithBlank: "_______ at the clock face.", image: "assets/ep22_stare.png", emoji: "👀" },
       { targetWord: "hour", statement: "Wait for the next hour", words: ["Wait", "for", "the", "next", "hour"], distractors: ["minute", "second"], sentenceWithBlank: "Wait for the next _______.", image: "assets/ep22_hour.png", emoji: "🕒" },
       { targetWord: "inside", statement: "Bird inside the clock house", words: ["Bird", "inside", "the", "clock", "house"], distractors: ["outside", "above"], sentenceWithBlank: "Bird _______ the clock house.", image: "assets/ep22_inside.png", emoji: "🏠" },
-      { targetWord: "pop", statement: "The bird pops out", words: ["The", "bird", "pops", "out"], distractors: ["hides", "falls"], sentenceWithBlank: "The bird _______ out.", image: "assets/ep22_pop.png", emoji: "🎉" },
+      { targetWord: "pop out", statement: "The bird pops out", words: ["The", "bird", "pops", "out"], distractors: ["falls down", "hides away"], sentenceWithBlank: "The bird _______.", image: "assets/ep22_pop.png", emoji: "🎉" },
       { targetWord: "chime", statement: "Hear the sweet clock chime", words: ["Hear", "the", "sweet", "clock", "chime"], distractors: ["silence", "noise"], sentenceWithBlank: "Hear the sweet clock _______.", image: "assets/ep22_chime.png", emoji: "🔔" }
     ]
   }
