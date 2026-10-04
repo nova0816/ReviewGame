@@ -1081,6 +1081,26 @@ const episodeData = {
       { targetWord: "bright", statement: "Paint with bright colors", words: ["Paint", "with", "bright", "colors"], distractors: ["dark", "dull"], sentenceWithBlank: "Paint with _______ colors.", image: "assets/ep21_bright.png", emoji: "✨" },
       { targetWord: "create", statement: "Create a beautiful artwork", words: ["Create", "a", "beautiful", "artwork"], distractors: ["destroy", "break"], sentenceWithBlank: "_______ a beautiful artwork.", image: "assets/ep21_create.png", emoji: "🌟" }
     ]
+  },
+  ep22: {
+    title: "Episode 22: Tick-Tock Cuckoo Clock",
+    levels: [
+      { targetWord: "clock", statement: "Fix the old clock", words: ["Fix", "the", "old", "clock"], distractors: ["watch", "bell"], sentenceWithBlank: "Fix the old _______.", image: "assets/ep22_clock.png", emoji: "⏰" },
+      { targetWord: "cuckoo", statement: "The bird in cuckoo clock", words: ["The", "bird", "in", "cuckoo", "clock"], distractors: ["parrot", "owl"], sentenceWithBlank: "The bird in _______ clock.", image: "assets/ep22_cuckoo.png", emoji: "🐦" },
+      { targetWord: "bird", statement: "A little wooden bird", words: ["A", "little", "wooden", "bird"], distractors: ["fish", "duck"], sentenceWithBlank: "A little wooden _______.", image: "assets/ep22_bird.png", emoji: "🐥" },
+      { targetWord: "time", statement: "Tell the right time", words: ["Tell", "the", "right", "time"], distractors: ["date", "year"], sentenceWithBlank: "Tell the right _______.", image: "assets/ep22_time.png", emoji: "⌛" },
+      { targetWord: "early", statement: "Wake up early morning", words: ["Wake", "up", "early", "morning"], distractors: ["late", "night"], sentenceWithBlank: "Wake up _______ morning.", image: "assets/ep22_early.png", emoji: "🌅" },
+      { targetWord: "morning", statement: "Sunny early morning time", words: ["Sunny", "early", "morning", "time"], distractors: ["evening", "dusk"], sentenceWithBlank: "Sunny early _______ time.", image: "assets/ep22_morning.png", emoji: "☀️" },
+      { targetWord: "mend", statement: "Mend the broken clock", words: ["Mend", "the", "broken", "clock"], distractors: ["break", "drop"], sentenceWithBlank: "_______ the broken clock.", image: "assets/ep22_mend.png", emoji: "🛠️" },
+      { targetWord: "wind", statement: "Wind up the clock key", words: ["Wind", "up", "the", "clock", "key"], distractors: ["stop", "push"], sentenceWithBlank: "_______ up the clock key.", image: "assets/ep22_wind.png", emoji: "🔑" },
+      { targetWord: "wooden", statement: "A little wooden clock house", words: ["A", "little", "wooden", "clock", "house"], distractors: ["glass", "metal"], sentenceWithBlank: "A little _______ clock house.", image: "assets/ep22_wooden.png", emoji: "🪵" },
+      { targetWord: "wait", statement: "Wait for cuckoo to pop out", words: ["Wait", "for", "cuckoo", "to", "pop"], distractors: ["leave", "run"], sentenceWithBlank: "_______ for cuckoo to pop out.", image: "assets/ep22_wait.png", emoji: "⏳" },
+      { targetWord: "stare", statement: "Stare at the clock face", words: ["Stare", "at", "the", "clock", "face"], distractors: ["blink", "glance"], sentenceWithBlank: "_______ at the clock face.", image: "assets/ep22_stare.png", emoji: "👀" },
+      { targetWord: "hour", statement: "Wait for the next hour", words: ["Wait", "for", "the", "next", "hour"], distractors: ["minute", "second"], sentenceWithBlank: "Wait for the next _______.", image: "assets/ep22_hour.png", emoji: "🕒" },
+      { targetWord: "inside", statement: "Bird inside the clock house", words: ["Bird", "inside", "the", "clock", "house"], distractors: ["outside", "above"], sentenceWithBlank: "Bird _______ the clock house.", image: "assets/ep22_inside.png", emoji: "🏠" },
+      { targetWord: "pop", statement: "The bird pops out", words: ["The", "bird", "pops", "out"], distractors: ["hides", "falls"], sentenceWithBlank: "The bird _______ out.", image: "assets/ep22_pop.png", emoji: "🎉" },
+      { targetWord: "chime", statement: "Hear the sweet clock chime", words: ["Hear", "the", "sweet", "clock", "chime"], distractors: ["silence", "noise"], sentenceWithBlank: "Hear the sweet clock _______.", image: "assets/ep22_chime.png", emoji: "🔔" }
+    ]
   }
 };
 

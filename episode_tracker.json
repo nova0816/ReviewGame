@@ -1,5 +1,5 @@
 {
-  "current_published_count": 21,
+  "current_published_count": 22,
   "episodes": [
     {
       "episode_num": 1,
@@ -146,6 +146,13 @@
       "code_title": "Episode 21",
       "subtitle": "Art Painting Fun",
       "video_id": "Painting",
+      "status": "published"
+    },
+    {
+      "episode_num": 22,
+      "code_title": "Episode 22",
+      "subtitle": "Tick-Tock Cuckoo Clock",
+      "video_id": "CuckooClock",
       "status": "published"
     }
   ]
