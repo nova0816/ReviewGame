@@ -1101,6 +1101,26 @@ const episodeData = {
       { targetWord: "nighttime", statement: "It is peaceful nighttime", words: ["It", "is", "peaceful", "nighttime"], distractors: ["daytime", "morning"], sentenceWithBlank: "It is peaceful _______.", image: "assets/ep22_nighttime.png", emoji: "🌙" },
       { targetWord: "asleep", statement: "Piggies are fast asleep", words: ["Piggies", "are", "fast", "asleep"], distractors: ["awake", "running"], sentenceWithBlank: "Piggies are fast _______.", image: "assets/ep22_asleep.png", emoji: "💤" }
     ]
+  },
+  ep23: {
+    title: "Episode 23: Catching a Cold Day",
+    levels: [
+      { targetWord: "catch a cold", statement: "You might catch a cold", words: ["You", "might", "catch", "a", "cold"], distractors: ["run away", "fall down"], sentenceWithBlank: "You might _______.", image: "assets/ep23_catch_a_cold.png", emoji: "🤧" },
+      { targetWord: "umbrella", statement: "Bring rain umbrella outside", words: ["Bring", "rain", "umbrella", "outside"], distractors: ["boots", "coat"], sentenceWithBlank: "Bring rain _______ outside.", image: "assets/ep23_umbrella.png", emoji: "☂️" },
+      { targetWord: "dry", statement: "You must keep dry", words: ["You", "must", "keep", "dry"], distractors: ["wet", "cold"], sentenceWithBlank: "You must keep _______.", image: "assets/ep23_dry.png", emoji: "☀️" },
+      { targetWord: "muddy", statement: "Jump in muddy puddles", words: ["Jump", "in", "muddy", "puddles"], distractors: ["clean", "dry"], sentenceWithBlank: "Jump in _______ puddles.", image: "assets/ep23_muddy.png", emoji: "🪵" },
+      { targetWord: "puddle", statement: "Jump in a muddy puddle", words: ["Jump", "in", "a", "muddy", "puddle"], distractors: ["lake", "river"], sentenceWithBlank: "Jump in a muddy _______.", image: "assets/ep23_puddle.png", emoji: "🌧️" },
+      { targetWord: "heavy", statement: "The rain is too heavy", words: ["The", "rain", "is", "too", "heavy"], distractors: ["light", "soft"], sentenceWithBlank: "The rain is too _______.", image: "assets/ep23_heavy.png", emoji: "🌧️" },
+      { targetWord: "stay in bed", statement: "You have to stay in bed", words: ["You", "have", "to", "stay", "in", "bed"], distractors: ["go outside", "play sports"], sentenceWithBlank: "You have to _______.", image: "assets/ep23_stay_in_bed.png", emoji: "🛏️" },
+      { targetWord: "clothes", statement: "Put your rain clothes on", words: ["Put", "your", "rain", "clothes", "on"], distractors: ["shoes", "hats"], sentenceWithBlank: "Put your rain _______ on.", image: "assets/ep23_clothes.png", emoji: "🧥" },
+      { targetWord: "hospital", statement: "Go to the hospital", words: ["Go", "to", "the", "hospital"], distractors: ["school", "market"], sentenceWithBlank: "Go to the _______.", image: "assets/ep23_hospital.png", emoji: "🏥" },
+      { targetWord: "brave", statement: "You are big and brave", words: ["You", "are", "big", "and", "brave"], distractors: ["scared", "shy"], sentenceWithBlank: "You are big and _______.", image: "assets/ep23_brave.png", emoji: "🦁" },
+      { targetWord: "glass", statement: "An empty milk glass", words: ["An", "empty", "milk", "glass"], distractors: ["cup", "bowl"], sentenceWithBlank: "An empty milk _______.", image: "assets/ep23_glass.png", emoji: "🥛" },
+      { targetWord: "sun", statement: "The bright warm sun rises", words: ["The", "bright", "warm", "sun", "rises"], distractors: ["moon", "star"], sentenceWithBlank: "The bright warm _______ rises.", image: "assets/ep23_sun.png", emoji: "☀️" },
+      { targetWord: "yawn", statement: "Drinks milk and yawns", words: ["Drinks", "milk", "and", "yawns"], distractors: ["sings", "dances"], sentenceWithBlank: "Drinks milk and _______.", image: "assets/ep23_yawn.png", emoji: "🥱" },
+      { targetWord: "patient", statement: "Where is my patient", words: ["Where", "is", "my", "patient"], distractors: ["doctor", "nurse"], sentenceWithBlank: "Where is my _______.", image: "assets/ep23_patient.png", emoji: "🩺" },
+      { targetWord: "medicine", statement: "Does George need medicine", words: ["Does", "George", "need", "medicine"], distractors: ["candy", "food"], sentenceWithBlank: "Does George need _______.", image: "assets/ep23_medicine.png", emoji: "💊" }
+    ]
   }
 };
 
