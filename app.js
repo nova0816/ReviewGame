@@ -1065,21 +1065,21 @@ const episodeData = {
   ep21: {
     title: "Episode 21: Art Painting Fun",
     levels: [
-      { targetWord: "paint", statement: "Mix colorful bright paint", words: ["Mix", "colorful", "bright", "paint"], distractors: ["water", "ink"], sentenceWithBlank: "Mix colorful bright _______.", image: "assets/ep21_paint.png", emoji: "🎨" },
+      { targetWord: "paint", statement: "Now we can start painting", words: ["Now", "we", "can", "start", "painting"], distractors: ["water", "ink"], sentenceWithBlank: "Now we can start _______.", image: "assets/ep21_paint.png", emoji: "🎨" },
       { targetWord: "picture", statement: "Paint a pretty picture", words: ["Paint", "a", "pretty", "picture"], distractors: ["statue", "poster"], sentenceWithBlank: "Paint a pretty _______.", image: "assets/ep21_picture.png", emoji: "🖼️" },
-      { targetWord: "color", statement: "Choose your favorite color", words: ["Choose", "your", "favorite", "color"], distractors: ["shape", "size"], sentenceWithBlank: "Choose your favorite _______.", image: "assets/ep21_color.png", emoji: "🖍️" },
-      { targetWord: "art", statement: "Fun in preschool art class", words: ["Fun", "in", "preschool", "art", "class"], distractors: ["math", "gym"], sentenceWithBlank: "Fun in preschool _______ class.", image: "assets/ep21_art.png", emoji: "🎭" },
-      { targetWord: "easel", statement: "Paper on wooden easel", words: ["Paper", "on", "wooden", "easel"], distractors: ["desk", "shelf"], sentenceWithBlank: "Paper on wooden _______.", image: "assets/ep21_easel.png", emoji: "🖌️" },
-      { targetWord: "mix", statement: "Mix red and yellow paint", words: ["Mix", "red", "and", "yellow", "paint"], distractors: ["separate", "pour"], sentenceWithBlank: "_______ red and yellow paint.", image: "assets/ep21_mix.png", emoji: "🧪" },
-      { targetWord: "dip", statement: "Dip brush into paint", words: ["Dip", "brush", "into", "paint"], distractors: ["wipe", "wash"], sentenceWithBlank: "_______ brush into paint.", image: "assets/ep21_dip.png", emoji: "🖌️" },
-      { targetWord: "wall", statement: "Hang pictures on wall", words: ["Hang", "pictures", "on", "wall"], distractors: ["floor", "door"], sentenceWithBlank: "Hang pictures on _______.", image: "assets/ep21_wall.png", emoji: "🧱" },
-      { targetWord: "handprint", statement: "Make a bright handprint", words: ["Make", "a", "bright", "handprint"], distractors: ["footprint", "stamp"], sentenceWithBlank: "Make a bright _______.", image: "assets/ep21_handprint.png", emoji: "🖐️" },
-      { targetWord: "circle", statement: "Paint a big circle", words: ["Paint", "a", "big", "circle"], distractors: ["square", "star"], sentenceWithBlank: "Paint a big _______.", image: "assets/ep21_circle.png", emoji: "⭕" },
-      { targetWord: "stripe", statement: "Add a yellow stripe", words: ["Add", "a", "yellow", "stripe"], distractors: ["dot", "cross"], sentenceWithBlank: "Add a yellow _______.", image: "assets/ep21_stripe.png", emoji: "🎗️" },
-      { targetWord: "apron", statement: "Wear an art apron", words: ["Wear", "an", "art", "apron"], distractors: ["coat", "shirt"], sentenceWithBlank: "Wear an art _______.", image: "assets/ep21_apron.png", emoji: "🦺" },
-      { targetWord: "dry", statement: "Wait for paint to dry", words: ["Wait", "for", "paint", "to", "dry"], distractors: ["wet", "run"], sentenceWithBlank: "Wait for paint to _______.", image: "assets/ep21_dry.png", emoji: "☀️" },
-      { targetWord: "bright", statement: "Paint with bright colors", words: ["Paint", "with", "bright", "colors"], distractors: ["dark", "dull"], sentenceWithBlank: "Paint with _______ colors.", image: "assets/ep21_bright.png", emoji: "✨" },
-      { targetWord: "create", statement: "Create a beautiful artwork", words: ["Create", "a", "beautiful", "artwork"], distractors: ["destroy", "break"], sentenceWithBlank: "_______ a beautiful artwork.", image: "assets/ep21_create.png", emoji: "🌟" }
+      { targetWord: "color", statement: "Red is my favorite color", words: ["Red", "is", "my", "favorite", "color"], distractors: ["shape", "size"], sentenceWithBlank: "Red is my favorite _______.", image: "assets/ep21_color.png", emoji: "🖍️" },
+      { targetWord: "easel", statement: "It holds canvas on easel", words: ["It", "holds", "canvas", "on", "easel"], distractors: ["desk", "shelf"], sentenceWithBlank: "It holds canvas on _______.", image: "assets/ep21_easel.png", emoji: "🖌️" },
+      { targetWord: "mix", statement: "Mix blue and yellow paint", words: ["Mix", "blue", "and", "yellow", "paint"], distractors: ["separate", "pour"], sentenceWithBlank: "_______ blue and yellow paint.", image: "assets/ep21_mix.png", emoji: "🧪" },
+      { targetWord: "hand", statement: "Put hands in the paint", words: ["Put", "hands", "in", "the", "paint"], distractors: ["feet", "head"], sentenceWithBlank: "Put _______ in the paint.", image: "assets/ep21_hand.png", emoji: "🖐️" },
+      { targetWord: "branch", statement: "Paint trunk and the branches", words: ["Paint", "trunk", "and", "the", "branches"], distractors: ["leaves", "roots"], sentenceWithBlank: "Paint trunk and the _______.", image: "assets/ep21_branch.png", emoji: "🌿" },
+      { targetWord: "finger", statement: "Put finger in the paint", words: ["Put", "finger", "in", "the", "paint"], distractors: ["toe", "thumb"], sentenceWithBlank: "Put _______ in the paint.", image: "assets/ep21_finger.png", emoji: "👆" },
+      { targetWord: "duck", statement: "Hello to the friendly ducks", words: ["Hello", "to", "the", "friendly", "ducks"], distractors: ["chickens", "birds"], sentenceWithBlank: "Hello to the friendly _______.", image: "assets/ep21_duck.png", emoji: "🦆" },
+      { targetWord: "footprint", statement: "Ducks make colorful paint footprints", words: ["Ducks", "make", "colorful", "paint", "footprints"], distractors: ["shadows", "tracks"], sentenceWithBlank: "Ducks make colorful paint _______.", image: "assets/ep21_footprint.png", emoji: "🐾" },
+      { targetWord: "red", statement: "Red is my favorite color", words: ["Red", "is", "my", "favorite", "color"], distractors: ["Blue", "Green"], sentenceWithBlank: "_______ is my favorite color.", image: "assets/ep21_red.png", emoji: "🔴" },
+      { targetWord: "green", statement: "Mixing blue and yellow makes green", words: ["Mixing", "blue", "and", "yellow", "makes", "green"], distractors: ["purple", "orange"], sentenceWithBlank: "Mixing blue and yellow makes _______.", image: "assets/ep21_green.png", emoji: "🟢" },
+      { targetWord: "blue", statement: "Start with the color blue", words: ["Start", "with", "the", "color", "blue"], distractors: ["pink", "black"], sentenceWithBlank: "Start with the color _______.", image: "assets/ep21_blue.png", emoji: "🔵" },
+      { targetWord: "brown", statement: "Mixing green and red makes brown", words: ["Mixing", "green", "and", "red", "makes", "brown"], distractors: ["white", "grey"], sentenceWithBlank: "Mixing green and red makes _______.", image: "assets/ep21_brown.png", emoji: "🤎" },
+      { targetWord: "table", statement: "Put newspaper on the table", words: ["Put", "newspaper", "on", "the", "table"], distractors: ["floor", "chair"], sentenceWithBlank: "Put newspaper on the _______.", image: "assets/ep21_table.png", emoji: "🛋️" }
     ]
   },
   ep22: {
@@ -1095,11 +1095,11 @@ const episodeData = {
       { targetWord: "wind up", statement: "Wind up the clock key", words: ["Wind", "up", "the", "clock", "key"], distractors: ["stop", "drop"], sentenceWithBlank: "_______ the clock key.", image: "assets/ep22_wind.png", emoji: "🔑" },
       { targetWord: "wooden", statement: "A little wooden clock house", words: ["A", "little", "wooden", "clock", "house"], distractors: ["glass", "metal"], sentenceWithBlank: "A little _______ clock house.", image: "assets/ep22_wooden.png", emoji: "🪵" },
       { targetWord: "wait", statement: "Wait for cuckoo to pop out", words: ["Wait", "for", "cuckoo", "to", "pop", "out"], distractors: ["leave", "run"], sentenceWithBlank: "_______ for cuckoo to pop out.", image: "assets/ep22_wait.png", emoji: "⏳" },
-      { targetWord: "stare", statement: "Stare at the clock face", words: ["Stare", "at", "the", "clock", "face"], distractors: ["blink", "glance"], sentenceWithBlank: "_______ at the clock face.", image: "assets/ep22_stare.png", emoji: "👀" },
+      { targetWord: "wing", statement: "Flaps her little wing", words: ["Flaps", "her", "little", "wing"], distractors: ["tail", "beak"], sentenceWithBlank: "Flaps her little _______.", image: "assets/ep22_wing.png", emoji: "🪶" },
       { targetWord: "hour", statement: "Wait for the next hour", words: ["Wait", "for", "the", "next", "hour"], distractors: ["minute", "second"], sentenceWithBlank: "Wait for the next _______.", image: "assets/ep22_hour.png", emoji: "🕒" },
       { targetWord: "inside", statement: "Bird inside the clock house", words: ["Bird", "inside", "the", "clock", "house"], distractors: ["outside", "above"], sentenceWithBlank: "Bird _______ the clock house.", image: "assets/ep22_inside.png", emoji: "🏠" },
-      { targetWord: "pop out", statement: "The bird pops out", words: ["The", "bird", "pops", "out"], distractors: ["falls down", "hides away"], sentenceWithBlank: "The bird _______.", image: "assets/ep22_pop.png", emoji: "🎉" },
-      { targetWord: "chime", statement: "Hear the sweet clock chime", words: ["Hear", "the", "sweet", "clock", "chime"], distractors: ["silence", "noise"], sentenceWithBlank: "Hear the sweet clock _______.", image: "assets/ep22_chime.png", emoji: "🔔" }
+      { targetWord: "nighttime", statement: "It is peaceful nighttime", words: ["It", "is", "peaceful", "nighttime"], distractors: ["daytime", "morning"], sentenceWithBlank: "It is peaceful _______.", image: "assets/ep22_nighttime.png", emoji: "🌙" },
+      { targetWord: "asleep", statement: "Piggies are fast asleep", words: ["Piggies", "are", "fast", "asleep"], distractors: ["awake", "running"], sentenceWithBlank: "Piggies are fast _______.", image: "assets/ep22_asleep.png", emoji: "💤" }
     ]
   }
 };
