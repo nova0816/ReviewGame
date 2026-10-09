@@ -25,7 +25,7 @@ This Standard Operating Procedure (SOP) documents the complete, consolidated end
 
 To ensure words are 100% authentic to the video episode while remaining age-appropriate for a 7-year-old ESL student:
 
-1. **Transcript Fetching:** Download episode transcripts using `youtube-transcript-api` in Python.
+1. **Transcript Fetching & Local Persistence:** Fetch episode transcripts using `youtube-transcript-api` or MediaWiki/web API sources in Python, and **save the complete raw transcript text locally** at `transcripts/{ep_id}_transcript.txt` (or `{ep_id}_transcript.txt`) prior to word selection for future auditing, checking, or adjustment.
 2. **CEFR A1/A2 Selection (With Max 2 B1 Fallback & Reused Spoken Word Cap):**
    - Filter transcript words to identify those belonging to **CEFR A1** and **CEFR A2**.
    - **CRITICAL RULE:** Pick 15 target words **directly spoken in the episode**. Prioritize A1/A2 words; if unavailable/exhausted, allow at most **2 B1 words** per episode.
@@ -33,6 +33,8 @@ To ensure words are 100% authentic to the video episode while remaining age-appr
    - **Zero Duplicates & Fallback Limit:** Check against `global_vocabulary_registry.md`. If unique transcript words are exhausted, up to **3 words** from earlier episodes are permitted (must still be directly spoken in the transcript).
    - **Automatic Rejection:** Ignore B2, C1, C2 words spoken in the video episode during word selection.
    - **Natural Target Phrase Mandate:** When a target concept forms a multi-word phrasal verb, compound idiom, or fixed collocation where a single word distorts story meaning (e.g., `out of control` instead of `control`, `post box` instead of `post`, `wind up` instead of `wind`, `pop out` instead of `pop`), select the **complete natural phrase** (`out of control`, `wind up`, `pop out`, `post box`).
+   - **Mandatory Local Transcript Persistence Mandate:** Ensure that from Episode 23 onwards, the full transcript file `transcripts/{ep_id}_transcript.txt` is created and stored in the repository.
+
 3. **Curate 15 Target Vocabulary Items:**
    - Target Word (CEFR A1/A2 directly from show)
    - Full Sentence Statement (authentic to show)

@@ -1,0 +1,20 @@
+# Workspace Rules for ReviewGame
+
+## Mandatory Production Standards
+
+### 🎯 Mandatory Triple Verification Criteria for Every Episode:
+1. **Criterion 1 (CEFR A1 / A2 Priority with Max 2 B1 Fallback):** Selected target words MUST be classified as CEFR A1 Starter or A2 Elementary in the Cambridge English Vocabulary Profile for 7-year-old ESL learners. If insufficient unique A1/A2 words remain in the episode transcript, at most **2 B1 words** may be selected per episode. No B2/C1/C2 words allowed.
+2. **Criterion 2 (100% Authentic Episode Transcript Verification):** Every selected target word MUST be verified directly against the official video episode dialogue transcript.
+3. **Criterion 3 (Zero Duplicates Priority with Max 3 Reused Spoken Word Fallback):** Selected target words MUST be audited against `global_vocabulary_registry.md`. If all unique A1/A2/B1 words in the episode transcript are exhausted, at most **3 words** previously used in earlier episodes may be selected from the transcript to preserve 100% transcript authenticity.
+
+1. **Zero Reused / Zero Fallback Images**: EVERY SINGLE LEVEL in EVERY episode MUST have its own unique, dedicated image file saved at `assets/{ep_id}_{targetWord}.png`. Never reuse images or fall back to duplicate picture paths across levels.
+2. **Vocabulary Audit & Reused Word Cap**: Target words across episodes should be 100% unique where possible. If transcript words are exhausted, at most **3 words** from earlier episodes are permitted per episode. Check `global_vocabulary_registry.md` before choosing words.
+3. **Multi-Panel Storybook Comics for Abstract Words**: Use 2-panel or 3-panel storybook comic grids for abstract concepts (`never`, `always`, `disappear`, `lost`), featuring copyright-safe original 3D Pixar animal characters.
+4. **Dedicated Main Menu Cover Images**: Episode cards in `index.html` main menu must feature dedicated episode artwork.
+5. **Image Quota Exhaustion & Background Scheduling**: Generate images sequentially. If API quota is exhausted (`429 Too Many Requests`), schedule a background timer using `schedule` for the exact reset timestamp. Resume image generation upon timer trigger before publishing code updates.
+6. **Copyright-Safe Episode Naming Mandate**: NEVER use the exact trademarked show episode title for any published episode card, badge, or title (e.g. avoid exact trademarked titles like "Peppa Pig", "George Catches a Cold", "Daddy Pig's Office"). Transform all episode titles into original, copyright-safe, descriptive titles (e.g., "Catching a Cold Day", "Fun at the Office", "Pirate Island Voyage", "Garden Tiny Friends", "Indoor Pool Fun", etc.) to prevent trademark and copyright infringement.
+7. **Context-Driven Visual Alignment Mandate (No Out-of-Context Gadgets)**: Image prompts MUST be strictly derived from the **full sentence statement** and **episode story context**. NEVER visually illustrate words out of context with unrelated gadgets (e.g., for `control` in *"Garden out of control"*, NEVER draw a remote control toy; draw an overgrown wild garden taking over paths. For `rusty` in *"A bit old and rusty mower"*, draw a rusty lawn mower, not a key).
+8. **Natural Target Phrase Mandate (Multi-Word Phrasal Verbs & Fixed Expressions)**: When a target concept in the transcript forms a multi-word phrasal verb, compound idiom, or fixed collocation where a single isolated word distorts or loses its true story meaning (e.g., `out of control` instead of `control`, `post box` instead of `post`, `wind up` instead of `wind`, `pop out` instead of `pop`), select the **complete natural phrase** (`out of control`, `wind up`, `pop out`, `post box`) as the target learning item.
+9. **Mandatory Local Transcript Persistence Mandate**: Starting from the next episode (Episode 23 onwards), the complete video episode dialogue transcript MUST be saved locally in the codebase at `transcripts/{ep_id}_transcript.txt` (or `{ep_id}_transcript.txt`) before word selection to ensure 100% auditability and enable future word/phrase checking or adjustment.
+
+
