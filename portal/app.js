@@ -1045,21 +1045,21 @@ const episodeData = {
   ep20: {
     title: "Episode 20: Friendly Postman Mail",
     levels: [
-      { targetWord: "postman", statement: "Friendly postman delivers mail", words: ["Friendly", "postman", "delivers", "mail"], distractors: ["baker", "pilot"], sentenceWithBlank: "Friendly _______ delivers mail.", image: "assets/ep20_postman.png", emoji: "📫" },
-      { targetWord: "letter", statement: "Send a birthday letter", words: ["Send", "a", "birthday", "letter"], distractors: ["book", "card"], sentenceWithBlank: "Send a birthday _______.", image: "assets/ep20_letter.png", emoji: "✉️" },
-      { targetWord: "envelope", statement: "Card inside an envelope", words: ["Card", "inside", "an", "envelope"], distractors: ["box", "bag"], sentenceWithBlank: "Card inside an _______.", image: "assets/ep20_envelope.png", emoji: "📨" },
-      { targetWord: "mail", statement: "Deliver the morning mail", words: ["Deliver", "the", "morning", "mail"], distractors: ["food", "milk"], sentenceWithBlank: "Deliver the morning _______.", image: "assets/ep20_mail.png", emoji: "📬" },
-      { targetWord: "post box", statement: "Drop into the post box", words: ["Drop", "into", "the", "post", "box"], distractors: ["trash bin", "basket"], sentenceWithBlank: "Drop into the _______.", image: "assets/ep20_post.png", emoji: "📮" },
-      { targetWord: "bag", statement: "Heavy postman mail bag", words: ["Heavy", "postman", "mail", "bag"], distractors: ["hat", "coat"], sentenceWithBlank: "Heavy postman mail _______.", image: "assets/ep20_bag.png", emoji: "💼" },
+      { targetWord: "postman", statement: "Mr Zebra is the postman", words: ["Mr", "Zebra", "is", "the", "postman"], distractors: ["baker", "pilot"], sentenceWithBlank: "Mr Zebra is the _______.", image: "assets/ep20_postman.png", emoji: "📫" },
+      { targetWord: "letter", statement: "Deliver a letter to Peppa", words: ["Deliver", "a", "letter", "to", "Peppa"], distractors: ["book", "card"], sentenceWithBlank: "Deliver a _______ to Peppa.", image: "assets/ep20_letter.png", emoji: "✉️" },
+      { targetWord: "envelope", statement: "What kind of envelope", words: ["What", "kind", "of", "envelope"], distractors: ["box", "bag"], sentenceWithBlank: "What kind of _______.", image: "assets/ep20_envelope.png", emoji: "📨" },
       { targetWord: "deliver", statement: "Deliver letters to houses", words: ["Deliver", "letters", "to", "houses"], distractors: ["throw", "keep"], sentenceWithBlank: "_______ letters to houses.", image: "assets/ep20_deliver.png", emoji: "🚶‍♂️" },
-      { targetWord: "invite", statement: "Party invite in envelope", words: ["Party", "invite", "in", "envelope"], distractors: ["bill", "ticket"], sentenceWithBlank: "Party _______ in envelope.", image: "assets/ep20_invite.png", emoji: "💌" },
-      { targetWord: "ring", statement: "Ring the front doorbell", words: ["Ring", "the", "front", "doorbell"], distractors: ["knock", "push"], sentenceWithBlank: "_______ the front doorbell.", image: "assets/ep20_ring.png", emoji: "🔔" },
-      { targetWord: "door bell", statement: "Hear the door bell", words: ["Hear", "the", "door", "bell"], distractors: ["car horn", "drum"], sentenceWithBlank: "Hear the _______.", image: "assets/ep20_bell.png", emoji: "🛎️" },
-      { targetWord: "door", statement: "Open the front door", words: ["Open", "the", "front", "door"], distractors: ["window", "gate"], sentenceWithBlank: "Open the front _______.", image: "assets/ep20_door.png", emoji: "🚪" },
-      { targetWord: "street", statement: "Walk down town street", words: ["Walk", "down", "town", "street"], distractors: ["river", "park"], sentenceWithBlank: "Walk down town _______.", image: "assets/ep20_street.png", emoji: "🛣️" },
-      { targetWord: "van", statement: "Drive blue mail van", words: ["Drive", "blue", "mail", "van"], distractors: ["boat", "car"], sentenceWithBlank: "Drive blue mail _______.", image: "assets/ep20_van.png", emoji: "🚐" },
-      { targetWord: "pack", statement: "Pack the letters neatly", words: ["Pack", "the", "letters", "neatly"], distractors: ["drop", "lose"], sentenceWithBlank: "_______ the letters neatly.", image: "assets/ep20_pack.png", emoji: "📦" },
-      { targetWord: "message", statement: "Read special party message", words: ["Read", "special", "party", "message"], distractors: ["song", "riddle"], sentenceWithBlank: "Read special party _______.", image: "assets/ep20_message.png", emoji: "📜" }
+      { targetWord: "door", statement: "Walk over to front door", words: ["Walk", "over", "to", "front", "door"], distractors: ["window", "gate"], sentenceWithBlank: "Walk over to front _______.", image: "assets/ep20_door.png", emoji: "🚪" },
+      { targetWord: "van", statement: "Drive the blue post van", words: ["Drive", "the", "blue", "post", "van"], distractors: ["boat", "car"], sentenceWithBlank: "Drive the blue post _______.", image: "assets/ep20_van.png", emoji: "🚐" },
+      { targetWord: "post", statement: "When the post arrives", words: ["When", "the", "post", "arrives"], distractors: ["train", "bus"], sentenceWithBlank: "When the _______ arrives.", image: "assets/ep20_post.png", emoji: "📮" },
+      { targetWord: "bill", statement: "Pay the telephone bill", words: ["Pay", "the", "telephone", "bill"], distractors: ["gift", "toy"], sentenceWithBlank: "Pay the telephone _______.", image: "assets/ep20_bill.png", emoji: "📑" },
+      { targetWord: "telephone", statement: "Pay your telephone bill", words: ["Pay", "your", "telephone", "bill"], distractors: ["radio", "clock"], sentenceWithBlank: "Pay your _______ bill.", image: "assets/ep20_telephone.png", emoji: "☎️" },
+      { targetWord: "write", statement: "Write a reply letter", words: ["Write", "a", "reply", "letter"], distractors: ["read", "draw"], sentenceWithBlank: "_______ a reply letter.", image: "assets/ep20_write.png", emoji: "✏️" },
+      { targetWord: "reply", statement: "Write a reply to Zoe", words: ["Write", "a", "reply", "to", "Zoe"], distractors: ["song", "story"], sentenceWithBlank: "Write a _______ to Zoe.", image: "assets/ep20_reply.png", emoji: "💌" },
+      { targetWord: "boring", statement: "Bills are very boring", words: ["Bills", "are", "very", "boring"], distractors: ["fun", "sweet"], sentenceWithBlank: "Bills are very _______.", image: "assets/ep20_boring.png", emoji: "🥱" },
+      { targetWord: "arrive", statement: "When the post arrives", words: ["When", "the", "post", "arrives"], distractors: ["leaves", "stops"], sentenceWithBlank: "When the post _______.", image: "assets/ep20_arrive.png", emoji: "🛬" },
+      { targetWord: "pay", statement: "Pay your telephone bill", words: ["Pay", "your", "telephone", "bill"], distractors: ["hide", "lose"], sentenceWithBlank: "_______ your telephone bill.", image: "assets/ep20_pay.png", emoji: "💵" },
+      { targetWord: "stamp", statement: "Last of all the stamp", words: ["Last", "of", "all", "the", "stamp"], distractors: ["sticker", "tape"], sentenceWithBlank: "Last of all the _______.", image: "assets/ep20_stamp.png", emoji: "🏷️" }
     ]
   },
   ep21: {
