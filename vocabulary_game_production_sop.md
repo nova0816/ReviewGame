@@ -34,6 +34,7 @@ To ensure words are 100% authentic to the video episode while remaining age-appr
    - **Automatic Rejection:** Ignore B2, C1, C2 words spoken in the video episode during word selection.
    - **Natural Target Phrase Mandate:** When a target concept forms a multi-word phrasal verb, compound idiom, or fixed collocation where a single word distorts story meaning (e.g., `out of control` instead of `control`, `post box` instead of `post`, `wind up` instead of `wind`, `pop out` instead of `pop`), select the **complete natural phrase** (`out of control`, `wind up`, `pop out`, `post box`).
    - **Mandatory Local Transcript Persistence Mandate:** Ensure that from Episode 23 onwards, the full transcript file `transcripts/{ep_id}_transcript.txt` is created and stored in the repository.
+   - **Image Semantic Meaning Audit & Zero-Duplicate Check Mandate (Rule 10):** Every episode's images MUST undergo automated and visual semantic audits before release. Run `python tools/audit_images.py {ep_id}` to verify: (1) no images are byte-identical copies or placeholders borrowed from other episodes/levels, (2) image paths strictly belong to `{ep_id}`, and (3) every image accurately depicts the specific statement and meaning of the level's sentence (e.g. for `table` in *"Put newspaper on the table"*, the image must depict laying newspaper on a table, never a bedroom or unrelated scene; for `brown`, the image must illustrate mixing paints to make brown, not a plain green canvas).
 
 3. **Curate 15 Target Vocabulary Items:**
    - Target Word (CEFR A1/A2 directly from show)
@@ -41,6 +42,7 @@ To ensure words are 100% authentic to the video episode while remaining age-appr
    - Words Array + Distractor Words Array
    - Fill-in-the-Blank Sentence (for Normal mode)
    - Child-friendly emoji and pronunciation guide
+
 
 ---
 

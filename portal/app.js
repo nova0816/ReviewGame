@@ -1103,23 +1103,23 @@ const episodeData = {
     ]
   },
   ep23: {
-    title: "Episode 23: Catching a Cold Day",
+    title: "Episode 23: Sweet Baby Cousin",
     levels: [
-      { targetWord: "catch a cold", statement: "You might catch a cold", words: ["You", "might", "catch", "a", "cold"], distractors: ["run away", "fall down"], sentenceWithBlank: "You might _______.", image: "assets/ep23_catch_a_cold.png", emoji: "🤧" },
-      { targetWord: "umbrella", statement: "Bring rain umbrella outside", words: ["Bring", "rain", "umbrella", "outside"], distractors: ["boots", "coat"], sentenceWithBlank: "Bring rain _______ outside.", image: "assets/ep23_umbrella.png", emoji: "☂️" },
-      { targetWord: "dry", statement: "You must keep dry", words: ["You", "must", "keep", "dry"], distractors: ["wet", "cold"], sentenceWithBlank: "You must keep _______.", image: "assets/ep23_dry.png", emoji: "☀️" },
-      { targetWord: "muddy", statement: "Jump in muddy puddles", words: ["Jump", "in", "muddy", "puddles"], distractors: ["clean", "dry"], sentenceWithBlank: "Jump in _______ puddles.", image: "assets/ep23_muddy.png", emoji: "🪵" },
-      { targetWord: "puddle", statement: "Jump in a muddy puddle", words: ["Jump", "in", "a", "muddy", "puddle"], distractors: ["lake", "river"], sentenceWithBlank: "Jump in a muddy _______.", image: "assets/ep23_puddle.png", emoji: "🌧️" },
-      { targetWord: "heavy", statement: "The rain is too heavy", words: ["The", "rain", "is", "too", "heavy"], distractors: ["light", "soft"], sentenceWithBlank: "The rain is too _______.", image: "assets/ep23_heavy.png", emoji: "🌧️" },
-      { targetWord: "stay in bed", statement: "You have to stay in bed", words: ["You", "have", "to", "stay", "in", "bed"], distractors: ["go outside", "play sports"], sentenceWithBlank: "You have to _______.", image: "assets/ep23_stay_in_bed.png", emoji: "🛏️" },
-      { targetWord: "clothes", statement: "Put your rain clothes on", words: ["Put", "your", "rain", "clothes", "on"], distractors: ["shoes", "hats"], sentenceWithBlank: "Put your rain _______ on.", image: "assets/ep23_clothes.png", emoji: "🧥" },
-      { targetWord: "hospital", statement: "Go to the hospital", words: ["Go", "to", "the", "hospital"], distractors: ["school", "market"], sentenceWithBlank: "Go to the _______.", image: "assets/ep23_hospital.png", emoji: "🏥" },
-      { targetWord: "brave", statement: "You are big and brave", words: ["You", "are", "big", "and", "brave"], distractors: ["scared", "shy"], sentenceWithBlank: "You are big and _______.", image: "assets/ep23_brave.png", emoji: "🦁" },
-      { targetWord: "glass", statement: "An empty milk glass", words: ["An", "empty", "milk", "glass"], distractors: ["cup", "bowl"], sentenceWithBlank: "An empty milk _______.", image: "assets/ep23_glass.png", emoji: "🥛" },
-      { targetWord: "sun", statement: "The bright warm sun rises", words: ["The", "bright", "warm", "sun", "rises"], distractors: ["moon", "star"], sentenceWithBlank: "The bright warm _______ rises.", image: "assets/ep23_sun.png", emoji: "☀️" },
-      { targetWord: "yawn", statement: "Drinks milk and yawns", words: ["Drinks", "milk", "and", "yawns"], distractors: ["sings", "dances"], sentenceWithBlank: "Drinks milk and _______.", image: "assets/ep23_yawn.png", emoji: "🥱" },
-      { targetWord: "patient", statement: "Where is my patient", words: ["Where", "is", "my", "patient"], distractors: ["doctor", "nurse"], sentenceWithBlank: "Where is my _______.", image: "assets/ep23_patient.png", emoji: "🩺" },
-      { targetWord: "medicine", statement: "Does George need medicine", words: ["Does", "George", "need", "medicine"], distractors: ["candy", "food"], sentenceWithBlank: "Does George need _______.", image: "assets/ep23_medicine.png", emoji: "💊" }
+      { targetWord: "cousin", statement: "Meet your new cousin", words: ["Meet", "your", "new", "cousin"], distractors: ["neighbor", "teacher"], sentenceWithBlank: "Meet your new _______.", image: "assets/ep23_cousin.png", emoji: "👋" },
+      { targetWord: "baby", statement: "Here is your new baby", words: ["Here", "is", "your", "new", "baby"], distractors: ["puppy", "kitten"], sentenceWithBlank: "Here is your new _______.", image: "assets/ep23_baby.png", emoji: "👶" },
+      { targetWord: "boy", statement: "The sweet baby is a boy", words: ["The", "sweet", "baby", "is", "a", "boy"], distractors: ["cat", "dog"], sentenceWithBlank: "The sweet baby is a _______.", image: "assets/ep23_boy.png", emoji: "👦" },
+      { targetWord: "girl", statement: "Is it a girl baby", words: ["Is", "it", "a", "girl", "baby"], distractors: ["bird", "bear"], sentenceWithBlank: "Is it a _______ baby.", image: "assets/ep23_girl.png", emoji: "👧" },
+      { targetWord: "play", statement: "Wants to play with me", words: ["Wants", "to", "play", "with", "me"], distractors: ["sleep", "cry"], sentenceWithBlank: "Wants to _______ with me.", image: "assets/ep23_play.png", emoji: "⚽" },
+      { targetWord: "sleep", statement: "The baby eats and sleeps", words: ["The", "baby", "eats", "and", "sleeps"], distractors: ["jumps", "runs"], sentenceWithBlank: "The baby eats and _______.", image: "assets/ep23_sleep.png", emoji: "💤" },
+      { targetWord: "hold", statement: "You can hold the baby", words: ["You", "can", "hold", "the", "baby"], distractors: ["drop", "push"], sentenceWithBlank: "You can _______ the baby.", image: "assets/ep23_hold.png", emoji: "🤲" },
+      { targetWord: "careful", statement: "You must be very careful", words: ["You", "must", "be", "very", "careful"], distractors: ["noisy", "rough"], sentenceWithBlank: "You must be very _______.", image: "assets/ep23_careful.png", emoji: "🤫" },
+      { targetWord: "brother", statement: "A sweet little baby brother", words: ["A", "sweet", "little", "baby", "brother"], distractors: ["sister", "cousin"], sentenceWithBlank: "A sweet little baby _______.", image: "assets/ep23_brother.png", emoji: "🍼" },
+      { targetWord: "pretend", statement: "Pretend to be a baby", words: ["Pretend", "to", "be", "a", "baby"], distractors: ["forget", "refuse"], sentenceWithBlank: "_______ to be a baby.", image: "assets/ep23_pretend.png", emoji: "🎭" },
+      { targetWord: "pram", statement: "Ride in the dolls pram", words: ["Ride", "in", "the", "dolls", "pram"], distractors: ["wagon", "sled"], sentenceWithBlank: "Ride in the dolls _______.", image: "assets/ep23_pram.png", emoji: "🛒" },
+      { targetWord: "promise", statement: "Promise to be very nice", words: ["Promise", "to", "be", "very", "nice"], distractors: ["yell", "fight"], sentenceWithBlank: "_______ to be very nice.", image: "assets/ep23_promise.png", emoji: "🤝" },
+      { targetWord: "toys", statement: "Play with all my toys", words: ["Play", "with", "all", "my", "toys"], distractors: ["books", "tools"], sentenceWithBlank: "Play with all my _______.", image: "assets/ep23_toys.png", emoji: "🧸" },
+      { targetWord: "cookie", statement: "Would the baby like a cookie", words: ["Would", "the", "baby", "like", "a", "cookie"], distractors: ["lemon", "onion"], sentenceWithBlank: "Would the baby like a _______.", image: "assets/ep23_cookie.png", emoji: "🍪" },
+      { targetWord: "clever", statement: "The little baby is clever", words: ["The", "little", "baby", "is", "clever"], distractors: ["sleepy", "slow"], sentenceWithBlank: "The little baby is _______.", image: "assets/ep23_clever.png", emoji: "💡" }
     ]
   }
 };
