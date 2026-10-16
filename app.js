@@ -1121,6 +1121,26 @@ const episodeData = {
       { targetWord: "cookie", statement: "Would the baby like a cookie", words: ["Would", "the", "baby", "like", "a", "cookie"], distractors: ["lemon", "onion"], sentenceWithBlank: "Would the baby like a _______.", image: "assets/ep23_cookie.png", emoji: "🍪" },
       { targetWord: "clever", statement: "The little baby is clever", words: ["The", "little", "baby", "is", "clever"], distractors: ["sleepy", "slow"], sentenceWithBlank: "The little baby is _______.", image: "assets/ep23_clever.png", emoji: "💡" }
     ]
+  },
+  ep24: {
+    title: "Episode 24: Miniature Train Ride",
+    levels: [
+      { targetWord: "train", statement: "A little toy train", words: ["A", "little", "toy", "train"], distractors: ["boat", "plane"], sentenceWithBlank: "A little toy _______.", image: "assets/ep24_train.png", emoji: "🚂" },
+      { targetWord: "noise", statement: "What is that noise", words: ["What", "is", "that", "noise"], distractors: ["smell", "taste"], sentenceWithBlank: "What is that _______?", image: "assets/ep24_noise.png", emoji: "🔊" },
+      { targetWord: "tracks", statement: "Need railway tracks to run", words: ["Need", "railway", "tracks", "to", "run"], distractors: ["clouds", "waves"], sentenceWithBlank: "Need railway _______ to run.", image: "assets/ep24_tracks.png", emoji: "🛤️" },
+      { targetWord: "wheels", statement: "Fitted with car wheels", words: ["Fitted", "with", "car", "wheels"], distractors: ["wings", "sails"], sentenceWithBlank: "Fitted with car _______.", image: "assets/ep24_wheels.png", emoji: "🛞" },
+      { targetWord: "ride", statement: "Can we ride on the train", words: ["Can", "we", "ride", "on", "the", "train"], distractors: ["sleep", "swim"], sentenceWithBlank: "Can we _______ on the train?", image: "assets/ep24_ride.png", emoji: "🎟️" },
+      { targetWord: "steam", statement: "Hop aboard full steam ahead", words: ["Hop", "aboard", "full", "steam", "ahead"], distractors: ["ice", "sand"], sentenceWithBlank: "Hop aboard full _______ ahead.", image: "assets/ep24_steam.png", emoji: "💨" },
+      { targetWord: "lorry", statement: "How is your little lorry", words: ["How", "is", "your", "little", "lorry"], distractors: ["bicycle", "scooter"], sentenceWithBlank: "How is your little _______?", image: "assets/ep24_lorry.png", emoji: "🚛" },
+      { targetWord: "truck", statement: "Breakdown truck is a work vehicle", words: ["Breakdown", "truck", "is", "a", "work", "vehicle"], distractors: ["carriage", "pram"], sentenceWithBlank: "Breakdown _______ is a work vehicle.", image: "assets/ep24_truck.png", emoji: "🛻" },
+      { targetWord: "bus", statement: "Driving the school bus", words: ["Driving", "the", "school", "bus"], distractors: ["boat", "rocket"], sentenceWithBlank: "Driving the school _______.", image: "assets/ep24_bus.png", emoji: "🚌" },
+      { targetWord: "hills", statement: "See some hills with trees", words: ["See", "some", "hills", "with", "trees"], distractors: ["deserts", "oceans"], sentenceWithBlank: "See some _______ with trees.", image: "assets/ep24_hills.png", emoji: "⛰️" },
+      { targetWord: "behind", statement: "Follow along behind the train", words: ["Follow", "along", "behind", "the", "train"], distractors: ["under", "inside"], sentenceWithBlank: "Follow along _______ the train.", image: "assets/ep24_behind.png", emoji: "🚌" },
+      { targetWord: "mud", statement: "The bus is stuck in mud", words: ["The", "bus", "is", "stuck", "in", "mud"], distractors: ["snow", "leaves"], sentenceWithBlank: "The bus is stuck in _______.", image: "assets/ep24_mud.png", emoji: "🤎" },
+      { targetWord: "strong", statement: "Is your truck strong enough", words: ["Is", "your", "truck", "strong", "enough"], distractors: ["weak", "tiny"], sentenceWithBlank: "Is your truck _______ enough?", image: "assets/ep24_strong.png", emoji: "💪" },
+      { targetWord: "power", statement: "Need a vehicle with more power", words: ["Need", "a", "vehicle", "with", "more", "power"], distractors: ["paint", "music"], sentenceWithBlank: "Need a vehicle with more _______.", image: "assets/ep24_power.png", emoji: "⚡" },
+      { targetWord: "pull", statement: "Pull the bus out of mud", words: ["Pull", "the", "bus", "out", "of", "mud"], distractors: ["push", "drop"], sentenceWithBlank: "_______ the bus out of mud.", image: "assets/ep24_pull.png", emoji: "🪢" }
+    ]
   }
 };
 
@@ -1369,7 +1389,40 @@ const phonicsDataMap = {
   "spot": { target: "sp", display: "<span class='phonics-blank-slot'>_ _</span> o t", distractors: ["st", "sw"] },
   "jelly": { target: "ll", display: "j e <span class='phonics-blank-slot'>_ _</span> y", distractors: ["ff", "ss"] },
   "step": { target: "st", display: "<span class='phonics-blank-slot'>_ _</span> e p", distractors: ["sp", "sw"] },
-  "wave": { target: "a", display: "w <span class='phonics-blank-slot'>_</span> v e", distractors: ["o", "e"] }
+  "wave": { target: "a", display: "w <span class='phonics-blank-slot'>_</span> v e", distractors: ["o", "e"] },
+
+  // Episode 23
+  "cousin": { target: "ou", display: "c <span class='phonics-blank-slot'>_ _</span> s i n", distractors: ["oo", "ea"] },
+  "baby": { target: "a", display: "b <span class='phonics-blank-slot'>_</span> b y", distractors: ["e", "o"] },
+  "boy": { target: "oy", display: "b <span class='phonics-blank-slot'>_ _</span>", distractors: ["oi", "ay"] },
+  "girl": { target: "ir", display: "g <span class='phonics-blank-slot'>_ _</span> l", distractors: ["ar", "or"] },
+  "play": { target: "ay", display: "p l <span class='phonics-blank-slot'>_ _</span>", distractors: ["ai", "ee"] },
+  "sleep": { target: "ee", display: "s l <span class='phonics-blank-slot'>_ _</span> p", distractors: ["ea", "oo"] },
+  "hold": { target: "o", display: "h <span class='phonics-blank-slot'>_</span> l d", distractors: ["a", "i"] },
+  "careful": { target: "are", display: "c <span class='phonics-blank-slot'>_ _ _</span> f u l", distractors: ["ear", "our"] },
+  "brother": { target: "th", display: "b r o <span class='phonics-blank-slot'>_ _</span> e r", distractors: ["sh", "ch"] },
+  "pram": { target: "pr", display: "<span class='phonics-blank-slot'>_ _</span> a m", distractors: ["tr", "br"] },
+  "promise": { target: "pr", display: "<span class='phonics-blank-slot'>_ _</span> o m i s e", distractors: ["tr", "cr"] },
+  "toys": { target: "oy", display: "t <span class='phonics-blank-slot'>_ _</span> s", distractors: ["oi", "ay"] },
+  "cookie": { target: "oo", display: "c <span class='phonics-blank-slot'>_ _</span> k i e", distractors: ["ee", "oa"] },
+  "clever": { target: "cl", display: "<span class='phonics-blank-slot'>_ _</span> e v e r", distractors: ["fl", "pl"] },
+
+  // Episode 24
+  "train": { target: "ai", display: "t r <span class='phonics-blank-slot'>_ _</span> n", distractors: ["ay", "ee"] },
+  "noise": { target: "oi", display: "n <span class='phonics-blank-slot'>_ _</span> s e", distractors: ["oy", "ou"] },
+  "tracks": { target: "ck", display: "t r a <span class='phonics-blank-slot'>_ _</span> s", distractors: ["ch", "sh"] },
+  "wheels": { target: "ee", display: "w h <span class='phonics-blank-slot'>_ _</span> l s", distractors: ["ea", "oo"] },
+  "ride": { target: "i", display: "r <span class='phonics-blank-slot'>_</span> d e", distractors: ["a", "o"] },
+  "steam": { target: "ea", display: "s t <span class='phonics-blank-slot'>_ _</span> m", distractors: ["ee", "oa"] },
+  "lorry": { target: "rr", display: "l o <span class='phonics-blank-slot'>_ _</span> y", distractors: ["ll", "tt"] },
+  "truck": { target: "ck", display: "t r u <span class='phonics-blank-slot'>_ _</span>", distractors: ["ch", "sh"] },
+  "bus": { target: "u", display: "b <span class='phonics-blank-slot'>_</span> s", distractors: ["a", "e"] },
+  "hills": { target: "ll", display: "h i <span class='phonics-blank-slot'>_ _</span> s", distractors: ["ss", "ff"] },
+  "behind": { target: "ind", display: "b e h <span class='phonics-blank-slot'>_ _ _</span>", distractors: ["end", "ond"] },
+  "mud": { target: "u", display: "m <span class='phonics-blank-slot'>_</span> d", distractors: ["a", "o"] },
+  "strong": { target: "st", display: "<span class='phonics-blank-slot'>_ _</span> r o n g", distractors: ["sp", "sw"] },
+  "power": { target: "ow", display: "p <span class='phonics-blank-slot'>_ _</span> e r", distractors: ["ou", "aw"] },
+  "pull": { target: "ll", display: "p u <span class='phonics-blank-slot'>_ _</span>", distractors: ["ss", "tt"] }
 };
 
 function getPhonicsInfo(word) {
