@@ -24,6 +24,7 @@ window.onNextLevelClick = function() {
 window.onStageTabClick = function(diff) {
   try { playSound('click'); } catch (e) {}
   currentLevelIndex = 0;
+  phonicsAttemptsLeft = 20;
   setDifficulty(diff);
   
   // Instant Launch Game for Selected Stage starting at Level 1
@@ -1161,6 +1162,16 @@ const episodeData = {
       { targetWord: "honk", statement: "Honk the loud bicycle horn", words: ["Honk", "the", "loud", "bicycle", "horn"], distractors: ["break", "hide"], sentenceWithBlank: "_______ the loud bicycle horn.", image: "assets/ep25_honk.png", emoji: "🎺" },
       { targetWord: "pedal", statement: "Pedal your bicycle up hill", words: ["Pedal", "your", "bicycle", "up", "hill"], distractors: ["stop", "drop"], sentenceWithBlank: "_______ your bicycle up hill.", image: "assets/ep25_pedal.png", emoji: "🦶" }
     ]
+  },
+  ep26: {
+    title: "Episode 26: Winter Ice Skating",
+    levels: [
+      { targetWord: "skates", statement: "Everyone wears ice skates", words: ["Everyone", "wears", "ice", "skates"], distractors: ["boots", "socks"], sentenceWithBlank: "Everyone wears ice _______.", image: "assets/ep26_skates.png", emoji: "⛸️" },
+      { targetWord: "rink", statement: "Skating at ice rink", words: ["Skating", "at", "ice", "rink"], distractors: ["park", "yard"], sentenceWithBlank: "Skating at ice _______.", image: "assets/ep26_rink.png", emoji: "❄️" },
+      { targetWord: "glide", statement: "Push feet and glide", words: ["Push", "feet", "and", "glide"], distractors: ["stop", "jump"], sentenceWithBlank: "Push feet and _______.", image: "assets/ep26_glide.png", emoji: "✨" },
+      { targetWord: "fall", statement: "Everyone can fall over", words: ["Everyone", "can", "fall", "over"], distractors: ["fly", "stand"], sentenceWithBlank: "Everyone can _______ over.", image: "assets/ep26_fall.png", emoji: "💫" },
+      { targetWord: "lesson", statement: "Your first skating lesson", words: ["Your", "first", "skating", "lesson"], distractors: ["party", "nap"], sentenceWithBlank: "Your first skating _______.", image: "assets/ep26_lesson.png", emoji: "🏅" }
+    ]
   }
 };
 
@@ -1459,7 +1470,39 @@ const phonicsDataMap = {
   "friends": { target: "ie", display: "f r <span class='phonics-blank-slot'>_ _</span> n d s", distractors: ["ei", "ee"] },
   "downhill": { target: "ow", display: "d <span class='phonics-blank-slot'>_ _</span> n h i l l", distractors: ["ou", "aw"] },
   "honk": { target: "nk", display: "h o <span class='phonics-blank-slot'>_ _</span>", distractors: ["ng", "nd"] },
-  "pedal": { target: "al", display: "p e d <span class='phonics-blank-slot'>_ _</span>", distractors: ["el", "ol"] }
+  "pedal": { target: "al", display: "p e d <span class='phonics-blank-slot'>_ _</span>", distractors: ["el", "ol"] },
+
+  // Episode 26 (Phonics V2: 2 letters emptied, simple audible sounds, 4 choices)
+  "skates": {
+    version: 2,
+    targets: ["s", "t"],
+    displayTemplate: "<span class='phonics-blank-slot' data-slot='0'>_</span> k a <span class='phonics-blank-slot' data-slot='1'>_</span> e s",
+    distractors: ["b", "m"]
+  },
+  "rink": {
+    version: 2,
+    targets: ["r", "k"],
+    displayTemplate: "<span class='phonics-blank-slot' data-slot='0'>_</span> i n <span class='phonics-blank-slot' data-slot='1'>_</span>",
+    distractors: ["p", "t"]
+  },
+  "glide": {
+    version: 2,
+    targets: ["g", "d"],
+    displayTemplate: "<span class='phonics-blank-slot' data-slot='0'>_</span> l i <span class='phonics-blank-slot' data-slot='1'>_</span> e",
+    distractors: ["m", "s"]
+  },
+  "fall": {
+    version: 2,
+    targets: ["f", "l"],
+    displayTemplate: "<span class='phonics-blank-slot' data-slot='0'>_</span> a <span class='phonics-blank-slot' data-slot='1'>_</span> l",
+    distractors: ["h", "n"]
+  },
+  "lesson": {
+    version: 2,
+    targets: ["l", "n"],
+    displayTemplate: "<span class='phonics-blank-slot' data-slot='0'>_</span> e s s o <span class='phonics-blank-slot' data-slot='1'>_</span>",
+    distractors: ["b", "t"]
+  }
 };
 
 function getPhonicsInfo(word) {
@@ -1488,6 +1531,8 @@ let isCurrentLevelSolved = false;
 let currentDifficulty = 'easy';
 let matchMistakeCount = 0;
 const MAX_MATCH_MISTAKES = 15;
+let phonicsAttemptsLeft = 20;
+const MAX_PHONICS_ERRORS = 20;
 let listenChoicesMemo = [];
 let levelChoicesMemo = [];
 
@@ -1755,6 +1800,18 @@ const phonicsReplayBtn = document.getElementById('phonicsReplayBtn');
 const phonicsMessageBanner = document.getElementById('phonicsMessageBanner');
 const phonicsMessageText = document.getElementById('phonicsMessageText');
 const phonicsNextLevelBtn = document.getElementById('phonicsNextLevelBtn');
+const phonicsAttemptsBadge = document.getElementById('phonicsAttemptsBadge');
+
+function updatePhonicsAttemptsBadge(isV2) {
+  if (phonicsAttemptsBadge) {
+    if (isV2) {
+      phonicsAttemptsBadge.style.display = 'inline-flex';
+      phonicsAttemptsBadge.textContent = `Attempts Left: ${phonicsAttemptsLeft} / ${MAX_PHONICS_ERRORS} ❤️`;
+    } else {
+      phonicsAttemptsBadge.style.display = 'none';
+    }
+  }
+}
 const matchFailModal = document.getElementById('matchFailModal');
 const matchRestartBtn = document.getElementById('matchRestartBtn');
 
@@ -1773,6 +1830,7 @@ function selectEpisode(epKey) {
   currentEpisodeKey = epKey;
   levels = episodeData[epKey].levels;
   selectedEpisodeTitle.textContent = episodeData[epKey].title;
+  phonicsAttemptsLeft = MAX_PHONICS_ERRORS;
   renderLevelGrid();
 }
 
@@ -2259,6 +2317,22 @@ function renderPhonicsStage() {
   }
   
   const info = getPhonicsInfo(currentLevel.targetWord);
+  const isV2 = (info && info.version === 2);
+  updatePhonicsAttemptsBadge(isV2);
+
+  if (isV2) {
+    renderPhonicsV2(currentLevel, info);
+  } else {
+    renderPhonicsV1(currentLevel, info);
+  }
+}
+
+function renderPhonicsV1(currentLevel, info) {
+  if (phonicsOptionGrid) {
+    phonicsOptionGrid.classList.remove('v2-grid');
+    phonicsOptionGrid.innerHTML = '';
+  }
+
   if (phonicsWordDisplay) {
     phonicsWordDisplay.style.fontSize = "26px";
     phonicsWordDisplay.style.fontWeight = "800";
@@ -2269,8 +2343,6 @@ function renderPhonicsStage() {
   
   const choices = shuffle([info.target, ...info.distractors]);
   if (phonicsOptionGrid) {
-    phonicsOptionGrid.innerHTML = '';
-    
     choices.forEach(optionText => {
       const card = document.createElement('button');
       card.className = 'match-word-card';
@@ -2311,6 +2383,103 @@ function renderPhonicsStage() {
       phonicsOptionGrid.appendChild(card);
     });
   }
+}
+
+function renderPhonicsV2(currentLevel, info) {
+  if (phonicsOptionGrid) {
+    phonicsOptionGrid.classList.add('v2-grid');
+    phonicsOptionGrid.innerHTML = '';
+  }
+
+  if (phonicsWordDisplay) {
+    phonicsWordDisplay.style.fontSize = "28px";
+    phonicsWordDisplay.style.fontWeight = "800";
+    phonicsWordDisplay.style.letterSpacing = "6px";
+    phonicsWordDisplay.style.color = "#263238";
+    phonicsWordDisplay.innerHTML = info.displayTemplate;
+  }
+
+  const filledSlots = { 0: null, 1: null };
+  const targetLetters = info.targets;
+  const choices = shuffle([...targetLetters, ...info.distractors]);
+
+  choices.forEach(optionLetter => {
+    const card = document.createElement('button');
+    card.className = 'match-word-card';
+    card.textContent = optionLetter.toUpperCase();
+
+    card.addEventListener('click', () => {
+      if (isCurrentLevelSolved) return;
+      playSound('click');
+
+      const clicked = optionLetter.toLowerCase();
+
+      // Check if clicked letter matches an unfilled target slot
+      let matchedSlotIdx = -1;
+      if (targetLetters[0].toLowerCase() === clicked && filledSlots[0] === null) {
+        matchedSlotIdx = 0;
+      } else if (targetLetters[1].toLowerCase() === clicked && filledSlots[1] === null) {
+        matchedSlotIdx = 1;
+      }
+
+      if (matchedSlotIdx !== -1) {
+        filledSlots[matchedSlotIdx] = clicked;
+        card.classList.add('correct');
+        card.disabled = true;
+        playSound('correct');
+
+        if (phonicsWordDisplay) {
+          const slotEl = phonicsWordDisplay.querySelector(`[data-slot="${matchedSlotIdx}"]`);
+          if (slotEl) {
+            slotEl.textContent = clicked.toUpperCase();
+            slotEl.classList.add('filled');
+          }
+        }
+
+        // Check if both slots are filled
+        if (filledSlots[0] !== null && filledSlots[1] !== null) {
+          isCurrentLevelSolved = true;
+          score += 10;
+          if (scoreValue) scoreValue.textContent = score;
+          startConfetti();
+
+          if (phonicsWordDisplay) phonicsWordDisplay.innerHTML = currentLevel.targetWord.toUpperCase();
+
+          setTimeout(() => {
+            speak(currentLevel.targetWord);
+          }, 300);
+
+          if (phonicsMessageText) phonicsMessageText.textContent = "Awesome Phonics Skill! Found both sounds! 🌟";
+          if (phonicsMessageBanner) phonicsMessageBanner.classList.remove('hidden');
+          if (phonicsNextLevelBtn) phonicsNextLevelBtn.classList.remove('hidden');
+        }
+      } else {
+        card.classList.add('wrong');
+        playSound('incorrect');
+
+        phonicsAttemptsLeft--;
+        updatePhonicsAttemptsBadge(true);
+
+        if (phonicsMessageText) phonicsMessageText.textContent = `Oops! Try another letter. (${phonicsAttemptsLeft} attempts left) 💡`;
+        if (phonicsMessageBanner) phonicsMessageBanner.classList.remove('hidden');
+
+        setTimeout(() => {
+          card.classList.remove('wrong');
+        }, 600);
+
+        if (phonicsAttemptsLeft <= 0) {
+          setTimeout(() => {
+            alert("Oh no! You've used all 20 attempts. Restarting Episode Phonics challenge! 💪");
+            phonicsAttemptsLeft = MAX_PHONICS_ERRORS;
+            currentLevelIndex = 0;
+            initLevel();
+          }, 400);
+        }
+      }
+    });
+
+    phonicsOptionGrid.appendChild(card);
+  });
 }
 
 let isNavigatingNextLevel = false;

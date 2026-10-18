@@ -1,5 +1,5 @@
 {
-  "current_published_count": 25,
+  "current_published_count": 26,
   "episodes": [
     {
       "episode_num": 1,
@@ -178,6 +178,15 @@
       "video_id": "7AzdrcecNzU",
       "playlist_index": 32,
       "status": "published"
+    },
+    {
+      "episode_num": 26,
+      "code_title": "Episode 26",
+      "subtitle": "Winter Ice Skating",
+      "video_id": "ywa8_Yi_hAM",
+      "playlist_index": 33,
+      "status": "testing_initial_5_words",
+      "phonics_engine": "v2"
     }
   ]
 }

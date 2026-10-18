@@ -1366,3 +1366,19 @@ body {
   min-height: 75px !important;
   box-shadow: 0 6px 0 #d6d6d6 !important;
 }
+
+#phonicsOptionGrid.v2-grid {
+  grid-template-columns: repeat(4, 1fr) !important;
+}
+
+@media (max-width: 600px) {
+  #phonicsOptionGrid.v2-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+.phonics-blank-slot.filled {
+  background: #e8f5e9 !important;
+  border-bottom: 4px solid #4caf50 !important;
+  color: #2e7d32 !important;
+}

@@ -269,10 +269,20 @@
           <span class="episode-card-title">Episode 25</span>
           <span class="episode-card-desc">Country Bicycle Ride</span>
         </button>
+
+        <!-- Active Episode 26 -->
+        <button class="episode-card active" id="episodeCard26" onclick="onEpisodeCardClick('ep26')" aria-label="Play Episode 26: Winter Ice Skating">
+          <div class="episode-image-container">
+            <img src="assets/ep26_skates.png" alt="Winter Ice Skating illustration" class="episode-card-img">
+          </div>
+          <span class="episode-card-badge">Active 🟢</span>
+          <span class="episode-card-title">Episode 26</span>
+          <span class="episode-card-desc">Winter Ice Skating</span>
+        </button>
       </div>
 
       <div class="start-footer">
-        <span class="version-tag">v52.0.0</span>
+        <span class="version-tag">v53.0.0</span>
       </div>
     </div>
   </div>
@@ -453,9 +463,14 @@
     <div class="match-main hidden" id="phonicsMain">
       <div class="match-header">
         <div class="match-instructions">🔤 Listen and tap the missing sound!</div>
-        <button class="match-mistakes-badge" id="phonicsReplayBtn" style="background: #fff3e0; color: #e65100; border-color: #ffb74d; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;">
-          🔊 Hear It!
-        </button>
+        <div style="display: flex; gap: 8px; align-items: center;">
+          <div class="match-mistakes-badge" id="phonicsAttemptsBadge" style="background: #ffebee; color: #c62828; border-color: #ef9a9a; font-weight: 700; display: none;">
+            Attempts: 20 / 20 ❤️
+          </div>
+          <button class="match-mistakes-badge" id="phonicsReplayBtn" style="background: #fff3e0; color: #e65100; border-color: #ffb74d; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;">
+            🔊 Hear It!
+          </button>
+        </div>
       </div>
 
       <div class="match-pic-container">
