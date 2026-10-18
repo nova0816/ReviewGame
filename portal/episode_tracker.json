@@ -1,5 +1,5 @@
 {
-  "current_published_count": 22,
+  "current_published_count": 26,
   "episodes": [
     {
       "episode_num": 1,
@@ -138,22 +138,58 @@
       "episode_num": 20,
       "code_title": "Episode 20",
       "subtitle": "Friendly Postman Mail",
-      "video_id": "Zo\u00ebZebra",
+      "video_id": "vG8FotzvvCA",
       "status": "published"
     },
     {
       "episode_num": 21,
       "code_title": "Episode 21",
       "subtitle": "Art Painting Fun",
-      "video_id": "Painting",
+      "video_id": "JnC7uo-2fOk",
       "status": "published"
     },
     {
       "episode_num": 22,
       "code_title": "Episode 22",
       "subtitle": "Tick-Tock Cuckoo Clock",
-      "video_id": "CuckooClock",
+      "video_id": "gu6PYRquPfw",
       "status": "published"
+    },
+    {
+      "episode_num": 23,
+      "code_title": "Episode 23",
+      "subtitle": "Sweet Baby Cousin",
+      "video_id": "VZ4QI0K69oI",
+      "playlist_index": 30,
+      "status": "published",
+      "phonics_engine": "v2"
+    },
+    {
+      "episode_num": 24,
+      "code_title": "Episode 24",
+      "subtitle": "Miniature Train Ride",
+      "video_id": "MDqDwGLAef4",
+      "playlist_index": 31,
+      "status": "published",
+      "phonics_engine": "v2"
+    },
+    {
+      "episode_num": 25,
+      "code_title": "Episode 25",
+      "subtitle": "Country Bicycle Ride",
+      "video_id": "7AzdrcecNzU",
+      "playlist_index": 32,
+      "status": "published",
+      "phonics_engine": "v2"
+    },
+    {
+      "episode_num": 26,
+      "code_title": "Episode 26",
+      "subtitle": "Winter Ice Skating",
+      "video_id": "ywa8_Yi_hAM",
+      "playlist_index": 33,
+      "status": "testing_initial_5_words",
+      "phonics_engine": "v2"
     }
   ]
 }

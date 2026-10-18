@@ -161,7 +161,8 @@
       "subtitle": "Sweet Baby Cousin",
       "video_id": "VZ4QI0K69oI",
       "playlist_index": 30,
-      "status": "published"
+      "status": "published",
+      "phonics_engine": "v2"
     },
     {
       "episode_num": 24,
@@ -169,7 +170,8 @@
       "subtitle": "Miniature Train Ride",
       "video_id": "MDqDwGLAef4",
       "playlist_index": 31,
-      "status": "published"
+      "status": "published",
+      "phonics_engine": "v2"
     },
     {
       "episode_num": 25,
@@ -177,7 +179,8 @@
       "subtitle": "Country Bicycle Ride",
       "video_id": "7AzdrcecNzU",
       "playlist_index": 32,
-      "status": "published"
+      "status": "published",
+      "phonics_engine": "v2"
     },
     {
       "episode_num": 26,
