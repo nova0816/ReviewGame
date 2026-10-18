@@ -23,7 +23,7 @@
 | Episode 23 | Episode 23: Sweet Baby Cousin | `cousin`, `baby`, `boy`, `girl`, `play`, `sleep`, `hold`, `careful`, `brother`, `pretend`, `pram`, `promise`, `toys`, `cookie`, `clever` |
 | Episode 24 | Episode 24: Miniature Train Ride | `train`, `noise`, `tracks`, `wheels`, `ride`, `steam`, `lorry`, `truck`, `bus`, `hills`, `behind`, `mud`, `strong`, `power`, `pull` |
 | Episode 25 | Episode 25: Country Bicycle Ride | `breakfast`, `bicycle`, `tricycle`, `tandem`, `front`, `back`, `seats`, `gentle`, `uphill`, `steep`, `top`, `friends`, `downhill`, `honk`, `pedal` |
-| Episode 26 | Episode 26: Winter Ice Skating | `skates`, `rink`, `glide`, `fall`, `lesson` *(Initial 5 test words)* |
+| Episode 26 | Episode 26: Winter Ice Skating | `skates`, `rink`, `glide`, `fall`, `lesson`, `family`, `first`, `hire`, `teach`, `easy`, `watch`, `bump`, `teacher`, `beautiful`, `fantastic` |
 
-**Total Active Vocabulary Items (Ep 1, Ep 6–26):** 331
+**Total Active Vocabulary Items (Ep 1, Ep 6–26):** 341
 

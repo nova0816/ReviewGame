@@ -1170,7 +1170,17 @@ const episodeData = {
       { targetWord: "rink", statement: "Skating at ice rink", words: ["Skating", "at", "ice", "rink"], distractors: ["park", "yard"], sentenceWithBlank: "Skating at ice _______.", image: "assets/ep26_rink.png", emoji: "❄️" },
       { targetWord: "glide", statement: "Push feet and glide", words: ["Push", "feet", "and", "glide"], distractors: ["stop", "jump"], sentenceWithBlank: "Push feet and _______.", image: "assets/ep26_glide.png", emoji: "✨" },
       { targetWord: "fall", statement: "Everyone can fall over", words: ["Everyone", "can", "fall", "over"], distractors: ["fly", "stand"], sentenceWithBlank: "Everyone can _______ over.", image: "assets/ep26_fall.png", emoji: "💫" },
-      { targetWord: "lesson", statement: "Your first skating lesson", words: ["Your", "first", "skating", "lesson"], distractors: ["party", "nap"], sentenceWithBlank: "Your first skating _______.", image: "assets/ep26_lesson.png", emoji: "🏅" }
+      { targetWord: "lesson", statement: "Your first skating lesson", words: ["Your", "first", "skating", "lesson"], distractors: ["party", "nap"], sentenceWithBlank: "Your first skating _______.", image: "assets/ep26_lesson.png", emoji: "🏅" },
+      { targetWord: "family", statement: "The piglet family are going ice skating", words: ["The", "piglet", "family", "are", "going", "ice", "skating"], distractors: ["alone", "party"], sentenceWithBlank: "The piglet _______ are going ice skating.", image: "assets/ep26_family.png", emoji: "👨‍👩‍👧‍👦" },
+      { targetWord: "first", statement: "First we need some skates before skating", words: ["First", "we", "need", "some", "skates", "before", "skating"], distractors: ["last", "never"], sentenceWithBlank: "_______ we need some skates before skating.", image: "assets/ep26_first.png", emoji: "🥇" },
+      { targetWord: "hire", statement: "We would like to hire some skates", words: ["We", "would", "like", "to", "hire", "some", "skates"], distractors: ["sell", "break"], sentenceWithBlank: "We would like to _______ some skates.", image: "assets/ep26_hire.png", emoji: "🎟️" },
+      { targetWord: "teach", statement: "Mummy will teach little piglet to skate", words: ["Mummy", "will", "teach", "little", "piglet", "to", "skate"], distractors: ["forget", "push"], sentenceWithBlank: "Mummy will _______ little piglet to skate.", image: "assets/ep26_teach.png", emoji: "🧑‍🏫" },
+      { targetWord: "easy", statement: "Ice skating is easy and fun", words: ["Ice", "skating", "is", "easy", "and", "fun"], distractors: ["hard", "dark"], sentenceWithBlank: "Ice skating is _______ and fun.", image: "assets/ep26_easy.png", emoji: "🎈" },
+      { targetWord: "watch", statement: "Watch this trick on the ice", words: ["Watch", "this", "trick", "on", "the", "ice"], distractors: ["hide", "sleep"], sentenceWithBlank: "_______ this trick on the ice.", image: "assets/ep26_watch.png", emoji: "👀" },
+      { targetWord: "bump", statement: "Slow down so you do not bump", words: ["Slow", "down", "so", "you", "do", "not", "bump"], distractors: ["jump", "fly"], sentenceWithBlank: "Slow down so you do not _______.", image: "assets/ep26_bump.png", emoji: "💥" },
+      { targetWord: "teacher", statement: "Mummy is a very good skating teacher", words: ["Mummy", "is", "a", "very", "good", "skating", "teacher"], distractors: ["driver", "doctor"], sentenceWithBlank: "Mummy is a very good skating _______.", image: "assets/ep26_teacher.png", emoji: "👩‍🏫" },
+      { targetWord: "beautiful", statement: "George can skate in beautiful circles", words: ["George", "can", "skate", "in", "beautiful", "circles"], distractors: ["noisy", "broken"], sentenceWithBlank: "George can skate in _______ circles.", image: "assets/ep26_beautiful.png", emoji: "🌟" },
+      { targetWord: "fantastic", statement: "You are fantastic at skating on ice", words: ["You", "are", "fantastic", "at", "skating", "on", "ice"], distractors: ["boring", "sad"], sentenceWithBlank: "You are _______ at skating on ice.", image: "assets/ep26_fantastic.png", emoji: "🏆" }
     ]
   }
 };
@@ -1503,6 +1513,66 @@ const phonicsDataMap = {
     targets: ["e", "o"],
     displayTemplate: "l <span class='phonics-blank-slot' data-slot='0'>_</span> s s <span class='phonics-blank-slot' data-slot='1'>_</span> n",
     distractors: ["a", "u"]
+  },
+  "family": {
+    version: 2,
+    targets: ["a", "i"],
+    displayTemplate: "f <span class='phonics-blank-slot' data-slot='0'>_</span> m <span class='phonics-blank-slot' data-slot='1'>_</span> l y",
+    distractors: ["e", "o"]
+  },
+  "first": {
+    version: 2,
+    targets: ["i", "t"],
+    displayTemplate: "f <span class='phonics-blank-slot' data-slot='0'>_</span> r s <span class='phonics-blank-slot' data-slot='1'>_</span>",
+    distractors: ["e", "d"]
+  },
+  "hire": {
+    version: 2,
+    targets: ["i", "e"],
+    displayTemplate: "h <span class='phonics-blank-slot' data-slot='0'>_</span> r <span class='phonics-blank-slot' data-slot='1'>_</span>",
+    distractors: ["a", "o"]
+  },
+  "teach": {
+    version: 2,
+    targets: ["e", "a"],
+    displayTemplate: "t <span class='phonics-blank-slot' data-slot='0'>_</span> <span class='phonics-blank-slot' data-slot='1'>_</span> c h",
+    distractors: ["o", "i"]
+  },
+  "easy": {
+    version: 2,
+    targets: ["a", "y"],
+    displayTemplate: "e <span class='phonics-blank-slot' data-slot='0'>_</span> s <span class='phonics-blank-slot' data-slot='1'>_</span>",
+    distractors: ["e", "i"]
+  },
+  "watch": {
+    version: 2,
+    targets: ["a", "h"],
+    displayTemplate: "w <span class='phonics-blank-slot' data-slot='0'>_</span> t c <span class='phonics-blank-slot' data-slot='1'>_</span>",
+    distractors: ["o", "k"]
+  },
+  "bump": {
+    version: 2,
+    targets: ["b", "u"],
+    displayTemplate: "<span class='phonics-blank-slot' data-slot='0'>_</span> <span class='phonics-blank-slot' data-slot='1'>_</span> m p",
+    distractors: ["d", "a"]
+  },
+  "teacher": {
+    version: 2,
+    targets: ["e", "a"],
+    displayTemplate: "t <span class='phonics-blank-slot' data-slot='0'>_</span> <span class='phonics-blank-slot' data-slot='1'>_</span> c h e r",
+    distractors: ["o", "i"]
+  },
+  "beautiful": {
+    version: 2,
+    targets: ["e", "a"],
+    displayTemplate: "b <span class='phonics-blank-slot' data-slot='0'>_</span> <span class='phonics-blank-slot' data-slot='1'>_</span> u t i f u l",
+    distractors: ["o", "i"]
+  },
+  "fantastic": {
+    version: 2,
+    targets: ["a", "t"],
+    displayTemplate: "f <span class='phonics-blank-slot' data-slot='0'>_</span> n <span class='phonics-blank-slot' data-slot='1'>_</span> a s t i c",
+    distractors: ["o", "d"]
   }
 };
 

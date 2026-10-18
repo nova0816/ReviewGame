@@ -86,12 +86,18 @@ Before revising game source code for an episode:
 2. **Landing Page Episode Menu (`index.html`):**
    - Interactive Episode Grid with episode cards (`episodeCard1`, `episodeCard2`, etc.).
    - Visual status badges (*Active 🟢* vs *Locked 🔴*).
-3. **5 Interactive Difficulty Modes:**
+3. **Interactive Game Stages:**
    - **Easy 🟢:** Sentence unscramble with voice guidance button.
    - **Listen 🔵:** Tap matching picture card upon hearing spoken word.
    - **Match 🧩:** Tap matching word card for 3D picture (with 15-mistake reset rule).
    - **Normal 🟡:** Fill-in-the-blank grammar review.
    - **Hard 🔴:** Sentence unscramble without voice helpers.
+   - **Phonics 🟠 (Phonics V2 from Episode 23 Onwards):**
+     - **Two Letters Emptied:** Exactly 2 audible letters (vowels and/or consonants) are blanked out (`<span class='phonics-blank-slot' data-slot='0'>_</span>` and `data-slot='1'`). Irregular digraphs and silent letters are avoided.
+     - **4 Lowercase Letter Choices:** Player picks from 4 choices (2 targets + 2 distractors), all presented in lowercase.
+     - **Explicit 'Confirm ✓' Button:** Validates the two selected letters.
+     - **Persistent Wrong Highlighting & Tap-to-Clear:** Incorrect answers highlight both slot boxes in red (`#e53935` border, `#ffebee` background) accompanied by the instruction *"👆 Tap the red letters above (or cards below) to clear them!"*. Tapping the slot directly or tapping the card deselects and returns the slot to `_`.
+     - **20-Error Episode Cap:** Mistake counter (`Attempts Left: 20 / 20 ❤️`) caps total mistakes per episode at 20 before resetting.
 
 ---
 
