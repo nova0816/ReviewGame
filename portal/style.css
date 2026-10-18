@@ -1382,3 +1382,36 @@ body {
   border-bottom: 4px solid #4caf50 !important;
   color: #2e7d32 !important;
 }
+
+.phonics-blank-slot.wrong {
+  background: #ffebee !important;
+  border-bottom: 4px solid #e53935 !important;
+  color: #c62828 !important;
+  animation: shake 0.4s ease-in-out;
+}
+
+.phonics-blank-slot.correct {
+  background: #e8f5e9 !important;
+  border-bottom: 4px solid #4caf50 !important;
+  color: #2e7d32 !important;
+}
+
+.phonics-blank-slot {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#phonicsWordDisplay,
+#phonicsOptionGrid .match-word-card,
+.phonics-blank-slot {
+  text-transform: lowercase !important;
+}
+
+#phonicsOptionGrid .match-word-card.selected {
+  background: #e3f2fd !important;
+  border-color: #2196f3 !important;
+  color: #1565c0 !important;
+  transform: translateY(-4px) !important;
+  box-shadow: 0 8px 0 #90caf9 !important;
+}
+

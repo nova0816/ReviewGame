@@ -1472,36 +1472,36 @@ const phonicsDataMap = {
   "honk": { target: "nk", display: "h o <span class='phonics-blank-slot'>_ _</span>", distractors: ["ng", "nd"] },
   "pedal": { target: "al", display: "p e d <span class='phonics-blank-slot'>_ _</span>", distractors: ["el", "ol"] },
 
-  // Episode 26 (Phonics V2: 2 letters emptied, simple audible sounds, 4 choices)
+  // Episode 26 (Phonics V2: 2 letters emptied including vowels, 4 choices in lowercase)
   "skates": {
     version: 2,
-    targets: ["s", "t"],
-    displayTemplate: "<span class='phonics-blank-slot' data-slot='0'>_</span> k a <span class='phonics-blank-slot' data-slot='1'>_</span> e s",
-    distractors: ["b", "m"]
+    targets: ["a", "e"],
+    displayTemplate: "s k <span class='phonics-blank-slot' data-slot='0'>_</span> t <span class='phonics-blank-slot' data-slot='1'>_</span> s",
+    distractors: ["o", "i"]
   },
   "rink": {
     version: 2,
-    targets: ["r", "k"],
-    displayTemplate: "<span class='phonics-blank-slot' data-slot='0'>_</span> i n <span class='phonics-blank-slot' data-slot='1'>_</span>",
-    distractors: ["p", "t"]
+    targets: ["r", "i"],
+    displayTemplate: "<span class='phonics-blank-slot' data-slot='0'>_</span> <span class='phonics-blank-slot' data-slot='1'>_</span> n k",
+    distractors: ["l", "e"]
   },
   "glide": {
     version: 2,
-    targets: ["g", "d"],
-    displayTemplate: "<span class='phonics-blank-slot' data-slot='0'>_</span> l i <span class='phonics-blank-slot' data-slot='1'>_</span> e",
-    distractors: ["m", "s"]
+    targets: ["g", "i"],
+    displayTemplate: "<span class='phonics-blank-slot' data-slot='0'>_</span> l <span class='phonics-blank-slot' data-slot='1'>_</span> d e",
+    distractors: ["b", "o"]
   },
   "fall": {
     version: 2,
-    targets: ["f", "l"],
-    displayTemplate: "<span class='phonics-blank-slot' data-slot='0'>_</span> a <span class='phonics-blank-slot' data-slot='1'>_</span> l",
-    distractors: ["h", "n"]
+    targets: ["f", "a"],
+    displayTemplate: "<span class='phonics-blank-slot' data-slot='0'>_</span> <span class='phonics-blank-slot' data-slot='1'>_</span> l l",
+    distractors: ["t", "o"]
   },
   "lesson": {
     version: 2,
-    targets: ["l", "n"],
-    displayTemplate: "<span class='phonics-blank-slot' data-slot='0'>_</span> e s s o <span class='phonics-blank-slot' data-slot='1'>_</span>",
-    distractors: ["b", "t"]
+    targets: ["e", "o"],
+    displayTemplate: "l <span class='phonics-blank-slot' data-slot='0'>_</span> s s <span class='phonics-blank-slot' data-slot='1'>_</span> n",
+    distractors: ["a", "u"]
   }
 };
 
@@ -1800,6 +1800,7 @@ const phonicsReplayBtn = document.getElementById('phonicsReplayBtn');
 const phonicsMessageBanner = document.getElementById('phonicsMessageBanner');
 const phonicsMessageText = document.getElementById('phonicsMessageText');
 const phonicsNextLevelBtn = document.getElementById('phonicsNextLevelBtn');
+const phonicsConfirmBtn = document.getElementById('phonicsConfirmBtn');
 const phonicsAttemptsBadge = document.getElementById('phonicsAttemptsBadge');
 
 function updatePhonicsAttemptsBadge(isV2) {
@@ -2310,6 +2311,7 @@ function renderPhonicsStage() {
   const currentLevel = levels[currentLevelIndex];
   if (phonicsMessageBanner) phonicsMessageBanner.classList.add('hidden');
   if (phonicsNextLevelBtn) phonicsNextLevelBtn.classList.add('hidden');
+  if (phonicsConfirmBtn) phonicsConfirmBtn.classList.add('hidden');
   
   if (phonicsPicImg) {
     phonicsPicImg.src = currentLevel.image;
@@ -2328,6 +2330,7 @@ function renderPhonicsStage() {
 }
 
 function renderPhonicsV1(currentLevel, info) {
+  if (phonicsConfirmBtn) phonicsConfirmBtn.classList.add('hidden');
   if (phonicsOptionGrid) {
     phonicsOptionGrid.classList.remove('v2-grid');
     phonicsOptionGrid.innerHTML = '';
@@ -2346,7 +2349,7 @@ function renderPhonicsV1(currentLevel, info) {
     choices.forEach(optionText => {
       const card = document.createElement('button');
       card.className = 'match-word-card';
-      card.textContent = optionText;
+      card.textContent = optionText.toLowerCase();
       
       card.addEventListener('click', () => {
         if (isCurrentLevelSolved) return;
@@ -2360,10 +2363,10 @@ function renderPhonicsV1(currentLevel, info) {
           playSound('correct');
           startConfetti();
           
-          if (phonicsWordDisplay) phonicsWordDisplay.innerHTML = currentLevel.targetWord.toUpperCase();
+          if (phonicsWordDisplay) phonicsWordDisplay.innerHTML = currentLevel.targetWord.toLowerCase();
           
           setTimeout(() => {
-            speak(currentLevel.targetWord);
+            speak(currentLevel.targetWord.toLowerCase());
           }, 300);
           
           if (phonicsMessageText) phonicsMessageText.textContent = "Awesome Phonics Skill! 🌟";
@@ -2386,6 +2389,12 @@ function renderPhonicsV1(currentLevel, info) {
 }
 
 function renderPhonicsV2(currentLevel, info) {
+  if (phonicsNextLevelBtn) phonicsNextLevelBtn.classList.add('hidden');
+  if (phonicsConfirmBtn) {
+    phonicsConfirmBtn.classList.remove('hidden');
+    phonicsConfirmBtn.textContent = 'Confirm ✓';
+  }
+
   if (phonicsOptionGrid) {
     phonicsOptionGrid.classList.add('v2-grid');
     phonicsOptionGrid.innerHTML = '';
@@ -2399,73 +2408,145 @@ function renderPhonicsV2(currentLevel, info) {
     phonicsWordDisplay.innerHTML = info.displayTemplate;
   }
 
-  const filledSlots = { 0: null, 1: null };
+  const slot0 = phonicsWordDisplay ? phonicsWordDisplay.querySelector('[data-slot="0"]') : null;
+  const slot1 = phonicsWordDisplay ? phonicsWordDisplay.querySelector('[data-slot="1"]') : null;
+
+  const selectedLetters = [null, null];
+  const selectedCards = [null, null];
+
+  // Helper to clear a slot
+  function clearSlot(idx) {
+    if (selectedCards[idx]) {
+      selectedCards[idx].classList.remove('selected');
+      selectedCards[idx] = null;
+    }
+    selectedLetters[idx] = null;
+    const targetSlot = (idx === 0) ? slot0 : slot1;
+    if (targetSlot) {
+      targetSlot.textContent = '_';
+      targetSlot.classList.remove('filled', 'wrong', 'correct');
+    }
+  }
+
+  // Tapping slots in the word directly clears them
+  if (slot0) slot0.onclick = () => { if (!isCurrentLevelSolved && selectedLetters[0]) { clearSlot(0); playSound('click'); } };
+  if (slot1) slot1.onclick = () => { if (!isCurrentLevelSolved && selectedLetters[1]) { clearSlot(1); playSound('click'); } };
+
   const targetLetters = info.targets;
   const choices = shuffle([...targetLetters, ...info.distractors]);
 
   choices.forEach(optionLetter => {
     const card = document.createElement('button');
     card.className = 'match-word-card';
-    card.textContent = optionLetter.toUpperCase();
+    const optLower = optionLetter.toLowerCase();
+    card.textContent = optLower;
 
     card.addEventListener('click', () => {
       if (isCurrentLevelSolved) return;
       playSound('click');
 
-      const clicked = optionLetter.toLowerCase();
-
-      // Check if clicked letter matches an unfilled target slot
-      let matchedSlotIdx = -1;
-      if (targetLetters[0].toLowerCase() === clicked && filledSlots[0] === null) {
-        matchedSlotIdx = 0;
-      } else if (targetLetters[1].toLowerCase() === clicked && filledSlots[1] === null) {
-        matchedSlotIdx = 1;
+      // If clicked card is already chosen in slot 0, deselect it
+      if (selectedCards[0] === card) {
+        clearSlot(0);
+        return;
+      }
+      // If clicked card is already chosen in slot 1, deselect it
+      if (selectedCards[1] === card) {
+        clearSlot(1);
+        return;
       }
 
-      if (matchedSlotIdx !== -1) {
-        filledSlots[matchedSlotIdx] = clicked;
-        card.classList.add('correct');
-        card.disabled = true;
-        playSound('correct');
-
-        if (phonicsWordDisplay) {
-          const slotEl = phonicsWordDisplay.querySelector(`[data-slot="${matchedSlotIdx}"]`);
-          if (slotEl) {
-            slotEl.textContent = clicked.toUpperCase();
-            slotEl.classList.add('filled');
-          }
+      // Assign to first empty slot
+      if (selectedLetters[0] === null) {
+        selectedLetters[0] = optLower;
+        selectedCards[0] = card;
+        card.classList.add('selected');
+        if (slot0) {
+          slot0.textContent = optLower;
+          slot0.classList.add('filled');
         }
-
-        // Check if both slots are filled
-        if (filledSlots[0] !== null && filledSlots[1] !== null) {
-          isCurrentLevelSolved = true;
-          score += 10;
-          if (scoreValue) scoreValue.textContent = score;
-          startConfetti();
-
-          if (phonicsWordDisplay) phonicsWordDisplay.innerHTML = currentLevel.targetWord.toUpperCase();
-
-          setTimeout(() => {
-            speak(currentLevel.targetWord);
-          }, 300);
-
-          if (phonicsMessageText) phonicsMessageText.textContent = "Awesome Phonics Skill! Found both sounds! 🌟";
-          if (phonicsMessageBanner) phonicsMessageBanner.classList.remove('hidden');
-          if (phonicsNextLevelBtn) phonicsNextLevelBtn.classList.remove('hidden');
+      } else if (selectedLetters[1] === null) {
+        selectedLetters[1] = optLower;
+        selectedCards[1] = card;
+        card.classList.add('selected');
+        if (slot1) {
+          slot1.textContent = optLower;
+          slot1.classList.add('filled');
         }
       } else {
-        card.classList.add('wrong');
+        // Both full, replace slot 1
+        clearSlot(1);
+        selectedLetters[1] = optLower;
+        selectedCards[1] = card;
+        card.classList.add('selected');
+        if (slot1) {
+          slot1.textContent = optLower;
+          slot1.classList.add('filled');
+        }
+      }
+    });
+
+    phonicsOptionGrid.appendChild(card);
+  });
+
+  // Confirm button validation handler
+  if (phonicsConfirmBtn) {
+    phonicsConfirmBtn.onclick = () => {
+      if (isCurrentLevelSolved) return;
+      playSound('click');
+
+      if (!selectedLetters[0] || !selectedLetters[1]) {
+        if (phonicsMessageText) phonicsMessageText.textContent = "Please choose 2 letters first! 💡";
+        if (phonicsMessageBanner) phonicsMessageBanner.classList.remove('hidden');
+        return;
+      }
+
+      const target0 = targetLetters[0].toLowerCase();
+      const target1 = targetLetters[1].toLowerCase();
+      const isCorrect = (selectedLetters[0] === target0 && selectedLetters[1] === target1);
+
+      if (isCorrect) {
+        isCurrentLevelSolved = true;
+        score += 10;
+        if (scoreValue) scoreValue.textContent = score;
+        playSound('correct');
+        startConfetti();
+
+        if (selectedCards[0]) selectedCards[0].classList.add('correct');
+        if (selectedCards[1]) selectedCards[1].classList.add('correct');
+        if (slot0) slot0.classList.add('correct');
+        if (slot1) slot1.classList.add('correct');
+
+        // Reveal word in all lowercase
+        if (phonicsWordDisplay) phonicsWordDisplay.innerHTML = currentLevel.targetWord.toLowerCase();
+
+        setTimeout(() => {
+          speak(currentLevel.targetWord.toLowerCase());
+        }, 300);
+
+        if (phonicsConfirmBtn) phonicsConfirmBtn.classList.add('hidden');
+        if (phonicsNextLevelBtn) phonicsNextLevelBtn.classList.remove('hidden');
+        if (phonicsMessageText) phonicsMessageText.textContent = "Awesome phonics skill! Both letters are correct! 🌟";
+        if (phonicsMessageBanner) phonicsMessageBanner.classList.remove('hidden');
+      } else {
         playSound('incorrect');
+        if (selectedCards[0]) selectedCards[0].classList.add('wrong');
+        if (selectedCards[1]) selectedCards[1].classList.add('wrong');
+        if (slot0) slot0.classList.add('wrong');
+        if (slot1) slot1.classList.add('wrong');
 
         phonicsAttemptsLeft--;
         updatePhonicsAttemptsBadge(true);
 
-        if (phonicsMessageText) phonicsMessageText.textContent = `Oops! Try another letter. (${phonicsAttemptsLeft} attempts left) 💡`;
+        if (phonicsMessageText) phonicsMessageText.textContent = `Not quite right! Try changing your letters. (${phonicsAttemptsLeft} attempts left) 💡`;
         if (phonicsMessageBanner) phonicsMessageBanner.classList.remove('hidden');
 
         setTimeout(() => {
-          card.classList.remove('wrong');
-        }, 600);
+          if (selectedCards[0]) selectedCards[0].classList.remove('wrong');
+          if (selectedCards[1]) selectedCards[1].classList.remove('wrong');
+          if (slot0) slot0.classList.remove('wrong');
+          if (slot1) slot1.classList.remove('wrong');
+        }, 700);
 
         if (phonicsAttemptsLeft <= 0) {
           setTimeout(() => {
@@ -2476,10 +2557,8 @@ function renderPhonicsV2(currentLevel, info) {
           }, 400);
         }
       }
-    });
-
-    phonicsOptionGrid.appendChild(card);
-  });
+    };
+  }
 }
 
 let isNavigatingNextLevel = false;
