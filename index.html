@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=49.0.0">
+  <link rel="stylesheet" href="style.css?v=54.0.0">
 </head>
 <body>
   <!-- Background autumn leaf decorations -->
@@ -282,7 +282,7 @@
       </div>
 
       <div class="start-footer">
-        <span class="version-tag">v53.0.0</span>
+        <span class="version-tag">v54.0.0</span>
       </div>
     </div>
   </div>
@@ -478,9 +478,12 @@
       </div>
 
       <!-- Word Display with Blanked Phonic -->
-      <div class="phonics-word-card" id="phonicsWordCard" style="width: 100% !important; max-width: 450px !important; margin: 8px auto !important; background: #ffffff !important; border: 3px solid #ffab91 !important; border-radius: 12px !important; padding: 8px 16px !important; box-shadow: 0 4px 0 #ff8a65 !important; text-align: center !important; display: flex !important; justify-content: center !important; align-items: center !important;">
+      <div class="phonics-word-card" id="phonicsWordCard" style="width: 100% !important; max-width: 450px !important; margin: 8px auto !important; background: #ffffff !important; border: 3px solid #ffab91 !important; border-radius: 12px !important; padding: 10px 16px !important; box-shadow: 0 4px 0 #ff8a65 !important; text-align: center !important; display: flex !important; flex-direction: column !important; justify-content: center !important; align-items: center !important;">
         <div class="phonics-word-display" id="phonicsWordDisplay" style="font-size: 26px !important; font-weight: 800 !important; letter-spacing: 4px !important; color: #263238 !important; font-family: 'Fredoka', cursive, sans-serif !important;">
           <!-- Populated dynamically by app.js -->
+        </div>
+        <div class="phonics-hint-text" id="phonicsHintText" style="font-size: 14px; font-weight: 700; color: #e53935; margin-top: 8px; display: none;">
+          👆 Tap the red letters above (or cards below) to clear them!
         </div>
       </div>
 

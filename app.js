@@ -2396,6 +2396,9 @@ function renderPhonicsV2(currentLevel, info) {
     phonicsConfirmBtn.textContent = 'Confirm ✓';
   }
 
+  const hintEl = document.getElementById('phonicsHintText');
+  if (hintEl) hintEl.style.display = 'none';
+
   if (phonicsOptionGrid) {
     phonicsOptionGrid.classList.add('v2-grid');
     phonicsOptionGrid.innerHTML = '';
@@ -2412,20 +2415,44 @@ function renderPhonicsV2(currentLevel, info) {
   const slot0 = phonicsWordDisplay ? phonicsWordDisplay.querySelector('[data-slot="0"]') : null;
   const slot1 = phonicsWordDisplay ? phonicsWordDisplay.querySelector('[data-slot="1"]') : null;
 
+  function updateSlotVisual(slotEl, state, text) {
+    if (!slotEl) return;
+    if (text !== undefined) slotEl.textContent = text;
+
+    if (state === 'empty') {
+      slotEl.className = 'phonics-blank-slot';
+      slotEl.style.cssText = "display: inline-flex !important; justify-content: center !important; align-items: center !important; min-width: 44px !important; height: 48px !important; padding: 0 8px !important; margin: 0 4px !important; border: 3px dashed #ff7043 !important; background: #fff8e1 !important; border-radius: 10px !important; color: #e65100 !important; font-weight: 800 !important; font-size: 28px !important; vertical-align: middle !important; cursor: pointer !important; box-shadow: 0 3px 0 #ffe082 !important;";
+    } else if (state === 'filled') {
+      slotEl.className = 'phonics-blank-slot filled';
+      slotEl.style.cssText = "display: inline-flex !important; justify-content: center !important; align-items: center !important; min-width: 44px !important; height: 48px !important; padding: 0 8px !important; margin: 0 4px !important; border: 3px solid #2196f3 !important; background: #e3f2fd !important; border-radius: 10px !important; color: #1565c0 !important; font-weight: 800 !important; font-size: 28px !important; vertical-align: middle !important; cursor: pointer !important; box-shadow: 0 4px 0 #90caf9 !important;";
+    } else if (state === 'wrong') {
+      slotEl.className = 'phonics-blank-slot wrong';
+      slotEl.style.cssText = "display: inline-flex !important; justify-content: center !important; align-items: center !important; min-width: 44px !important; height: 48px !important; padding: 0 8px !important; margin: 0 4px !important; border: 3px solid #e53935 !important; background: #ffebee !important; border-radius: 10px !important; color: #c62828 !important; font-weight: 800 !important; font-size: 28px !important; vertical-align: middle !important; cursor: pointer !important; box-shadow: 0 4px 0 #ef9a9a !important; animation: shake 0.4s ease-in-out !important;";
+    } else if (state === 'correct') {
+      slotEl.className = 'phonics-blank-slot correct';
+      slotEl.style.cssText = "display: inline-flex !important; justify-content: center !important; align-items: center !important; min-width: 44px !important; height: 48px !important; padding: 0 8px !important; margin: 0 4px !important; border: 3px solid #4caf50 !important; background: #e8f5e9 !important; border-radius: 10px !important; color: #2e7d32 !important; font-weight: 800 !important; font-size: 28px !important; vertical-align: middle !important; box-shadow: 0 4px 0 #a5d6a7 !important;";
+    }
+  }
+
+  // Initialize both slots with prominent empty style
+  updateSlotVisual(slot0, 'empty', '_');
+  updateSlotVisual(slot1, 'empty', '_');
+
   const selectedLetters = [null, null];
   const selectedCards = [null, null];
 
   // Helper to clear a slot
   function clearSlot(idx) {
     if (selectedCards[idx]) {
-      selectedCards[idx].classList.remove('selected');
+      selectedCards[idx].classList.remove('selected', 'wrong');
       selectedCards[idx] = null;
     }
     selectedLetters[idx] = null;
     const targetSlot = (idx === 0) ? slot0 : slot1;
-    if (targetSlot) {
-      targetSlot.textContent = '_';
-      targetSlot.classList.remove('filled', 'wrong', 'correct');
+    updateSlotVisual(targetSlot, 'empty', '_');
+
+    if (hintEl && !selectedLetters[0] && !selectedLetters[1]) {
+      hintEl.style.display = 'none';
     }
   }
 
@@ -2462,28 +2489,19 @@ function renderPhonicsV2(currentLevel, info) {
         selectedLetters[0] = optLower;
         selectedCards[0] = card;
         card.classList.add('selected');
-        if (slot0) {
-          slot0.textContent = optLower;
-          slot0.classList.add('filled');
-        }
+        updateSlotVisual(slot0, 'filled', optLower);
       } else if (selectedLetters[1] === null) {
         selectedLetters[1] = optLower;
         selectedCards[1] = card;
         card.classList.add('selected');
-        if (slot1) {
-          slot1.textContent = optLower;
-          slot1.classList.add('filled');
-        }
+        updateSlotVisual(slot1, 'filled', optLower);
       } else {
         // Both full, replace slot 1
         clearSlot(1);
         selectedLetters[1] = optLower;
         selectedCards[1] = card;
         card.classList.add('selected');
-        if (slot1) {
-          slot1.textContent = optLower;
-          slot1.classList.add('filled');
-        }
+        updateSlotVisual(slot1, 'filled', optLower);
       }
     });
 
@@ -2515,8 +2533,10 @@ function renderPhonicsV2(currentLevel, info) {
 
         if (selectedCards[0]) selectedCards[0].classList.add('correct');
         if (selectedCards[1]) selectedCards[1].classList.add('correct');
-        if (slot0) slot0.classList.add('correct');
-        if (slot1) slot1.classList.add('correct');
+        updateSlotVisual(slot0, 'correct');
+        updateSlotVisual(slot1, 'correct');
+
+        if (hintEl) hintEl.style.display = 'none';
 
         // Reveal word in all lowercase
         if (phonicsWordDisplay) phonicsWordDisplay.innerHTML = currentLevel.targetWord.toLowerCase();
@@ -2533,20 +2553,25 @@ function renderPhonicsV2(currentLevel, info) {
         playSound('incorrect');
         if (selectedCards[0]) selectedCards[0].classList.add('wrong');
         if (selectedCards[1]) selectedCards[1].classList.add('wrong');
-        if (slot0) slot0.classList.add('wrong');
-        if (slot1) slot1.classList.add('wrong');
+
+        // PERSISTENT HIGHLIGHT: Keep slot0 and slot1 marked in red so the user can clearly see and tap to clear!
+        updateSlotVisual(slot0, 'wrong');
+        updateSlotVisual(slot1, 'wrong');
 
         phonicsAttemptsLeft--;
         updatePhonicsAttemptsBadge(true);
 
-        if (phonicsMessageText) phonicsMessageText.textContent = `Not quite right! Try changing your letters. (${phonicsAttemptsLeft} attempts left) 💡`;
+        if (hintEl) {
+          hintEl.textContent = "👆 Tap the red letters above (or cards below) to clear them!";
+          hintEl.style.display = "block";
+        }
+
+        if (phonicsMessageText) phonicsMessageText.textContent = `Not quite right! Tap the red letters to clear them. (${phonicsAttemptsLeft} attempts left) 💡`;
         if (phonicsMessageBanner) phonicsMessageBanner.classList.remove('hidden');
 
         setTimeout(() => {
           if (selectedCards[0]) selectedCards[0].classList.remove('wrong');
           if (selectedCards[1]) selectedCards[1].classList.remove('wrong');
-          if (slot0) slot0.classList.remove('wrong');
-          if (slot1) slot1.classList.remove('wrong');
         }, 700);
 
         if (phonicsAttemptsLeft <= 0) {

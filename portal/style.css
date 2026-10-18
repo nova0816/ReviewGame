@@ -1346,15 +1346,25 @@ body {
   display: inline-flex !important;
   justify-content: center !important;
   align-items: center !important;
-  min-width: 34px !important;
-  height: 36px !important;
-  padding: 0 6px !important;
-  border-bottom: 4px solid #ff7043 !important;
-  background: #fbe9e7 !important;
-  border-radius: 6px !important;
-  color: #d84315 !important;
+  min-width: 44px !important;
+  height: 48px !important;
+  padding: 0 8px !important;
+  margin: 0 4px !important;
+  border: 3px dashed #ff7043 !important;
+  background: #fff8e1 !important;
+  border-radius: 10px !important;
+  color: #e65100 !important;
   font-weight: 800 !important;
-  font-size: 26px !important;
+  font-size: 30px !important;
+  vertical-align: middle !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  box-shadow: 0 3px 0 #ffe082 !important;
+}
+
+.phonics-blank-slot:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 5px 0 #ffd54f !important;
 }
 
 #phonicsOptionGrid .match-word-card {
@@ -1378,27 +1388,25 @@ body {
 }
 
 .phonics-blank-slot.filled {
-  background: #e8f5e9 !important;
-  border-bottom: 4px solid #4caf50 !important;
-  color: #2e7d32 !important;
+  border: 3px solid #2196f3 !important;
+  background: #e3f2fd !important;
+  color: #1565c0 !important;
+  box-shadow: 0 4px 0 #90caf9 !important;
 }
 
 .phonics-blank-slot.wrong {
+  border: 3px solid #e53935 !important;
   background: #ffebee !important;
-  border-bottom: 4px solid #e53935 !important;
   color: #c62828 !important;
-  animation: shake 0.4s ease-in-out;
+  box-shadow: 0 4px 0 #ef9a9a !important;
+  animation: shake 0.4s ease-in-out !important;
 }
 
 .phonics-blank-slot.correct {
+  border: 3px solid #4caf50 !important;
   background: #e8f5e9 !important;
-  border-bottom: 4px solid #4caf50 !important;
   color: #2e7d32 !important;
-}
-
-.phonics-blank-slot {
-  cursor: pointer;
-  transition: all 0.2s ease;
+  box-shadow: 0 4px 0 #a5d6a7 !important;
 }
 
 #phonicsWordDisplay,
