@@ -1141,6 +1141,26 @@ const episodeData = {
       { targetWord: "power", statement: "Need a vehicle with more power", words: ["Need", "a", "vehicle", "with", "more", "power"], distractors: ["paint", "music"], sentenceWithBlank: "Need a vehicle with more _______.", image: "assets/ep24_power.png", emoji: "⚡" },
       { targetWord: "pull", statement: "Pull the bus out of mud", words: ["Pull", "the", "bus", "out", "of", "mud"], distractors: ["push", "drop"], sentenceWithBlank: "_______ the bus out of mud.", image: "assets/ep24_pull.png", emoji: "🪢" }
     ]
+  },
+  ep25: {
+    title: "Episode 25: Country Bicycle Ride",
+    levels: [
+      { targetWord: "breakfast", statement: "Finishing their morning breakfast", words: ["Finishing", "their", "morning", "breakfast"], distractors: ["dinner", "lunch"], sentenceWithBlank: "Finishing their morning _______.", image: "assets/ep25_breakfast.png", emoji: "🥣" },
+      { targetWord: "bicycle", statement: "Ride on your own bicycle", words: ["Ride", "on", "your", "own", "bicycle"], distractors: ["car", "boat"], sentenceWithBlank: "Ride on your own _______.", image: "assets/ep25_bicycle.png", emoji: "🚲" },
+      { targetWord: "tricycle", statement: "Little brother rides his tricycle", words: ["Little", "brother", "rides", "his", "tricycle"], distractors: ["bus", "train"], sentenceWithBlank: "Little brother rides his _______.", image: "assets/ep25_tricycle.png", emoji: "🛞" },
+      { targetWord: "tandem", statement: "Parents ride a tandem bicycle", words: ["Parents", "ride", "a", "tandem", "bicycle"], distractors: ["wagon", "scooter"], sentenceWithBlank: "Parents ride a _______ bicycle.", image: "assets/ep25_tandem.png", emoji: "🚲" },
+      { targetWord: "front", statement: "Driver sits at the front", words: ["Driver", "sits", "at", "the", "front"], distractors: ["back", "middle"], sentenceWithBlank: "Driver sits at the _______.", image: "assets/ep25_front.png", emoji: "⬆️" },
+      { targetWord: "back", statement: "Passenger sits at the back", words: ["Passenger", "sits", "at", "the", "back"], distractors: ["front", "side"], sentenceWithBlank: "Passenger sits at the _______.", image: "assets/ep25_back.png", emoji: "⬇️" },
+      { targetWord: "seats", statement: "Two little seats on back", words: ["Two", "little", "seats", "on", "back"], distractors: ["wheels", "lights"], sentenceWithBlank: "Two little _______ on back.", image: "assets/ep25_seats.png", emoji: "🪑" },
+      { targetWord: "gentle", statement: "Just a gentle bicycle ride", words: ["Just", "a", "gentle", "bicycle", "ride"], distractors: ["wild", "rough"], sentenceWithBlank: "Just a _______ bicycle ride.", image: "assets/ep25_gentle.png", emoji: "🌸" },
+      { targetWord: "uphill", statement: "Cycling all the way uphill", words: ["Cycling", "all", "the", "way", "uphill"], distractors: ["downhill", "inside"], sentenceWithBlank: "Cycling all the way _______.", image: "assets/ep25_uphill.png", emoji: "📈" },
+      { targetWord: "steep", statement: "The grassy ground is steep", words: ["The", "grassy", "ground", "is", "steep"], distractors: ["flat", "soft"], sentenceWithBlank: "The grassy ground is _______.", image: "assets/ep25_steep.png", emoji: "⛰️" },
+      { targetWord: "top", statement: "Reached the top of hill", words: ["Reached", "the", "top", "of", "hill"], distractors: ["bottom", "middle"], sentenceWithBlank: "Reached the _______ of hill.", image: "assets/ep25_top.png", emoji: "🏁" },
+      { targetWord: "friends", "statement": "All our happy friends here", words: ["All", "our", "happy", "friends", "here"], distractors: ["strangers", "toys"], sentenceWithBlank: "All our happy _______ here.", image: "assets/ep25_friends.png", emoji: "👫" },
+      { targetWord: "downhill", statement: "We love cycling fast downhill", words: ["We", "love", "cycling", "fast", "downhill"], distractors: ["uphill", "slowly"], sentenceWithBlank: "We love cycling fast _______.", image: "assets/ep25_downhill.png", emoji: "📉" },
+      { targetWord: "honk", statement: "Honk the loud bicycle horn", words: ["Honk", "the", "loud", "bicycle", "horn"], distractors: ["break", "hide"], sentenceWithBlank: "_______ the loud bicycle horn.", image: "assets/ep25_honk.png", emoji: "🎺" },
+      { targetWord: "pedal", statement: "Pedal your bicycle up hill", words: ["Pedal", "your", "bicycle", "up", "hill"], distractors: ["stop", "drop"], sentenceWithBlank: "_______ your bicycle up hill.", image: "assets/ep25_pedal.png", emoji: "🦶" }
+    ]
   }
 };
 
@@ -1422,7 +1442,24 @@ const phonicsDataMap = {
   "mud": { target: "u", display: "m <span class='phonics-blank-slot'>_</span> d", distractors: ["a", "o"] },
   "strong": { target: "st", display: "<span class='phonics-blank-slot'>_ _</span> r o n g", distractors: ["sp", "sw"] },
   "power": { target: "ow", display: "p <span class='phonics-blank-slot'>_ _</span> e r", distractors: ["ou", "aw"] },
-  "pull": { target: "ll", display: "p u <span class='phonics-blank-slot'>_ _</span>", distractors: ["ss", "tt"] }
+  "pull": { target: "ll", display: "p u <span class='phonics-blank-slot'>_ _</span>", distractors: ["ss", "tt"] },
+
+  // Episode 25
+  "breakfast": { target: "ea", display: "b r <span class='phonics-blank-slot'>_ _</span> k f a s t", distractors: ["ee", "oa"] },
+  "bicycle": { target: "y", display: "b <span class='phonics-blank-slot'>_</span> c y c l e", distractors: ["i", "e"] },
+  "tricycle": { target: "y", display: "t r <span class='phonics-blank-slot'>_</span> c y c l e", distractors: ["i", "e"] },
+  "tandem": { target: "an", display: "t <span class='phonics-blank-slot'>_ _</span> d e m", distractors: ["on", "en"] },
+  "front": { target: "fr", display: "<span class='phonics-blank-slot'>_ _</span> o n t", distractors: ["fl", "pr"] },
+  "back": { target: "ck", display: "b a <span class='phonics-blank-slot'>_ _</span>", distractors: ["ch", "sh"] },
+  "seats": { target: "ea", display: "s <span class='phonics-blank-slot'>_ _</span> t s", distractors: ["ee", "oa"] },
+  "gentle": { target: "g", display: "<span class='phonics-blank-slot'>_</span> e n t l e", distractors: ["j", "c"] },
+  "uphill": { target: "ll", display: "u p h i <span class='phonics-blank-slot'>_ _</span>", distractors: ["ss", "tt"] },
+  "steep": { target: "ee", display: "s t <span class='phonics-blank-slot'>_ _</span> p", distractors: ["ea", "oo"] },
+  "top": { target: "o", display: "t <span class='phonics-blank-slot'>_</span> p", distractors: ["a", "u"] },
+  "friends": { target: "ie", display: "f r <span class='phonics-blank-slot'>_ _</span> n d s", distractors: ["ei", "ee"] },
+  "downhill": { target: "ow", display: "d <span class='phonics-blank-slot'>_ _</span> n h i l l", distractors: ["ou", "aw"] },
+  "honk": { target: "nk", display: "h o <span class='phonics-blank-slot'>_ _</span>", distractors: ["ng", "nd"] },
+  "pedal": { target: "al", display: "p e d <span class='phonics-blank-slot'>_ _</span>", distractors: ["el", "ol"] }
 };
 
 function getPhonicsInfo(word) {

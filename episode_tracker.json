@@ -1,5 +1,5 @@
 {
-  "current_published_count": 24,
+  "current_published_count": 25,
   "episodes": [
     {
       "episode_num": 1,
@@ -169,6 +169,14 @@
       "subtitle": "Miniature Train Ride",
       "video_id": "MDqDwGLAef4",
       "playlist_index": 31,
+      "status": "published"
+    },
+    {
+      "episode_num": 25,
+      "code_title": "Episode 25",
+      "subtitle": "Country Bicycle Ride",
+      "video_id": "7AzdrcecNzU",
+      "playlist_index": 32,
       "status": "published"
     }
   ]

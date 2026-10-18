@@ -1,4 +1,4 @@
-# Global Vocabulary Registry (Episodes 1–24)
+# Global Vocabulary Registry (Episodes 1–25)
 
 | Episode | Title | Target Vocabulary Words (15) |
 | :--- | :--- | :--- |
@@ -22,5 +22,7 @@
 | Episode 22 | Episode 22: Tick-Tock Cuckoo Clock | `clock`, `cuckoo`, `bird`, `time`, `early`, `morning`, `mend`, `wind up`, `wooden`, `wait`, `wing`, `hour`, `inside`, `nighttime`, `asleep` |
 | Episode 23 | Episode 23: Sweet Baby Cousin | `cousin`, `baby`, `boy`, `girl`, `play`, `sleep`, `hold`, `careful`, `brother`, `pretend`, `pram`, `promise`, `toys`, `cookie`, `clever` |
 | Episode 24 | Episode 24: Miniature Train Ride | `train`, `noise`, `tracks`, `wheels`, `ride`, `steam`, `lorry`, `truck`, `bus`, `hills`, `behind`, `mud`, `strong`, `power`, `pull` |
+| Episode 25 | Episode 25: Country Bicycle Ride | `breakfast`, `bicycle`, `tricycle`, `tandem`, `front`, `back`, `seats`, `gentle`, `uphill`, `steep`, `top`, `friends`, `downhill`, `honk`, `pedal` |
 
-**Total Active Vocabulary Items (Ep 1, Ep 6–24):** 311
+**Total Active Vocabulary Items (Ep 1, Ep 6–25):** 326
+
