@@ -1182,6 +1182,26 @@ const episodeData = {
       { targetWord: "beautiful", statement: "George can skate in beautiful circles", words: ["George", "can", "skate", "in", "beautiful", "circles"], distractors: ["noisy", "broken"], sentenceWithBlank: "George can skate in _______ circles.", image: "assets/ep26_beautiful.png", emoji: "🌟" },
       { targetWord: "fantastic", statement: "You are fantastic at skating on ice", words: ["You", "are", "fantastic", "at", "skating", "on", "ice"], distractors: ["boring", "sad"], sentenceWithBlank: "You are _______ at skating on ice.", image: "assets/ep26_fantastic.png", emoji: "🏆" }
     ]
+  },
+  ep27: {
+    title: "Episode 27: Gentle Dental Checkup",
+    levels: [
+      { targetWord: "dentist", statement: "Going to visit the dentist", words: ["Going", "to", "visit", "the", "dentist"], distractors: ["baker", "pilot"], sentenceWithBlank: "Going to visit the _______.", image: "assets/ep27_dentist.png", emoji: "🦷" },
+      { targetWord: "clean", statement: "Keep teeth clean and bright", words: ["Keep", "teeth", "clean", "and", "bright"], distractors: ["dirty", "messy"], sentenceWithBlank: "Keep teeth _______ and bright.", image: "assets/ep27_clean.png", emoji: "✨" },
+      { targetWord: "healthy", statement: "Healthy teeth for a smile", words: ["Healthy", "teeth", "for", "a", "smile"], distractors: ["broken", "weak"], sentenceWithBlank: "_______ teeth for a smile.", image: "assets/ep27_healthy.png", emoji: "🍎" },
+      { targetWord: "visit", statement: "Their first visit today", words: ["Their", "first", "visit", "today"], distractors: ["sleep", "race"], sentenceWithBlank: "Their first _______ today.", image: "assets/ep27_visit.png", emoji: "🏥" },
+      { targetWord: "magazine", statement: "Reading a magazine while waiting", words: ["Reading", "a", "magazine", "while", "waiting"], distractors: ["pillow", "blanket"], sentenceWithBlank: "Reading a _______ while waiting.", image: "assets/ep27_magazine.png", emoji: "📖" },
+      { targetWord: "open", statement: "Open your mouth for checkup", words: ["Open", "your", "mouth", "for", "checkup"], distractors: ["Close", "Lock"], sentenceWithBlank: "_______ your mouth for checkup.", image: "assets/ep27_open.png", emoji: "😮" },
+      { targetWord: "wide", statement: "Open wide for the dentist", words: ["Open", "wide", "for", "the", "dentist"], distractors: ["narrow", "tiny"], sentenceWithBlank: "Open _______ for the dentist.", image: "assets/ep27_wide.png", emoji: "🗣️" },
+      { targetWord: "mirror", statement: "Dentist uses a little mirror", words: ["Dentist", "uses", "a", "little", "mirror"], distractors: ["hammer", "pencil"], sentenceWithBlank: "Dentist uses a little _______.", image: "assets/ep27_mirror.png", emoji: "🪞" },
+      { targetWord: "sweets", statement: "Do not eat too many sweets", words: ["Do", "not", "eat", "too", "many", "sweets"], distractors: ["salads", "carrots"], sentenceWithBlank: "Do not eat too many _______.", image: "assets/ep27_sweets.png", emoji: "🍬" },
+      { targetWord: "mouth", statement: "Looking inside the mouth carefully", words: ["Looking", "inside", "the", "mouth", "carefully"], distractors: ["pocket", "shoe"], sentenceWithBlank: "Looking inside the _______ carefully.", image: "assets/ep27_mouth.png", emoji: "👄" },
+      { targetWord: "pink", statement: "A cup of pink rinse", words: ["A", "cup", "of", "pink", "rinse"], distractors: ["black", "grey"], sentenceWithBlank: "A cup of _______ rinse.", image: "assets/ep27_pink.png", emoji: "🌸" },
+      { targetWord: "drink", statement: "Special pink drink in cup", words: ["Special", "pink", "drink", "in", "cup"], distractors: ["soup", "toast"], sentenceWithBlank: "Special pink _______ in cup.", image: "assets/ep27_drink.png", emoji: "🥤" },
+      { targetWord: "spit", statement: "Spit into the little sink", words: ["Spit", "into", "the", "little", "sink"], distractors: ["Swallow", "Drink"], sentenceWithBlank: "_______ into the little sink.", image: "assets/ep27_spit.png", emoji: "💧" },
+      { targetWord: "plastic", statement: "Toy dinosaur made of plastic", words: ["Toy", "dinosaur", "made", "of", "plastic"], distractors: ["wood", "glass"], sentenceWithBlank: "Toy dinosaur made of _______.", image: "assets/ep27_plastic.png", emoji: "🦖" },
+      { targetWord: "turn", statement: "Now it is your turn", words: ["Now", "it", "is", "your", "turn"], distractors: ["year", "time"], sentenceWithBlank: "Now it is your _______.", image: "assets/ep27_turn.png", emoji: "👋" }
+    ]
   }
 };
 
@@ -1573,6 +1593,98 @@ const phonicsDataMap = {
     targets: ["a", "t"],
     displayTemplate: "f <span class='phonics-blank-slot' data-slot='0'>_</span> n <span class='phonics-blank-slot' data-slot='1'>_</span> a s t i c",
     distractors: ["o", "d"]
+  },
+
+  // Episode 27 (Phonics V2: 2 letters emptied including vowels, 4 choices in lowercase)
+  "dentist": {
+    version: 2,
+    targets: ["e", "i"],
+    displayTemplate: "d <span class='phonics-blank-slot' data-slot='0'>_</span> n t <span class='phonics-blank-slot' data-slot='1'>_</span> s t",
+    distractors: ["a", "o"]
+  },
+  "clean": {
+    version: 2,
+    targets: ["e", "a"],
+    displayTemplate: "c l <span class='phonics-blank-slot' data-slot='0'>_</span> <span class='phonics-blank-slot' data-slot='1'>_</span> n",
+    distractors: ["i", "o"]
+  },
+  "healthy": {
+    version: 2,
+    targets: ["e", "a"],
+    displayTemplate: "h <span class='phonics-blank-slot' data-slot='0'>_</span> <span class='phonics-blank-slot' data-slot='1'>_</span> l t h y",
+    distractors: ["o", "i"]
+  },
+  "visit": {
+    version: 2,
+    targets: ["i", "s"],
+    displayTemplate: "v <span class='phonics-blank-slot' data-slot='0'>_</span> <span class='phonics-blank-slot' data-slot='1'>_</span> i t",
+    distractors: ["e", "c"]
+  },
+  "magazine": {
+    version: 2,
+    targets: ["a", "i"],
+    displayTemplate: "m <span class='phonics-blank-slot' data-slot='0'>_</span> g a z <span class='phonics-blank-slot' data-slot='1'>_</span> n e",
+    distractors: ["o", "e"]
+  },
+  "open": {
+    version: 2,
+    targets: ["o", "e"],
+    displayTemplate: "<span class='phonics-blank-slot' data-slot='0'>_</span> p <span class='phonics-blank-slot' data-slot='1'>_</span> n",
+    distractors: ["a", "i"]
+  },
+  "wide": {
+    version: 2,
+    targets: ["i", "e"],
+    displayTemplate: "w <span class='phonics-blank-slot' data-slot='0'>_</span> d <span class='phonics-blank-slot' data-slot='1'>_</span>",
+    distractors: ["a", "o"]
+  },
+  "mirror": {
+    version: 2,
+    targets: ["i", "o"],
+    displayTemplate: "m <span class='phonics-blank-slot' data-slot='0'>_</span> r r <span class='phonics-blank-slot' data-slot='1'>_</span> r",
+    distractors: ["e", "u"]
+  },
+  "sweets": {
+    version: 2,
+    targets: ["w", "t"],
+    displayTemplate: "s <span class='phonics-blank-slot' data-slot='0'>_</span> e e <span class='phonics-blank-slot' data-slot='1'>_</span> s",
+    distractors: ["m", "p"]
+  },
+  "mouth": {
+    version: 2,
+    targets: ["o", "u"],
+    displayTemplate: "m <span class='phonics-blank-slot' data-slot='0'>_</span> <span class='phonics-blank-slot' data-slot='1'>_</span> t h",
+    distractors: ["a", "e"]
+  },
+  "pink": {
+    version: 2,
+    targets: ["i", "n"],
+    displayTemplate: "p <span class='phonics-blank-slot' data-slot='0'>_</span> <span class='phonics-blank-slot' data-slot='1'>_</span> k",
+    distractors: ["e", "m"]
+  },
+  "drink": {
+    version: 2,
+    targets: ["i", "k"],
+    displayTemplate: "d r <span class='phonics-blank-slot' data-slot='0'>_</span> n <span class='phonics-blank-slot' data-slot='1'>_</span>",
+    distractors: ["e", "t"]
+  },
+  "spit": {
+    version: 2,
+    targets: ["p", "i"],
+    displayTemplate: "s <span class='phonics-blank-slot' data-slot='0'>_</span> <span class='phonics-blank-slot' data-slot='1'>_</span> t",
+    distractors: ["b", "e"]
+  },
+  "plastic": {
+    version: 2,
+    targets: ["a", "i"],
+    displayTemplate: "p l <span class='phonics-blank-slot' data-slot='0'>_</span> s t <span class='phonics-blank-slot' data-slot='1'>_</span> c",
+    distractors: ["o", "e"]
+  },
+  "turn": {
+    version: 2,
+    targets: ["u", "r"],
+    displayTemplate: "t <span class='phonics-blank-slot' data-slot='0'>_</span> <span class='phonics-blank-slot' data-slot='1'>_</span> n",
+    distractors: ["a", "l"]
   }
 };
 
@@ -2428,6 +2540,23 @@ const phonicsChineseExplanations = {
     teacher: "老師 / 教練",
     beautiful: "美麗的 / 優美的",
     fantastic: "極棒的 / 太精彩了"
+  },
+  ep27: {
+    dentist: "牙醫 / 牙科醫生",
+    clean: "乾淨的 / 清潔整齊的",
+    healthy: "健康的 / 強健完好的",
+    visit: "拜訪 / 看診檢查",
+    magazine: "雜誌 / 圖文期刊",
+    open: "張開 / 打開",
+    wide: "寬寬地 / 大大張開",
+    mirror: "鏡子 / 牙科小口鏡",
+    sweets: "糖果 / 甜食點心",
+    mouth: "嘴巴 / 口部",
+    pink: "粉紅色的 / 粉紅色",
+    drink: "飲料 / 漱口液",
+    spit: "吐出 / 吐水",
+    plastic: "塑膠的 / 塑膠製玩具",
+    turn: "輪流 / 輪到下一位"
   }
 };
 

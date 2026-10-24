@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=56.3.0">
+  <link rel="stylesheet" href="style.css?v=57.0.0">
 </head>
 <body>
   <!-- Background autumn leaf decorations -->
@@ -279,10 +279,20 @@
           <span class="episode-card-title">Episode 26</span>
           <span class="episode-card-desc">Winter Ice Skating</span>
         </button>
+
+        <!-- Active Episode 27 -->
+        <button class="episode-card active" id="episodeCard27" onclick="onEpisodeCardClick('ep27')" aria-label="Play Episode 27: Gentle Dental Checkup">
+          <div class="episode-image-container">
+            <img src="assets/ep27_dentist.png" alt="Gentle Dental Checkup illustration" class="episode-card-img">
+          </div>
+          <span class="episode-card-badge">Active 🟢</span>
+          <span class="episode-card-title">Episode 27</span>
+          <span class="episode-card-desc">Gentle Dental Checkup</span>
+        </button>
       </div>
 
       <div class="start-footer">
-        <span class="version-tag">v56.3.0</span>
+        <span class="version-tag">v57.0.0</span>
       </div>
     </div>
   </div>
@@ -533,6 +543,6 @@
   <!-- Canvas for Confetti -->
   <canvas id="confettiCanvas" class="confetti-canvas"></canvas>
 
-  <script src="app.js?v=56.3.0"></script>
+  <script src="app.js?v=57.0.0"></script>
 </body>
 </html>

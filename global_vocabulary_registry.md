@@ -1,4 +1,4 @@
-# Global Vocabulary Registry (Episodes 1–25)
+# Global Vocabulary Registry (Episodes 1–27)
 
 | Episode | Title | Target Vocabulary Words (15) |
 | :--- | :--- | :--- |
@@ -24,6 +24,6 @@
 | Episode 24 | Episode 24: Miniature Train Ride | `train`, `noise`, `tracks`, `wheels`, `ride`, `steam`, `lorry`, `truck`, `bus`, `hills`, `behind`, `mud`, `strong`, `power`, `pull` |
 | Episode 25 | Episode 25: Country Bicycle Ride | `breakfast`, `bicycle`, `tricycle`, `tandem`, `front`, `back`, `seats`, `gentle`, `uphill`, `steep`, `top`, `friends`, `downhill`, `honk`, `pedal` |
 | Episode 26 | Episode 26: Winter Ice Skating | `skates`, `rink`, `glide`, `fall`, `lesson`, `family`, `first`, `hire`, `teach`, `easy`, `watch`, `bump`, `teacher`, `beautiful`, `fantastic` |
+| Episode 27 | Episode 27: Gentle Dental Checkup | `dentist`, `clean`, `healthy`, `visit`, `magazine`, `open`, `wide`, `mirror`, `sweets`, `mouth`, `pink`, `drink`, `spit`, `plastic`, `turn` |
 
-**Total Active Vocabulary Items (Ep 1, Ep 6–26):** 341
-
+**Total Active Vocabulary Items (Ep 1, Ep 6–27):** 356
