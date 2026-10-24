@@ -1696,8 +1696,8 @@ function playSound(type) {
   }
 }
 
-// Text-to-Speech synthesis (English)
-function speak(text, slow = false, onEnd = null) {
+// Text-to-Speech synthesis
+function speak(text, slow = false) {
   if (soundMuted) return;
   if ('speechSynthesis' in window) {
     window.speechSynthesis.cancel();
@@ -1712,36 +1712,6 @@ function speak(text, slow = false, onEnd = null) {
                          voices.find(v => v.lang.startsWith('en'));
     if (englishVoice) {
       utterance.voice = englishVoice;
-    }
-    if (onEnd) {
-      utterance.onend = onEnd;
-      utterance.onerror = onEnd;
-    }
-    window.speechSynthesis.speak(utterance);
-  }
-}
-
-// Text-to-Speech synthesis (Traditional Chinese 繁體中文)
-function speakChinese(text, onEnd = null) {
-  if (soundMuted) return;
-  if ('speechSynthesis' in window) {
-    // Replace slash '/' with natural pause comma '，' for smooth TTS reading of multiple meanings
-    const speechText = (text || '').replace(/\s*\/\s*/g, '，');
-    const utterance = new SpeechSynthesisUtterance(speechText);
-    utterance.lang = 'zh-TW';
-    utterance.rate = 0.85;
-    utterance.pitch = 1.0;
-    
-    const voices = window.speechSynthesis.getVoices();
-    const zhVoice = voices.find(v => (v.lang === 'zh-TW' || v.lang === 'zh_TW' || v.lang === 'zh-HK' || v.lang === 'zh_HK') && (v.name.includes('Google') || v.name.includes('Natural') || v.name.includes('Taiwan') || v.name.includes('Han') || v.name.includes('Yating') || v.name.includes('Mei-Jia') || v.name.includes('Hsiao'))) ||
-                    voices.find(v => v.lang === 'zh-TW' || v.lang === 'zh_TW' || v.lang === 'zh-HK' || v.lang === 'zh_HK') ||
-                    voices.find(v => v.lang.startsWith('zh'));
-    if (zhVoice) {
-      utterance.voice = zhVoice;
-    }
-    if (onEnd) {
-      utterance.onend = onEnd;
-      utterance.onerror = onEnd;
     }
     window.speechSynthesis.speak(utterance);
   }
@@ -2432,38 +2402,17 @@ function showPhonicsSuccessPrompt(currentLevel) {
   if (zhExplanation) {
     if (phonicsMessageText) {
       phonicsMessageText.innerHTML = `
-        <div class="phonics-zh-dialogue" style="display: inline-flex; align-items: center; gap: 8px; flex-wrap: wrap; justify-content: center; cursor: pointer; max-width: 95%; margin: 0 auto;" title="點擊朗讀中文釋義">
+        <div class="phonics-zh-dialogue" style="display: inline-flex; align-items: center; gap: 8px; flex-wrap: wrap; justify-content: center; max-width: 95%; margin: 0 auto;">
           <span class="phonics-zh-tag" style="background: #e8f5e9; color: #2e7d32; border: 1.5px solid #a5d6a7; border-radius: 6px; padding: 2px 8px; font-size: 13px; font-weight: 800; letter-spacing: 0.5px;">繁體中文釋義</span>
           <span class="phonics-zh-word" style="font-size: 18px; font-weight: 800; color: #1b5e20;">${zhExplanation}</span>
-          <button type="button" class="phonics-zh-speak-btn" style="background: #e8f5e9; border: 1px solid #81c784; border-radius: 50%; width: 28px; height: 28px; display: inline-flex; justify-content: center; align-items: center; cursor: pointer; font-size: 14px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-left: 2px;" title="重播中文發音">🔊</button>
         </div>
       `;
-      const dialogueBox = phonicsMessageText.querySelector('.phonics-zh-dialogue');
-      if (dialogueBox) {
-        dialogueBox.onclick = (e) => {
-          e.stopPropagation();
-          playSound('click');
-          speakChinese(zhExplanation);
-        };
-      }
     }
     if (phonicsMessageBanner) phonicsMessageBanner.classList.remove('hidden');
 
-    // Dual-Audio: speak English word first, then speak Traditional Chinese explanation
-    let zhPlayed = false;
-    const playZh = () => {
-      if (!zhPlayed) {
-        zhPlayed = true;
-        speakChinese(zhExplanation);
-      }
-    };
-
+    // Pronounce English target word only (no Chinese sound)
     setTimeout(() => {
-      speak(targetLower, false, () => {
-        setTimeout(playZh, 250);
-      });
-      // Safety fallback in case onend does not fire
-      setTimeout(playZh, 1100);
+      speak(targetLower);
     }, 300);
   } else {
     // Default celebration message for other episodes
