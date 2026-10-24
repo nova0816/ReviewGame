@@ -1423,3 +1423,37 @@ body {
   box-shadow: 0 8px 0 #90caf9 !important;
 }
 
+
+/* Phonics Traditional Chinese Explanation Dialogue */
+.phonics-zh-dialogue {
+  background: #f1f8e9;
+  border: 2px solid #a5d6a7;
+  border-radius: 12px;
+  padding: 6px 14px;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.phonics-zh-dialogue:hover {
+  background: #e8f5e9;
+  border-color: #66bb6a;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(46, 125, 50, 0.15);
+}
+
+.phonics-zh-dialogue:active {
+  transform: translateY(1px);
+}
+
+.phonics-zh-speak-btn {
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.phonics-zh-speak-btn:hover {
+  background-color: #c8e6c9 !important;
+  transform: scale(1.1);
+}
+
+.phonics-zh-speak-btn:active {
+  transform: scale(0.95);
+}
