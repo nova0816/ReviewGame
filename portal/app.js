@@ -1725,7 +1725,9 @@ function speak(text, slow = false, onEnd = null) {
 function speakChinese(text, onEnd = null) {
   if (soundMuted) return;
   if ('speechSynthesis' in window) {
-    const utterance = new SpeechSynthesisUtterance(text);
+    // Replace slash '/' with natural pause comma '，' for smooth TTS reading of multiple meanings
+    const speechText = (text || '').replace(/\s*\/\s*/g, '，');
+    const utterance = new SpeechSynthesisUtterance(speechText);
     utterance.lang = 'zh-TW';
     utterance.rate = 0.85;
     utterance.pitch = 1.0;
@@ -2404,23 +2406,23 @@ listenReplayBtn.addEventListener('click', () => {
 });
 
 
-// Traditional Chinese Explanations (繁體中文釋義) for Episode 25 Trial
+// Traditional Chinese Explanations (繁體中文釋義) for Episode 25 Trial - Expanded Multi-Meaning Synonyms
 const episode25ChineseExplanations = {
-  breakfast: "早餐",
-  bicycle: "腳踏車",
-  tricycle: "三輪車",
-  tandem: "雙人腳踏車",
-  front: "前面",
-  back: "後面",
-  seats: "座位",
-  gentle: "平緩的",
-  uphill: "上坡",
-  steep: "陡峭的",
-  top: "山頂",
-  friends: "朋友",
-  downhill: "下坡",
-  honk: "按喇叭",
-  pedal: "踩踏板"
+  breakfast: "早餐 / 早點",
+  bicycle: "腳踏車 / 自行車",
+  tricycle: "三輪車 / 幼童三輪車",
+  tandem: "雙人腳踏車 / 協力車",
+  front: "前面 / 前方",
+  back: "後面 / 後方",
+  seats: "座位 / 坐墊",
+  gentle: "平緩的 / 輕柔舒適的",
+  uphill: "上坡 / 往上爬坡",
+  steep: "陡峭的 / 很斜難爬的",
+  top: "山頂 / 最高處",
+  friends: "朋友 / 好夥伴",
+  downhill: "下坡 / 順坡滑下",
+  honk: "按喇叭 / 鳴響喇叭",
+  pedal: "踩踏板 / 腳踏板"
 };
 
 function showPhonicsSuccessPrompt(currentLevel) {
@@ -2430,9 +2432,9 @@ function showPhonicsSuccessPrompt(currentLevel) {
   if (zhExplanation) {
     if (phonicsMessageText) {
       phonicsMessageText.innerHTML = `
-        <div class="phonics-zh-dialogue" style="display: inline-flex; align-items: center; gap: 8px; flex-wrap: wrap; cursor: pointer;" title="點擊朗讀中文釋義">
+        <div class="phonics-zh-dialogue" style="display: inline-flex; align-items: center; gap: 8px; flex-wrap: wrap; justify-content: center; cursor: pointer; max-width: 95%; margin: 0 auto;" title="點擊朗讀中文釋義">
           <span class="phonics-zh-tag" style="background: #e8f5e9; color: #2e7d32; border: 1.5px solid #a5d6a7; border-radius: 6px; padding: 2px 8px; font-size: 13px; font-weight: 800; letter-spacing: 0.5px;">繁體中文釋義</span>
-          <span class="phonics-zh-word" style="font-size: 20px; font-weight: 800; color: #1b5e20;">${zhExplanation}</span>
+          <span class="phonics-zh-word" style="font-size: 18px; font-weight: 800; color: #1b5e20;">${zhExplanation}</span>
           <button type="button" class="phonics-zh-speak-btn" style="background: #e8f5e9; border: 1px solid #81c784; border-radius: 50%; width: 28px; height: 28px; display: inline-flex; justify-content: center; align-items: center; cursor: pointer; font-size: 14px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-left: 2px;" title="重播中文發音">🔊</button>
         </div>
       `;
