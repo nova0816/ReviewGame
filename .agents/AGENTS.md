@@ -27,3 +27,6 @@
 
 
 
+12. **Phonics Stage Traditional Chinese Explanations Display Mandate (Episode 24 Onwards)**:
+    - **Multi-Meaning Synonyms & Contextual Explanations**: In the Phonics stage (`diff === 'phonics'`), upon passing each level, the bottom prompt banner MUST display the Traditional Chinese Explanation (`繁體中文釋義`) dialogue box containing multi-meaning synonyms / contextual explanations separated by slashes (e.g., `【繁體中文釋義】 腳踏車 / 自行車`, `【繁體中文釋義】 平緩的 / 輕柔舒適的`), preventing young ESL learners from fixating on single isolated definitions.
+    - **Visual Display Only (No Chinese TTS)**: Chinese Speech Synthesis (TTS) and audio icons are excluded to keep children's cognitive attention focused on reading, spelling, and character recognition, while the standard English pronunciation of the target word is spoken automatically as normal upon level completion.

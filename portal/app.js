@@ -2376,28 +2376,65 @@ listenReplayBtn.addEventListener('click', () => {
 });
 
 
-// Traditional Chinese Explanations (繁體中文釋義) for Episode 25 Trial - Expanded Multi-Meaning Synonyms
-const episode25ChineseExplanations = {
-  breakfast: "早餐 / 早點",
-  bicycle: "腳踏車 / 自行車",
-  tricycle: "三輪車 / 幼童三輪車",
-  tandem: "雙人腳踏車 / 協力車",
-  front: "前面 / 前方",
-  back: "後面 / 後方",
-  seats: "座位 / 坐墊",
-  gentle: "平緩的 / 輕柔舒適的",
-  uphill: "上坡 / 往上爬坡",
-  steep: "陡峭的 / 很斜難爬的",
-  top: "山頂 / 最高處",
-  friends: "朋友 / 好夥伴",
-  downhill: "下坡 / 順坡滑下",
-  honk: "按喇叭 / 鳴響喇叭",
-  pedal: "踩踏板 / 腳踏板"
+// Traditional Chinese Explanations (繁體中文釋義) for Phonics Stage (Episode 24 onwards)
+const phonicsChineseExplanations = {
+  ep24: {
+    train: "火車 / 列車",
+    noise: "聲響 / 聲音",
+    tracks: "軌道 / 鐵軌",
+    wheels: "車輪 / 輪子",
+    ride: "搭乘 / 乘坐",
+    steam: "蒸汽 / 水蒸氣",
+    lorry: "大卡車 / 貨車",
+    truck: "拖吊車 / 卡車",
+    bus: "公車 / 巴士",
+    hills: "山丘 / 丘陵",
+    behind: "在後面 / 背後",
+    mud: "泥巴 / 泥濘",
+    strong: "強壯的 / 有力的",
+    power: "動力 / 力量",
+    pull: "拉動 / 拖拉"
+  },
+  ep25: {
+    breakfast: "早餐 / 早點",
+    bicycle: "腳踏車 / 自行車",
+    tricycle: "三輪車 / 幼童三輪車",
+    tandem: "雙人腳踏車 / 協力車",
+    front: "前面 / 前方",
+    back: "後面 / 後方",
+    seats: "座位 / 坐墊",
+    gentle: "平緩的 / 輕柔舒適的",
+    uphill: "上坡 / 往上爬坡",
+    steep: "陡峭的 / 很斜難爬的",
+    top: "山頂 / 最高處",
+    friends: "朋友 / 好夥伴",
+    downhill: "下坡 / 順坡滑下",
+    honk: "按喇叭 / 鳴響喇叭",
+    pedal: "踩踏板 / 腳踏板"
+  },
+  ep26: {
+    skates: "溜冰鞋 / 冰刀鞋",
+    rink: "溜冰場 / 滑冰場",
+    glide: "滑行 / 順暢滑動",
+    fall: "跌倒 / 摔倒",
+    lesson: "課程 / 練習課",
+    family: "家人 / 家庭",
+    first: "首先 / 第一步",
+    hire: "租借 / 借用",
+    teach: "教導 / 指導",
+    easy: "容易的 / 簡單輕鬆的",
+    watch: "注視 / 觀看",
+    bump: "碰撞 / 撞到",
+    teacher: "老師 / 教練",
+    beautiful: "美麗的 / 優美的",
+    fantastic: "極棒的 / 太精彩了"
+  }
 };
 
 function showPhonicsSuccessPrompt(currentLevel) {
   const targetLower = (currentLevel.targetWord || '').toLowerCase().trim();
-  const zhExplanation = (currentEpisodeKey === 'ep25') ? episode25ChineseExplanations[targetLower] : null;
+  const epDict = phonicsChineseExplanations[currentEpisodeKey];
+  const zhExplanation = epDict ? epDict[targetLower] : null;
 
   if (zhExplanation) {
     if (phonicsMessageText) {
