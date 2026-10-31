@@ -1,4 +1,4 @@
-# Global Vocabulary Registry (Episodes 1–27)
+# Global Vocabulary Registry (Episodes 1–28)
 
 | Episode | Title | Target Vocabulary Words (15) |
 | :--- | :--- | :--- |
@@ -25,5 +25,6 @@
 | Episode 25 | Episode 25: Country Bicycle Ride | `breakfast`, `bicycle`, `tricycle`, `tandem`, `front`, `back`, `seats`, `gentle`, `uphill`, `steep`, `top`, `friends`, `downhill`, `honk`, `pedal` |
 | Episode 26 | Episode 26: Winter Ice Skating | `skates`, `rink`, `glide`, `fall`, `lesson`, `family`, `first`, `hire`, `teach`, `easy`, `watch`, `bump`, `teacher`, `beautiful`, `fantastic` |
 | Episode 27 | Episode 27: Gentle Dental Checkup | `dentist`, `clean`, `healthy`, `visit`, `magazine`, `open`, `wide`, `mirror`, `sweets`, `mouth`, `pink`, `drink`, `spit`, `plastic`, `turn` |
+| Episode 28 | Episode 28: Garden Castle Dens | `treehouse`, `castle`, `den`, `build`, `king`, `tea`, `noisy`, `spoil`, `dress`, `pretty`, `string`, `tight`, `talk`, `fair`, `puddle` |
 
-**Total Active Vocabulary Items (Ep 1, Ep 6–27):** 356
+**Total Active Vocabulary Items (Ep 1, Ep 6–28):** 371

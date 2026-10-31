@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=57.0.0">
+  <link rel="stylesheet" href="style.css?v=58.0.0">
 </head>
 <body>
   <!-- Background autumn leaf decorations -->
@@ -289,10 +289,20 @@
           <span class="episode-card-title">Episode 27</span>
           <span class="episode-card-desc">Gentle Dental Checkup</span>
         </button>
+
+        <!-- Active Episode 28 -->
+        <button class="episode-card active" id="episodeCard28" onclick="onEpisodeCardClick('ep28')" aria-label="Play Episode 28: Garden Castle Dens">
+          <div class="episode-image-container">
+            <img src="assets/ep28_treehouse.png" alt="Garden Castle Dens illustration" class="episode-card-img">
+          </div>
+          <span class="episode-card-badge">Active 🟢</span>
+          <span class="episode-card-title">Episode 28</span>
+          <span class="episode-card-desc">Garden Castle Dens</span>
+        </button>
       </div>
 
       <div class="start-footer">
-        <span class="version-tag">v57.0.0</span>
+        <span class="version-tag">v58.0.0</span>
       </div>
     </div>
   </div>
@@ -543,6 +553,6 @@
   <!-- Canvas for Confetti -->
   <canvas id="confettiCanvas" class="confetti-canvas"></canvas>
 
-  <script src="app.js?v=57.0.0"></script>
+  <script src="app.js?v=58.0.0"></script>
 </body>
 </html>

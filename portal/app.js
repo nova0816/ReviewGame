@@ -1202,6 +1202,26 @@ const episodeData = {
       { targetWord: "plastic", statement: "Toy dinosaur made of plastic", words: ["Toy", "dinosaur", "made", "of", "plastic"], distractors: ["wood", "glass"], sentenceWithBlank: "Toy dinosaur made of _______.", image: "assets/ep27_plastic.png", emoji: "🦖" },
       { targetWord: "turn", statement: "Now it is your turn", words: ["Now", "it", "is", "your", "turn"], distractors: ["year", "time"], sentenceWithBlank: "Now it is your _______.", image: "assets/ep27_turn.png", emoji: "👋" }
     ]
+  },
+  ep28: {
+    title: "Episode 28: Garden Castle Dens",
+    levels: [
+      { targetWord: "treehouse", statement: "Play inside the treehouse", words: ["Play", "inside", "the", "treehouse"], distractors: ["submarine", "airplane"], sentenceWithBlank: "Play inside the _______.", image: "assets/ep28_treehouse.png", emoji: "🏡" },
+      { targetWord: "castle", statement: "Build a wooden castle", words: ["Build", "a", "wooden", "castle"], distractors: ["cave", "tent"], sentenceWithBlank: "Build a wooden _______.", image: "assets/ep28_castle.png", emoji: "🏰" },
+      { targetWord: "den", statement: "Make a cozy den", words: ["Make", "a", "cozy", "den"], distractors: ["factory", "street"], sentenceWithBlank: "Make a cozy _______.", image: "assets/ep28_den.png", emoji: "🛖" },
+      { targetWord: "build", statement: "Grandpa will build a fort", words: ["Grandpa", "will", "build", "a", "fort"], distractors: ["break", "forget"], sentenceWithBlank: "Grandpa will _______ a fort.", image: "assets/ep28_build.png", emoji: "🔨" },
+      { targetWord: "king", statement: "King of the castle", words: ["King", "of", "the", "castle"], distractors: ["driver", "cook"], sentenceWithBlank: "_______ of the castle.", image: "assets/ep28_king.png", emoji: "👑" },
+      { targetWord: "tea", statement: "A fun tea party", words: ["A", "fun", "tea", "party"], distractors: ["mud", "sleep"], sentenceWithBlank: "A fun _______ party.", image: "assets/ep28_tea.png", emoji: "🫖" },
+      { targetWord: "noisy", statement: "Boys are very noisy", words: ["Boys", "are", "very", "noisy"], distractors: ["silent", "asleep"], sentenceWithBlank: "Boys are very _______.", image: "assets/ep28_noisy.png", emoji: "📢" },
+      { targetWord: "spoil", statement: "Do not spoil the fun", words: ["Do", "not", "spoil", "the", "fun"], distractors: ["enjoy", "help"], sentenceWithBlank: "Do not _______ the fun.", image: "assets/ep28_spoil.png", emoji: "💥" },
+      { targetWord: "dress", statement: "A pretty dress for flag", words: ["A", "pretty", "dress", "for", "flag"], distractors: ["shoe", "hat"], sentenceWithBlank: "A pretty _______ for flag.", image: "assets/ep28_dress.png", emoji: "👗" },
+      { targetWord: "pretty", statement: "A pretty pink flag", words: ["A", "pretty", "pink", "flag"], distractors: ["ugly", "dark"], sentenceWithBlank: "A _______ pink flag.", image: "assets/ep28_pretty.png", emoji: "✨" },
+      { targetWord: "string", statement: "Keep the string tight", words: ["Keep", "the", "string", "tight"], distractors: ["rock", "branch"], sentenceWithBlank: "Keep the _______ tight.", image: "assets/ep28_string.png", emoji: "🧵" },
+      { targetWord: "tight", statement: "Hold the string tight", words: ["Hold", "the", "string", "tight"], distractors: ["loose", "broken"], sentenceWithBlank: "Hold the string _______.", image: "assets/ep28_tight.png", emoji: "🪢" },
+      { targetWord: "talk", statement: "Talk on tin cans", words: ["Talk", "on", "tin", "cans"], distractors: ["Sleep", "Hide"], sentenceWithBlank: "_______ on tin cans.", image: "assets/ep28_talk.png", emoji: "🗣️" },
+      { targetWord: "fair", statement: "It is not fair", words: ["It", "is", "not", "fair"], distractors: ["cold", "sour"], sentenceWithBlank: "It is not _______.", image: "assets/ep28_fair.png", emoji: "⚖️" },
+      { targetWord: "puddle", statement: "Jump in muddy puddle", words: ["Jump", "in", "muddy", "puddle"], distractors: ["cloud", "basket"], sentenceWithBlank: "Jump in muddy _______.", image: "assets/ep28_puddle.png", emoji: "💦" }
+    ]
   }
 };
 
@@ -1685,6 +1705,98 @@ const phonicsDataMap = {
     targets: ["u", "r"],
     displayTemplate: "t <span class='phonics-blank-slot' data-slot='0'>_</span> <span class='phonics-blank-slot' data-slot='1'>_</span> n",
     distractors: ["a", "l"]
+  },
+
+  // Episode 28 (Phonics V2: 2 letters emptied including vowels, 4 choices in lowercase)
+  "treehouse": {
+    version: 2,
+    targets: ["e", "o"],
+    displayTemplate: "t r <span class='phonics-blank-slot' data-slot='0'>_</span> e h <span class='phonics-blank-slot' data-slot='1'>_</span> u s e",
+    distractors: ["a", "i"]
+  },
+  "castle": {
+    version: 2,
+    targets: ["a", "t"],
+    displayTemplate: "c <span class='phonics-blank-slot' data-slot='0'>_</span> s <span class='phonics-blank-slot' data-slot='1'>_</span> l e",
+    distractors: ["o", "p"]
+  },
+  "den": {
+    version: 2,
+    targets: ["d", "e"],
+    displayTemplate: "<span class='phonics-blank-slot' data-slot='0'>_</span> <span class='phonics-blank-slot' data-slot='1'>_</span> n",
+    distractors: ["b", "a"]
+  },
+  "build": {
+    version: 2,
+    targets: ["u", "i"],
+    displayTemplate: "b <span class='phonics-blank-slot' data-slot='0'>_</span> <span class='phonics-blank-slot' data-slot='1'>_</span> l d",
+    distractors: ["o", "e"]
+  },
+  "king": {
+    version: 2,
+    targets: ["i", "g"],
+    displayTemplate: "k <span class='phonics-blank-slot' data-slot='0'>_</span> n <span class='phonics-blank-slot' data-slot='1'>_</span>",
+    distractors: ["e", "d"]
+  },
+  "tea": {
+    version: 2,
+    targets: ["e", "a"],
+    displayTemplate: "t <span class='phonics-blank-slot' data-slot='0'>_</span> <span class='phonics-blank-slot' data-slot='1'>_</span>",
+    distractors: ["o", "i"]
+  },
+  "noisy": {
+    version: 2,
+    targets: ["o", "i"],
+    displayTemplate: "n <span class='phonics-blank-slot' data-slot='0'>_</span> <span class='phonics-blank-slot' data-slot='1'>_</span> s y",
+    distractors: ["a", "e"]
+  },
+  "spoil": {
+    version: 2,
+    targets: ["o", "i"],
+    displayTemplate: "s p <span class='phonics-blank-slot' data-slot='0'>_</span> <span class='phonics-blank-slot' data-slot='1'>_</span> l",
+    distractors: ["a", "e"]
+  },
+  "dress": {
+    version: 2,
+    targets: ["e", "s"],
+    displayTemplate: "d r <span class='phonics-blank-slot' data-slot='0'>_</span> s <span class='phonics-blank-slot' data-slot='1'>_</span>",
+    distractors: ["a", "t"]
+  },
+  "pretty": {
+    version: 2,
+    targets: ["e", "t"],
+    displayTemplate: "p r <span class='phonics-blank-slot' data-slot='0'>_</span> t <span class='phonics-blank-slot' data-slot='1'>_</span> y",
+    distractors: ["a", "l"]
+  },
+  "string": {
+    version: 2,
+    targets: ["t", "i"],
+    displayTemplate: "s <span class='phonics-blank-slot' data-slot='0'>_</span> r <span class='phonics-blank-slot' data-slot='1'>_</span> n g",
+    distractors: ["p", "e"]
+  },
+  "tight": {
+    version: 2,
+    targets: ["i", "t"],
+    displayTemplate: "t <span class='phonics-blank-slot' data-slot='0'>_</span> g h <span class='phonics-blank-slot' data-slot='1'>_</span>",
+    distractors: ["e", "d"]
+  },
+  "talk": {
+    version: 2,
+    targets: ["a", "k"],
+    displayTemplate: "t <span class='phonics-blank-slot' data-slot='0'>_</span> l <span class='phonics-blank-slot' data-slot='1'>_</span>",
+    distractors: ["o", "t"]
+  },
+  "fair": {
+    version: 2,
+    targets: ["a", "i"],
+    displayTemplate: "f <span class='phonics-blank-slot' data-slot='0'>_</span> <span class='phonics-blank-slot' data-slot='1'>_</span> r",
+    distractors: ["e", "o"]
+  },
+  "puddle": {
+    version: 2,
+    targets: ["u", "d"],
+    displayTemplate: "p <span class='phonics-blank-slot' data-slot='0'>_</span> d <span class='phonics-blank-slot' data-slot='1'>_</span> l e",
+    distractors: ["o", "b"]
   }
 };
 
@@ -2557,6 +2669,23 @@ const phonicsChineseExplanations = {
     spit: "吐出 / 吐水",
     plastic: "塑膠的 / 塑膠製玩具",
     turn: "輪流 / 輪到下一位"
+  },
+  ep28: {
+    treehouse: "樹屋 / 樹上木屋",
+    castle: "城堡 / 堡壘",
+    den: "秘密基地 / 遊戲小屋",
+    build: "建造 / 搭建",
+    king: "國王 / 君王",
+    tea: "茶會 / 茶水",
+    noisy: "熱鬧吵雜的 / 大聲喧鬧的",
+    spoil: "破壞 / 弄糟",
+    dress: "洋裝 / 洋裝裙",
+    pretty: "漂亮的 / 好看的",
+    string: "細繩 / 線繩",
+    tight: "緊繃的 / 拉緊的",
+    talk: "談話 / 說話通話",
+    fair: "公平的 / 合理公正的",
+    puddle: "水坑 / 泥巴水窪"
   }
 };
 
