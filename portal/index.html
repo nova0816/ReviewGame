@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=58.0.0">
+  <link rel="stylesheet" href="style.css?v=59.0.0">
 </head>
 <body>
   <!-- Background autumn leaf decorations -->
@@ -302,7 +302,7 @@
       </div>
 
       <div class="start-footer">
-        <span class="version-tag">v58.0.0</span>
+        <span class="version-tag">v59.0.0</span>
       </div>
     </div>
   </div>
@@ -483,7 +483,10 @@
     <div class="match-main hidden" id="phonicsMain">
       <div class="match-header">
         <div class="match-instructions">🔤 Listen and tap the missing sound!</div>
-        <div style="display: flex; gap: 8px; align-items: center;">
+        <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
+          <button class="match-mistakes-badge" id="phonicsHintBtn" style="background: #fff8e1; color: #f57f17; border-color: #ffd54f; font-weight: 700; cursor: pointer; display: none; align-items: center; gap: 6px;">
+            💡 Hint (3 left)
+          </button>
           <div class="match-mistakes-badge" id="phonicsAttemptsBadge" style="background: #ffebee; color: #c62828; border-color: #ef9a9a; font-weight: 700; display: none;">
             Attempts: 20 / 20 ❤️
           </div>
@@ -553,6 +556,6 @@
   <!-- Canvas for Confetti -->
   <canvas id="confettiCanvas" class="confetti-canvas"></canvas>
 
-  <script src="app.js?v=58.0.0"></script>
+  <script src="app.js?v=59.0.0"></script>
 </body>
 </html>

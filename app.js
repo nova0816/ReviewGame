@@ -25,6 +25,7 @@ window.onStageTabClick = function(diff) {
   try { playSound('click'); } catch (e) {}
   currentLevelIndex = 0;
   phonicsAttemptsLeft = 20;
+  phonicsHintsLeft = 3;
   setDifficulty(diff);
   
   // Instant Launch Game for Selected Stage starting at Level 1
@@ -1828,6 +1829,8 @@ let matchMistakeCount = 0;
 const MAX_MATCH_MISTAKES = 15;
 let phonicsAttemptsLeft = 20;
 const MAX_PHONICS_ERRORS = 20;
+let phonicsHintsLeft = 3;
+const MAX_PHONICS_HINTS = 3;
 let listenChoicesMemo = [];
 let levelChoicesMemo = [];
 
@@ -2097,6 +2100,12 @@ const phonicsMessageText = document.getElementById('phonicsMessageText');
 const phonicsNextLevelBtn = document.getElementById('phonicsNextLevelBtn');
 const phonicsConfirmBtn = document.getElementById('phonicsConfirmBtn');
 const phonicsAttemptsBadge = document.getElementById('phonicsAttemptsBadge');
+const phonicsHintBtn = document.getElementById('phonicsHintBtn');
+
+function isPhonicsEp26Plus() {
+  const num = parseInt((currentEpisodeKey || '').replace('ep', ''), 10);
+  return !isNaN(num) && num >= 26;
+}
 
 function updatePhonicsAttemptsBadge(isV2) {
   if (phonicsAttemptsBadge) {
@@ -2106,6 +2115,31 @@ function updatePhonicsAttemptsBadge(isV2) {
     } else {
       phonicsAttemptsBadge.style.display = 'none';
     }
+  }
+}
+
+function updatePhonicsHintButton(isV2, disabledForLevel = false) {
+  if (!phonicsHintBtn) return;
+  if (isV2 && isPhonicsEp26Plus()) {
+    phonicsHintBtn.style.display = 'inline-flex';
+    phonicsHintBtn.textContent = `💡 Hint (${phonicsHintsLeft} left)`;
+    if (phonicsHintsLeft <= 0 || disabledForLevel) {
+      phonicsHintBtn.disabled = true;
+      phonicsHintBtn.style.background = '#eeeeee';
+      phonicsHintBtn.style.color = '#9e9e9e';
+      phonicsHintBtn.style.borderColor = '#bdbdbd';
+      phonicsHintBtn.style.cursor = 'not-allowed';
+      phonicsHintBtn.style.opacity = '0.65';
+    } else {
+      phonicsHintBtn.disabled = false;
+      phonicsHintBtn.style.background = '#fff8e1';
+      phonicsHintBtn.style.color = '#f57f17';
+      phonicsHintBtn.style.borderColor = '#ffd54f';
+      phonicsHintBtn.style.cursor = 'pointer';
+      phonicsHintBtn.style.opacity = '1';
+    }
+  } else {
+    phonicsHintBtn.style.display = 'none';
   }
 }
 const matchFailModal = document.getElementById('matchFailModal');
@@ -2127,6 +2161,7 @@ function selectEpisode(epKey) {
   levels = episodeData[epKey].levels;
   selectedEpisodeTitle.textContent = episodeData[epKey].title;
   phonicsAttemptsLeft = MAX_PHONICS_ERRORS;
+  phonicsHintsLeft = MAX_PHONICS_HINTS;
   renderLevelGrid();
 }
 
@@ -2735,6 +2770,7 @@ function renderPhonicsStage() {
   const info = getPhonicsInfo(currentLevel.targetWord);
   const isV2 = (info && info.version === 2);
   updatePhonicsAttemptsBadge(isV2);
+  updatePhonicsHintButton(isV2, false);
 
   if (isV2) {
     renderPhonicsV2(currentLevel, info);
@@ -2848,6 +2884,8 @@ function renderPhonicsV2(currentLevel, info) {
 
   const selectedLetters = [null, null];
   const selectedCards = [null, null];
+  const distractorCards = [];
+  let hintUsedInCurrentLevel = false;
 
   // Helper to clear a slot
   function clearSlot(idx) {
@@ -2869,16 +2907,22 @@ function renderPhonicsV2(currentLevel, info) {
   if (slot1) slot1.onclick = () => { if (!isCurrentLevelSolved && selectedLetters[1]) { clearSlot(1); playSound('click'); } };
 
   const targetLetters = info.targets;
-  const choices = shuffle([...targetLetters, ...info.distractors]);
+  const choiceItems = shuffle([
+    ...targetLetters.map(l => ({ letter: l.toLowerCase(), isDistractor: false })),
+    ...info.distractors.map(l => ({ letter: l.toLowerCase(), isDistractor: true }))
+  ]);
 
-  choices.forEach(optionLetter => {
+  choiceItems.forEach(item => {
     const card = document.createElement('button');
     card.className = 'match-word-card';
-    const optLower = optionLetter.toLowerCase();
+    const optLower = item.letter;
     card.textContent = optLower;
+    if (item.isDistractor) {
+      distractorCards.push(card);
+    }
 
     card.addEventListener('click', () => {
-      if (isCurrentLevelSolved) return;
+      if (isCurrentLevelSolved || card.disabled || card.classList.contains('hint-eliminated')) return;
       playSound('click');
 
       // If clicked card is already chosen in slot 0, deselect it
@@ -2904,17 +2948,50 @@ function renderPhonicsV2(currentLevel, info) {
         card.classList.add('selected');
         updateSlotVisual(slot1, 'filled', optLower);
       } else {
-        // Both full, replace slot 1
-        clearSlot(1);
-        selectedLetters[1] = optLower;
-        selectedCards[1] = card;
+        // Both full: if slot 0 is marked wrong and slot 1 is not wrong, replace slot 0; otherwise replace slot 1
+        const replaceIdx = (slot0 && slot0.classList.contains('wrong') && (!slot1 || !slot1.classList.contains('wrong'))) ? 0 : 1;
+        clearSlot(replaceIdx);
+        selectedLetters[replaceIdx] = optLower;
+        selectedCards[replaceIdx] = card;
         card.classList.add('selected');
-        updateSlotVisual(slot1, 'filled', optLower);
+        updateSlotVisual(replaceIdx === 0 ? slot0 : slot1, 'filled', optLower);
       }
     });
 
     phonicsOptionGrid.appendChild(card);
   });
+
+  // Top Hint button handler (Episode 26+: 3 hints per episode, eliminates 2 distractor letters)
+  if (phonicsHintBtn) {
+    phonicsHintBtn.onclick = () => {
+      if (isCurrentLevelSolved || hintUsedInCurrentLevel || phonicsHintsLeft <= 0 || !isPhonicsEp26Plus()) return;
+      playSound('click');
+      phonicsHintsLeft--;
+      hintUsedInCurrentLevel = true;
+      updatePhonicsHintButton(true, true);
+
+      // Clear any slot that currently holds one of the eliminated distractor cards
+      if (selectedCards[0] && distractorCards.includes(selectedCards[0])) {
+        clearSlot(0);
+      }
+      if (selectedCards[1] && distractorCards.includes(selectedCards[1])) {
+        clearSlot(1);
+      }
+
+      // Eliminate the 2 distractor letter cards (become gray & unclickable)
+      distractorCards.forEach(dCard => {
+        dCard.disabled = true;
+        dCard.classList.remove('selected', 'wrong');
+        dCard.classList.add('hint-eliminated');
+        dCard.style.cssText = "background: #e0e0e0 !important; color: #9e9e9e !important; border-color: #bdbdbd !important; box-shadow: none !important; opacity: 0.45 !important; cursor: not-allowed !important; pointer-events: none !important; text-decoration: line-through !important; transform: none !important;";
+      });
+
+      if (phonicsMessageText) {
+        phonicsMessageText.textContent = `💡 Hint used! 2 letters eliminated (${phonicsHintsLeft} hint${phonicsHintsLeft === 1 ? '' : 's'} left).`;
+      }
+      if (phonicsMessageBanner) phonicsMessageBanner.classList.remove('hidden');
+    };
+  }
 
   // Confirm button validation handler
   if (phonicsConfirmBtn) {
@@ -2930,7 +3007,9 @@ function renderPhonicsV2(currentLevel, info) {
 
       const target0 = targetLetters[0].toLowerCase();
       const target1 = targetLetters[1].toLowerCase();
-      const isCorrect = (selectedLetters[0] === target0 && selectedLetters[1] === target1);
+      const is0Right = (selectedLetters[0] === target0);
+      const is1Right = (selectedLetters[1] === target1);
+      const isCorrect = (is0Right && is1Right);
 
       if (isCorrect) {
         isCurrentLevelSolved = true;
@@ -2943,6 +3022,7 @@ function renderPhonicsV2(currentLevel, info) {
         if (selectedCards[1]) selectedCards[1].classList.add('correct');
         updateSlotVisual(slot0, 'correct');
         updateSlotVisual(slot1, 'correct');
+        updatePhonicsHintButton(true, true);
 
         if (hintEl) hintEl.style.display = 'none';
 
@@ -2954,23 +3034,48 @@ function renderPhonicsV2(currentLevel, info) {
         showPhonicsSuccessPrompt(currentLevel);
       } else {
         playSound('incorrect');
-        if (selectedCards[0]) selectedCards[0].classList.add('wrong');
-        if (selectedCards[1]) selectedCards[1].classList.add('wrong');
-
-        // PERSISTENT HIGHLIGHT: Keep slot0 and slot1 marked in red so the user can clearly see and tap to clear!
-        updateSlotVisual(slot0, 'wrong');
-        updateSlotVisual(slot1, 'wrong');
 
         phonicsAttemptsLeft--;
         updatePhonicsAttemptsBadge(true);
 
-        if (hintEl) {
-          hintEl.textContent = "👆 Tap the red letters above (or cards below) to clear them!";
-          hintEl.style.display = "block";
-        }
+        if (isPhonicsEp26Plus() && (is0Right || is1Right)) {
+          // Partial correct feedback (Episode 26+): 1 letter is right, the other is not
+          const rightLetter = is0Right ? selectedLetters[0] : selectedLetters[1];
+          if (is0Right) {
+            updateSlotVisual(slot0, 'correct');
+            updateSlotVisual(slot1, 'wrong');
+            if (selectedCards[1]) selectedCards[1].classList.add('wrong');
+          } else {
+            updateSlotVisual(slot0, 'wrong');
+            updateSlotVisual(slot1, 'correct');
+            if (selectedCards[0]) selectedCards[0].classList.add('wrong');
+          }
 
-        if (phonicsMessageText) phonicsMessageText.textContent = `Not quite right! Tap the red letters to clear them. (${phonicsAttemptsLeft} attempts left) 💡`;
-        if (phonicsMessageBanner) phonicsMessageBanner.classList.remove('hidden');
+          if (hintEl) {
+            hintEl.textContent = "👆 Tap the red letter above (or card below) to change it!";
+            hintEl.style.display = "block";
+          }
+
+          if (phonicsMessageText) {
+            phonicsMessageText.textContent = `letter ${rightLetter} is correct! 😊`;
+          }
+          if (phonicsMessageBanner) phonicsMessageBanner.classList.remove('hidden');
+        } else {
+          if (selectedCards[0]) selectedCards[0].classList.add('wrong');
+          if (selectedCards[1]) selectedCards[1].classList.add('wrong');
+
+          // PERSISTENT HIGHLIGHT: Keep slot0 and slot1 marked in red so the user can clearly see and tap to clear!
+          updateSlotVisual(slot0, 'wrong');
+          updateSlotVisual(slot1, 'wrong');
+
+          if (hintEl) {
+            hintEl.textContent = "👆 Tap the red letters above (or cards below) to clear them!";
+            hintEl.style.display = "block";
+          }
+
+          if (phonicsMessageText) phonicsMessageText.textContent = `Not quite right! Tap the red letters to clear them. (${phonicsAttemptsLeft} attempts left) 💡`;
+          if (phonicsMessageBanner) phonicsMessageBanner.classList.remove('hidden');
+        }
 
         setTimeout(() => {
           if (selectedCards[0]) selectedCards[0].classList.remove('wrong');
@@ -2981,6 +3086,7 @@ function renderPhonicsV2(currentLevel, info) {
           setTimeout(() => {
             alert("Oh no! You've used all 20 attempts. Restarting Episode Phonics challenge! 💪");
             phonicsAttemptsLeft = MAX_PHONICS_ERRORS;
+            phonicsHintsLeft = MAX_PHONICS_HINTS;
             currentLevelIndex = 0;
             initLevel();
           }, 400);
@@ -3112,6 +3218,8 @@ victoryMenuBtn.addEventListener('click', () => {
 // Reset Game
 function resetGame() {
   matchMistakeCount = 0;
+  phonicsAttemptsLeft = MAX_PHONICS_ERRORS;
+  phonicsHintsLeft = MAX_PHONICS_HINTS;
   currentLevelIndex = 0;
   score = 0;
   victoryModal.classList.add('hidden');

@@ -1433,3 +1433,17 @@ body {
   box-shadow: 0 2px 8px rgba(46, 125, 50, 0.1);
   user-select: none;
 }
+
+
+/* Phonics Hint Eliminated Card Style (Episode 26+) */
+#phonicsOptionGrid .match-word-card.hint-eliminated {
+  background: #e0e0e0 !important;
+  border-color: #bdbdbd !important;
+  color: #9e9e9e !important;
+  box-shadow: none !important;
+  opacity: 0.45 !important;
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+  transform: none !important;
+  text-decoration: line-through !important;
+}
