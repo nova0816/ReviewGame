@@ -17,7 +17,7 @@ text = open(os.path.join(ROOT, 'app.js'), encoding='utf-8').read()
 
 levels = []
 for ep, body in re.findall(r'(ep\d+):\s*\{[^\}]*levels:\s*\[(.*?)\]\s*\}', text, re.DOTALL):
-    for tw, st, img in re.findall(r'targetWord:\s*"([^"]+)",\s*statement:\s*"([^"]+)".*?image:\s*"([^"]+)"', body):
+    for tw, st, img in re.findall(r'targetWord:\s*"([^"]+)",\s*statement:\s*"([^"]+)".*?image:\s*"([^"]+)"', body, re.DOTALL):
         levels.append((ep, tw, st, img))
 
 errors = 0

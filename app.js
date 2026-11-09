@@ -1223,6 +1223,146 @@ const episodeData = {
       { targetWord: "fair", statement: "It is not fair", words: ["It", "is", "not", "fair"], distractors: ["cold", "sour"], sentenceWithBlank: "It is not _______.", image: "assets/ep28_fair.png", emoji: "⚖️" },
       { targetWord: "puddle", statement: "Jump in muddy puddle", words: ["Jump", "in", "muddy", "puddle"], distractors: ["cloud", "basket"], sentenceWithBlank: "Jump in muddy _______.", image: "assets/ep28_puddle.png", emoji: "💦" }
     ]
+  },
+  ep29: {
+    title: "Episode 29: Playful Pretend Friend",
+    levels: [
+      {
+        targetWord: "lion",
+        statement: "This is my new friend Leo Lion",
+        words: ["This", "is", "my", "new", "friend", "Leo", "Lion"],
+        distractors: ["tiger", "bear"],
+        sentenceWithBlank: "This is my new friend Leo _______.",
+        image: "assets/ep29_lion.png",
+        emoji: "🦁"
+      },
+      {
+        targetWord: "roar",
+        statement: "He likes to roar",
+        words: ["He", "likes", "to", "roar"],
+        distractors: ["sing", "whistle"],
+        sentenceWithBlank: "He likes to _______.",
+        image: "assets/ep29_roar.png",
+        emoji: "📢"
+      },
+      {
+        targetWord: "head",
+        statement: "He is nodding his head",
+        words: ["He", "is", "nodding", "his", "head"],
+        distractors: ["hand", "foot"],
+        sentenceWithBlank: "He is nodding his _______.",
+        image: "assets/ep29_head.png",
+        emoji: "👤"
+      },
+      {
+        targetWord: "slice",
+        statement: "Would you like a slice of fruit cake",
+        words: ["Would", "you", "like", "a", "slice", "of", "fruit", "cake"],
+        distractors: ["cup", "bowl"],
+        sentenceWithBlank: "Would you like a _______ of fruit cake?",
+        image: "assets/ep29_slice.png",
+        emoji: "🍰"
+      },
+      {
+        targetWord: "cherries",
+        statement: "Leo loves cake with lots of cherries",
+        words: ["Leo", "loves", "cake", "with", "lots", "of", "cherries"],
+        distractors: ["apples", "oranges"],
+        sentenceWithBlank: "Leo loves cake with lots of _______.",
+        image: "assets/ep29_cherries.png",
+        emoji: "🍒"
+      },
+      {
+        targetWord: "visitor",
+        statement: "You have a very special visitor",
+        words: ["You", "have", "a", "very", "special", "visitor"],
+        distractors: ["teacher", "doctor"],
+        sentenceWithBlank: "You have a very special _______.",
+        image: "assets/ep29_visitor.png",
+        emoji: "🚪"
+      },
+      {
+        targetWord: "golden",
+        statement: "What a fine golden mane you have",
+        words: ["What", "a", "fine", "golden", "mane", "you", "have"],
+        distractors: ["silver", "spotted"],
+        sentenceWithBlank: "What a fine _______ mane you have!",
+        image: "assets/ep29_golden.png",
+        emoji: "✨"
+      },
+      {
+        targetWord: "trousers",
+        statement: "He is wearing his best red trousers",
+        words: ["He", "is", "wearing", "his", "best", "red", "trousers"],
+        distractors: ["socks", "gloves"],
+        sentenceWithBlank: "He is wearing his best red _______.",
+        image: "assets/ep29_trousers.png",
+        emoji: "👖"
+      },
+      {
+        targetWord: "jumper",
+        statement: "And his warm blue jumper",
+        words: ["And", "his", "warm", "blue", "jumper"],
+        distractors: ["jacket", "scarf"],
+        sentenceWithBlank: "And his warm blue _______.",
+        image: "assets/ep29_jumper.png",
+        emoji: "🧶"
+      },
+      {
+        targetWord: "shirt",
+        statement: "He is wearing his best green shirt",
+        words: ["He", "is", "wearing", "his", "best", "green", "shirt"],
+        distractors: ["coat", "vest"],
+        sentenceWithBlank: "He is wearing his best green _______.",
+        image: "assets/ep29_shirt.png",
+        emoji: "👕"
+      },
+      {
+        targetWord: "fairy",
+        statement: "Peppa is going to be a fairy",
+        words: ["Peppa", "is", "going", "to", "be", "a", "fairy"],
+        distractors: ["clown", "witch"],
+        sentenceWithBlank: "Peppa is going to be a _______.",
+        image: "assets/ep29_fairy.png",
+        emoji: "🧚"
+      },
+      {
+        targetWord: "queen",
+        statement: "My wish is to be Queen Suzy",
+        words: ["My", "wish", "is", "to", "be", "Queen", "Suzy"],
+        distractors: ["nurse", "pilot"],
+        sentenceWithBlank: "My wish is to be _______ Suzy.",
+        image: "assets/ep29_queen.png",
+        emoji: "👑"
+      },
+      {
+        targetWord: "goodbye",
+        statement: "Goodbye Leo see you tomorrow",
+        words: ["Goodbye", "Leo", "see", "you", "tomorrow"],
+        distractors: ["welcome", "hello"],
+        sentenceWithBlank: "_______ Leo, see you tomorrow.",
+        image: "assets/ep29_goodbye.png",
+        emoji: "👋"
+      },
+      {
+        targetWord: "tomorrow",
+        statement: "We can play together again tomorrow",
+        words: ["We", "can", "play", "together", "again", "tomorrow"],
+        distractors: ["yesterday", "tonight"],
+        sentenceWithBlank: "We can play together again _______.",
+        image: "assets/ep29_tomorrow.png",
+        emoji: "📅"
+      },
+      {
+        targetWord: "boots",
+        statement: "Leo is wearing his puddle boots as well",
+        words: ["Leo", "is", "wearing", "his", "puddle", "boots", "as", "well"],
+        distractors: ["slippers", "sandals"],
+        sentenceWithBlank: "Leo is wearing his puddle _______ as well.",
+        image: "assets/ep29_boots.png",
+        emoji: "🥾"
+      }
+    ]
   }
 };
 
@@ -1798,6 +1938,98 @@ const phonicsDataMap = {
     targets: ["u", "d"],
     displayTemplate: "p <span class='phonics-blank-slot' data-slot='0'>_</span> d <span class='phonics-blank-slot' data-slot='1'>_</span> l e",
     distractors: ["o", "b"]
+  },
+
+  // Episode 29 (Phonics V2: 2 letters emptied including vowels, 4 choices in lowercase)
+  "lion": {
+    version: 2,
+    targets: ["i", "o"],
+    displayTemplate: "l <span class='phonics-blank-slot' data-slot='0'>_</span> <span class='phonics-blank-slot' data-slot='1'>_</span> n",
+    distractors: ["e", "a"]
+  },
+  "roar": {
+    version: 2,
+    targets: ["o", "a"],
+    displayTemplate: "r <span class='phonics-blank-slot' data-slot='0'>_</span> <span class='phonics-blank-slot' data-slot='1'>_</span> r",
+    distractors: ["e", "u"]
+  },
+  "head": {
+    version: 2,
+    targets: ["e", "a"],
+    displayTemplate: "h <span class='phonics-blank-slot' data-slot='0'>_</span> <span class='phonics-blank-slot' data-slot='1'>_</span> d",
+    distractors: ["o", "i"]
+  },
+  "slice": {
+    version: 2,
+    targets: ["i", "e"],
+    displayTemplate: "s l <span class='phonics-blank-slot' data-slot='0'>_</span> c <span class='phonics-blank-slot' data-slot='1'>_</span>",
+    distractors: ["a", "o"]
+  },
+  "cherries": {
+    version: 2,
+    targets: ["e", "i"],
+    displayTemplate: "c h <span class='phonics-blank-slot' data-slot='0'>_</span> r r <span class='phonics-blank-slot' data-slot='1'>_</span> e s",
+    distractors: ["a", "o"]
+  },
+  "visitor": {
+    version: 2,
+    targets: ["i", "o"],
+    displayTemplate: "v <span class='phonics-blank-slot' data-slot='0'>_</span> s i t <span class='phonics-blank-slot' data-slot='1'>_</span> r",
+    distractors: ["e", "u"]
+  },
+  "golden": {
+    version: 2,
+    targets: ["o", "e"],
+    displayTemplate: "g <span class='phonics-blank-slot' data-slot='0'>_</span> l d <span class='phonics-blank-slot' data-slot='1'>_</span> n",
+    distractors: ["a", "i"]
+  },
+  "trousers": {
+    version: 2,
+    targets: ["o", "u"],
+    displayTemplate: "t r <span class='phonics-blank-slot' data-slot='0'>_</span> <span class='phonics-blank-slot' data-slot='1'>_</span> s e r s",
+    distractors: ["a", "e"]
+  },
+  "jumper": {
+    version: 2,
+    targets: ["u", "e"],
+    displayTemplate: "j <span class='phonics-blank-slot' data-slot='0'>_</span> m p <span class='phonics-blank-slot' data-slot='1'>_</span> r",
+    distractors: ["o", "a"]
+  },
+  "shirt": {
+    version: 2,
+    targets: ["i", "r"],
+    displayTemplate: "s h <span class='phonics-blank-slot' data-slot='0'>_</span> <span class='phonics-blank-slot' data-slot='1'>_</span> t",
+    distractors: ["e", "l"]
+  },
+  "fairy": {
+    version: 2,
+    targets: ["a", "i"],
+    displayTemplate: "f <span class='phonics-blank-slot' data-slot='0'>_</span> <span class='phonics-blank-slot' data-slot='1'>_</span> r y",
+    distractors: ["e", "o"]
+  },
+  "queen": {
+    version: 2,
+    targets: ["u", "e"],
+    displayTemplate: "q <span class='phonics-blank-slot' data-slot='0'>_</span> <span class='phonics-blank-slot' data-slot='1'>_</span> e n",
+    distractors: ["o", "a"]
+  },
+  "goodbye": {
+    version: 2,
+    targets: ["o", "e"],
+    displayTemplate: "g <span class='phonics-blank-slot' data-slot='0'>_</span> o d b y <span class='phonics-blank-slot' data-slot='1'>_</span>",
+    distractors: ["a", "i"]
+  },
+  "tomorrow": {
+    version: 2,
+    targets: ["o", "r"],
+    displayTemplate: "t <span class='phonics-blank-slot' data-slot='0'>_</span> m o <span class='phonics-blank-slot' data-slot='1'>_</span> r o w",
+    distractors: ["a", "l"]
+  },
+  "boots": {
+    version: 2,
+    targets: ["o", "t"],
+    displayTemplate: "b o <span class='phonics-blank-slot' data-slot='0'>_</span> <span class='phonics-blank-slot' data-slot='1'>_</span> s",
+    distractors: ["a", "p"]
   }
 };
 
@@ -2721,6 +2953,23 @@ const phonicsChineseExplanations = {
     talk: "談話 / 說話通話",
     fair: "公平的 / 合理公正的",
     puddle: "水坑 / 泥巴水窪"
+  },
+  ep29: {
+    lion: "獅子 / 萬獸之王",
+    roar: "吼叫 / 大聲吼叫",
+    head: "頭部 / 腦袋",
+    slice: "薄片 / 切片一塊",
+    cherries: "櫻桃 / 甜櫻桃",
+    visitor: "訪客 / 參觀客人",
+    golden: "金黃色的 / 金色的",
+    trousers: "長褲 / 褲子",
+    jumper: "毛衣 / 針織衫",
+    shirt: "襯衫 / 襯衣",
+    fairy: "小仙女 / 精靈仙子",
+    queen: "女王 / 王后",
+    goodbye: "再見 / 道別告辭",
+    tomorrow: "明天 / 明日",
+    boots: "靴子 / 雨靴"
   }
 };
 

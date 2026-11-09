@@ -1,4 +1,4 @@
-# Global Vocabulary Registry (Episodes 1–28)
+# Global Vocabulary Registry (Episodes 1–29)
 
 | Episode | Title | Target Vocabulary Words (15) |
 | :--- | :--- | :--- |
@@ -26,5 +26,6 @@
 | Episode 26 | Episode 26: Winter Ice Skating | `skates`, `rink`, `glide`, `fall`, `lesson`, `family`, `first`, `hire`, `teach`, `easy`, `watch`, `bump`, `teacher`, `beautiful`, `fantastic` |
 | Episode 27 | Episode 27: Gentle Dental Checkup | `dentist`, `clean`, `healthy`, `visit`, `magazine`, `open`, `wide`, `mirror`, `sweets`, `mouth`, `pink`, `drink`, `spit`, `plastic`, `turn` |
 | Episode 28 | Episode 28: Garden Castle Dens | `treehouse`, `castle`, `den`, `build`, `king`, `tea`, `noisy`, `spoil`, `dress`, `pretty`, `string`, `tight`, `talk`, `fair`, `puddle` |
+| Episode 29 | Episode 29: Playful Pretend Friend | `lion`, `roar`, `head`, `slice`, `cherries`, `visitor`, `golden`, `trousers`, `jumper`, `shirt`, `fairy`, `queen`, `goodbye`, `tomorrow`, `boots` |
 
-**Total Active Vocabulary Items (Ep 1, Ep 6–28):** 371
+**Total Active Vocabulary Items (Ep 1, Ep 6–29):** 386
